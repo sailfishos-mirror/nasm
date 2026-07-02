@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVAPD",
+  "id": "vmovapd64",
+  "format": "bin",
+  "source": "vmovapd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovapd/",
+  "target": [
+   { "output": "vmovapd.bin64", "match": "vmovapd.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MOVNTPS",
+  "id": "movntps64",
+  "format": "bin",
+  "source": "movntps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movntps/",
+  "target": [
+   { "output": "movntps.bin64", "match": "movntps.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MOVAPS",
+  "id": "movaps64",
+  "format": "bin",
+  "source": "movaps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movaps/",
+  "target": [
+   { "output": "movaps.bin64", "match": "movaps.bin64.t" }
+  ]
+ }
+]

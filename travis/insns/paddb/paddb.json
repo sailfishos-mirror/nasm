@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PADDB",
+  "id": "paddb64",
+  "format": "bin",
+  "source": "paddb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddb/",
+  "target": [
+   { "output": "paddb.bin64", "match": "paddb.bin64.t" }
+  ]
+ }
+]

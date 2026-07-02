@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPUNPCKHWD",
+  "id": "vpunpckhwd64",
+  "format": "bin",
+  "source": "vpunpckhwd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpunpckhwd/",
+  "target": [
+   { "output": "vpunpckhwd.bin64", "match": "vpunpckhwd.bin64.t" }
+  ]
+ }
+]

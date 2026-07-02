@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VDPPHPS",
+  "id": "vdpphps64",
+  "format": "bin",
+  "source": "vdpphps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdpphps/",
+  "target": [
+   { "output": "vdpphps.bin64", "match": "vdpphps.bin64.t" }
+  ]
+ }
+]

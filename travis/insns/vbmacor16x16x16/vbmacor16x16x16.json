@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VBMACOR16X16X16",
+  "id": "vbmacor16x16x1664",
+  "format": "bin",
+  "source": "vbmacor16x16x16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbmacor16x16x16/",
+  "target": [
+   { "output": "vbmacor16x16x16.bin64", "match": "vbmacor16x16x16.bin64.t" }
+  ]
+ }
+]

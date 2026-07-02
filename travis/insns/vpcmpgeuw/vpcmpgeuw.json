@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPGEUW",
+  "id": "vpcmpgeuw64",
+  "format": "bin",
+  "source": "vpcmpgeuw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgeuw/",
+  "target": [
+   { "output": "vpcmpgeuw.bin64", "match": "vpcmpgeuw.bin64.t" }
+  ]
+ }
+]

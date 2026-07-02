@@ -1,0 +1,4 @@
+	loopd 0xe549
+	loopd 0x900b
+	loopd 0x1791bd84
+	loopd 0x2405970d

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VHADDPS",
+  "id": "vhaddps64",
+  "format": "bin",
+  "source": "vhaddps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vhaddps/",
+  "target": [
+   { "output": "vhaddps.bin64", "match": "vhaddps.bin64.t" }
+  ]
+ }
+]

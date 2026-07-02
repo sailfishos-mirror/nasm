@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for RDPID",
+  "id": "rdpid16",
+  "format": "bin",
+  "source": "rdpid_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdpid/",
+  "target": [
+   { "output": "rdpid.bin16", "match": "rdpid.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for RDPID",
+  "id": "rdpid32",
+  "format": "bin",
+  "source": "rdpid_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdpid/",
+  "target": [
+   { "output": "rdpid.bin32", "match": "rdpid.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for RDPID",
+  "id": "rdpid64",
+  "format": "bin",
+  "source": "rdpid.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdpid/",
+  "target": [
+   { "output": "rdpid.bin64", "match": "rdpid.bin64.t" }
+  ]
+ }
+]

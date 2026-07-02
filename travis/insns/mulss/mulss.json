@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MULSS",
+  "id": "mulss64",
+  "format": "bin",
+  "source": "mulss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulss/",
+  "target": [
+   { "output": "mulss.bin64", "match": "mulss.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPACKSSDW",
+  "id": "vpackssdw64",
+  "format": "bin",
+  "source": "vpackssdw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpackssdw/",
+  "target": [
+   { "output": "vpackssdw.bin64", "match": "vpackssdw.bin64.t" }
+  ]
+ }
+]

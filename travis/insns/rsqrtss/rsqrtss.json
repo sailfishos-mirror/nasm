@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for RSQRTSS",
+  "id": "rsqrtss64",
+  "format": "bin",
+  "source": "rsqrtss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rsqrtss/",
+  "target": [
+   { "output": "rsqrtss.bin64", "match": "rsqrtss.bin64.t" }
+  ]
+ }
+]

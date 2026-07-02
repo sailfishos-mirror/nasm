@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VTESTPS",
+  "id": "vtestps64",
+  "format": "bin",
+  "source": "vtestps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vtestps/",
+  "target": [
+   { "output": "vtestps.bin64", "match": "vtestps.bin64.t" }
+  ]
+ }
+]

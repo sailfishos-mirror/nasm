@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMAXSH",
+  "id": "vmaxsh64",
+  "format": "bin",
+  "source": "vmaxsh.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxsh/",
+  "target": [
+   { "output": "vmaxsh.bin64", "match": "vmaxsh.bin64.t" }
+  ]
+ }
+]

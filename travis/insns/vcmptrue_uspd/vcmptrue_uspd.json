@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPTRUE_USPD",
+  "id": "vcmptrue_uspd64",
+  "format": "bin",
+  "source": "vcmptrue_uspd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmptrue_uspd/",
+  "target": [
+   { "output": "vcmptrue_uspd.bin64", "match": "vcmptrue_uspd.bin64.t" }
+  ]
+ }
+]

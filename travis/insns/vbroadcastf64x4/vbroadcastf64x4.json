@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VBROADCASTF64X4",
+  "id": "vbroadcastf64x464",
+  "format": "bin",
+  "source": "vbroadcastf64x4.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbroadcastf64x4/",
+  "target": [
+   { "output": "vbroadcastf64x4.bin64", "match": "vbroadcastf64x4.bin64.t" }
+  ]
+ }
+]

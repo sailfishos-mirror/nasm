@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PHSUBSW",
+  "id": "phsubsw64",
+  "format": "bin",
+  "source": "phsubsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/phsubsw/",
+  "target": [
+   { "output": "phsubsw.bin64", "match": "phsubsw.bin64.t" }
+  ]
+ }
+]

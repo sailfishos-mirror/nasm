@@ -1,0 +1,3 @@
+default rel
+	fxsave [0x26a]
+	fxsave [0x906]

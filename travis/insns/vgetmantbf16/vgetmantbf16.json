@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGETMANTBF16",
+  "id": "vgetmantbf1664",
+  "format": "bin",
+  "source": "vgetmantbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetmantbf16/",
+  "target": [
+   { "output": "vgetmantbf16.bin64", "match": "vgetmantbf16.bin64.t" }
+  ]
+ }
+]

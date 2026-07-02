@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFRCZPS",
+  "id": "vfrczps64",
+  "format": "bin",
+  "source": "vfrczps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfrczps/",
+  "target": [
+   { "output": "vfrczps.bin64", "match": "vfrczps.bin64.t" }
+  ]
+ }
+]

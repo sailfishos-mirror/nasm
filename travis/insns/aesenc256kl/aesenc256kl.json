@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for AESENC256KL",
+  "id": "aesenc256kl64",
+  "format": "bin",
+  "source": "aesenc256kl.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesenc256kl/",
+  "target": [
+   { "output": "aesenc256kl.bin64", "match": "aesenc256kl.bin64.t" }
+  ]
+ }
+]

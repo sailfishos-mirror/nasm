@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMADDWD",
+  "id": "vpmaddwd64",
+  "format": "bin",
+  "source": "vpmaddwd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaddwd/",
+  "target": [
+   { "output": "vpmaddwd.bin64", "match": "vpmaddwd.bin64.t" }
+  ]
+ }
+]

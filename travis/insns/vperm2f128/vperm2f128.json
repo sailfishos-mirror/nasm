@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPERM2F128",
+  "id": "vperm2f12864",
+  "format": "bin",
+  "source": "vperm2f128.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vperm2f128/",
+  "target": [
+   { "output": "vperm2f128.bin64", "match": "vperm2f128.bin64.t" }
+  ]
+ }
+]

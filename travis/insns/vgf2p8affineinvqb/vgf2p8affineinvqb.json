@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGF2P8AFFINEINVQB",
+  "id": "vgf2p8affineinvqb64",
+  "format": "bin",
+  "source": "vgf2p8affineinvqb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgf2p8affineinvqb/",
+  "target": [
+   { "output": "vgf2p8affineinvqb.bin64", "match": "vgf2p8affineinvqb.bin64.t" }
+  ]
+ }
+]

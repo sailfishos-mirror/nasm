@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPACKUSWB",
+  "id": "vpackuswb64",
+  "format": "bin",
+  "source": "vpackuswb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpackuswb/",
+  "target": [
+   { "output": "vpackuswb.bin64", "match": "vpackuswb.bin64.t" }
+  ]
+ }
+]

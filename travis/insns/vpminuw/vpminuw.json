@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMINUW",
+  "id": "vpminuw64",
+  "format": "bin",
+  "source": "vpminuw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpminuw/",
+  "target": [
+   { "output": "vpminuw.bin64", "match": "vpminuw.bin64.t" }
+  ]
+ }
+]

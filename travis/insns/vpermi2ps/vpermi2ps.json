@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPERMI2PS",
+  "id": "vpermi2ps64",
+  "format": "bin",
+  "source": "vpermi2ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermi2ps/",
+  "target": [
+   { "output": "vpermi2ps.bin64", "match": "vpermi2ps.bin64.t" }
+  ]
+ }
+]

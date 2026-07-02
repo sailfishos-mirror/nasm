@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PCMPISTRI",
+  "id": "pcmpistri64",
+  "format": "bin",
+  "source": "pcmpistri.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpistri/",
+  "target": [
+   { "output": "pcmpistri.bin64", "match": "pcmpistri.bin64.t" }
+  ]
+ }
+]

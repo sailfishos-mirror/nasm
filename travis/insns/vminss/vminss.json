@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMINSS",
+  "id": "vminss64",
+  "format": "bin",
+  "source": "vminss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminss/",
+  "target": [
+   { "output": "vminss.bin64", "match": "vminss.bin64.t" }
+  ]
+ }
+]

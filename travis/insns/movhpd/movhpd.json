@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MOVHPD",
+  "id": "movhpd64",
+  "format": "bin",
+  "source": "movhpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movhpd/",
+  "target": [
+   { "output": "movhpd.bin64", "match": "movhpd.bin64.t" }
+  ]
+ }
+]

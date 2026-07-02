@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for BNDCL",
+  "id": "bndcl16",
+  "format": "bin",
+  "source": "bndcl_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcl/",
+  "target": [
+   { "output": "bndcl.bin16", "match": "bndcl.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BNDCL",
+  "id": "bndcl32",
+  "format": "bin",
+  "source": "bndcl_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcl/",
+  "target": [
+   { "output": "bndcl.bin32", "match": "bndcl.bin32.t" }
+  ]
+ }
+]

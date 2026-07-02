@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCOMISBF16",
+  "id": "vcomisbf1664",
+  "format": "bin",
+  "source": "vcomisbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcomisbf16/",
+  "target": [
+   { "output": "vcomisbf16.bin64", "match": "vcomisbf16.bin64.t" }
+  ]
+ }
+]

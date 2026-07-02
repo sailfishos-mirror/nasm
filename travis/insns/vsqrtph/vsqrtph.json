@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSQRTPH",
+  "id": "vsqrtph64",
+  "format": "bin",
+  "source": "vsqrtph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsqrtph/",
+  "target": [
+   { "output": "vsqrtph.bin64", "match": "vsqrtph.bin64.t" }
+  ]
+ }
+]

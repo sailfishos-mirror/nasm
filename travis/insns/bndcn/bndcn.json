@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for BNDCN",
+  "id": "bndcn16",
+  "format": "bin",
+  "source": "bndcn_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcn/",
+  "target": [
+   { "output": "bndcn.bin16", "match": "bndcn.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BNDCN",
+  "id": "bndcn32",
+  "format": "bin",
+  "source": "bndcn_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcn/",
+  "target": [
+   { "output": "bndcn.bin32", "match": "bndcn.bin32.t" }
+  ]
+ }
+]

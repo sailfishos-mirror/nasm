@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for DPPD",
+  "id": "dppd64",
+  "format": "bin",
+  "source": "dppd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/dppd/",
+  "target": [
+   { "output": "dppd.bin64", "match": "dppd.bin64.t" }
+  ]
+ }
+]

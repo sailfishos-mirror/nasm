@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRANGEPD",
+  "id": "vrangepd64",
+  "format": "bin",
+  "source": "vrangepd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrangepd/",
+  "target": [
+   { "output": "vrangepd.bin64", "match": "vrangepd.bin64.t" }
+  ]
+ }
+]

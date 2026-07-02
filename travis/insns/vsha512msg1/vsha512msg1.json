@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSHA512MSG1",
+  "id": "vsha512msg164",
+  "format": "bin",
+  "source": "vsha512msg1.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsha512msg1/",
+  "target": [
+   { "output": "vsha512msg1.bin64", "match": "vsha512msg1.bin64.t" }
+  ]
+ }
+]

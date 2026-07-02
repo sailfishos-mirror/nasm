@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for UCOMISS",
+  "id": "ucomiss64",
+  "format": "bin",
+  "source": "ucomiss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ucomiss/",
+  "target": [
+   { "output": "ucomiss.bin64", "match": "ucomiss.bin64.t" }
+  ]
+ }
+]

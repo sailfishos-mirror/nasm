@@ -1,0 +1,3 @@
+default rel
+	fstenv [0x4f5]
+	fstenv [0x2b3]

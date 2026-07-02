@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VEXP2PS",
+  "id": "vexp2ps64",
+  "format": "bin",
+  "source": "vexp2ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vexp2ps/",
+  "target": [
+   { "output": "vexp2ps.bin64", "match": "vexp2ps.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMINPS",
+  "id": "vminps64",
+  "format": "bin",
+  "source": "vminps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminps/",
+  "target": [
+   { "output": "vminps.bin64", "match": "vminps.bin64.t" }
+  ]
+ }
+]

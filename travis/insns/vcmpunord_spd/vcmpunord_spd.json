@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPUNORD_SPD",
+  "id": "vcmpunord_spd64",
+  "format": "bin",
+  "source": "vcmpunord_spd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunord_spd/",
+  "target": [
+   { "output": "vcmpunord_spd.bin64", "match": "vcmpunord_spd.bin64.t" }
+  ]
+ }
+]

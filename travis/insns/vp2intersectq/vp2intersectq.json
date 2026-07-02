@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VP2INTERSECTQ",
+  "id": "vp2intersectq64",
+  "format": "bin",
+  "source": "vp2intersectq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vp2intersectq/",
+  "target": [
+   { "output": "vp2intersectq.bin64", "match": "vp2intersectq.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPHADDUDQ",
+  "id": "vphaddudq64",
+  "format": "bin",
+  "source": "vphaddudq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vphaddudq/",
+  "target": [
+   { "output": "vphaddudq.bin64", "match": "vphaddudq.bin64.t" }
+  ]
+ }
+]

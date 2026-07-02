@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for WRFSBASE",
+  "id": "wrfsbase64",
+  "format": "bin",
+  "source": "wrfsbase.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/wrfsbase/",
+  "target": [
+   { "output": "wrfsbase.bin64", "match": "wrfsbase.bin64.t" }
+  ]
+ }
+]

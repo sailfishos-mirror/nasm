@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PSLLW",
+  "id": "psllw64",
+  "format": "bin",
+  "source": "psllw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psllw/",
+  "target": [
+   { "output": "psllw.bin64", "match": "psllw.bin64.t" }
+  ]
+ }
+]

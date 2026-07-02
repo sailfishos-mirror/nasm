@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for AESIMC",
+  "id": "aesimc64",
+  "format": "bin",
+  "source": "aesimc.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesimc/",
+  "target": [
+   { "output": "aesimc.bin64", "match": "aesimc.bin64.t" }
+  ]
+ }
+]

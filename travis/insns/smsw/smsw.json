@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for SMSW",
+  "id": "smsw16",
+  "format": "bin",
+  "source": "smsw_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/smsw/",
+  "target": [
+   { "output": "smsw.bin16", "match": "smsw.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for SMSW",
+  "id": "smsw32",
+  "format": "bin",
+  "source": "smsw_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/smsw/",
+  "target": [
+   { "output": "smsw.bin32", "match": "smsw.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for SMSW",
+  "id": "smsw64",
+  "format": "bin",
+  "source": "smsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/smsw/",
+  "target": [
+   { "output": "smsw.bin64", "match": "smsw.bin64.t" }
+  ]
+ }
+]

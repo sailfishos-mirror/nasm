@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for VMWRITE",
+  "id": "vmwrite16",
+  "format": "bin",
+  "source": "vmwrite_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmwrite/",
+  "target": [
+   { "output": "vmwrite.bin16", "match": "vmwrite.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for VMWRITE",
+  "id": "vmwrite32",
+  "format": "bin",
+  "source": "vmwrite_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmwrite/",
+  "target": [
+   { "output": "vmwrite.bin32", "match": "vmwrite.bin32.t" }
+  ]
+ }
+]

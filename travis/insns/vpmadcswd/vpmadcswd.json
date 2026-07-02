@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMADCSWD",
+  "id": "vpmadcswd64",
+  "format": "bin",
+  "source": "vpmadcswd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmadcswd/",
+  "target": [
+   { "output": "vpmadcswd.bin64", "match": "vpmadcswd.bin64.t" }
+  ]
+ }
+]

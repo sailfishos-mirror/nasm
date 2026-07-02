@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MINPS",
+  "id": "minps64",
+  "format": "bin",
+  "source": "minps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/minps/",
+  "target": [
+   { "output": "minps.bin64", "match": "minps.bin64.t" }
+  ]
+ }
+]

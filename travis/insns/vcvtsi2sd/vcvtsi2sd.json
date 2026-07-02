@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCVTSI2SD",
+  "id": "vcvtsi2sd64",
+  "format": "bin",
+  "source": "vcvtsi2sd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtsi2sd/",
+  "target": [
+   { "output": "vcvtsi2sd.bin64", "match": "vcvtsi2sd.bin64.t" }
+  ]
+ }
+]

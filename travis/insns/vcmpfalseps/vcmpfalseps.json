@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPFALSEPS",
+  "id": "vcmpfalseps64",
+  "format": "bin",
+  "source": "vcmpfalseps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpfalseps/",
+  "target": [
+   { "output": "vcmpfalseps.bin64", "match": "vcmpfalseps.bin64.t" }
+  ]
+ }
+]

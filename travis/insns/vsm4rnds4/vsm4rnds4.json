@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSM4RNDS4",
+  "id": "vsm4rnds464",
+  "format": "bin",
+  "source": "vsm4rnds4.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsm4rnds4/",
+  "target": [
+   { "output": "vsm4rnds4.bin64", "match": "vsm4rnds4.bin64.t" }
+  ]
+ }
+]

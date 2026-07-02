@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVDDUP",
+  "id": "vmovddup64",
+  "format": "bin",
+  "source": "vmovddup.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovddup/",
+  "target": [
+   { "output": "vmovddup.bin64", "match": "vmovddup.bin64.t" }
+  ]
+ }
+]

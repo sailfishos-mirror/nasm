@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFMSUBSD",
+  "id": "vfmsubsd64",
+  "format": "bin",
+  "source": "vfmsubsd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsubsd/",
+  "target": [
+   { "output": "vfmsubsd.bin64", "match": "vfmsubsd.bin64.t" }
+  ]
+ }
+]

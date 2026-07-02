@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVLHPS",
+  "id": "vmovlhps64",
+  "format": "bin",
+  "source": "vmovlhps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovlhps/",
+  "target": [
+   { "output": "vmovlhps.bin64", "match": "vmovlhps.bin64.t" }
+  ]
+ }
+]

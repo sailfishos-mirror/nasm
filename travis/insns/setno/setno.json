@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNO",
+  "id": "setno64",
+  "format": "bin",
+  "source": "setno.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setno/",
+  "target": [
+   { "output": "setno.bin64", "match": "setno.bin64.t" }
+  ]
+ }
+]

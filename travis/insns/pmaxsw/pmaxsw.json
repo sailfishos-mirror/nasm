@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PMAXSW",
+  "id": "pmaxsw64",
+  "format": "bin",
+  "source": "pmaxsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmaxsw/",
+  "target": [
+   { "output": "pmaxsw.bin64", "match": "pmaxsw.bin64.t" }
+  ]
+ }
+]

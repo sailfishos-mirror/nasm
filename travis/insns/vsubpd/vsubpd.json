@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSUBPD",
+  "id": "vsubpd64",
+  "format": "bin",
+  "source": "vsubpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsubpd/",
+  "target": [
+   { "output": "vsubpd.bin64", "match": "vsubpd.bin64.t" }
+  ]
+ }
+]

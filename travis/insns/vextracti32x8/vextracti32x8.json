@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VEXTRACTI32X8",
+  "id": "vextracti32x864",
+  "format": "bin",
+  "source": "vextracti32x8.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vextracti32x8/",
+  "target": [
+   { "output": "vextracti32x8.bin64", "match": "vextracti32x8.bin64.t" }
+  ]
+ }
+]

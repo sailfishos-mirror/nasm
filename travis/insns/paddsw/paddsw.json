@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PADDSW",
+  "id": "paddsw64",
+  "format": "bin",
+  "source": "paddsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddsw/",
+  "target": [
+   { "output": "paddsw.bin64", "match": "paddsw.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFNMSUB123SS",
+  "id": "vfnmsub123ss64",
+  "format": "bin",
+  "source": "vfnmsub123ss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmsub123ss/",
+  "target": [
+   { "output": "vfnmsub123ss.bin64", "match": "vfnmsub123ss.bin64.t" }
+  ]
+ }
+]

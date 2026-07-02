@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PSUBW",
+  "id": "psubw64",
+  "format": "bin",
+  "source": "psubw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psubw/",
+  "target": [
+   { "output": "psubw.bin64", "match": "psubw.bin64.t" }
+  ]
+ }
+]

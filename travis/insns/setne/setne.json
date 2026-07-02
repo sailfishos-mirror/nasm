@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETNE",
+  "id": "setne64",
+  "format": "bin",
+  "source": "setne.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setne/",
+  "target": [
+   { "output": "setne.bin64", "match": "setne.bin64.t" }
+  ]
+ }
+]

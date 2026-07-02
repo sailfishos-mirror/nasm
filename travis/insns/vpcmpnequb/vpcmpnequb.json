@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPNEQUB",
+  "id": "vpcmpnequb64",
+  "format": "bin",
+  "source": "vpcmpnequb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnequb/",
+  "target": [
+   { "output": "vpcmpnequb.bin64", "match": "vpcmpnequb.bin64.t" }
+  ]
+ }
+]

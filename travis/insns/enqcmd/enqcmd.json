@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for ENQCMD",
+  "id": "enqcmd16",
+  "format": "bin",
+  "source": "enqcmd_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/enqcmd/",
+  "target": [
+   { "output": "enqcmd.bin16", "match": "enqcmd.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for ENQCMD",
+  "id": "enqcmd32",
+  "format": "bin",
+  "source": "enqcmd_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/enqcmd/",
+  "target": [
+   { "output": "enqcmd.bin32", "match": "enqcmd.bin32.t" }
+  ]
+ }
+]

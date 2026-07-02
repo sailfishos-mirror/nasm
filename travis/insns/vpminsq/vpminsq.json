@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMINSQ",
+  "id": "vpminsq64",
+  "format": "bin",
+  "source": "vpminsq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpminsq/",
+  "target": [
+   { "output": "vpminsq.bin64", "match": "vpminsq.bin64.t" }
+  ]
+ }
+]

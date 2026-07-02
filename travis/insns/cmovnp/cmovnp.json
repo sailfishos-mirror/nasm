@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMOVNP",
+  "id": "cmovnp64",
+  "format": "bin",
+  "source": "cmovnp.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmovnp/",
+  "target": [
+   { "output": "cmovnp.bin64", "match": "cmovnp.bin64.t" }
+  ]
+ }
+]

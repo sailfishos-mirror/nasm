@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPADDW",
+  "id": "vpaddw64",
+  "format": "bin",
+  "source": "vpaddw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpaddw/",
+  "target": [
+   { "output": "vpaddw.bin64", "match": "vpaddw.bin64.t" }
+  ]
+ }
+]

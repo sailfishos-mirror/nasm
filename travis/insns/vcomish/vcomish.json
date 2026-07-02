@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCOMISH",
+  "id": "vcomish64",
+  "format": "bin",
+  "source": "vcomish.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcomish/",
+  "target": [
+   { "output": "vcomish.bin64", "match": "vcomish.bin64.t" }
+  ]
+ }
+]

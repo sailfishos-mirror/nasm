@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VADDSH",
+  "id": "vaddsh64",
+  "format": "bin",
+  "source": "vaddsh.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaddsh/",
+  "target": [
+   { "output": "vaddsh.bin64", "match": "vaddsh.bin64.t" }
+  ]
+ }
+]

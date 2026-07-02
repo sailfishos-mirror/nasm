@@ -1,0 +1,2 @@
+	slwpcb ebx
+	slwpcb edi

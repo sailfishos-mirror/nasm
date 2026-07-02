@@ -1,0 +1,2 @@
+	rorx edi, dword [0xb58], 0x74
+	rorx ebx, ecx, 0x2c

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFPCLASSSD",
+  "id": "vfpclasssd64",
+  "format": "bin",
+  "source": "vfpclasssd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfpclasssd/",
+  "target": [
+   { "output": "vfpclasssd.bin64", "match": "vfpclasssd.bin64.t" }
+  ]
+ }
+]

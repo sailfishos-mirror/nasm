@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VREDUCEPD",
+  "id": "vreducepd64",
+  "format": "bin",
+  "source": "vreducepd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vreducepd/",
+  "target": [
+   { "output": "vreducepd.bin64", "match": "vreducepd.bin64.t" }
+  ]
+ }
+]

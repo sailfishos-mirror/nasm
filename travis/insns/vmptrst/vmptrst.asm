@@ -1,0 +1,3 @@
+default rel
+	vmptrst [0xf09]
+	vmptrst [0x377]

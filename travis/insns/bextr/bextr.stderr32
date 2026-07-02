@@ -1,0 +1,2 @@
+./travis/insns/bextr/bextr_narrow.asm:3: warning: instruction obsolete and removed from the target CPU [-w+obsolete-removed]
+./travis/insns/bextr/bextr_narrow.asm:4: warning: instruction obsolete and removed from the target CPU [-w+obsolete-removed]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PHADDD",
+  "id": "phaddd64",
+  "format": "bin",
+  "source": "phaddd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/phaddd/",
+  "target": [
+   { "output": "phaddd.bin64", "match": "phaddd.bin64.t" }
+  ]
+ }
+]

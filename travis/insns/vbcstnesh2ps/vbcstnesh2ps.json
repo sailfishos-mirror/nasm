@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VBCSTNESH2PS",
+  "id": "vbcstnesh2ps64",
+  "format": "bin",
+  "source": "vbcstnesh2ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbcstnesh2ps/",
+  "target": [
+   { "output": "vbcstnesh2ps.bin64", "match": "vbcstnesh2ps.bin64.t" }
+  ]
+ }
+]

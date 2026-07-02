@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPPH",
+  "id": "vcmpph64",
+  "format": "bin",
+  "source": "vcmpph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpph/",
+  "target": [
+   { "output": "vcmpph.bin64", "match": "vcmpph.bin64.t" }
+  ]
+ }
+]

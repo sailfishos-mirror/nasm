@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VORPD",
+  "id": "vorpd64",
+  "format": "bin",
+  "source": "vorpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vorpd/",
+  "target": [
+   { "output": "vorpd.bin64", "match": "vorpd.bin64.t" }
+  ]
+ }
+]

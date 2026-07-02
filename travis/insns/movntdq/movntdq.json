@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MOVNTDQ",
+  "id": "movntdq64",
+  "format": "bin",
+  "source": "movntdq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movntdq/",
+  "target": [
+   { "output": "movntdq.bin64", "match": "movntdq.bin64.t" }
+  ]
+ }
+]

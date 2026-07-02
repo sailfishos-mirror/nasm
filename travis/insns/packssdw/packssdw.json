@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PACKSSDW",
+  "id": "packssdw64",
+  "format": "bin",
+  "source": "packssdw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/packssdw/",
+  "target": [
+   { "output": "packssdw.bin64", "match": "packssdw.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFPCLASSBF16",
+  "id": "vfpclassbf1664",
+  "format": "bin",
+  "source": "vfpclassbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfpclassbf16/",
+  "target": [
+   { "output": "vfpclassbf16.bin64", "match": "vfpclassbf16.bin64.t" }
+  ]
+ }
+]

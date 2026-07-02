@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for AESENCLAST",
+  "id": "aesenclast64",
+  "format": "bin",
+  "source": "aesenclast.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesenclast/",
+  "target": [
+   { "output": "aesenclast.bin64", "match": "aesenclast.bin64.t" }
+  ]
+ }
+]

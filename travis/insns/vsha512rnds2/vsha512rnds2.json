@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSHA512RNDS2",
+  "id": "vsha512rnds264",
+  "format": "bin",
+  "source": "vsha512rnds2.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsha512rnds2/",
+  "target": [
+   { "output": "vsha512rnds2.bin64", "match": "vsha512rnds2.bin64.t" }
+  ]
+ }
+]

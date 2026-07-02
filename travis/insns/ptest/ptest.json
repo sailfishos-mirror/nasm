@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PTEST",
+  "id": "ptest64",
+  "format": "bin",
+  "source": "ptest.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ptest/",
+  "target": [
+   { "output": "ptest.bin64", "match": "ptest.bin64.t" }
+  ]
+ }
+]

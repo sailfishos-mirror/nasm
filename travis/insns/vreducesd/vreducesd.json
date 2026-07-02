@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VREDUCESD",
+  "id": "vreducesd64",
+  "format": "bin",
+  "source": "vreducesd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vreducesd/",
+  "target": [
+   { "output": "vreducesd.bin64", "match": "vreducesd.bin64.t" }
+  ]
+ }
+]

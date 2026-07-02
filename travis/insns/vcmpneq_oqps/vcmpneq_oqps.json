@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPNEQ_OQPS",
+  "id": "vcmpneq_oqps64",
+  "format": "bin",
+  "source": "vcmpneq_oqps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_oqps/",
+  "target": [
+   { "output": "vcmpneq_oqps.bin64", "match": "vcmpneq_oqps.bin64.t" }
+  ]
+ }
+]

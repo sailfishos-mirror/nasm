@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPABSQ",
+  "id": "vpabsq64",
+  "format": "bin",
+  "source": "vpabsq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpabsq/",
+  "target": [
+   { "output": "vpabsq.bin64", "match": "vpabsq.bin64.t" }
+  ]
+ }
+]

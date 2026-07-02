@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for IDIV",
+  "id": "idiv64",
+  "format": "bin",
+  "source": "idiv.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/idiv/",
+  "target": [
+   { "output": "idiv.bin64", "match": "idiv.bin64.t" }
+  ]
+ }
+]

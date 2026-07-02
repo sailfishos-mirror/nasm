@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PEXTRB",
+  "id": "pextrb64",
+  "format": "bin",
+  "source": "pextrb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pextrb/",
+  "target": [
+   { "output": "pextrb.bin64", "match": "pextrb.bin64.t" }
+  ]
+ }
+]

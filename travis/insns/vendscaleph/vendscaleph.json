@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VENDSCALEPH",
+  "id": "vendscaleph64",
+  "format": "bin",
+  "source": "vendscaleph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vendscaleph/",
+  "target": [
+   { "output": "vendscaleph.bin64", "match": "vendscaleph.bin64.t" }
+  ]
+ }
+]

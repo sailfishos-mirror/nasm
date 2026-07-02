@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMADDUBSW",
+  "id": "vpmaddubsw64",
+  "format": "bin",
+  "source": "vpmaddubsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaddubsw/",
+  "target": [
+   { "output": "vpmaddubsw.bin64", "match": "vpmaddubsw.bin64.t" }
+  ]
+ }
+]

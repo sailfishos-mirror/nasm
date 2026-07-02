@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFMSUB213BF16",
+  "id": "vfmsub213bf1664",
+  "format": "bin",
+  "source": "vfmsub213bf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub213bf16/",
+  "target": [
+   { "output": "vfmsub213bf16.bin64", "match": "vfmsub213bf16.bin64.t" }
+  ]
+ }
+]

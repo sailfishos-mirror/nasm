@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for NOT",
+  "id": "not64",
+  "format": "bin",
+  "source": "not.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/not/",
+  "target": [
+   { "output": "not.bin64", "match": "not.bin64.t" }
+  ]
+ }
+]

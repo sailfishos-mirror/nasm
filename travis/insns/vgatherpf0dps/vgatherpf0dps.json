@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGATHERPF0DPS",
+  "id": "vgatherpf0dps64",
+  "format": "bin",
+  "source": "vgatherpf0dps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf0dps/",
+  "target": [
+   { "output": "vgatherpf0dps.bin64", "match": "vgatherpf0dps.bin64.t" }
+  ]
+ }
+]

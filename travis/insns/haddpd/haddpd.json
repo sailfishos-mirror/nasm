@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for HADDPD",
+  "id": "haddpd64",
+  "format": "bin",
+  "source": "haddpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/haddpd/",
+  "target": [
+   { "output": "haddpd.bin64", "match": "haddpd.bin64.t" }
+  ]
+ }
+]

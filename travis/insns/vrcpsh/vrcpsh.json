@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRCPSH",
+  "id": "vrcpsh64",
+  "format": "bin",
+  "source": "vrcpsh.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcpsh/",
+  "target": [
+   { "output": "vrcpsh.bin64", "match": "vrcpsh.bin64.t" }
+  ]
+ }
+]

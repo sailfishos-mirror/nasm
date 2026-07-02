@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHA1NEXTE",
+  "id": "sha1nexte64",
+  "format": "bin",
+  "source": "sha1nexte.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1nexte/",
+  "target": [
+   { "output": "sha1nexte.bin64", "match": "sha1nexte.bin64.t" }
+  ]
+ }
+]

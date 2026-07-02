@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for UD2B",
+  "id": "ud2b16",
+  "format": "bin",
+  "source": "ud2b_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2b/",
+  "target": [
+   { "output": "ud2b.bin16", "match": "ud2b.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for UD2B",
+  "id": "ud2b32",
+  "format": "bin",
+  "source": "ud2b_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2b/",
+  "target": [
+   { "output": "ud2b.bin32", "match": "ud2b.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for UD2B",
+  "id": "ud2b64",
+  "format": "bin",
+  "source": "ud2b.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2b/",
+  "target": [
+   { "output": "ud2b.bin64", "match": "ud2b.bin64.t" }
+  ]
+ }
+]

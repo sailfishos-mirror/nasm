@@ -1,0 +1,4 @@
+./travis/insns/blcs/blcs.asm:2: warning: instruction obsolete and removed from the target CPU [-w+obsolete-removed]
+./travis/insns/blcs/blcs.asm:3: warning: instruction obsolete and removed from the target CPU [-w+obsolete-removed]
+./travis/insns/blcs/blcs.asm:4: warning: instruction obsolete and removed from the target CPU [-w+obsolete-removed]
+./travis/insns/blcs/blcs.asm:5: warning: instruction obsolete and removed from the target CPU [-w+obsolete-removed]

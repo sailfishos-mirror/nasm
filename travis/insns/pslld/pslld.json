@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PSLLD",
+  "id": "pslld64",
+  "format": "bin",
+  "source": "pslld.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pslld/",
+  "target": [
+   { "output": "pslld.bin64", "match": "pslld.bin64.t" }
+  ]
+ }
+]

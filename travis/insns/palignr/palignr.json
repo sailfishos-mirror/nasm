@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PALIGNR",
+  "id": "palignr64",
+  "format": "bin",
+  "source": "palignr.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/palignr/",
+  "target": [
+   { "output": "palignr.bin64", "match": "palignr.bin64.t" }
+  ]
+ }
+]

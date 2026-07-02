@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VUNPCKHPD",
+  "id": "vunpckhpd64",
+  "format": "bin",
+  "source": "vunpckhpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vunpckhpd/",
+  "target": [
+   { "output": "vunpckhpd.bin64", "match": "vunpckhpd.bin64.t" }
+  ]
+ }
+]

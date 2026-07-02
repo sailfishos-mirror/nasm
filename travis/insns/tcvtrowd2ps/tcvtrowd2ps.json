@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for TCVTROWD2PS",
+  "id": "tcvtrowd2ps64",
+  "format": "bin",
+  "source": "tcvtrowd2ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/tcvtrowd2ps/",
+  "target": [
+   { "output": "tcvtrowd2ps.bin64", "match": "tcvtrowd2ps.bin64.t" }
+  ]
+ }
+]

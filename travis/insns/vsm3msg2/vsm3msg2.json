@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSM3MSG2",
+  "id": "vsm3msg264",
+  "format": "bin",
+  "source": "vsm3msg2.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsm3msg2/",
+  "target": [
+   { "output": "vsm3msg2.bin64", "match": "vsm3msg2.bin64.t" }
+  ]
+ }
+]

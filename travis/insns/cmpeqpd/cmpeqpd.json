@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPEQPD",
+  "id": "cmpeqpd64",
+  "format": "bin",
+  "source": "cmpeqpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpeqpd/",
+  "target": [
+   { "output": "cmpeqpd.bin64", "match": "cmpeqpd.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for BNDCU",
+  "id": "bndcu16",
+  "format": "bin",
+  "source": "bndcu_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcu/",
+  "target": [
+   { "output": "bndcu.bin16", "match": "bndcu.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BNDCU",
+  "id": "bndcu32",
+  "format": "bin",
+  "source": "bndcu_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcu/",
+  "target": [
+   { "output": "bndcu.bin32", "match": "bndcu.bin32.t" }
+  ]
+ }
+]

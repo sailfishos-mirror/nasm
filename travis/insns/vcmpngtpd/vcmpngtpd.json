@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPNGTPD",
+  "id": "vcmpngtpd64",
+  "format": "bin",
+  "source": "vcmpngtpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpngtpd/",
+  "target": [
+   { "output": "vcmpngtpd.bin64", "match": "vcmpngtpd.bin64.t" }
+  ]
+ }
+]

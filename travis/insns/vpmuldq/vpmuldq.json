@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMULDQ",
+  "id": "vpmuldq64",
+  "format": "bin",
+  "source": "vpmuldq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmuldq/",
+  "target": [
+   { "output": "vpmuldq.bin64", "match": "vpmuldq.bin64.t" }
+  ]
+ }
+]

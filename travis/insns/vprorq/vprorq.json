@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPRORQ",
+  "id": "vprorq64",
+  "format": "bin",
+  "source": "vprorq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprorq/",
+  "target": [
+   { "output": "vprorq.bin64", "match": "vprorq.bin64.t" }
+  ]
+ }
+]

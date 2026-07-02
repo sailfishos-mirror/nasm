@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for VGATHERPF1DPS",
+  "id": "vgatherpf1dps32",
+  "format": "bin",
+  "source": "vgatherpf1dps.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf1dps/",
+  "target": [
+   { "output": "vgatherpf1dps.bin32", "match": "vgatherpf1dps.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for VGATHERPF1DPS",
+  "id": "vgatherpf1dps64",
+  "format": "bin",
+  "source": "vgatherpf1dps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf1dps/",
+  "target": [
+   { "output": "vgatherpf1dps.bin64", "match": "vgatherpf1dps.bin64.t" }
+  ]
+ }
+]

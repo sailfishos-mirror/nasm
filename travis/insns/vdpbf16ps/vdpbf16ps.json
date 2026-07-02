@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VDPBF16PS",
+  "id": "vdpbf16ps64",
+  "format": "bin",
+  "source": "vdpbf16ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdpbf16ps/",
+  "target": [
+   { "output": "vdpbf16ps.bin64", "match": "vdpbf16ps.bin64.t" }
+  ]
+ }
+]

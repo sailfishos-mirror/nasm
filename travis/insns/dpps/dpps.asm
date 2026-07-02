@@ -1,0 +1,3 @@
+default rel
+	dpps xmm13, oword [0xdff], 0xe0
+	dpps xmm5, oword [0xdc3], 0x57

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPLEW",
+  "id": "vpcmplew64",
+  "format": "bin",
+  "source": "vpcmplew.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmplew/",
+  "target": [
+   { "output": "vpcmplew.bin64", "match": "vpcmplew.bin64.t" }
+  ]
+ }
+]

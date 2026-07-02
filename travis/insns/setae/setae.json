@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETAE",
+  "id": "setae64",
+  "format": "bin",
+  "source": "setae.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setae/",
+  "target": [
+   { "output": "setae.bin64", "match": "setae.bin64.t" }
+  ]
+ }
+]

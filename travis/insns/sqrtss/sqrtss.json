@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SQRTSS",
+  "id": "sqrtss64",
+  "format": "bin",
+  "source": "sqrtss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sqrtss/",
+  "target": [
+   { "output": "sqrtss.bin64", "match": "sqrtss.bin64.t" }
+  ]
+ }
+]

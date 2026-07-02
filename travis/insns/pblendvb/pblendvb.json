@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PBLENDVB",
+  "id": "pblendvb64",
+  "format": "bin",
+  "source": "pblendvb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pblendvb/",
+  "target": [
+   { "output": "pblendvb.bin64", "match": "pblendvb.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSHAD",
+  "id": "vpshad64",
+  "format": "bin",
+  "source": "vpshad.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshad/",
+  "target": [
+   { "output": "vpshad.bin64", "match": "vpshad.bin64.t" }
+  ]
+ }
+]

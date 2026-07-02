@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPGTQ",
+  "id": "vpcmpgtq64",
+  "format": "bin",
+  "source": "vpcmpgtq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgtq/",
+  "target": [
+   { "output": "vpcmpgtq.bin64", "match": "vpcmpgtq.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFCMULCSH",
+  "id": "vfcmulcsh64",
+  "format": "bin",
+  "source": "vfcmulcsh.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfcmulcsh/",
+  "target": [
+   { "output": "vfcmulcsh.bin64", "match": "vfcmulcsh.bin64.t" }
+  ]
+ }
+]

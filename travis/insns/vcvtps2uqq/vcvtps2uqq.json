@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCVTPS2UQQ",
+  "id": "vcvtps2uqq64",
+  "format": "bin",
+  "source": "vcvtps2uqq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtps2uqq/",
+  "target": [
+   { "output": "vcvtps2uqq.bin64", "match": "vcvtps2uqq.bin64.t" }
+  ]
+ }
+]

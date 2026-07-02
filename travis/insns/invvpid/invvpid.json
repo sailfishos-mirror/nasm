@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for INVVPID",
+  "id": "invvpid16",
+  "format": "bin",
+  "source": "invvpid_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invvpid/",
+  "target": [
+   { "output": "invvpid.bin16", "match": "invvpid.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for INVVPID",
+  "id": "invvpid32",
+  "format": "bin",
+  "source": "invvpid_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invvpid/",
+  "target": [
+   { "output": "invvpid.bin32", "match": "invvpid.bin32.t" }
+  ]
+ }
+]

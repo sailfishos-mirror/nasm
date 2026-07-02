@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for SALX",
+  "id": "salx16",
+  "format": "bin",
+  "source": "salx_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/salx/",
+  "target": [
+   { "output": "salx.bin16", "match": "salx.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for SALX",
+  "id": "salx32",
+  "format": "bin",
+  "source": "salx_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/salx/",
+  "target": [
+   { "output": "salx.bin32", "match": "salx.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for SALX",
+  "id": "salx64",
+  "format": "bin",
+  "source": "salx.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/salx/",
+  "target": [
+   { "output": "salx.bin64", "match": "salx.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PHMINPOSUW",
+  "id": "phminposuw64",
+  "format": "bin",
+  "source": "phminposuw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/phminposuw/",
+  "target": [
+   { "output": "phminposuw.bin64", "match": "phminposuw.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPUD",
+  "id": "vpcmpud64",
+  "format": "bin",
+  "source": "vpcmpud.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpud/",
+  "target": [
+   { "output": "vpcmpud.bin64", "match": "vpcmpud.bin64.t" }
+  ]
+ }
+]

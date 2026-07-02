@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMAXUD",
+  "id": "vpmaxud64",
+  "format": "bin",
+  "source": "vpmaxud.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaxud/",
+  "target": [
+   { "output": "vpmaxud.bin64", "match": "vpmaxud.bin64.t" }
+  ]
+ }
+]

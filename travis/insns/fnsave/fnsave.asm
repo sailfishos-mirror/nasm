@@ -1,0 +1,3 @@
+default rel
+	fnsave [0xfce]
+	fnsave [0x432]

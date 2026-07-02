@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRCP28SD",
+  "id": "vrcp28sd64",
+  "format": "bin",
+  "source": "vrcp28sd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcp28sd/",
+  "target": [
+   { "output": "vrcp28sd.bin64", "match": "vrcp28sd.bin64.t" }
+  ]
+ }
+]

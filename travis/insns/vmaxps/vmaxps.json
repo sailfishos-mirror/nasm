@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMAXPS",
+  "id": "vmaxps64",
+  "format": "bin",
+  "source": "vmaxps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxps/",
+  "target": [
+   { "output": "vmaxps.bin64", "match": "vmaxps.bin64.t" }
+  ]
+ }
+]

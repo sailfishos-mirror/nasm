@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHUFPS",
+  "id": "shufps64",
+  "format": "bin",
+  "source": "shufps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/shufps/",
+  "target": [
+   { "output": "shufps.bin64", "match": "shufps.bin64.t" }
+  ]
+ }
+]

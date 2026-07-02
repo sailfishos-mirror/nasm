@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSIGNB",
+  "id": "vpsignb64",
+  "format": "bin",
+  "source": "vpsignb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsignb/",
+  "target": [
+   { "output": "vpsignb.bin64", "match": "vpsignb.bin64.t" }
+  ]
+ }
+]

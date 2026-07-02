@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPNLESS",
+  "id": "cmpnless64",
+  "format": "bin",
+  "source": "cmpnless.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnless/",
+  "target": [
+   { "output": "cmpnless.bin64", "match": "cmpnless.bin64.t" }
+  ]
+ }
+]

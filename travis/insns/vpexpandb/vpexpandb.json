@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPEXPANDB",
+  "id": "vpexpandb64",
+  "format": "bin",
+  "source": "vpexpandb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandb/",
+  "target": [
+   { "output": "vpexpandb.bin64", "match": "vpexpandb.bin64.t" }
+  ]
+ }
+]

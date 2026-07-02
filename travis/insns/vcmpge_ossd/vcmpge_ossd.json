@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPGE_OSSD",
+  "id": "vcmpge_ossd64",
+  "format": "bin",
+  "source": "vcmpge_ossd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpge_ossd/",
+  "target": [
+   { "output": "vcmpge_ossd.bin64", "match": "vcmpge_ossd.bin64.t" }
+  ]
+ }
+]

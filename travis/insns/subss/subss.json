@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SUBSS",
+  "id": "subss64",
+  "format": "bin",
+  "source": "subss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subss/",
+  "target": [
+   { "output": "subss.bin64", "match": "subss.bin64.t" }
+  ]
+ }
+]

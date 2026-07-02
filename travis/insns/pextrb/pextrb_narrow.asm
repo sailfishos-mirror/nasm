@@ -1,0 +1,4 @@
+	pextrb ebx, xmm1, 0xd
+	pextrb eax, xmm4, 0x3b
+	pextrb byte [0xc2a], xmm9, 0x60
+	pextrb byte [0xbd3], xmm9, 0x3b

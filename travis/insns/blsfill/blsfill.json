@@ -1,0 +1,37 @@
+[
+ {
+  "description": "Pseudorandom test for BLSFILL",
+  "id": "blsfill16",
+  "format": "bin",
+  "source": "blsfill_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsfill/",
+  "target": [
+   { "output": "blsfill.bin16", "match": "blsfill.bin16.t" },
+   { "stderr": "blsfill.stderr16" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BLSFILL",
+  "id": "blsfill32",
+  "format": "bin",
+  "source": "blsfill_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsfill/",
+  "target": [
+   { "output": "blsfill.bin32", "match": "blsfill.bin32.t" },
+   { "stderr": "blsfill.stderr32" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BLSFILL",
+  "id": "blsfill64",
+  "format": "bin",
+  "source": "blsfill.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsfill/",
+  "target": [
+   { "output": "blsfill.bin64", "match": "blsfill.bin64.t" },
+   { "stderr": "blsfill.stderr64" }
+  ]
+ }
+]

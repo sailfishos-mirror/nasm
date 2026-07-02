@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VINSERTF32X8",
+  "id": "vinsertf32x864",
+  "format": "bin",
+  "source": "vinsertf32x8.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinsertf32x8/",
+  "target": [
+   { "output": "vinsertf32x8.bin64", "match": "vinsertf32x8.bin64.t" }
+  ]
+ }
+]

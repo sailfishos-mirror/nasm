@@ -1,0 +1,5 @@
+default rel
+	rorx edi, dword [0xb58], 0x74
+	rorx ebx, ecx, 0x2c
+	rorx rbp, rbx, 0xa7
+	rorx rbp, qword [0xe67], 0xb7

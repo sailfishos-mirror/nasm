@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPLT_OQSD",
+  "id": "vcmplt_oqsd64",
+  "format": "bin",
+  "source": "vcmplt_oqsd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmplt_oqsd/",
+  "target": [
+   { "output": "vcmplt_oqsd.bin64", "match": "vcmplt_oqsd.bin64.t" }
+  ]
+ }
+]

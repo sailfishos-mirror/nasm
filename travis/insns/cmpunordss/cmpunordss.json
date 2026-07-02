@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPUNORDSS",
+  "id": "cmpunordss64",
+  "format": "bin",
+  "source": "cmpunordss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpunordss/",
+  "target": [
+   { "output": "cmpunordss.bin64", "match": "cmpunordss.bin64.t" }
+  ]
+ }
+]

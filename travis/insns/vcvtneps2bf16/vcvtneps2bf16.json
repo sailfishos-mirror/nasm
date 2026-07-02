@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCVTNEPS2BF16",
+  "id": "vcvtneps2bf1664",
+  "format": "bin",
+  "source": "vcvtneps2bf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtneps2bf16/",
+  "target": [
+   { "output": "vcvtneps2bf16.bin64", "match": "vcvtneps2bf16.bin64.t" }
+  ]
+ }
+]

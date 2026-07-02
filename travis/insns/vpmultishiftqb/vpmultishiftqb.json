@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMULTISHIFTQB",
+  "id": "vpmultishiftqb64",
+  "format": "bin",
+  "source": "vpmultishiftqb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmultishiftqb/",
+  "target": [
+   { "output": "vpmultishiftqb.bin64", "match": "vpmultishiftqb.bin64.t" }
+  ]
+ }
+]

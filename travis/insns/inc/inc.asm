@@ -1,0 +1,9 @@
+default rel
+	inc si
+	inc si
+	inc ebp
+	inc ecx
+	inc bl
+	inc bl
+	inc si
+	inc di

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPUB",
+  "id": "vpcmpub64",
+  "format": "bin",
+  "source": "vpcmpub.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpub/",
+  "target": [
+   { "output": "vpcmpub.bin64", "match": "vpcmpub.bin64.t" }
+  ]
+ }
+]

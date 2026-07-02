@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETO",
+  "id": "seto64",
+  "format": "bin",
+  "source": "seto.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/seto/",
+  "target": [
+   { "output": "seto.bin64", "match": "seto.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for HINT_NOP24",
+  "id": "hint_nop2464",
+  "format": "bin",
+  "source": "hint_nop24.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/hint_nop24/",
+  "target": [
+   { "output": "hint_nop24.bin64", "match": "hint_nop24.bin64.t" }
+  ]
+ }
+]

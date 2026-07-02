@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMINPH",
+  "id": "vminph64",
+  "format": "bin",
+  "source": "vminph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminph/",
+  "target": [
+   { "output": "vminph.bin64", "match": "vminph.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPDPBSUD",
+  "id": "vpdpbsud64",
+  "format": "bin",
+  "source": "vpdpbsud.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpbsud/",
+  "target": [
+   { "output": "vpdpbsud.bin64", "match": "vpdpbsud.bin64.t" }
+  ]
+ }
+]

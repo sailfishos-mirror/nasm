@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPGEPD",
+  "id": "vcmpgepd64",
+  "format": "bin",
+  "source": "vcmpgepd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgepd/",
+  "target": [
+   { "output": "vcmpgepd.bin64", "match": "vcmpgepd.bin64.t" }
+  ]
+ }
+]

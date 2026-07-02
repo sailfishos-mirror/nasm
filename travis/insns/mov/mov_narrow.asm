@@ -1,0 +1,6 @@
+	mov al, [0x91f]
+	mov al, [0xba]
+	mov ax, [0xb8e]
+	mov ax, [0xbae]
+	mov eax, [0x4b2]
+	mov eax, [0x28d]

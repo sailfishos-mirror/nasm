@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPGT_OSSS",
+  "id": "vcmpgt_osss64",
+  "format": "bin",
+  "source": "vcmpgt_osss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgt_osss/",
+  "target": [
+   { "output": "vcmpgt_osss.bin64", "match": "vcmpgt_osss.bin64.t" }
+  ]
+ }
+]

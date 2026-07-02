@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SAL",
+  "id": "sal64",
+  "format": "bin",
+  "source": "sal.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sal/",
+  "target": [
+   { "output": "sal.bin64", "match": "sal.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ROUNDPS",
+  "id": "roundps64",
+  "format": "bin",
+  "source": "roundps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/roundps/",
+  "target": [
+   { "output": "roundps.bin64", "match": "roundps.bin64.t" }
+  ]
+ }
+]

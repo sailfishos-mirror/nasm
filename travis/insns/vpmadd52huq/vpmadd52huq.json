@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMADD52HUQ",
+  "id": "vpmadd52huq64",
+  "format": "bin",
+  "source": "vpmadd52huq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmadd52huq/",
+  "target": [
+   { "output": "vpmadd52huq.bin64", "match": "vpmadd52huq.bin64.t" }
+  ]
+ }
+]

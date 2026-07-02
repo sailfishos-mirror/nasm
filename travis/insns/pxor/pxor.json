@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PXOR",
+  "id": "pxor64",
+  "format": "bin",
+  "source": "pxor.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pxor/",
+  "target": [
+   { "output": "pxor.bin64", "match": "pxor.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPNGE_UQSD",
+  "id": "vcmpnge_uqsd64",
+  "format": "bin",
+  "source": "vcmpnge_uqsd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnge_uqsd/",
+  "target": [
+   { "output": "vcmpnge_uqsd.bin64", "match": "vcmpnge_uqsd.bin64.t" }
+  ]
+ }
+]

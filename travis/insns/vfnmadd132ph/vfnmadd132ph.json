@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFNMADD132PH",
+  "id": "vfnmadd132ph64",
+  "format": "bin",
+  "source": "vfnmadd132ph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmadd132ph/",
+  "target": [
+   { "output": "vfnmadd132ph.bin64", "match": "vfnmadd132ph.bin64.t" }
+  ]
+ }
+]

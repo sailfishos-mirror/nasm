@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPBROADCASTMB2Q",
+  "id": "vpbroadcastmb2q64",
+  "format": "bin",
+  "source": "vpbroadcastmb2q.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpbroadcastmb2q/",
+  "target": [
+   { "output": "vpbroadcastmb2q.bin64", "match": "vpbroadcastmb2q.bin64.t" }
+  ]
+ }
+]

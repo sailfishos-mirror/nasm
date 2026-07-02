@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMINUD",
+  "id": "vpminud64",
+  "format": "bin",
+  "source": "vpminud.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpminud/",
+  "target": [
+   { "output": "vpminud.bin64", "match": "vpminud.bin64.t" }
+  ]
+ }
+]

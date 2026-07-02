@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for BLENDVPD",
+  "id": "blendvpd64",
+  "format": "bin",
+  "source": "blendvpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blendvpd/",
+  "target": [
+   { "output": "blendvpd.bin64", "match": "blendvpd.bin64.t" }
+  ]
+ }
+]

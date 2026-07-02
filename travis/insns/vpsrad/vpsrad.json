@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSRAD",
+  "id": "vpsrad64",
+  "format": "bin",
+  "source": "vpsrad.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsrad/",
+  "target": [
+   { "output": "vpsrad.bin64", "match": "vpsrad.bin64.t" }
+  ]
+ }
+]

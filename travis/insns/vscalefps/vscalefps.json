@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSCALEFPS",
+  "id": "vscalefps64",
+  "format": "bin",
+  "source": "vscalefps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vscalefps/",
+  "target": [
+   { "output": "vscalefps.bin64", "match": "vscalefps.bin64.t" }
+  ]
+ }
+]

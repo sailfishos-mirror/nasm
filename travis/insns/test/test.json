@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for TEST",
+  "id": "test16",
+  "format": "bin",
+  "source": "test_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/test/",
+  "target": [
+   { "output": "test.bin16", "match": "test.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for TEST",
+  "id": "test32",
+  "format": "bin",
+  "source": "test_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/test/",
+  "target": [
+   { "output": "test.bin32", "match": "test.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for TEST",
+  "id": "test64",
+  "format": "bin",
+  "source": "test.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/test/",
+  "target": [
+   { "output": "test.bin64", "match": "test.bin64.t" }
+  ]
+ }
+]

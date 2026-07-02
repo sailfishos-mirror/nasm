@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSHUFF32X4",
+  "id": "vshuff32x464",
+  "format": "bin",
+  "source": "vshuff32x4.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vshuff32x4/",
+  "target": [
+   { "output": "vshuff32x4.bin64", "match": "vshuff32x4.bin64.t" }
+  ]
+ }
+]

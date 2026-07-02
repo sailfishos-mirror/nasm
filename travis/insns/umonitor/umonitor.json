@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for UMONITOR",
+  "id": "umonitor16",
+  "format": "bin",
+  "source": "umonitor_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/umonitor/",
+  "target": [
+   { "output": "umonitor.bin16", "match": "umonitor.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for UMONITOR",
+  "id": "umonitor32",
+  "format": "bin",
+  "source": "umonitor_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/umonitor/",
+  "target": [
+   { "output": "umonitor.bin32", "match": "umonitor.bin32.t" }
+  ]
+ }
+]

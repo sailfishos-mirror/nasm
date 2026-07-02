@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ADOX",
+  "id": "adox64",
+  "format": "bin",
+  "source": "adox.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/adox/",
+  "target": [
+   { "output": "adox.bin64", "match": "adox.bin64.t" }
+  ]
+ }
+]

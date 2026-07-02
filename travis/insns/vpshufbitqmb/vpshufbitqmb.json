@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSHUFBITQMB",
+  "id": "vpshufbitqmb64",
+  "format": "bin",
+  "source": "vpshufbitqmb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshufbitqmb/",
+  "target": [
+   { "output": "vpshufbitqmb.bin64", "match": "vpshufbitqmb.bin64.t" }
+  ]
+ }
+]

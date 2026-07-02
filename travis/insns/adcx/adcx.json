@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ADCX",
+  "id": "adcx64",
+  "format": "bin",
+  "source": "adcx.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/adcx/",
+  "target": [
+   { "output": "adcx.bin64", "match": "adcx.bin64.t" }
+  ]
+ }
+]

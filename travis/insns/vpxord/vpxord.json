@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPXORD",
+  "id": "vpxord64",
+  "format": "bin",
+  "source": "vpxord.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpxord/",
+  "target": [
+   { "output": "vpxord.bin64", "match": "vpxord.bin64.t" }
+  ]
+ }
+]

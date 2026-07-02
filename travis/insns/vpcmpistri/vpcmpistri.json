@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPISTRI",
+  "id": "vpcmpistri64",
+  "format": "bin",
+  "source": "vpcmpistri.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpistri/",
+  "target": [
+   { "output": "vpcmpistri.bin64", "match": "vpcmpistri.bin64.t" }
+  ]
+ }
+]

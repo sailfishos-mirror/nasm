@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VBLENDVPS",
+  "id": "vblendvps64",
+  "format": "bin",
+  "source": "vblendvps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vblendvps/",
+  "target": [
+   { "output": "vblendvps.bin64", "match": "vblendvps.bin64.t" }
+  ]
+ }
+]

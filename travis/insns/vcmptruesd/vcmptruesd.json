@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPTRUESD",
+  "id": "vcmptruesd64",
+  "format": "bin",
+  "source": "vcmptruesd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmptruesd/",
+  "target": [
+   { "output": "vcmptruesd.bin64", "match": "vcmptruesd.bin64.t" }
+  ]
+ }
+]

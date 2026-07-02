@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for EXTRACTPS",
+  "id": "extractps64",
+  "format": "bin",
+  "source": "extractps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/extractps/",
+  "target": [
+   { "output": "extractps.bin64", "match": "extractps.bin64.t" }
+  ]
+ }
+]

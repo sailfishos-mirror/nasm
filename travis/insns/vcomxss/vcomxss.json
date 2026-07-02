@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCOMXSS",
+  "id": "vcomxss64",
+  "format": "bin",
+  "source": "vcomxss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcomxss/",
+  "target": [
+   { "output": "vcomxss.bin64", "match": "vcomxss.bin64.t" }
+  ]
+ }
+]

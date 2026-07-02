@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for NEG",
+  "id": "neg64",
+  "format": "bin",
+  "source": "neg.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/neg/",
+  "target": [
+   { "output": "neg.bin64", "match": "neg.bin64.t" }
+  ]
+ }
+]

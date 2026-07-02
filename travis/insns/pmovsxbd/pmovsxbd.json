@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PMOVSXBD",
+  "id": "pmovsxbd64",
+  "format": "bin",
+  "source": "pmovsxbd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmovsxbd/",
+  "target": [
+   { "output": "pmovsxbd.bin64", "match": "pmovsxbd.bin64.t" }
+  ]
+ }
+]

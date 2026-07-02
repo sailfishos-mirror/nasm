@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFMADD213SH",
+  "id": "vfmadd213sh64",
+  "format": "bin",
+  "source": "vfmadd213sh.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmadd213sh/",
+  "target": [
+   { "output": "vfmadd213sh.bin64", "match": "vfmadd213sh.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPGEB",
+  "id": "vpcmpgeb64",
+  "format": "bin",
+  "source": "vpcmpgeb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgeb/",
+  "target": [
+   { "output": "vpcmpgeb.bin64", "match": "vpcmpgeb.bin64.t" }
+  ]
+ }
+]

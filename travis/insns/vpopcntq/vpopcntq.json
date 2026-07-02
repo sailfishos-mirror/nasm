@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPOPCNTQ",
+  "id": "vpopcntq64",
+  "format": "bin",
+  "source": "vpopcntq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpopcntq/",
+  "target": [
+   { "output": "vpopcntq.bin64", "match": "vpopcntq.bin64.t" }
+  ]
+ }
+]

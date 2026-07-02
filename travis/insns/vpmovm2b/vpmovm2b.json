@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMOVM2B",
+  "id": "vpmovm2b64",
+  "format": "bin",
+  "source": "vpmovm2b.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovm2b/",
+  "target": [
+   { "output": "vpmovm2b.bin64", "match": "vpmovm2b.bin64.t" }
+  ]
+ }
+]

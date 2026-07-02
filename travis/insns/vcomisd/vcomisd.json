@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCOMISD",
+  "id": "vcomisd64",
+  "format": "bin",
+  "source": "vcomisd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcomisd/",
+  "target": [
+   { "output": "vcomisd.bin64", "match": "vcomisd.bin64.t" }
+  ]
+ }
+]

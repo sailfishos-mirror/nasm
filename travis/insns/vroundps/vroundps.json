@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VROUNDPS",
+  "id": "vroundps64",
+  "format": "bin",
+  "source": "vroundps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vroundps/",
+  "target": [
+   { "output": "vroundps.bin64", "match": "vroundps.bin64.t" }
+  ]
+ }
+]

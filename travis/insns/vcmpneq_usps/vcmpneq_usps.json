@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPNEQ_USPS",
+  "id": "vcmpneq_usps64",
+  "format": "bin",
+  "source": "vcmpneq_usps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_usps/",
+  "target": [
+   { "output": "vcmpneq_usps.bin64", "match": "vcmpneq_usps.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PBLENDW",
+  "id": "pblendw64",
+  "format": "bin",
+  "source": "pblendw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pblendw/",
+  "target": [
+   { "output": "pblendw.bin64", "match": "pblendw.bin64.t" }
+  ]
+ }
+]

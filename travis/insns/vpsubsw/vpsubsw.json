@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSUBSW",
+  "id": "vpsubsw64",
+  "format": "bin",
+  "source": "vpsubsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubsw/",
+  "target": [
+   { "output": "vpsubsw.bin64", "match": "vpsubsw.bin64.t" }
+  ]
+ }
+]

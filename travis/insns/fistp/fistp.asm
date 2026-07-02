@@ -1,0 +1,7 @@
+default rel
+	fistp dword [0xa3a]
+	fistp dword [0xe82]
+	fistp word [0x8a8]
+	fistp word [0xc15]
+	fistp qword [0xfda]
+	fistp qword [0x574]

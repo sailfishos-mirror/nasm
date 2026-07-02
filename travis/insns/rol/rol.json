@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ROL",
+  "id": "rol64",
+  "format": "bin",
+  "source": "rol.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rol/",
+  "target": [
+   { "output": "rol.bin64", "match": "rol.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,6 @@
+./travis/insns/hint_nop/hint_nop.asm:2: warning: not a valid hint-NOP opcode (0D, 18-1F) [-w+(null)]
+./travis/insns/hint_nop/hint_nop.asm:3: warning: not a valid hint-NOP opcode (0D, 18-1F) [-w+(null)]
+./travis/insns/hint_nop/hint_nop.asm:4: warning: not a valid hint-NOP opcode (0D, 18-1F) [-w+(null)]
+./travis/insns/hint_nop/hint_nop.asm:5: warning: not a valid hint-NOP opcode (0D, 18-1F) [-w+(null)]
+./travis/insns/hint_nop/hint_nop.asm:6: warning: not a valid hint-NOP opcode (0D, 18-1F) [-w+(null)]
+./travis/insns/hint_nop/hint_nop.asm:7: warning: not a valid hint-NOP opcode (0D, 18-1F) [-w+(null)]

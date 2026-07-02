@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPGE_OQPD",
+  "id": "vcmpge_oqpd64",
+  "format": "bin",
+  "source": "vcmpge_oqpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpge_oqpd/",
+  "target": [
+   { "output": "vcmpge_oqpd.bin64", "match": "vcmpge_oqpd.bin64.t" }
+  ]
+ }
+]

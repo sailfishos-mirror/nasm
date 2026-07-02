@@ -1,0 +1,2 @@
+	rdpid eax
+	rdpid ebp

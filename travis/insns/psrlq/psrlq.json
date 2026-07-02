@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PSRLQ",
+  "id": "psrlq64",
+  "format": "bin",
+  "source": "psrlq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psrlq/",
+  "target": [
+   { "output": "psrlq.bin64", "match": "psrlq.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for GF2P8MULB",
+  "id": "gf2p8mulb64",
+  "format": "bin",
+  "source": "gf2p8mulb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/gf2p8mulb/",
+  "target": [
+   { "output": "gf2p8mulb.bin64", "match": "gf2p8mulb.bin64.t" }
+  ]
+ }
+]

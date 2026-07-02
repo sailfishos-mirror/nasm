@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGETEXPPH",
+  "id": "vgetexpph64",
+  "format": "bin",
+  "source": "vgetexpph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetexpph/",
+  "target": [
+   { "output": "vgetexpph.bin64", "match": "vgetexpph.bin64.t" }
+  ]
+ }
+]

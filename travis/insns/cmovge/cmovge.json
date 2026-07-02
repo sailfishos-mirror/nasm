@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMOVGE",
+  "id": "cmovge64",
+  "format": "bin",
+  "source": "cmovge.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmovge/",
+  "target": [
+   { "output": "cmovge.bin64", "match": "cmovge.bin64.t" }
+  ]
+ }
+]

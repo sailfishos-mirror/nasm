@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPABSW",
+  "id": "vpabsw64",
+  "format": "bin",
+  "source": "vpabsw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpabsw/",
+  "target": [
+   { "output": "vpabsw.bin64", "match": "vpabsw.bin64.t" }
+  ]
+ }
+]

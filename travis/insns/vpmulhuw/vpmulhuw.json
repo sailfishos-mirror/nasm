@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMULHUW",
+  "id": "vpmulhuw64",
+  "format": "bin",
+  "source": "vpmulhuw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmulhuw/",
+  "target": [
+   { "output": "vpmulhuw.bin64", "match": "vpmulhuw.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRCP14PD",
+  "id": "vrcp14pd64",
+  "format": "bin",
+  "source": "vrcp14pd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcp14pd/",
+  "target": [
+   { "output": "vrcp14pd.bin64", "match": "vrcp14pd.bin64.t" }
+  ]
+ }
+]

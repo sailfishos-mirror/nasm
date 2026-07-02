@@ -1,0 +1,3 @@
+default rel
+	prefetch [0x37f]
+	prefetch [0x9eb]

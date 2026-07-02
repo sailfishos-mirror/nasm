@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PCMPESTRM",
+  "id": "pcmpestrm64",
+  "format": "bin",
+  "source": "pcmpestrm.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpestrm/",
+  "target": [
+   { "output": "pcmpestrm.bin64", "match": "pcmpestrm.bin64.t" }
+  ]
+ }
+]

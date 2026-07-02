@@ -1,0 +1,4 @@
+	loopzd 0xfa01
+	loopzd 0xa8a9
+	loopzd 0x20d5247
+	loopzd 0x20f442f5

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VEXTRACTI128",
+  "id": "vextracti12864",
+  "format": "bin",
+  "source": "vextracti128.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vextracti128/",
+  "target": [
+   { "output": "vextracti128.bin64", "match": "vextracti128.bin64.t" }
+  ]
+ }
+]

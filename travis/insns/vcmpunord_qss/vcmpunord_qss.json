@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPUNORD_QSS",
+  "id": "vcmpunord_qss64",
+  "format": "bin",
+  "source": "vcmpunord_qss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunord_qss/",
+  "target": [
+   { "output": "vcmpunord_qss.bin64", "match": "vcmpunord_qss.bin64.t" }
+  ]
+ }
+]

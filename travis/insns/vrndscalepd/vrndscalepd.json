@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRNDSCALEPD",
+  "id": "vrndscalepd64",
+  "format": "bin",
+  "source": "vrndscalepd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrndscalepd/",
+  "target": [
+   { "output": "vrndscalepd.bin64", "match": "vrndscalepd.bin64.t" }
+  ]
+ }
+]

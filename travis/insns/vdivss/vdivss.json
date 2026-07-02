@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VDIVSS",
+  "id": "vdivss64",
+  "format": "bin",
+  "source": "vdivss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdivss/",
+  "target": [
+   { "output": "vdivss.bin64", "match": "vdivss.bin64.t" }
+  ]
+ }
+]

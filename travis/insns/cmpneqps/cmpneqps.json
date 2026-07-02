@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPNEQPS",
+  "id": "cmpneqps64",
+  "format": "bin",
+  "source": "cmpneqps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpneqps/",
+  "target": [
+   { "output": "cmpneqps.bin64", "match": "cmpneqps.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PMAXSD",
+  "id": "pmaxsd64",
+  "format": "bin",
+  "source": "pmaxsd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmaxsd/",
+  "target": [
+   { "output": "pmaxsd.bin64", "match": "pmaxsd.bin64.t" }
+  ]
+ }
+]

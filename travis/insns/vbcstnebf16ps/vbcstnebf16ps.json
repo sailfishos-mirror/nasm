@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VBCSTNEBF16PS",
+  "id": "vbcstnebf16ps64",
+  "format": "bin",
+  "source": "vbcstnebf16ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbcstnebf16ps/",
+  "target": [
+   { "output": "vbcstnebf16ps.bin64", "match": "vbcstnebf16ps.bin64.t" }
+  ]
+ }
+]

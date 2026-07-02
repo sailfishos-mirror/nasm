@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHA1MSG1",
+  "id": "sha1msg164",
+  "format": "bin",
+  "source": "sha1msg1.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1msg1/",
+  "target": [
+   { "output": "sha1msg1.bin64", "match": "sha1msg1.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPLEPD",
+  "id": "cmplepd64",
+  "format": "bin",
+  "source": "cmplepd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmplepd/",
+  "target": [
+   { "output": "cmplepd.bin64", "match": "cmplepd.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPEQUB",
+  "id": "vpcmpequb64",
+  "format": "bin",
+  "source": "vpcmpequb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpequb/",
+  "target": [
+   { "output": "vpcmpequb.bin64", "match": "vpcmpequb.bin64.t" }
+  ]
+ }
+]

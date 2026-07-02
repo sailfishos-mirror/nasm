@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PCMPGTQ",
+  "id": "pcmpgtq64",
+  "format": "bin",
+  "source": "pcmpgtq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpgtq/",
+  "target": [
+   { "output": "pcmpgtq.bin64", "match": "pcmpgtq.bin64.t" }
+  ]
+ }
+]

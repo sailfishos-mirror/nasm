@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPNLEUQ",
+  "id": "vpcmpnleuq64",
+  "format": "bin",
+  "source": "vpcmpnleuq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnleuq/",
+  "target": [
+   { "output": "vpcmpnleuq.bin64", "match": "vpcmpnleuq.bin64.t" }
+  ]
+ }
+]

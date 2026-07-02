@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRSQRT28PD",
+  "id": "vrsqrt28pd64",
+  "format": "bin",
+  "source": "vrsqrt28pd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrsqrt28pd/",
+  "target": [
+   { "output": "vrsqrt28pd.bin64", "match": "vrsqrt28pd.bin64.t" }
+  ]
+ }
+]

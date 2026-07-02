@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VUCOMISD",
+  "id": "vucomisd64",
+  "format": "bin",
+  "source": "vucomisd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vucomisd/",
+  "target": [
+   { "output": "vucomisd.bin64", "match": "vucomisd.bin64.t" }
+  ]
+ }
+]

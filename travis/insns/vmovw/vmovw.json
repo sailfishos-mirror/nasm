@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVW",
+  "id": "vmovw64",
+  "format": "bin",
+  "source": "vmovw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovw/",
+  "target": [
+   { "output": "vmovw.bin64", "match": "vmovw.bin64.t" }
+  ]
+ }
+]

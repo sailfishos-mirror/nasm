@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGETMANTPD",
+  "id": "vgetmantpd64",
+  "format": "bin",
+  "source": "vgetmantpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetmantpd/",
+  "target": [
+   { "output": "vgetmantpd.bin64", "match": "vgetmantpd.bin64.t" }
+  ]
+ }
+]

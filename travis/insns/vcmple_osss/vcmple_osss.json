@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPLE_OSSS",
+  "id": "vcmple_osss64",
+  "format": "bin",
+  "source": "vcmple_osss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmple_osss/",
+  "target": [
+   { "output": "vcmple_osss.bin64", "match": "vcmple_osss.bin64.t" }
+  ]
+ }
+]

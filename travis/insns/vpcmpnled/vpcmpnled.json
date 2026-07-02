@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPNLED",
+  "id": "vpcmpnled64",
+  "format": "bin",
+  "source": "vpcmpnled.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnled/",
+  "target": [
+   { "output": "vpcmpnled.bin64", "match": "vpcmpnled.bin64.t" }
+  ]
+ }
+]

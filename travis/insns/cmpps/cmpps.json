@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMPPS",
+  "id": "cmpps64",
+  "format": "bin",
+  "source": "cmpps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpps/",
+  "target": [
+   { "output": "cmpps.bin64", "match": "cmpps.bin64.t" }
+  ]
+ }
+]

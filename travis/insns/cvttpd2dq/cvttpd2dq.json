@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CVTTPD2DQ",
+  "id": "cvttpd2dq64",
+  "format": "bin",
+  "source": "cvttpd2dq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cvttpd2dq/",
+  "target": [
+   { "output": "cvttpd2dq.bin64", "match": "cvttpd2dq.bin64.t" }
+  ]
+ }
+]

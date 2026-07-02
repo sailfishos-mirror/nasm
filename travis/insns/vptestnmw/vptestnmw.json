@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPTESTNMW",
+  "id": "vptestnmw64",
+  "format": "bin",
+  "source": "vptestnmw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestnmw/",
+  "target": [
+   { "output": "vptestnmw.bin64", "match": "vptestnmw.bin64.t" }
+  ]
+ }
+]

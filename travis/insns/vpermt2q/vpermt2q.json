@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPERMT2Q",
+  "id": "vpermt2q64",
+  "format": "bin",
+  "source": "vpermt2q.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermt2q/",
+  "target": [
+   { "output": "vpermt2q.bin64", "match": "vpermt2q.bin64.t" }
+  ]
+ }
+]

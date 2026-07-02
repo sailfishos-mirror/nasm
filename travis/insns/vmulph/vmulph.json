@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMULPH",
+  "id": "vmulph64",
+  "format": "bin",
+  "source": "vmulph.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmulph/",
+  "target": [
+   { "output": "vmulph.bin64", "match": "vmulph.bin64.t" }
+  ]
+ }
+]

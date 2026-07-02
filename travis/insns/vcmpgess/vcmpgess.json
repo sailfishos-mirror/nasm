@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPGESS",
+  "id": "vcmpgess64",
+  "format": "bin",
+  "source": "vcmpgess.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgess/",
+  "target": [
+   { "output": "vcmpgess.bin64", "match": "vcmpgess.bin64.t" }
+  ]
+ }
+]

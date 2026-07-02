@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for POR",
+  "id": "por64",
+  "format": "bin",
+  "source": "por.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/por/",
+  "target": [
+   { "output": "por.bin64", "match": "por.bin64.t" }
+  ]
+ }
+]

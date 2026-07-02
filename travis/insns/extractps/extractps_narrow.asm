@@ -1,0 +1,2 @@
+	extractps dword [0x687], xmm11, 0x74
+	extractps dword [0x7b3], xmm8, 0x5c

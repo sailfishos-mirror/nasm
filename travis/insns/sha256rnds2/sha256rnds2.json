@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHA256RNDS2",
+  "id": "sha256rnds264",
+  "format": "bin",
+  "source": "sha256rnds2.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha256rnds2/",
+  "target": [
+   { "output": "sha256rnds2.bin64", "match": "sha256rnds2.bin64.t" }
+  ]
+ }
+]

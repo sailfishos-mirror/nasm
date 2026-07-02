@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPERMD",
+  "id": "vpermd64",
+  "format": "bin",
+  "source": "vpermd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermd/",
+  "target": [
+   { "output": "vpermd.bin64", "match": "vpermd.bin64.t" }
+  ]
+ }
+]

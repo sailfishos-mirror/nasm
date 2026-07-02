@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVDQU8",
+  "id": "vmovdqu864",
+  "format": "bin",
+  "source": "vmovdqu8.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovdqu8/",
+  "target": [
+   { "output": "vmovdqu8.bin64", "match": "vmovdqu8.bin64.t" }
+  ]
+ }
+]

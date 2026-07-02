@@ -1,0 +1,3 @@
+default rel
+	vmxon [0xdf0]
+	vmxon [0xd41]

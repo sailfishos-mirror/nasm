@@ -1,0 +1,5 @@
+default rel
+	pshufd xmm4, xmm8, 0x31
+	pshufd xmm12, xmm5, 0x1b
+	pshufd xmm9, [0xabf], 0x64
+	pshufd xmm4, [0xfe0], 0x5e

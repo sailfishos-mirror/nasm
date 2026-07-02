@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCVTPH2HF8",
+  "id": "vcvtph2hf864",
+  "format": "bin",
+  "source": "vcvtph2hf8.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtph2hf8/",
+  "target": [
+   { "output": "vcvtph2hf8.bin64", "match": "vcvtph2hf8.bin64.t" }
+  ]
+ }
+]

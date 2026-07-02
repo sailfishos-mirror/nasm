@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHL",
+  "id": "shl64",
+  "format": "bin",
+  "source": "shl.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/shl/",
+  "target": [
+   { "output": "shl.bin64", "match": "shl.bin64.t" }
+  ]
+ }
+]

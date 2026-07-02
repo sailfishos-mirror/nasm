@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for MAXPS",
+  "id": "maxps64",
+  "format": "bin",
+  "source": "maxps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/maxps/",
+  "target": [
+   { "output": "maxps.bin64", "match": "maxps.bin64.t" }
+  ]
+ }
+]

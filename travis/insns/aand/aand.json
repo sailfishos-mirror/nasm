@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for AAND",
+  "id": "aand64",
+  "format": "bin",
+  "source": "aand.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aand/",
+  "target": [
+   { "output": "aand.bin64", "match": "aand.bin64.t" }
+  ]
+ }
+]

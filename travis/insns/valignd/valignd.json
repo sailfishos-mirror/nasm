@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VALIGND",
+  "id": "valignd64",
+  "format": "bin",
+  "source": "valignd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/valignd/",
+  "target": [
+   { "output": "valignd.bin64", "match": "valignd.bin64.t" }
+  ]
+ }
+]

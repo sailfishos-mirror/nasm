@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VANDNPS",
+  "id": "vandnps64",
+  "format": "bin",
+  "source": "vandnps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vandnps/",
+  "target": [
+   { "output": "vandnps.bin64", "match": "vandnps.bin64.t" }
+  ]
+ }
+]

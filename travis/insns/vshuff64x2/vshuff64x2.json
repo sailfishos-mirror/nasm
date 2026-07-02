@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSHUFF64X2",
+  "id": "vshuff64x264",
+  "format": "bin",
+  "source": "vshuff64x2.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vshuff64x2/",
+  "target": [
+   { "output": "vshuff64x2.bin64", "match": "vshuff64x2.bin64.t" }
+  ]
+ }
+]

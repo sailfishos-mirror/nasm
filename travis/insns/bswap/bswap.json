@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for BSWAP",
+  "id": "bswap16",
+  "format": "bin",
+  "source": "bswap_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bswap/",
+  "target": [
+   { "output": "bswap.bin16", "match": "bswap.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BSWAP",
+  "id": "bswap32",
+  "format": "bin",
+  "source": "bswap_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bswap/",
+  "target": [
+   { "output": "bswap.bin32", "match": "bswap.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for BSWAP",
+  "id": "bswap64",
+  "format": "bin",
+  "source": "bswap.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bswap/",
+  "target": [
+   { "output": "bswap.bin64", "match": "bswap.bin64.t" }
+  ]
+ }
+]

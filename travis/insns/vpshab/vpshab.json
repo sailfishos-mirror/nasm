@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSHAB",
+  "id": "vpshab64",
+  "format": "bin",
+  "source": "vpshab.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshab/",
+  "target": [
+   { "output": "vpshab.bin64", "match": "vpshab.bin64.t" }
+  ]
+ }
+]

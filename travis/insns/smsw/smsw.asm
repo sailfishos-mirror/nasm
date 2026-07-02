@@ -1,0 +1,9 @@
+default rel
+	smsw dx
+	smsw dx
+	smsw rcx
+	smsw rcx
+	smsw bp
+	smsw di
+	smsw ecx
+	smsw ecx

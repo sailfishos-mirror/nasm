@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCONFLICTD",
+  "id": "vpconflictd64",
+  "format": "bin",
+  "source": "vpconflictd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpconflictd/",
+  "target": [
+   { "output": "vpconflictd.bin64", "match": "vpconflictd.bin64.t" }
+  ]
+ }
+]

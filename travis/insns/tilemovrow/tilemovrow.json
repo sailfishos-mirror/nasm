@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for TILEMOVROW",
+  "id": "tilemovrow64",
+  "format": "bin",
+  "source": "tilemovrow.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/tilemovrow/",
+  "target": [
+   { "output": "tilemovrow.bin64", "match": "tilemovrow.bin64.t" }
+  ]
+ }
+]

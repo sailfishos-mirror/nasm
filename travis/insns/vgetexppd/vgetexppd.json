@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGETEXPPD",
+  "id": "vgetexppd64",
+  "format": "bin",
+  "source": "vgetexppd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetexppd/",
+  "target": [
+   { "output": "vgetexppd.bin64", "match": "vgetexppd.bin64.t" }
+  ]
+ }
+]

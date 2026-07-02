@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMPLED",
+  "id": "vpcmpled64",
+  "format": "bin",
+  "source": "vpcmpled.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpled/",
+  "target": [
+   { "output": "vpcmpled.bin64", "match": "vpcmpled.bin64.t" }
+  ]
+ }
+]

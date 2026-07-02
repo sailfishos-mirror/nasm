@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCOMPRESSW",
+  "id": "vpcompressw64",
+  "format": "bin",
+  "source": "vpcompressw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcompressw/",
+  "target": [
+   { "output": "vpcompressw.bin64", "match": "vpcompressw.bin64.t" }
+  ]
+ }
+]

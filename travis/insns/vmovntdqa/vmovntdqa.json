@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVNTDQA",
+  "id": "vmovntdqa64",
+  "format": "bin",
+  "source": "vmovntdqa.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovntdqa/",
+  "target": [
+   { "output": "vmovntdqa.bin64", "match": "vmovntdqa.bin64.t" }
+  ]
+ }
+]

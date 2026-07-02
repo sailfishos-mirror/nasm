@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPNLE_USPS",
+  "id": "vcmpnle_usps64",
+  "format": "bin",
+  "source": "vcmpnle_usps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnle_usps/",
+  "target": [
+   { "output": "vcmpnle_usps.bin64", "match": "vcmpnle_usps.bin64.t" }
+  ]
+ }
+]

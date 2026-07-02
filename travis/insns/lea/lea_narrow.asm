@@ -1,0 +1,6 @@
+	lea cx, [0x8fc]
+	lea si, [0x26c]
+	lea edx, [0x600]
+	lea eax, [0x96b]
+	lea cx, 0x8d4f
+	lea cx, 0xbb55

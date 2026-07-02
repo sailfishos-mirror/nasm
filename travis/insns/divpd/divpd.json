@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for DIVPD",
+  "id": "divpd64",
+  "format": "bin",
+  "source": "divpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/divpd/",
+  "target": [
+   { "output": "divpd.bin64", "match": "divpd.bin64.t" }
+  ]
+ }
+]

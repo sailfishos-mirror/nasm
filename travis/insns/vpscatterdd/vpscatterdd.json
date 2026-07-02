@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSCATTERDD",
+  "id": "vpscatterdd64",
+  "format": "bin",
+  "source": "vpscatterdd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpscatterdd/",
+  "target": [
+   { "output": "vpscatterdd.bin64", "match": "vpscatterdd.bin64.t" }
+  ]
+ }
+]

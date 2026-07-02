@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRNDSCALESS",
+  "id": "vrndscaless64",
+  "format": "bin",
+  "source": "vrndscaless.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrndscaless/",
+  "target": [
+   { "output": "vrndscaless.bin64", "match": "vrndscaless.bin64.t" }
+  ]
+ }
+]

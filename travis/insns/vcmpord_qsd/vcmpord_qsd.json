@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPORD_QSD",
+  "id": "vcmpord_qsd64",
+  "format": "bin",
+  "source": "vcmpord_qsd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpord_qsd/",
+  "target": [
+   { "output": "vcmpord_qsd.bin64", "match": "vcmpord_qsd.bin64.t" }
+  ]
+ }
+]

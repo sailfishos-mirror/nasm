@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for LDDQU",
+  "id": "lddqu64",
+  "format": "bin",
+  "source": "lddqu.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lddqu/",
+  "target": [
+   { "output": "lddqu.bin64", "match": "lddqu.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for INVEPT",
+  "id": "invept16",
+  "format": "bin",
+  "source": "invept_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invept/",
+  "target": [
+   { "output": "invept.bin16", "match": "invept.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for INVEPT",
+  "id": "invept32",
+  "format": "bin",
+  "source": "invept_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invept/",
+  "target": [
+   { "output": "invept.bin32", "match": "invept.bin32.t" }
+  ]
+ }
+]

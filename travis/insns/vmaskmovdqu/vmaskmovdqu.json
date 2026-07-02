@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMASKMOVDQU",
+  "id": "vmaskmovdqu64",
+  "format": "bin",
+  "source": "vmaskmovdqu.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaskmovdqu/",
+  "target": [
+   { "output": "vmaskmovdqu.bin64", "match": "vmaskmovdqu.bin64.t" }
+  ]
+ }
+]

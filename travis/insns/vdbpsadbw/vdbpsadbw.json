@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VDBPSADBW",
+  "id": "vdbpsadbw64",
+  "format": "bin",
+  "source": "vdbpsadbw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdbpsadbw/",
+  "target": [
+   { "output": "vdbpsadbw.bin64", "match": "vdbpsadbw.bin64.t" }
+  ]
+ }
+]

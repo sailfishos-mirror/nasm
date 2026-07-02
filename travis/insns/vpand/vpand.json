@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPAND",
+  "id": "vpand64",
+  "format": "bin",
+  "source": "vpand.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpand/",
+  "target": [
+   { "output": "vpand.bin64", "match": "vpand.bin64.t" }
+  ]
+ }
+]

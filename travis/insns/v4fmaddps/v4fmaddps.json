@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for V4FMADDPS",
+  "id": "v4fmaddps64",
+  "format": "bin",
+  "source": "v4fmaddps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/v4fmaddps/",
+  "target": [
+   { "output": "v4fmaddps.bin64", "match": "v4fmaddps.bin64.t" }
+  ]
+ }
+]

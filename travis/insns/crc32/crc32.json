@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CRC32",
+  "id": "crc3264",
+  "format": "bin",
+  "source": "crc32.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/crc32/",
+  "target": [
+   { "output": "crc32.bin64", "match": "crc32.bin64.t" }
+  ]
+ }
+]

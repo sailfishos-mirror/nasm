@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CVTSD2SS",
+  "id": "cvtsd2ss64",
+  "format": "bin",
+  "source": "cvtsd2ss.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cvtsd2ss/",
+  "target": [
+   { "output": "cvtsd2ss.bin64", "match": "cvtsd2ss.bin64.t" }
+  ]
+ }
+]

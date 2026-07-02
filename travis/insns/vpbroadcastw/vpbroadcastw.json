@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPBROADCASTW",
+  "id": "vpbroadcastw64",
+  "format": "bin",
+  "source": "vpbroadcastw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpbroadcastw/",
+  "target": [
+   { "output": "vpbroadcastw.bin64", "match": "vpbroadcastw.bin64.t" }
+  ]
+ }
+]

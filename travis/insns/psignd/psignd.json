@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PSIGND",
+  "id": "psignd64",
+  "format": "bin",
+  "source": "psignd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psignd/",
+  "target": [
+   { "output": "psignd.bin64", "match": "psignd.bin64.t" }
+  ]
+ }
+]

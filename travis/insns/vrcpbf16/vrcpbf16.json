@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRCPBF16",
+  "id": "vrcpbf1664",
+  "format": "bin",
+  "source": "vrcpbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcpbf16/",
+  "target": [
+   { "output": "vrcpbf16.bin64", "match": "vrcpbf16.bin64.t" }
+  ]
+ }
+]

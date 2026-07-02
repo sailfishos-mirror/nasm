@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPXOR",
+  "id": "vpxor64",
+  "format": "bin",
+  "source": "vpxor.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpxor/",
+  "target": [
+   { "output": "vpxor.bin64", "match": "vpxor.bin64.t" }
+  ]
+ }
+]

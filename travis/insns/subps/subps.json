@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SUBPS",
+  "id": "subps64",
+  "format": "bin",
+  "source": "subps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subps/",
+  "target": [
+   { "output": "subps.bin64", "match": "subps.bin64.t" }
+  ]
+ }
+]

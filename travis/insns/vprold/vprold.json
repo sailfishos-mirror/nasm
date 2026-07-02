@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPROLD",
+  "id": "vprold64",
+  "format": "bin",
+  "source": "vprold.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprold/",
+  "target": [
+   { "output": "vprold.bin64", "match": "vprold.bin64.t" }
+  ]
+ }
+]

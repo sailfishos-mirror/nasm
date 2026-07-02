@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for LOADIWKEY",
+  "id": "loadiwkey64",
+  "format": "bin",
+  "source": "loadiwkey.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/loadiwkey/",
+  "target": [
+   { "output": "loadiwkey.bin64", "match": "loadiwkey.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMAXSQ",
+  "id": "vpmaxsq64",
+  "format": "bin",
+  "source": "vpmaxsq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaxsq/",
+  "target": [
+   { "output": "vpmaxsq.bin64", "match": "vpmaxsq.bin64.t" }
+  ]
+ }
+]

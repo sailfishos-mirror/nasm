@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPORD_SPS",
+  "id": "vcmpord_sps64",
+  "format": "bin",
+  "source": "vcmpord_sps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpord_sps/",
+  "target": [
+   { "output": "vcmpord_sps.bin64", "match": "vcmpord_sps.bin64.t" }
+  ]
+ }
+]

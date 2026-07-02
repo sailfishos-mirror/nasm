@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSQRTBF16",
+  "id": "vsqrtbf1664",
+  "format": "bin",
+  "source": "vsqrtbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsqrtbf16/",
+  "target": [
+   { "output": "vsqrtbf16.bin64", "match": "vsqrtbf16.bin64.t" }
+  ]
+ }
+]

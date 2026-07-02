@@ -1,0 +1,3 @@
+default rel
+	xsaveopt [0x709]
+	xsaveopt [0xc64]

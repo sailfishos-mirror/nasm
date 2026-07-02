@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCMOV",
+  "id": "vpcmov64",
+  "format": "bin",
+  "source": "vpcmov.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmov/",
+  "target": [
+   { "output": "vpcmov.bin64", "match": "vpcmov.bin64.t" }
+  ]
+ }
+]

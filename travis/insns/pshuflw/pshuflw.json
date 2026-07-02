@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PSHUFLW",
+  "id": "pshuflw64",
+  "format": "bin",
+  "source": "pshuflw.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pshuflw/",
+  "target": [
+   { "output": "pshuflw.bin64", "match": "pshuflw.bin64.t" }
+  ]
+ }
+]

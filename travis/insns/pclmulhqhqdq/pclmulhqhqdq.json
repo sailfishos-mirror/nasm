@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PCLMULHQHQDQ",
+  "id": "pclmulhqhqdq64",
+  "format": "bin",
+  "source": "pclmulhqhqdq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pclmulhqhqdq/",
+  "target": [
+   { "output": "pclmulhqhqdq.bin64", "match": "pclmulhqhqdq.bin64.t" }
+  ]
+ }
+]

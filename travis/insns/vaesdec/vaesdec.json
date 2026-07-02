@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VAESDEC",
+  "id": "vaesdec64",
+  "format": "bin",
+  "source": "vaesdec.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaesdec/",
+  "target": [
+   { "output": "vaesdec.bin64", "match": "vaesdec.bin64.t" }
+  ]
+ }
+]

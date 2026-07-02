@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ANDNPD",
+  "id": "andnpd64",
+  "format": "bin",
+  "source": "andnpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/andnpd/",
+  "target": [
+   { "output": "andnpd.bin64", "match": "andnpd.bin64.t" }
+  ]
+ }
+]

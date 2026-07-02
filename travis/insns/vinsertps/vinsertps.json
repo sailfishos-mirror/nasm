@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VINSERTPS",
+  "id": "vinsertps64",
+  "format": "bin",
+  "source": "vinsertps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinsertps/",
+  "target": [
+   { "output": "vinsertps.bin64", "match": "vinsertps.bin64.t" }
+  ]
+ }
+]

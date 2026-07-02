@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHA1RNDS4",
+  "id": "sha1rnds464",
+  "format": "bin",
+  "source": "sha1rnds4.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1rnds4/",
+  "target": [
+   { "output": "sha1rnds4.bin64", "match": "sha1rnds4.bin64.t" }
+  ]
+ }
+]

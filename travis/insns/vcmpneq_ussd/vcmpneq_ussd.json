@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCMPNEQ_USSD",
+  "id": "vcmpneq_ussd64",
+  "format": "bin",
+  "source": "vcmpneq_ussd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_ussd/",
+  "target": [
+   { "output": "vcmpneq_ussd.bin64", "match": "vcmpneq_ussd.bin64.t" }
+  ]
+ }
+]

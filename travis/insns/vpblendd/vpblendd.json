@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPBLENDD",
+  "id": "vpblendd64",
+  "format": "bin",
+  "source": "vpblendd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpblendd/",
+  "target": [
+   { "output": "vpblendd.bin64", "match": "vpblendd.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,2 @@
+	rdfsbase eax
+	rdfsbase ecx

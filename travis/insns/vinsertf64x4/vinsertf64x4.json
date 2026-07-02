@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VINSERTF64X4",
+  "id": "vinsertf64x464",
+  "format": "bin",
+  "source": "vinsertf64x4.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinsertf64x4/",
+  "target": [
+   { "output": "vinsertf64x4.bin64", "match": "vinsertf64x4.bin64.t" }
+  ]
+ }
+]

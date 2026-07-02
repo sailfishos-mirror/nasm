@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for COMISD",
+  "id": "comisd64",
+  "format": "bin",
+  "source": "comisd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/comisd/",
+  "target": [
+   { "output": "comisd.bin64", "match": "comisd.bin64.t" }
+  ]
+ }
+]

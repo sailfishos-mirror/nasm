@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SETL",
+  "id": "setl64",
+  "format": "bin",
+  "source": "setl.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setl/",
+  "target": [
+   { "output": "setl.bin64", "match": "setl.bin64.t" }
+  ]
+ }
+]

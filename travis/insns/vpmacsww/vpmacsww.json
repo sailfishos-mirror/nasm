@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMACSWW",
+  "id": "vpmacsww64",
+  "format": "bin",
+  "source": "vpmacsww.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmacsww/",
+  "target": [
+   { "output": "vpmacsww.bin64", "match": "vpmacsww.bin64.t" }
+  ]
+ }
+]

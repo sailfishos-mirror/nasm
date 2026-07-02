@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VHSUBPS",
+  "id": "vhsubps64",
+  "format": "bin",
+  "source": "vhsubps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vhsubps/",
+  "target": [
+   { "output": "vhsubps.bin64", "match": "vhsubps.bin64.t" }
+  ]
+ }
+]

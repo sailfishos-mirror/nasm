@@ -1,0 +1,23 @@
+[
+ {
+  "description": "Pseudorandom test for MONITOR",
+  "id": "monitor16",
+  "format": "bin",
+  "source": "monitor_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/monitor/",
+  "target": [
+   { "output": "monitor.bin16", "match": "monitor.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for MONITOR",
+  "id": "monitor32",
+  "format": "bin",
+  "source": "monitor_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/monitor/",
+  "target": [
+   { "output": "monitor.bin32", "match": "monitor.bin32.t" }
+  ]
+ }
+]

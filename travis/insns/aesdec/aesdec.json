@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for AESDEC",
+  "id": "aesdec64",
+  "format": "bin",
+  "source": "aesdec.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesdec/",
+  "target": [
+   { "output": "aesdec.bin64", "match": "aesdec.bin64.t" }
+  ]
+ }
+]

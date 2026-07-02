@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CFCMOVNS",
+  "id": "cfcmovns64",
+  "format": "bin",
+  "source": "cfcmovns.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cfcmovns/",
+  "target": [
+   { "output": "cfcmovns.bin64", "match": "cfcmovns.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMOVLPS",
+  "id": "vmovlps64",
+  "format": "bin",
+  "source": "vmovlps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovlps/",
+  "target": [
+   { "output": "vmovlps.bin64", "match": "vmovlps.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for AESKEYGENASSIST",
+  "id": "aeskeygenassist64",
+  "format": "bin",
+  "source": "aeskeygenassist.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aeskeygenassist/",
+  "target": [
+   { "output": "aeskeygenassist.bin64", "match": "aeskeygenassist.bin64.t" }
+  ]
+ }
+]

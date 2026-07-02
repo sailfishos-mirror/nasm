@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VFMSUB231PS",
+  "id": "vfmsub231ps64",
+  "format": "bin",
+  "source": "vfmsub231ps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub231ps/",
+  "target": [
+   { "output": "vfmsub231ps.bin64", "match": "vfmsub231ps.bin64.t" }
+  ]
+ }
+]

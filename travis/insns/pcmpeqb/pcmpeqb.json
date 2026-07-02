@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PCMPEQB",
+  "id": "pcmpeqb64",
+  "format": "bin",
+  "source": "pcmpeqb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpeqb/",
+  "target": [
+   { "output": "pcmpeqb.bin64", "match": "pcmpeqb.bin64.t" }
+  ]
+ }
+]

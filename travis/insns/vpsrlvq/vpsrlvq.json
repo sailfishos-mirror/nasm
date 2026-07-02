@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSRLVQ",
+  "id": "vpsrlvq64",
+  "format": "bin",
+  "source": "vpsrlvq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsrlvq/",
+  "target": [
+   { "output": "vpsrlvq.bin64", "match": "vpsrlvq.bin64.t" }
+  ]
+ }
+]

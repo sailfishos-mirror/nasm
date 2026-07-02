@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSM4KEY4",
+  "id": "vsm4key464",
+  "format": "bin",
+  "source": "vsm4key4.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsm4key4/",
+  "target": [
+   { "output": "vsm4key4.bin64", "match": "vsm4key4.bin64.t" }
+  ]
+ }
+]

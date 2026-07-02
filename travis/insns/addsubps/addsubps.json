@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ADDSUBPS",
+  "id": "addsubps64",
+  "format": "bin",
+  "source": "addsubps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/addsubps/",
+  "target": [
+   { "output": "addsubps.bin64", "match": "addsubps.bin64.t" }
+  ]
+ }
+]

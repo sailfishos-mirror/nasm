@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PMULLD",
+  "id": "pmulld64",
+  "format": "bin",
+  "source": "pmulld.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmulld/",
+  "target": [
+   { "output": "pmulld.bin64", "match": "pmulld.bin64.t" }
+  ]
+ }
+]

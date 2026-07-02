@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for SHA256MSG2",
+  "id": "sha256msg264",
+  "format": "bin",
+  "source": "sha256msg2.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha256msg2/",
+  "target": [
+   { "output": "sha256msg2.bin64", "match": "sha256msg2.bin64.t" }
+  ]
+ }
+]

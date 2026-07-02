@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPSRAQ",
+  "id": "vpsraq64",
+  "format": "bin",
+  "source": "vpsraq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsraq/",
+  "target": [
+   { "output": "vpsraq.bin64", "match": "vpsraq.bin64.t" }
+  ]
+ }
+]

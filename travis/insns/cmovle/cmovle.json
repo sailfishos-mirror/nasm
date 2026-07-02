@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for CMOVLE",
+  "id": "cmovle64",
+  "format": "bin",
+  "source": "cmovle.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmovle/",
+  "target": [
+   { "output": "cmovle.bin64", "match": "cmovle.bin64.t" }
+  ]
+ }
+]

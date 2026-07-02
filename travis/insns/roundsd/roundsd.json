@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for ROUNDSD",
+  "id": "roundsd64",
+  "format": "bin",
+  "source": "roundsd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/roundsd/",
+  "target": [
+   { "output": "roundsd.bin64", "match": "roundsd.bin64.t" }
+  ]
+ }
+]

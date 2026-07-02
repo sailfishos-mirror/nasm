@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VGF2P8MULB",
+  "id": "vgf2p8mulb64",
+  "format": "bin",
+  "source": "vgf2p8mulb.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgf2p8mulb/",
+  "target": [
+   { "output": "vgf2p8mulb.bin64", "match": "vgf2p8mulb.bin64.t" }
+  ]
+ }
+]

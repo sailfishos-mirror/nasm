@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for PUNPCKLDQ",
+  "id": "punpckldq64",
+  "format": "bin",
+  "source": "punpckldq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/punpckldq/",
+  "target": [
+   { "output": "punpckldq.bin64", "match": "punpckldq.bin64.t" }
+  ]
+ }
+]

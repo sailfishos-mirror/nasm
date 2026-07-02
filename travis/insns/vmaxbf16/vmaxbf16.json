@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMAXBF16",
+  "id": "vmaxbf1664",
+  "format": "bin",
+  "source": "vmaxbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxbf16/",
+  "target": [
+   { "output": "vmaxbf16.bin64", "match": "vmaxbf16.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMOVSXWQ",
+  "id": "vpmovsxwq64",
+  "format": "bin",
+  "source": "vpmovsxwq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovsxwq/",
+  "target": [
+   { "output": "vpmovsxwq.bin64", "match": "vpmovsxwq.bin64.t" }
+  ]
+ }
+]

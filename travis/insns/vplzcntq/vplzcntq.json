@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPLZCNTQ",
+  "id": "vplzcntq64",
+  "format": "bin",
+  "source": "vplzcntq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vplzcntq/",
+  "target": [
+   { "output": "vplzcntq.bin64", "match": "vplzcntq.bin64.t" }
+  ]
+ }
+]

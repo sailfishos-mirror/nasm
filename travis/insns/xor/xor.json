@@ -1,0 +1,34 @@
+[
+ {
+  "description": "Pseudorandom test for XOR",
+  "id": "xor16",
+  "format": "bin",
+  "source": "xor_narrow.asm",
+  "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xor/",
+  "target": [
+   { "output": "xor.bin16", "match": "xor.bin16.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for XOR",
+  "id": "xor32",
+  "format": "bin",
+  "source": "xor_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xor/",
+  "target": [
+   { "output": "xor.bin32", "match": "xor.bin32.t" }
+  ]
+ }
+,
+ {
+  "description": "Pseudorandom test for XOR",
+  "id": "xor64",
+  "format": "bin",
+  "source": "xor.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xor/",
+  "target": [
+   { "output": "xor.bin64", "match": "xor.bin64.t" }
+  ]
+ }
+]

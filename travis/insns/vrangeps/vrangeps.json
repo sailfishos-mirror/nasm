@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VRANGEPS",
+  "id": "vrangeps64",
+  "format": "bin",
+  "source": "vrangeps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrangeps/",
+  "target": [
+   { "output": "vrangeps.bin64", "match": "vrangeps.bin64.t" }
+  ]
+ }
+]

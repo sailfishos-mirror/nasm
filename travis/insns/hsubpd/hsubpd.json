@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for HSUBPD",
+  "id": "hsubpd64",
+  "format": "bin",
+  "source": "hsubpd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/hsubpd/",
+  "target": [
+   { "output": "hsubpd.bin64", "match": "hsubpd.bin64.t" }
+  ]
+ }
+]

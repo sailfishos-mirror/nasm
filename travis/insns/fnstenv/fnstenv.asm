@@ -1,0 +1,3 @@
+default rel
+	fnstenv [0x65e]
+	fnstenv [0xd91]

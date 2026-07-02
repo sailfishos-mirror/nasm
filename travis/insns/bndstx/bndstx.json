@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for BNDSTX",
+  "id": "bndstx32",
+  "format": "bin",
+  "source": "bndstx_narrow.asm",
+  "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndstx/",
+  "target": [
+   { "output": "bndstx.bin32", "match": "bndstx.bin32.t" }
+  ]
+ }
+]

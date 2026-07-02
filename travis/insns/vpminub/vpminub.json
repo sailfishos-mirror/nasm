@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPMINUB",
+  "id": "vpminub64",
+  "format": "bin",
+  "source": "vpminub.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpminub/",
+  "target": [
+   { "output": "vpminub.bin64", "match": "vpminub.bin64.t" }
+  ]
+ }
+]

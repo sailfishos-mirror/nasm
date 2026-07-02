@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VMULBF16",
+  "id": "vmulbf1664",
+  "format": "bin",
+  "source": "vmulbf16.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmulbf16/",
+  "target": [
+   { "output": "vmulbf16.bin64", "match": "vmulbf16.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPCOMQ",
+  "id": "vpcomq64",
+  "format": "bin",
+  "source": "vpcomq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomq/",
+  "target": [
+   { "output": "vpcomq.bin64", "match": "vpcomq.bin64.t" }
+  ]
+ }
+]

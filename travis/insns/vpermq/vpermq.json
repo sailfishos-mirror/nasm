@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPERMQ",
+  "id": "vpermq64",
+  "format": "bin",
+  "source": "vpermq.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermq/",
+  "target": [
+   { "output": "vpermq.bin64", "match": "vpermq.bin64.t" }
+  ]
+ }
+]

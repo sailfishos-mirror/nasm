@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VSHUFPS",
+  "id": "vshufps64",
+  "format": "bin",
+  "source": "vshufps.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vshufps/",
+  "target": [
+   { "output": "vshufps.bin64", "match": "vshufps.bin64.t" }
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VCOMPRESSPD",
+  "id": "vcompresspd64",
+  "format": "bin",
+  "source": "vcompresspd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcompresspd/",
+  "target": [
+   { "output": "vcompresspd.bin64", "match": "vcompresspd.bin64.t" }
+  ]
+ }
+]

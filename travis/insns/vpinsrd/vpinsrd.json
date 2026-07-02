@@ -1,0 +1,12 @@
+[
+ {
+  "description": "Pseudorandom test for VPINSRD",
+  "id": "vpinsrd64",
+  "format": "bin",
+  "source": "vpinsrd.asm",
+  "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpinsrd/",
+  "target": [
+   { "output": "vpinsrd.bin64", "match": "vpinsrd.bin64.t" }
+  ]
+ }
+]
