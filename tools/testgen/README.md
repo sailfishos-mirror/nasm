@@ -176,15 +176,15 @@ philosophy as the rest of the tool.
 A handful of mnemonics (mostly `NOAPX`/`NOLONG`-flagged ones, e.g.
 `ARPL`) genuinely can't take extended-register operands at all. To
 avoid letting one bad candidate line cost the whole mnemonic its
-pre-existing 64-bit coverage, a staged-fallback probe tries, in order:
-hireg+apxreg together, hireg alone, apxreg alone, then neither (the
-pre-existing, already-validated behavior, which always succeeds). The
-probe also checks `--bits 16/32` whenever a mnemonic's *only* templates
-require 64-bit-sized registers regardless of number (e.g.
-`URDMSR`/`UWRMSR`, whose sole operands are `reg64`) — in that case the
-"full" body is reused verbatim for every bit width (see below), so a
-hireg/apxreg-only-in-64-bit-mode line would otherwise silently break
-their 16/32-bit coverage too.
+pre-existing 64-bit coverage, a staged probe (shared with the EVEX
+decorator candidates below — see "Staged, cumulative probing") tries
+adding the hireg and apxreg buckets, keeping each only if it still
+assembles. The probe also checks `--bits 16/32` whenever a mnemonic's
+*only* templates require 64-bit-sized registers regardless of number
+(e.g. `URDMSR`/`UWRMSR`, whose sole operands are `reg64`) — in that
+case the "full" body is reused verbatim for every bit width (see
+below), so a hireg/apxreg-only-in-64-bit-mode line would otherwise
+silently break their 16/32-bit coverage too.
 
 This work also fixed a related latent bug: `xmmreg`/`ymmreg`/`zmmreg`
 previously drew uniformly from registers 0-15 for *all* lines, not just
@@ -194,6 +194,78 @@ non-deterministically lose its 16/32-bit golden whenever the PRNG
 happened to land on register 8 or above for that mnemonic's seed. The
 low/hireg/apxreg tier split fixes this for good, since normal lines now
 only ever draw from the 0-7 "low" pool.
+
+## EVEX decorator (`{k}`/`{z}`/`{1toN}`/`{sae}`/`{er}`) coverage
+
+`insns.xda` operand tokens carry `|`-suffixed markers (`mask`, `z`,
+`b16`/`b32`/`b64`, `sae`, `er`) recording which of NASM's brace-decorator
+syntaxes a given EVEX-encoded operand supports (see the stripping regex
+in `x86/insns.pl` and `asm/parser.c`'s `parse_decorators()` for the
+authoritative semantics). Each is exercised as an independent candidate
+line, once per *distinct* template across a mnemonic's **entire**
+template set — not just the capped per-mnemonic sample, since EVEX/
+AVX512 forms are frequently appended well after a mnemonic's plain SSE/
+AVX forms in `insns.xda` (e.g. `VMOVAPD`'s mask-on-memory-destination
+forms come after its four plain AVX forms), so relying on the sample
+alone would silently skip decorator coverage for many mnemonics:
+
+- **`mask`**: `{k1}`-`{k7}` appended directly to the marked register (or,
+  for masked-store instructions, memory) operand's text, e.g.
+  `zmm30{k7}`.
+- **`z`** (zeroing): only ever co-occurs with `mask` on the same operand
+  in `insns.xda` (verified empirically — no counter-examples), so it's
+  folded into a second, `maskz`-family candidate that appends `{z}`
+  immediately after the mask suffix: `zmm30{k7}{z}`.
+- **`b16`/`b32`/`b64`** (broadcast): `{1toN}` appended to a **memory**
+  operand (broadcast is only legal from memory, never a register), where
+  `N` = vector-width-in-bits (128/256/512, from the token's `xmm`/`ymm`/
+  `zmm`/explicit-size base) divided by the marker's element width (16,
+  32, or 64), e.g. `QWORD [rcx]{1to8}` for a 512-bit operand with `b64`.
+- **`sae`/`er`** (suppress-all-exceptions / embedded rounding): written
+  as a wholly separate, comma-preceded **trailing pseudo-operand** after
+  all real operands, regardless of which real operand carried the
+  marker in `insns.xda` (always the last operand in every observed
+  template) — `{sae}` for `sae`, one of `{rn-sae}`/`{rd-sae}`/`{ru-sae}`/
+  `{rz-sae}` for `er` (embedded rounding always specifies a mode). Only
+  legal when the marked operand resolves to a **register**, and — this
+  is a real gotcha — the register must match the *token's own declared
+  size*: e.g. `VCVTSI2SD`'s `rm64|er` template requires a 64-bit register
+  (`rax`) for `{rn-sae}` to be accepted; using a 32-bit register (`eax`,
+  which is what the sibling `rm32` template — with no `|er` — would use)
+  fails with "unsupported mode decorator for instruction" even in
+  64-bit mode.
+
+Register-span markers (`rs2`/`rs4`, used by multi-register FMA
+instructions like `V4FMADDPS`) are a related but distinct concept (register
+*count*/alignment, not `{...}`-suffix decorator syntax) and are
+deliberately out of scope for this coverage item.
+
+### Staged, cumulative probing
+
+Six independent "extra candidate line" buckets now exist: `hireg`,
+`apxreg` (see above), and `mask`, `maskz`, `broadcast`, `saeer` (this
+section). Trying every subset combination would be combinatorially
+expensive as buckets are added, so the generator instead probes each
+bucket **independently and cumulatively**: starting from the
+already-validated base line set, each non-empty bucket is tentatively
+merged in and kept only if the combined result still assembles at the
+relevant bit width(s), otherwise it's discarded and the next bucket is
+tried against the last-known-good set. This is linear in the number of
+buckets rather than exponential, and — because each merge re-probes the
+*whole* accumulated candidate set, not just the new bucket in isolation
+— still correctly rejects a bucket that only fails in combination with
+an earlier-accepted one.
+
+Decorator candidate lines are marked `needs64 => 0` (mask/maskz/
+broadcast syntax genuinely assembles fine at 16/32-bit given low-tier
+0-7 registers, verified empirically), but the existing "extra-line"
+architecture only ever merges buckets into the 64-bit "full" body, never
+into the base `narrow_lines` computation — so in practice decorator
+lines only get 16/32-bit exercise in the (uncommon) case where a
+mnemonic's `narrow_lines` set is already empty for other reasons (all of
+its plain templates need 64-bit anyway). This is an accepted
+simplification, not a bug: most AVX512 mnemonics have non-decorated
+low-tier lines that keep `narrow_lines` non-empty regardless.
 
 ## Bit-width (16/32/64) handling
 
@@ -268,6 +340,13 @@ the last full run:
 - Memory/vsib operands only exercise base-register-free addressing
   forms (see above) — true base+index+scale+disp combinations aren't
   covered by generated tests.
+- Decorator (`{k}`/`{z}`/`{1toN}`/`{sae}`/`{er}`) candidate lines are
+  only exercised at `--bits 16/32` in the uncommon case where a
+  mnemonic's non-decorated lines are already 64-bit-only (see "Staged,
+  cumulative probing" above) — otherwise they're only ever probed at
+  `--bits 64`, even though the syntax itself works at any width.
+- Register-span (`rs2`/`rs4`) operands used by multi-register FMA
+  instructions (e.g. `V4FMADDPS`) aren't targeted by dedicated coverage.
 - ~70+ distinct operand-type tokens have generator support (see the
   `%fixed`/`%gen` tables at the top of the script); any new/renamed
   token introduced by a future `insns.dat` change that isn't in those
@@ -295,3 +374,10 @@ grew substantially from 4427 with this update, both from the new
 hireg/apxreg targets and from previously-silently-dropped 16/32-bit
 coverage being restored by the `xmmreg`/`ymmreg`/`zmmreg` low-tier bug
 fix described above.)
+
+Adding EVEX decorator coverage did not change these counts — decorator
+candidate lines are additive to already-passing templates (971
+mnemonics gained at least one decorator line), verified by comparing
+per-mnemonic `.json` entry counts between a scratch regeneration and
+the committed `travis/insns/` tree (identical, 6955/6955) before
+committing. `make -j32 travis` continues to pass in ~26s.
