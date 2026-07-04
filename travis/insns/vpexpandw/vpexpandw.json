@@ -31,4 +31,28 @@
    { "output": "vpexpandw.bin64", "match": "vpexpandw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXPANDW",
+  "id": "vpexpandw16err",
+  "format": "bin",
+  "source": "vpexpandw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandw/",
+  "target": [
+   { "stderr": "vpexpandw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXPANDW",
+  "id": "vpexpandw32err",
+  "format": "bin",
+  "source": "vpexpandw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandw/",
+  "target": [
+   { "stderr": "vpexpandw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

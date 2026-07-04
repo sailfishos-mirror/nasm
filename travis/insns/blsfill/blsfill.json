@@ -34,4 +34,28 @@
    { "stderr": "blsfill.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BLSFILL",
+  "id": "blsfill16err",
+  "format": "bin",
+  "source": "blsfill_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsfill/",
+  "target": [
+   { "stderr": "blsfill.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BLSFILL",
+  "id": "blsfill32err",
+  "format": "bin",
+  "source": "blsfill_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsfill/",
+  "target": [
+   { "stderr": "blsfill.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

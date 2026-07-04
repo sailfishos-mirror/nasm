@@ -31,4 +31,28 @@
    { "output": "vfnmadd132ph.bin64", "match": "vfnmadd132ph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFNMADD132PH",
+  "id": "vfnmadd132ph16err",
+  "format": "bin",
+  "source": "vfnmadd132ph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmadd132ph/",
+  "target": [
+   { "stderr": "vfnmadd132ph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFNMADD132PH",
+  "id": "vfnmadd132ph32err",
+  "format": "bin",
+  "source": "vfnmadd132ph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmadd132ph/",
+  "target": [
+   { "stderr": "vfnmadd132ph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

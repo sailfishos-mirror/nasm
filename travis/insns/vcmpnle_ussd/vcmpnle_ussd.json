@@ -31,4 +31,28 @@
    { "output": "vcmpnle_ussd.bin64", "match": "vcmpnle_ussd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNLE_USSD",
+  "id": "vcmpnle_ussd16err",
+  "format": "bin",
+  "source": "vcmpnle_ussd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnle_ussd/",
+  "target": [
+   { "stderr": "vcmpnle_ussd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNLE_USSD",
+  "id": "vcmpnle_ussd32err",
+  "format": "bin",
+  "source": "vcmpnle_ussd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnle_ussd/",
+  "target": [
+   { "stderr": "vcmpnle_ussd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

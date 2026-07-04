@@ -7,3 +7,12 @@
 	valignd zmm7, zmm1, zmm4, 0xdf
 	valignd zmm7, zmm4, 0xdf
 	valignd zmm4, zmm2, zmm5, 0x80
+
+%ifdef ERROR
+	valignd xmm9, xmm8, xmm14, 0xd0
+	valignd ymm13, ymm13, ymm9, 0x2c
+	valignd zmm13, zmm11, zmm13, 0x5d
+	valignd xmm26, xmm26, xmm28, 0xdb
+	valignd ymm25, ymm23, ymm18, 0x91
+	valignd zmm25, zmm25, zmm29, 0xd5
+%endif

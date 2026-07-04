@@ -31,4 +31,28 @@
    { "output": "rorx.bin64", "match": "rorx.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for RORX",
+  "id": "rorx16err",
+  "format": "bin",
+  "source": "rorx_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rorx/",
+  "target": [
+   { "stderr": "rorx.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for RORX",
+  "id": "rorx32err",
+  "format": "bin",
+  "source": "rorx_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rorx/",
+  "target": [
+   { "stderr": "rorx.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

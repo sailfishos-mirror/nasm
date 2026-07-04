@@ -31,4 +31,28 @@
    { "output": "lzcnt.bin64", "match": "lzcnt.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for LZCNT",
+  "id": "lzcnt16err",
+  "format": "bin",
+  "source": "lzcnt_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lzcnt/",
+  "target": [
+   { "stderr": "lzcnt.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for LZCNT",
+  "id": "lzcnt32err",
+  "format": "bin",
+  "source": "lzcnt_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lzcnt/",
+  "target": [
+   { "stderr": "lzcnt.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

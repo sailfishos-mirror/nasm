@@ -31,4 +31,28 @@
    { "output": "vpmultishiftqb.bin64", "match": "vpmultishiftqb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMULTISHIFTQB",
+  "id": "vpmultishiftqb16err",
+  "format": "bin",
+  "source": "vpmultishiftqb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmultishiftqb/",
+  "target": [
+   { "stderr": "vpmultishiftqb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMULTISHIFTQB",
+  "id": "vpmultishiftqb32err",
+  "format": "bin",
+  "source": "vpmultishiftqb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmultishiftqb/",
+  "target": [
+   { "stderr": "vpmultishiftqb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

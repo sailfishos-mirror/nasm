@@ -31,4 +31,28 @@
    { "output": "paddw.bin64", "match": "paddw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PADDW",
+  "id": "paddw16err",
+  "format": "bin",
+  "source": "paddw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddw/",
+  "target": [
+   { "stderr": "paddw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PADDW",
+  "id": "paddw32err",
+  "format": "bin",
+  "source": "paddw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddw/",
+  "target": [
+   { "stderr": "paddw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

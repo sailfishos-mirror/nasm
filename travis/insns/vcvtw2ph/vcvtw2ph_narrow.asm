@@ -4,3 +4,12 @@
 	vcvtw2ph ymm7, ymm7
 	vcvtw2ph zmm1, zmm3
 	vcvtw2ph zmm2, zword [0xe49]
+
+%ifdef ERROR
+	vcvtw2ph xmm13, xmm9
+	vcvtw2ph ymm11, ymm14
+	vcvtw2ph zmm13, zmm11
+	vcvtw2ph xmm17, xmm17
+	vcvtw2ph ymm17, ymm16
+	vcvtw2ph zmm20, zmm28
+%endif

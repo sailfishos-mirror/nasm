@@ -31,4 +31,28 @@
    { "output": "sqrtps.bin64", "match": "sqrtps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SQRTPS",
+  "id": "sqrtps16err",
+  "format": "bin",
+  "source": "sqrtps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sqrtps/",
+  "target": [
+   { "stderr": "sqrtps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SQRTPS",
+  "id": "sqrtps32err",
+  "format": "bin",
+  "source": "sqrtps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sqrtps/",
+  "target": [
+   { "stderr": "sqrtps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

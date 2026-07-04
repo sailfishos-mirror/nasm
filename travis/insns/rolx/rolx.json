@@ -31,4 +31,28 @@
    { "output": "rolx.bin64", "match": "rolx.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ROLX",
+  "id": "rolx16err",
+  "format": "bin",
+  "source": "rolx_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rolx/",
+  "target": [
+   { "stderr": "rolx.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ROLX",
+  "id": "rolx32err",
+  "format": "bin",
+  "source": "rolx_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rolx/",
+  "target": [
+   { "stderr": "rolx.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "paddd.bin64", "match": "paddd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PADDD",
+  "id": "paddd16err",
+  "format": "bin",
+  "source": "paddd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddd/",
+  "target": [
+   { "stderr": "paddd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PADDD",
+  "id": "paddd32err",
+  "format": "bin",
+  "source": "paddd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddd/",
+  "target": [
+   { "stderr": "paddd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

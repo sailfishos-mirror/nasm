@@ -31,4 +31,28 @@
    { "output": "cmpnltsd.bin64", "match": "cmpnltsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPNLTSD",
+  "id": "cmpnltsd16err",
+  "format": "bin",
+  "source": "cmpnltsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnltsd/",
+  "target": [
+   { "stderr": "cmpnltsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPNLTSD",
+  "id": "cmpnltsd32err",
+  "format": "bin",
+  "source": "cmpnltsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnltsd/",
+  "target": [
+   { "stderr": "cmpnltsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

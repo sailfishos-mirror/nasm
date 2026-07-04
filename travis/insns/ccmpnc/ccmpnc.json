@@ -10,4 +10,28 @@
    { "stderr": "ccmpnc.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPNC",
+  "id": "ccmpnc16err",
+  "format": "bin",
+  "source": "ccmpnc_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnc/",
+  "target": [
+   { "stderr": "ccmpnc.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPNC",
+  "id": "ccmpnc32err",
+  "format": "bin",
+  "source": "ccmpnc_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnc/",
+  "target": [
+   { "stderr": "ccmpnc.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

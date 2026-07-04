@@ -4,3 +4,12 @@
 	vpblendmd ymm5, ymm2, ymm6
 	vpblendmd zmm7, zmm6, zmm6
 	vpblendmd zmm5, zmm7, zword [0x4ed]
+
+%ifdef ERROR
+	vpblendmd xmm10, xmm11, xmm13
+	vpblendmd ymm15, ymm14, ymm10
+	vpblendmd zmm15, zmm12, zmm15
+	vpblendmd xmm20, xmm22, xmm20
+	vpblendmd ymm18, ymm16, ymm29
+	vpblendmd zmm25, zmm30, zmm21
+%endif

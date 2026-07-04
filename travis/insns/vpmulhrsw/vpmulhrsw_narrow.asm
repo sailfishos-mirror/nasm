@@ -10,3 +10,14 @@
 	vpmulhrsw ymm7, ymm1, ymm4
 	vpmulhrsw ymm7, ymm4
 	vpmulhrsw ymm7, ymm4, ymm0
+
+%ifdef ERROR
+	vpmulhrsw xmm8, xmm11, xmm15
+	vpmulhrsw ymm10, ymm10, ymm14
+	vpmulhrsw xmm13, xmm11, xmm9
+	vpmulhrsw ymm13, ymm14, ymm15
+	vpmulhrsw xmm31, xmm30, xmm28
+	vpmulhrsw ymm25, ymm20, ymm28
+	vpmulhrsw xmm21, xmm28, xmm23
+	vpmulhrsw ymm24, ymm17, ymm18
+%endif

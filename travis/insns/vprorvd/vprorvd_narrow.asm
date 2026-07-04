@@ -7,3 +7,12 @@
 	vprorvd zmm2, zmm3, zmm1
 	vprorvd zmm2, zmm1
 	vprorvd zmm1, zmm2, zmm3
+
+%ifdef ERROR
+	vprorvd xmm10, xmm11, xmm12
+	vprorvd ymm13, ymm8, ymm13
+	vprorvd zmm15, zmm15, zmm15
+	vprorvd xmm16, xmm27, xmm22
+	vprorvd ymm31, ymm29, ymm19
+	vprorvd zmm26, zmm16, zmm20
+%endif

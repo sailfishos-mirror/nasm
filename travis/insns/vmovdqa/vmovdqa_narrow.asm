@@ -6,3 +6,10 @@
 	vmovdqa ymm3, ymm1
 	vmovdqa ymm1, ymm1
 	vmovdqa yword [0x410], ymm2
+
+%ifdef ERROR
+	vmovdqa xmm8, xmm12
+	vmovdqa xmm8, xmm14
+	vmovdqa ymm10, ymm12
+	vmovdqa ymm14, ymm9
+%endif

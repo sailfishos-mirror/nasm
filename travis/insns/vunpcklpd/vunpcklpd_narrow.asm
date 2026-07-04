@@ -10,3 +10,14 @@
 	vunpcklpd ymm4, ymm3, ymm0
 	vunpcklpd ymm4, ymm0
 	vunpcklpd ymm7, ymm7, ymm5
+
+%ifdef ERROR
+	vunpcklpd xmm9, xmm8, xmm15
+	vunpcklpd ymm15, ymm8, ymm14
+	vunpcklpd xmm13, xmm11, xmm13
+	vunpcklpd ymm9, ymm14, ymm11
+	vunpcklpd xmm19, xmm17, xmm23
+	vunpcklpd ymm17, ymm16, ymm28
+	vunpcklpd xmm20, xmm23, xmm18
+	vunpcklpd ymm20, ymm20, ymm30
+%endif

@@ -10,3 +10,14 @@
 	vpsraw ymm5, ymm4, 0xa4
 	vpsraw ymm5, 0xa4
 	vpsraw ymm7, ymm0, 0xb9
+
+%ifdef ERROR
+	vpsraw xmm9, xmm8, xmm14
+	vpsraw xmm14, xmm13, 0xfa
+	vpsraw ymm13, ymm13, xmm15
+	vpsraw ymm12, ymm9, 0x74
+	vpsraw xmm17, xmm19, xmm17
+	vpsraw xmm16, xmm30, 0xae
+	vpsraw ymm21, ymm26, xmm29
+	vpsraw ymm16, ymm26, 0x42
+%endif

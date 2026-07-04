@@ -31,4 +31,28 @@
    { "output": "vfmaddcph.bin64", "match": "vfmaddcph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADDCPH",
+  "id": "vfmaddcph16err",
+  "format": "bin",
+  "source": "vfmaddcph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmaddcph/",
+  "target": [
+   { "stderr": "vfmaddcph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADDCPH",
+  "id": "vfmaddcph32err",
+  "format": "bin",
+  "source": "vfmaddcph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmaddcph/",
+  "target": [
+   { "stderr": "vfmaddcph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

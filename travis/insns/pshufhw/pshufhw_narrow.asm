@@ -2,3 +2,8 @@
 	pshufhw xmm4, xmm5, 0x58
 	pshufhw xmm3, [0xcb8], 0x7c
 	pshufhw xmm0, [0x62a], 0x61
+
+%ifdef ERROR
+	pshufhw xmm9, xmm8, 0x76
+	pshufhw xmm8, [0xf14], 0x55
+%endif

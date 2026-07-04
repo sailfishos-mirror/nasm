@@ -31,4 +31,28 @@
    { "output": "vmulps.bin64", "match": "vmulps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMULPS",
+  "id": "vmulps16err",
+  "format": "bin",
+  "source": "vmulps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmulps/",
+  "target": [
+   { "stderr": "vmulps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMULPS",
+  "id": "vmulps32err",
+  "format": "bin",
+  "source": "vmulps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmulps/",
+  "target": [
+   { "stderr": "vmulps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

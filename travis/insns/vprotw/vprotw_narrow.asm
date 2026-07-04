@@ -7,3 +7,9 @@
 	vprotw xmm7, xmm4, 0x50
 	vprotw xmm7, 0x50
 	vprotw xmm6, xmm1, 0x21
+
+%ifdef ERROR
+	vprotw xmm12, xmm10, xmm14
+	vprotw xmm13, xmm13, xmm13
+	vprotw xmm12, xmm14, 0xea
+%endif

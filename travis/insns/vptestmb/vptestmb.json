@@ -31,4 +31,28 @@
    { "output": "vptestmb.bin64", "match": "vptestmb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTESTMB",
+  "id": "vptestmb16err",
+  "format": "bin",
+  "source": "vptestmb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestmb/",
+  "target": [
+   { "stderr": "vptestmb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTESTMB",
+  "id": "vptestmb32err",
+  "format": "bin",
+  "source": "vptestmb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestmb/",
+  "target": [
+   { "stderr": "vptestmb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

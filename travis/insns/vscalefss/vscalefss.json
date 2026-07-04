@@ -31,4 +31,28 @@
    { "output": "vscalefss.bin64", "match": "vscalefss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VSCALEFSS",
+  "id": "vscalefss16err",
+  "format": "bin",
+  "source": "vscalefss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vscalefss/",
+  "target": [
+   { "stderr": "vscalefss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VSCALEFSS",
+  "id": "vscalefss32err",
+  "format": "bin",
+  "source": "vscalefss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vscalefss/",
+  "target": [
+   { "stderr": "vscalefss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

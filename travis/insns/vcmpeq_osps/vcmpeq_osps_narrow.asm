@@ -8,3 +8,10 @@
 	vcmpeq_osps k5, xmm7, xmm2
 	vcmpeq_osps k7, ymm1, ymm4
 	vcmpeq_osps k4, ymm1, ymm2
+
+%ifdef ERROR
+	vcmpeq_osps xmm12, xmm13, xmm13
+	vcmpeq_osps ymm9, ymm8, ymm12
+	vcmpeq_osps k1, xmm11, xmm13
+	vcmpeq_osps k5, ymm14, ymm14
+%endif

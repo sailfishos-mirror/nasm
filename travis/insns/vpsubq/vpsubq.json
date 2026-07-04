@@ -31,4 +31,28 @@
    { "output": "vpsubq.bin64", "match": "vpsubq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBQ",
+  "id": "vpsubq16err",
+  "format": "bin",
+  "source": "vpsubq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubq/",
+  "target": [
+   { "stderr": "vpsubq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBQ",
+  "id": "vpsubq32err",
+  "format": "bin",
+  "source": "vpsubq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubq/",
+  "target": [
+   { "stderr": "vpsubq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -6,3 +6,8 @@
 	psrlq xmm3, oword [0x8e7]
 	psrlq xmm7, 0x71
 	psrlq xmm6, 0x37
+
+%ifdef ERROR
+	psrlq xmm11, xmm15
+	psrlq xmm13, 0x6a
+%endif

@@ -31,4 +31,28 @@
    { "output": "vcmpunordsd.bin64", "match": "vcmpunordsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPUNORDSD",
+  "id": "vcmpunordsd16err",
+  "format": "bin",
+  "source": "vcmpunordsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunordsd/",
+  "target": [
+   { "stderr": "vcmpunordsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPUNORDSD",
+  "id": "vcmpunordsd32err",
+  "format": "bin",
+  "source": "vcmpunordsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunordsd/",
+  "target": [
+   { "stderr": "vcmpunordsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

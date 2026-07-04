@@ -31,4 +31,28 @@
    { "output": "encodekey256.bin64", "match": "encodekey256.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ENCODEKEY256",
+  "id": "encodekey25616err",
+  "format": "bin",
+  "source": "encodekey256_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/encodekey256/",
+  "target": [
+   { "stderr": "encodekey256.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ENCODEKEY256",
+  "id": "encodekey25632err",
+  "format": "bin",
+  "source": "encodekey256_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/encodekey256/",
+  "target": [
+   { "stderr": "encodekey256.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

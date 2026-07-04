@@ -31,4 +31,28 @@
    { "output": "vmaxss.bin64", "match": "vmaxss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMAXSS",
+  "id": "vmaxss16err",
+  "format": "bin",
+  "source": "vmaxss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxss/",
+  "target": [
+   { "stderr": "vmaxss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMAXSS",
+  "id": "vmaxss32err",
+  "format": "bin",
+  "source": "vmaxss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxss/",
+  "target": [
+   { "stderr": "vmaxss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

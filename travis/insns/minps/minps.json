@@ -31,4 +31,28 @@
    { "output": "minps.bin64", "match": "minps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MINPS",
+  "id": "minps16err",
+  "format": "bin",
+  "source": "minps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/minps/",
+  "target": [
+   { "stderr": "minps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MINPS",
+  "id": "minps32err",
+  "format": "bin",
+  "source": "minps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/minps/",
+  "target": [
+   { "stderr": "minps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

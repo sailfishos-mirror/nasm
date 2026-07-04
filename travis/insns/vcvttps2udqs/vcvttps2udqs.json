@@ -31,4 +31,28 @@
    { "output": "vcvttps2udqs.bin64", "match": "vcvttps2udqs.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTTPS2UDQS",
+  "id": "vcvttps2udqs16err",
+  "format": "bin",
+  "source": "vcvttps2udqs_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvttps2udqs/",
+  "target": [
+   { "stderr": "vcvttps2udqs.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTTPS2UDQS",
+  "id": "vcvttps2udqs32err",
+  "format": "bin",
+  "source": "vcvttps2udqs_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvttps2udqs/",
+  "target": [
+   { "stderr": "vcvttps2udqs.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "shufpd.bin64", "match": "shufpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SHUFPD",
+  "id": "shufpd16err",
+  "format": "bin",
+  "source": "shufpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/shufpd/",
+  "target": [
+   { "stderr": "shufpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SHUFPD",
+  "id": "shufpd32err",
+  "format": "bin",
+  "source": "shufpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/shufpd/",
+  "target": [
+   { "stderr": "shufpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

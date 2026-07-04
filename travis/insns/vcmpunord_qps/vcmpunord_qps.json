@@ -31,4 +31,28 @@
    { "output": "vcmpunord_qps.bin64", "match": "vcmpunord_qps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPUNORD_QPS",
+  "id": "vcmpunord_qps16err",
+  "format": "bin",
+  "source": "vcmpunord_qps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunord_qps/",
+  "target": [
+   { "stderr": "vcmpunord_qps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPUNORD_QPS",
+  "id": "vcmpunord_qps32err",
+  "format": "bin",
+  "source": "vcmpunord_qps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunord_qps/",
+  "target": [
+   { "stderr": "vcmpunord_qps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

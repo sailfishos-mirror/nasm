@@ -31,4 +31,28 @@
    { "output": "vsubss.bin64", "match": "vsubss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VSUBSS",
+  "id": "vsubss16err",
+  "format": "bin",
+  "source": "vsubss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsubss/",
+  "target": [
+   { "stderr": "vsubss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VSUBSS",
+  "id": "vsubss32err",
+  "format": "bin",
+  "source": "vsubss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsubss/",
+  "target": [
+   { "stderr": "vsubss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

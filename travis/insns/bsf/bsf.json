@@ -31,4 +31,28 @@
    { "output": "bsf.bin64", "match": "bsf.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BSF",
+  "id": "bsf16err",
+  "format": "bin",
+  "source": "bsf_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bsf/",
+  "target": [
+   { "stderr": "bsf.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BSF",
+  "id": "bsf32err",
+  "format": "bin",
+  "source": "bsf_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bsf/",
+  "target": [
+   { "stderr": "bsf.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

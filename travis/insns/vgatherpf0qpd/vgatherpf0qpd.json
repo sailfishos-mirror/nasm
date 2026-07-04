@@ -20,4 +20,28 @@
    { "output": "vgatherpf0qpd.bin64", "match": "vgatherpf0qpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VGATHERPF0QPD",
+  "id": "vgatherpf0qpd16err",
+  "format": "bin",
+  "source": "vgatherpf0qpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf0qpd/",
+  "target": [
+   { "stderr": "vgatherpf0qpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VGATHERPF0QPD",
+  "id": "vgatherpf0qpd32err",
+  "format": "bin",
+  "source": "vgatherpf0qpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf0qpd/",
+  "target": [
+   { "stderr": "vgatherpf0qpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

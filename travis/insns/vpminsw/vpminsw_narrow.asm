@@ -10,3 +10,14 @@
 	vpminsw ymm3, ymm4, yword [0x571]
 	vpminsw ymm3, yword [0x571]
 	vpminsw ymm1, ymm5, yword [0xf04]
+
+%ifdef ERROR
+	vpminsw xmm13, xmm11, xmm12
+	vpminsw ymm15, ymm15, ymm15
+	vpminsw xmm11, xmm8, xmm13
+	vpminsw ymm15, ymm11, ymm14
+	vpminsw xmm27, xmm20, xmm24
+	vpminsw ymm30, ymm28, ymm28
+	vpminsw xmm27, xmm21, xmm23
+	vpminsw ymm21, ymm17, ymm19
+%endif

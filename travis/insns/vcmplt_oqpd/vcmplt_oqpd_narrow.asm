@@ -8,3 +8,10 @@
 	vcmplt_oqpd k3, xmm3, xmm5
 	vcmplt_oqpd k3, ymm4, ymm3
 	vcmplt_oqpd k2, ymm7, ymm3
+
+%ifdef ERROR
+	vcmplt_oqpd xmm14, xmm15, xmm10
+	vcmplt_oqpd ymm10, ymm10, ymm15
+	vcmplt_oqpd k7, xmm12, xmm13
+	vcmplt_oqpd k3, ymm14, ymm8
+%endif

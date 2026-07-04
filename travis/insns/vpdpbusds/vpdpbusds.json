@@ -31,4 +31,28 @@
    { "output": "vpdpbusds.bin64", "match": "vpdpbusds.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPDPBUSDS",
+  "id": "vpdpbusds16err",
+  "format": "bin",
+  "source": "vpdpbusds_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpbusds/",
+  "target": [
+   { "stderr": "vpdpbusds.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPDPBUSDS",
+  "id": "vpdpbusds32err",
+  "format": "bin",
+  "source": "vpdpbusds_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpbusds/",
+  "target": [
+   { "stderr": "vpdpbusds.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

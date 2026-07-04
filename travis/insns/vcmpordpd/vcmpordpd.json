@@ -31,4 +31,28 @@
    { "output": "vcmpordpd.bin64", "match": "vcmpordpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPORDPD",
+  "id": "vcmpordpd16err",
+  "format": "bin",
+  "source": "vcmpordpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpordpd/",
+  "target": [
+   { "stderr": "vcmpordpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPORDPD",
+  "id": "vcmpordpd32err",
+  "format": "bin",
+  "source": "vcmpordpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpordpd/",
+  "target": [
+   { "stderr": "vcmpordpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

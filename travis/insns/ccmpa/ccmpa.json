@@ -10,4 +10,28 @@
    { "stderr": "ccmpa.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPA",
+  "id": "ccmpa16err",
+  "format": "bin",
+  "source": "ccmpa_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpa/",
+  "target": [
+   { "stderr": "ccmpa.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPA",
+  "id": "ccmpa32err",
+  "format": "bin",
+  "source": "ccmpa_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpa/",
+  "target": [
+   { "stderr": "ccmpa.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

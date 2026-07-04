@@ -31,4 +31,28 @@
    { "output": "vpcomub.bin64", "match": "vpcomub.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMUB",
+  "id": "vpcomub16err",
+  "format": "bin",
+  "source": "vpcomub_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomub/",
+  "target": [
+   { "stderr": "vpcomub.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMUB",
+  "id": "vpcomub32err",
+  "format": "bin",
+  "source": "vpcomub_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomub/",
+  "target": [
+   { "stderr": "vpcomub.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

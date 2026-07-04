@@ -31,4 +31,28 @@
    { "output": "vandnps.bin64", "match": "vandnps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VANDNPS",
+  "id": "vandnps16err",
+  "format": "bin",
+  "source": "vandnps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vandnps/",
+  "target": [
+   { "stderr": "vandnps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VANDNPS",
+  "id": "vandnps32err",
+  "format": "bin",
+  "source": "vandnps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vandnps/",
+  "target": [
+   { "stderr": "vandnps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

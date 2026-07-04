@@ -10,4 +10,28 @@
    { "stderr": "ccmpz.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPZ",
+  "id": "ccmpz16err",
+  "format": "bin",
+  "source": "ccmpz_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpz/",
+  "target": [
+   { "stderr": "ccmpz.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPZ",
+  "id": "ccmpz32err",
+  "format": "bin",
+  "source": "ccmpz_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpz/",
+  "target": [
+   { "stderr": "ccmpz.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

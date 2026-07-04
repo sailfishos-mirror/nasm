@@ -6,3 +6,8 @@
 	psllw xmm1, oword [0x11f]
 	psllw xmm7, 0x7
 	psllw xmm5, 0x5b
+
+%ifdef ERROR
+	psllw xmm13, xmm14
+	psllw xmm9, 0x78
+%endif

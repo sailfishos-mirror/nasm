@@ -31,4 +31,28 @@
    { "output": "vpshufb.bin64", "match": "vpshufb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSHUFB",
+  "id": "vpshufb16err",
+  "format": "bin",
+  "source": "vpshufb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshufb/",
+  "target": [
+   { "stderr": "vpshufb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSHUFB",
+  "id": "vpshufb32err",
+  "format": "bin",
+  "source": "vpshufb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshufb/",
+  "target": [
+   { "stderr": "vpshufb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

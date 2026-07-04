@@ -31,4 +31,28 @@
    { "output": "vcmpnltsd.bin64", "match": "vcmpnltsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNLTSD",
+  "id": "vcmpnltsd16err",
+  "format": "bin",
+  "source": "vcmpnltsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnltsd/",
+  "target": [
+   { "stderr": "vcmpnltsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNLTSD",
+  "id": "vcmpnltsd32err",
+  "format": "bin",
+  "source": "vcmpnltsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnltsd/",
+  "target": [
+   { "stderr": "vcmpnltsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

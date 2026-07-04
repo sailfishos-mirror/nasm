@@ -31,4 +31,28 @@
    { "output": "pavgb.bin64", "match": "pavgb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PAVGB",
+  "id": "pavgb16err",
+  "format": "bin",
+  "source": "pavgb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pavgb/",
+  "target": [
+   { "stderr": "pavgb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PAVGB",
+  "id": "pavgb32err",
+  "format": "bin",
+  "source": "pavgb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pavgb/",
+  "target": [
+   { "stderr": "pavgb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

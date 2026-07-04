@@ -31,4 +31,28 @@
    { "output": "vfmaddsub231ph.bin64", "match": "vfmaddsub231ph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADDSUB231PH",
+  "id": "vfmaddsub231ph16err",
+  "format": "bin",
+  "source": "vfmaddsub231ph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmaddsub231ph/",
+  "target": [
+   { "stderr": "vfmaddsub231ph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADDSUB231PH",
+  "id": "vfmaddsub231ph32err",
+  "format": "bin",
+  "source": "vfmaddsub231ph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmaddsub231ph/",
+  "target": [
+   { "stderr": "vfmaddsub231ph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

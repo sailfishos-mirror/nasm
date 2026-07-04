@@ -31,4 +31,28 @@
    { "output": "vgetmantsd.bin64", "match": "vgetmantsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VGETMANTSD",
+  "id": "vgetmantsd16err",
+  "format": "bin",
+  "source": "vgetmantsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetmantsd/",
+  "target": [
+   { "stderr": "vgetmantsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VGETMANTSD",
+  "id": "vgetmantsd32err",
+  "format": "bin",
+  "source": "vgetmantsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetmantsd/",
+  "target": [
+   { "stderr": "vgetmantsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

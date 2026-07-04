@@ -31,4 +31,28 @@
    { "output": "vpcmpud.bin64", "match": "vpcmpud.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPUD",
+  "id": "vpcmpud16err",
+  "format": "bin",
+  "source": "vpcmpud_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpud/",
+  "target": [
+   { "stderr": "vpcmpud.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPUD",
+  "id": "vpcmpud32err",
+  "format": "bin",
+  "source": "vpcmpud_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpud/",
+  "target": [
+   { "stderr": "vpcmpud.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

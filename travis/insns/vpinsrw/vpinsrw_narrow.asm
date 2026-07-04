@@ -7,3 +7,9 @@
 	vpinsrw xmm7, xmm1, eax, 0xd1
 	vpinsrw xmm7, eax, 0xd1
 	vpinsrw xmm6, xmm5, esi, 0x7a
+
+%ifdef ERROR
+	vpinsrw xmm10, xmm13, word [0xba4], 0x1e
+	vpinsrw xmm14, xmm8, r12w, 0xc9
+	vpinsrw xmm12, xmm9, r11d, 0x63
+%endif

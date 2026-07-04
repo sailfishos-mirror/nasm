@@ -31,4 +31,28 @@
    { "output": "punpckldq.bin64", "match": "punpckldq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PUNPCKLDQ",
+  "id": "punpckldq16err",
+  "format": "bin",
+  "source": "punpckldq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/punpckldq/",
+  "target": [
+   { "stderr": "punpckldq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PUNPCKLDQ",
+  "id": "punpckldq32err",
+  "format": "bin",
+  "source": "punpckldq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/punpckldq/",
+  "target": [
+   { "stderr": "punpckldq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

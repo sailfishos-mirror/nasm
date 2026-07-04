@@ -31,4 +31,28 @@
    { "output": "vmovupd.bin64", "match": "vmovupd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVUPD",
+  "id": "vmovupd16err",
+  "format": "bin",
+  "source": "vmovupd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovupd/",
+  "target": [
+   { "stderr": "vmovupd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVUPD",
+  "id": "vmovupd32err",
+  "format": "bin",
+  "source": "vmovupd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovupd/",
+  "target": [
+   { "stderr": "vmovupd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

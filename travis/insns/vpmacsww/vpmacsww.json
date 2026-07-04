@@ -31,4 +31,28 @@
    { "output": "vpmacsww.bin64", "match": "vpmacsww.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMACSWW",
+  "id": "vpmacsww16err",
+  "format": "bin",
+  "source": "vpmacsww_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmacsww/",
+  "target": [
+   { "stderr": "vpmacsww.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMACSWW",
+  "id": "vpmacsww32err",
+  "format": "bin",
+  "source": "vpmacsww_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmacsww/",
+  "target": [
+   { "stderr": "vpmacsww.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

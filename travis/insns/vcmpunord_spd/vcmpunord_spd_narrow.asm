@@ -8,3 +8,10 @@
 	vcmpunord_spd k4, xmm1, xmm6
 	vcmpunord_spd k2, ymm5, yword [0xa3a]
 	vcmpunord_spd k4, ymm5, ymm4
+
+%ifdef ERROR
+	vcmpunord_spd xmm15, xmm8, xmm12
+	vcmpunord_spd ymm10, ymm13, ymm12
+	vcmpunord_spd k4, xmm9, xmm14
+	vcmpunord_spd k5, ymm13, ymm10
+%endif

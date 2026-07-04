@@ -4,3 +4,8 @@
 	vpblendw ymm4, ymm3, ymm5, 0xf3
 	vpblendw ymm4, ymm5, 0xf3
 	vpblendw ymm3, ymm6, ymm1, 0x34
+
+%ifdef ERROR
+	vpblendw xmm15, xmm12, xmm8, 0x8b
+	vpblendw ymm9, ymm11, ymm15, 0xaa
+%endif

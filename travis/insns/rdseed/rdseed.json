@@ -31,4 +31,28 @@
    { "output": "rdseed.bin64", "match": "rdseed.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for RDSEED",
+  "id": "rdseed16err",
+  "format": "bin",
+  "source": "rdseed_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdseed/",
+  "target": [
+   { "stderr": "rdseed.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for RDSEED",
+  "id": "rdseed32err",
+  "format": "bin",
+  "source": "rdseed_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdseed/",
+  "target": [
+   { "stderr": "rdseed.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

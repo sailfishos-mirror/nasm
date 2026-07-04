@@ -31,4 +31,28 @@
    { "output": "pblendw.bin64", "match": "pblendw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PBLENDW",
+  "id": "pblendw16err",
+  "format": "bin",
+  "source": "pblendw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pblendw/",
+  "target": [
+   { "stderr": "pblendw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PBLENDW",
+  "id": "pblendw32err",
+  "format": "bin",
+  "source": "pblendw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pblendw/",
+  "target": [
+   { "stderr": "pblendw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

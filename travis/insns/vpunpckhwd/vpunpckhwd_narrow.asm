@@ -10,3 +10,14 @@
 	vpunpckhwd ymm3, ymm5, ymm2
 	vpunpckhwd ymm3, ymm2
 	vpunpckhwd ymm1, ymm5, ymm1
+
+%ifdef ERROR
+	vpunpckhwd xmm12, xmm9, xmm13
+	vpunpckhwd ymm14, ymm9, ymm11
+	vpunpckhwd xmm8, xmm8, xmm12
+	vpunpckhwd ymm8, ymm15, ymm8
+	vpunpckhwd xmm23, xmm28, xmm27
+	vpunpckhwd ymm31, ymm29, ymm28
+	vpunpckhwd xmm20, xmm21, xmm24
+	vpunpckhwd ymm30, ymm28, ymm20
+%endif

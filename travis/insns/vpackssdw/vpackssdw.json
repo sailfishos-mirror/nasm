@@ -31,4 +31,28 @@
    { "output": "vpackssdw.bin64", "match": "vpackssdw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPACKSSDW",
+  "id": "vpackssdw16err",
+  "format": "bin",
+  "source": "vpackssdw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpackssdw/",
+  "target": [
+   { "stderr": "vpackssdw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPACKSSDW",
+  "id": "vpackssdw32err",
+  "format": "bin",
+  "source": "vpackssdw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpackssdw/",
+  "target": [
+   { "stderr": "vpackssdw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

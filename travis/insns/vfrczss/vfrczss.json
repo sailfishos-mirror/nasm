@@ -31,4 +31,28 @@
    { "output": "vfrczss.bin64", "match": "vfrczss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFRCZSS",
+  "id": "vfrczss16err",
+  "format": "bin",
+  "source": "vfrczss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfrczss/",
+  "target": [
+   { "stderr": "vfrczss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFRCZSS",
+  "id": "vfrczss32err",
+  "format": "bin",
+  "source": "vfrczss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfrczss/",
+  "target": [
+   { "stderr": "vfrczss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

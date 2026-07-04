@@ -4,3 +4,12 @@
 	vpcmpngtub k7, ymm0, ymm2
 	vpcmpngtub k3, zmm0, zmm3
 	vpcmpngtub k1, zmm0, zword [0x7e0]
+
+%ifdef ERROR
+	vpcmpngtub k5, xmm9, xmm11
+	vpcmpngtub k7, ymm11, ymm8
+	vpcmpngtub k5, zmm11, zmm10
+	vpcmpngtub k1, xmm26, xmm31
+	vpcmpngtub k4, ymm18, ymm17
+	vpcmpngtub k4, zmm20, zmm24
+%endif

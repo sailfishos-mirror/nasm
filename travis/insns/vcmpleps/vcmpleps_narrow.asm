@@ -8,3 +8,10 @@
 	vcmpleps k3, xmm4, oword [0x3bc]
 	vcmpleps k3, ymm1, ymm1
 	vcmpleps k1, ymm5, yword [0xaea]
+
+%ifdef ERROR
+	vcmpleps xmm13, xmm12, xmm15
+	vcmpleps ymm13, ymm10, ymm12
+	vcmpleps k4, xmm13, xmm8
+	vcmpleps k6, ymm14, ymm12
+%endif

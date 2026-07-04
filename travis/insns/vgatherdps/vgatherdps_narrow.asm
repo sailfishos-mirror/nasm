@@ -6,3 +6,10 @@
 	vgatherdps xmm0, [xmm5*1]
 	vgatherdps ymm1, [ymm7*1]
 	vgatherdps ymm0, [ymm3*1]
+
+%ifdef ERROR
+	vgatherdps xmm11, [xmm12*1], xmm10
+	vgatherdps ymm14, [ymm12*1], ymm10
+	vgatherdps xmm8, [xmm10*1]
+	vgatherdps ymm11, [ymm13*1]
+%endif

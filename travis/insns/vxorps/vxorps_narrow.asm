@@ -10,3 +10,14 @@
 	vxorps ymm0, ymm4, ymm5
 	vxorps ymm0, ymm5
 	vxorps ymm5, ymm7, ymm0
+
+%ifdef ERROR
+	vxorps xmm10, xmm8, xmm12
+	vxorps ymm14, ymm12, ymm11
+	vxorps xmm9, xmm14, xmm12
+	vxorps ymm13, ymm11, ymm15
+	vxorps xmm24, xmm17, xmm31
+	vxorps ymm23, ymm27, ymm26
+	vxorps xmm25, xmm26, xmm16
+	vxorps ymm26, ymm28, ymm21
+%endif

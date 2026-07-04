@@ -8,3 +8,10 @@
 	vcmpfalse_oqpd k5, xmm5, xmm4
 	vcmpfalse_oqpd k6, ymm2, yword [0xc83]
 	vcmpfalse_oqpd k3, ymm0, ymm7
+
+%ifdef ERROR
+	vcmpfalse_oqpd xmm11, xmm9, xmm10
+	vcmpfalse_oqpd ymm8, ymm13, ymm11
+	vcmpfalse_oqpd k4, xmm12, xmm15
+	vcmpfalse_oqpd k5, ymm8, ymm11
+%endif

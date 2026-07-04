@@ -404,7 +404,17 @@ sub base_token {
 sub gen_operand {
     my ($rng, $tok, $mnem, $is_branch, $variant) = @_;
     my $base = base_token($tok);
-    if ($is_branch) {
+    # Only genuine relative/near/short/abs branch-displacement operands
+    # (plain imm8/16/32/64, before the trailing "|near"/"|short"/"|abs"
+    # qualifier that base_token() already stripped) get replaced with a
+    # local label -- NOT every operand of a "branch mnemonic". Some
+    # branch mnemonics also have indirect (rm16/32/64), far-pointer
+    # (colon-compound "imm16:imm16"), or fixed-register (reg_cx, for
+    # LOOP's address-size-override form) operand forms, none of which
+    # are relative-displacement targets, and would otherwise get
+    # nonsensically replaced with the branch label too (producing
+    # invalid syntax like "loop .L1, .L1" instead of "loop .L1, cx").
+    if ($is_branch && $base =~ /^imm(?:8|16|32|64)$/) {
         return '.L1';
     }
     if (exists $fixed{$base}) {
@@ -415,6 +425,21 @@ sub gen_operand {
     }
     $unsupported{$base}++;
     return undef;
+}
+
+# CALL/JMP near-indirect targets (the only branch-mnemonic templates
+# with rm*-typed operands) restrict the operand-size override: rm64 is
+# the only form valid in 64-bit mode -- rm16/rm32 forms genuinely only
+# assemble in 16/32-bit mode (confirmed empirically: "call cx"/
+# "call ecx" both fail under --bits 64, matching the NOLONG flag on
+# those insns.xda templates). This is unrelated to %needs64_token
+# (which flags the opposite direction -- 64-bit-*only* operands), so a
+# separate helper marks lines built from these tokens as excluded from
+# the 64-bit "full" body, mirroring how needs64 lines are excluded from
+# the 16/32-bit "narrow" body.
+sub branch_narrow_only {
+    my ($is_branch, $base) = @_;
+    return ($is_branch && $base =~ /^rm(?:16|32)$/) ? 1 : 0;
 }
 
 # Base tokens whose register pool has hireg (r8-r15 range) / apxreg
@@ -632,6 +657,7 @@ sub build_dispboundary_line {
     my @operands;
     my $used_mem = 0;
     my $needs64 = 0;
+    my $avoid64 = 0;
     for my $tok (@$ops) {
         my $base = base_token($tok);
         if (!$used_mem && exists $mem_sizebits{$base}) {
@@ -640,15 +666,17 @@ sub build_dispboundary_line {
             $txt = "$memsize{$sizebits} $txt" if $sizebits && $memsize{$sizebits};
             push @operands, $txt;
             $used_mem = 1;
+            $avoid64 = 1 if branch_narrow_only($is_branch, $base);
             next;
         }
         my $val = gen_operand($rng, $tok, $mnem, $is_branch);
         return undef unless defined $val;
         $needs64 = 1 if $needs64_token{$base};
+        $avoid64 = 1 if branch_narrow_only($is_branch, $base);
         push @operands, $val;
     }
     return undef unless $used_mem;
-    return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => $needs64 };
+    return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => $needs64, avoid64 => $avoid64 };
 }
 
 # Implicitly-sized memory operand coverage.
@@ -677,20 +705,23 @@ sub build_implicitsize_line {
     my @operands;
     my $used_mem = 0;
     my $needs64 = 0;
+    my $avoid64 = 0;
     for my $tok (@$ops) {
         my $base = base_token($tok);
         if (!$used_mem && ($mem_sizebits{$base} // 0)) {
             push @operands, mem_operand($rng, 0);
             $used_mem = 1;
+            $avoid64 = 1 if branch_narrow_only($is_branch, $base);
             next;
         }
         my $val = gen_operand($rng, $tok, $mnem, $is_branch);
         return undef unless defined $val;
         $needs64 = 1 if $needs64_token{$base};
+        $avoid64 = 1 if branch_narrow_only($is_branch, $base);
         push @operands, $val;
     }
     return undef unless $used_mem;
-    return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => $needs64 };
+    return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => $needs64, avoid64 => $avoid64 };
 }
 
 sub make_rng {
@@ -768,16 +799,20 @@ for my $mnem (sort keys %by_mnemonic) {
             my @operands;
             my $ok = 1;
             my $needs64 = 0;
+            my $avoid64 = 0;
             for my $tok (@{ $t->{ops} }) {
                 my $val = gen_operand($rng, $tok, $mnem, $is_branch);
                 if (!defined $val) { $ok = 0; last; }
-                $needs64 = 1 if $needs64_token{ base_token($tok) };
+                my $base = base_token($tok);
+                $needs64 = 1 if $needs64_token{$base};
+                $avoid64 = 1 if branch_narrow_only($is_branch, $base);
                 push @operands, $val;
             }
             next unless $ok;
             push @lines, {
                 text    => lc($mnem) . (@operands ? ' ' . join(', ', @operands) : ''),
                 needs64 => $needs64,
+                avoid64 => $avoid64,
             };
 
             # Optional-operand ('*'/'?') coverage: also emit the
@@ -791,8 +826,10 @@ for my $mnem (sort keys %by_mnemonic) {
                 push @lines, {
                     text    => lc($mnem) . (@reduced ? ' ' . join(', ', @reduced) : ''),
                     needs64 => $needs64,
+                    avoid64 => $avoid64,
                 };
             }
+
 
             # Register-number coverage: once per template (not once per
             # --variants instance), also try building an all-hireg
@@ -848,7 +885,17 @@ for my $mnem (sort keys %by_mnemonic) {
     for my $t (@dedup_all) {
         for my $disp (1, 64) {
             my $dl = build_dispboundary_line($rng, $mnem, $t->{ops}, $is_branch, $disp);
-            push @extra_dispboundary, $dl if defined $dl;
+            # avoid64 candidates (CALL/JMP rm16/rm32 near-indirect
+            # targets -- see branch_narrow_only()) are dropped here
+            # rather than fed into the bits=64 probe: they're
+            # guaranteed to fail at 64-bit, and folding them into this
+            # bucket would either cost the whole bucket its otherwise-
+            # valid candidates (probe rejects the merge) or need a
+            # second parallel probe path for no real benefit, since
+            # this supplementary boundary coverage isn't the base
+            # per-mnemonic content the 64-bit error-case block (below)
+            # is built from.
+            push @extra_dispboundary, $dl if defined $dl && !$dl->{avoid64};
         }
     }
 
@@ -861,12 +908,21 @@ for my $mnem (sort keys %by_mnemonic) {
     # which this generator doesn't parse directly (see comment above).
     for my $t (@dedup_all) {
         my $dl = build_implicitsize_line($rng, $mnem, $t->{ops}, $is_branch);
-        push @extra_implicitsize, $dl if defined $dl;
+        push @extra_implicitsize, $dl if defined $dl && !$dl->{avoid64};
     }
+
 
     next unless @lines;   # nothing we knew how to generate
 
     my @narrow_lines = grep { !$_->{needs64} } @lines;
+    # Lines that only assemble in 16/32-bit mode (currently just
+    # CALL/JMP rm16/rm32 near-indirect targets -- branch_narrow_only())
+    # must symmetrically be excluded from the 64-bit "full" body: they
+    # aren't flagged needs64 (they don't require 64-bit -- the opposite
+    # holds, they're incompatible with it), so they'd otherwise poison
+    # bits=64 assembly for the *entire* file the same way a needs64
+    # line would poison bits=16/32.
+    my @lines64 = grep { !$_->{avoid64} } @lines;
 
     my $dirname = "$out_dir/" . lc($mnem);
     make_path($dirname);
@@ -923,7 +979,7 @@ for my $mnem (sort keys %by_mnemonic) {
         return $ok;
     };
 
-    my @full_lines = @lines;
+    my @full_lines = @lines64;
     for my $cat (\@extra_hireg, \@extra_apxreg, \@extra_mask, \@extra_maskz,
                  \@extra_broadcast, \@extra_saeer, \@extra_dispboundary,
                  \@extra_implicitsize) {
@@ -943,6 +999,47 @@ for my $mnem (sort keys %by_mnemonic) {
         open(my $nfh, '>', "$dirname/$asmfile_narrow") or die $!;
         print $nfh render_body(\@narrow_lines, $is_branch);
         close($nfh);
+    }
+
+    # Error-case coverage: lines that only assemble in 64-bit mode
+    # (reg64/imm64 operands, hireg r8-r15, apxreg r16-r31, etc. -- see
+    # %needs64_token / build_variant_line) are, by construction, exactly
+    # the lines excluded from the 16/32-bit "narrow" body above. Rather
+    # than inventing a separate error-only source file, append them to
+    # the *same* narrow file under a %ifdef ERROR guard (per the user's
+    # preferred convention: one .asm file, assembled twice -- with and
+    # without -DERROR). Without -DERROR the block is invisible and
+    # narrow-mode coverage is unaffected; with -DERROR the block is
+    # included and attempting to assemble it at --bits 16/32 should
+    # fail with a mode/operand-mismatch diagnostic, which is exactly
+    # the negative-test coverage we want. Each bit width is probed
+    # independently below and only kept if it actually fails, so a line
+    # that unexpectedly *does* assemble at some width (this generator
+    # doesn't model every mode restriction) doesn't turn into a bogus
+    # "expected error" test.
+    my @error_lines = grep { $_->{needs64} } @full_lines;
+    my $has_narrow_file = ($asmfile_narrow ne $asmfile_full);
+    if ($has_narrow_file && @error_lines) {
+        open(my $efh, '>>', "$dirname/$asmfile_narrow") or die $!;
+        print $efh "\n%ifdef ERROR\n";
+        print $efh join('', map { "\t$_->{text}\n" } @error_lines);
+        print $efh "%endif\n";
+        close($efh);
+    }
+
+    # Symmetric case: lines that only assemble in 16/32-bit mode
+    # (CALL/JMP rm16/rm32 near-indirect targets -- branch_narrow_only())
+    # are excluded from @full_lines above; append them to the *full*
+    # (64-bit) body under the same %ifdef ERROR convention, so
+    # attempting to assemble them at --bits 64 with -DERROR is
+    # exercised as an expected-error case too.
+    my @error64_lines = grep { $_->{avoid64} } @lines;
+    if (@error64_lines) {
+        open(my $e6fh, '>>', "$dirname/$asmfile_full") or die $!;
+        print $e6fh "\n%ifdef ERROR\n";
+        print $e6fh join('', map { "\t$_->{text}\n" } @error64_lines);
+        print $e6fh "%endif\n";
+        close($e6fh);
     }
 
     my @json_entries;
@@ -979,9 +1076,47 @@ for my $mnem (sort keys %by_mnemonic) {
         }
     }
 
-    if (!@json_entries) {
+    # Error-case coverage: probe the %ifdef ERROR block(s) appended
+    # above with -DERROR defined, and only turn each into a json
+    # "expected error" entry for the (source file, bit width) pairs
+    # where it actually fails to assemble.
+    my $probe_error_bits = sub {
+        my ($src, @bitlist) = @_;
+        for my $bits (@bitlist) {
+            my $errbin = lc($mnem) . ".errprobe$bits.bin";
+            my $errstderr = lc($mnem) . ".stderr${bits}err";
+            my $relsrc = "$dirref/$src";
+            my $cmd = sprintf('%s --bits %d -DERROR -f bin %s %s -o %s.tmp 2>%s',
+                               $nasm_bin, $bits, $warn_opts, $relsrc,
+                               "$dirname/$errbin", "$dirname/$errstderr");
+            system($cmd);
+            my $rc = $? >> 8;
+            unlink("$dirname/$errbin.tmp");
+            my $fails = ($rc != 0);
+            unlink("$dirname/$errstderr");
+            if ($fails) {
+                push @json_entries, {
+                    id       => lc($mnem) . $bits . 'err',
+                    bits     => $bits,
+                    source   => $src,
+                    opts     => "-DERROR $warn_opts",
+                    stderr   => $errstderr,
+                    is_error => 1,
+                };
+            }
+        }
+    };
+    $probe_error_bits->($asmfile_narrow, 16, 32) if $has_narrow_file && @error_lines;
+    $probe_error_bits->($asmfile_full, 64) if @error64_lines;
+
+    if (!grep { !$_->{is_error} } @json_entries) {
         # Couldn't assemble in any mode -- drop the whole directory,
-        # don't leave a dangling/empty test case behind.
+        # don't leave a dangling/empty test case behind. (Error-case
+        # entries alone don't count: a directory whose only "coverage"
+        # is "this asm never assembles" isn't meaningful regression
+        # coverage and would only mask a real generation bug -- see
+        # the is_branch operand-substitution fix above, discovered via
+        # exactly this scenario.)
         unlink("$dirname/$asmfile_full");
         unlink("$dirname/$asmfile_narrow") if $asmfile_narrow ne $asmfile_full;
         rmdir($dirname);
@@ -995,6 +1130,22 @@ for my $mnem (sort keys %by_mnemonic) {
     for my $e (@json_entries) {
         print $jf ",\n" unless $first;
         $first = 0;
+        if ($e->{is_error}) {
+            printf $jf <<"JSON", $mnem, $e->{id}, $e->{source}, $e->{bits}, $e->{opts}, $dirname, $e->{stderr};
+ {
+  "description": "Pseudorandom error-case test for %s",
+  "id": "%s",
+  "format": "bin",
+  "source": "%s",
+  "option": "--bits %d %s -I./%s/",
+  "target": [
+   { "stderr": "%s" }
+  ],
+  "error": "expected"
+ }
+JSON
+            next;
+        }
         my $stderr_target = $e->{stderr}
             ? qq(,\n   { "stderr": "$e->{stderr}" })
             : '';

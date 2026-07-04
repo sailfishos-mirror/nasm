@@ -31,4 +31,28 @@
    { "output": "vcmpfalse_oqss.bin64", "match": "vcmpfalse_oqss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPFALSE_OQSS",
+  "id": "vcmpfalse_oqss16err",
+  "format": "bin",
+  "source": "vcmpfalse_oqss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpfalse_oqss/",
+  "target": [
+   { "stderr": "vcmpfalse_oqss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPFALSE_OQSS",
+  "id": "vcmpfalse_oqss32err",
+  "format": "bin",
+  "source": "vcmpfalse_oqss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpfalse_oqss/",
+  "target": [
+   { "stderr": "vcmpfalse_oqss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

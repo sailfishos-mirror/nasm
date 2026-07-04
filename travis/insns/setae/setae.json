@@ -9,4 +9,28 @@
    { "output": "setae.bin64", "match": "setae.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SETAE",
+  "id": "setae16err",
+  "format": "bin",
+  "source": "setae_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setae/",
+  "target": [
+   { "stderr": "setae.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SETAE",
+  "id": "setae32err",
+  "format": "bin",
+  "source": "setae_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setae/",
+  "target": [
+   { "stderr": "setae.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

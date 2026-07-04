@@ -10,3 +10,14 @@
 	vpaddsb ymm6, ymm2, yword [0xc53]
 	vpaddsb ymm6, yword [0xc53]
 	vpaddsb ymm0, ymm2, ymm2
+
+%ifdef ERROR
+	vpaddsb xmm11, xmm14, xmm12
+	vpaddsb ymm12, ymm11, ymm12
+	vpaddsb xmm12, xmm11, xmm12
+	vpaddsb ymm9, ymm9, ymm15
+	vpaddsb xmm31, xmm21, xmm20
+	vpaddsb ymm29, ymm29, ymm25
+	vpaddsb xmm20, xmm16, xmm18
+	vpaddsb ymm31, ymm29, ymm28
+%endif

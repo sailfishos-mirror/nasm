@@ -31,4 +31,28 @@
    { "output": "pmovsxbq.bin64", "match": "pmovsxbq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PMOVSXBQ",
+  "id": "pmovsxbq16err",
+  "format": "bin",
+  "source": "pmovsxbq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmovsxbq/",
+  "target": [
+   { "stderr": "pmovsxbq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PMOVSXBQ",
+  "id": "pmovsxbq32err",
+  "format": "bin",
+  "source": "pmovsxbq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmovsxbq/",
+  "target": [
+   { "stderr": "pmovsxbq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

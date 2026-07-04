@@ -34,4 +34,28 @@
    { "stderr": "blcs.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BLCS",
+  "id": "blcs16err",
+  "format": "bin",
+  "source": "blcs_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blcs/",
+  "target": [
+   { "stderr": "blcs.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BLCS",
+  "id": "blcs32err",
+  "format": "bin",
+  "source": "blcs_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blcs/",
+  "target": [
+   { "stderr": "blcs.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

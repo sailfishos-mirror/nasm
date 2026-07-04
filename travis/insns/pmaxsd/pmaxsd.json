@@ -31,4 +31,28 @@
    { "output": "pmaxsd.bin64", "match": "pmaxsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PMAXSD",
+  "id": "pmaxsd16err",
+  "format": "bin",
+  "source": "pmaxsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmaxsd/",
+  "target": [
+   { "stderr": "pmaxsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PMAXSD",
+  "id": "pmaxsd32err",
+  "format": "bin",
+  "source": "pmaxsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmaxsd/",
+  "target": [
+   { "stderr": "pmaxsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

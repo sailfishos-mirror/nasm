@@ -20,4 +20,28 @@
    { "output": "bndcl.bin32", "match": "bndcl.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BNDCL",
+  "id": "bndcl16err",
+  "format": "bin",
+  "source": "bndcl_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcl/",
+  "target": [
+   { "stderr": "bndcl.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BNDCL",
+  "id": "bndcl32err",
+  "format": "bin",
+  "source": "bndcl_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcl/",
+  "target": [
+   { "stderr": "bndcl.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

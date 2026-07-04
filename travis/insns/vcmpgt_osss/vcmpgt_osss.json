@@ -31,4 +31,28 @@
    { "output": "vcmpgt_osss.bin64", "match": "vcmpgt_osss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGT_OSSS",
+  "id": "vcmpgt_osss16err",
+  "format": "bin",
+  "source": "vcmpgt_osss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgt_osss/",
+  "target": [
+   { "stderr": "vcmpgt_osss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGT_OSSS",
+  "id": "vcmpgt_osss32err",
+  "format": "bin",
+  "source": "vcmpgt_osss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgt_osss/",
+  "target": [
+   { "stderr": "vcmpgt_osss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

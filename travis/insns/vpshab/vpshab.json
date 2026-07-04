@@ -31,4 +31,28 @@
    { "output": "vpshab.bin64", "match": "vpshab.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSHAB",
+  "id": "vpshab16err",
+  "format": "bin",
+  "source": "vpshab_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshab/",
+  "target": [
+   { "stderr": "vpshab.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSHAB",
+  "id": "vpshab32err",
+  "format": "bin",
+  "source": "vpshab_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshab/",
+  "target": [
+   { "stderr": "vpshab.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

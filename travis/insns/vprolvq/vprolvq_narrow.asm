@@ -7,3 +7,12 @@
 	vprolvq zmm7, zmm4, zmm7
 	vprolvq zmm7, zmm7
 	vprolvq zmm6, zmm6, zword [0xb76]
+
+%ifdef ERROR
+	vprolvq xmm13, xmm15, xmm13
+	vprolvq ymm9, ymm9, ymm11
+	vprolvq zmm14, zmm10, zmm14
+	vprolvq xmm31, xmm26, xmm22
+	vprolvq ymm28, ymm30, ymm22
+	vprolvq zmm23, zmm18, zmm24
+%endif

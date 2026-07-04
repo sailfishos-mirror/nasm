@@ -9,4 +9,28 @@
    { "output": "setezu.bin64", "match": "setezu.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SETEZU",
+  "id": "setezu16err",
+  "format": "bin",
+  "source": "setezu_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setezu/",
+  "target": [
+   { "stderr": "setezu.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SETEZU",
+  "id": "setezu32err",
+  "format": "bin",
+  "source": "setezu_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setezu/",
+  "target": [
+   { "stderr": "setezu.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

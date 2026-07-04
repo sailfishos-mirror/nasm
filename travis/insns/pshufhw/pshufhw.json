@@ -31,4 +31,28 @@
    { "output": "pshufhw.bin64", "match": "pshufhw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PSHUFHW",
+  "id": "pshufhw16err",
+  "format": "bin",
+  "source": "pshufhw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pshufhw/",
+  "target": [
+   { "stderr": "pshufhw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PSHUFHW",
+  "id": "pshufhw32err",
+  "format": "bin",
+  "source": "pshufhw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pshufhw/",
+  "target": [
+   { "stderr": "pshufhw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

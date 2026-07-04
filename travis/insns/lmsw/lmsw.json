@@ -31,4 +31,28 @@
    { "output": "lmsw.bin64", "match": "lmsw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for LMSW",
+  "id": "lmsw16err",
+  "format": "bin",
+  "source": "lmsw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lmsw/",
+  "target": [
+   { "stderr": "lmsw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for LMSW",
+  "id": "lmsw32err",
+  "format": "bin",
+  "source": "lmsw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lmsw/",
+  "target": [
+   { "stderr": "lmsw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

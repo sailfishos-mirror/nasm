@@ -6,3 +6,14 @@
 	vextractf32x4 oword [0x2c2], ymm2, 0xe6
 	vextractf32x4 oword [0x6fa], zmm2, 0x4c
 	vextractf32x4 oword [0x821], zmm2, 0x47
+
+%ifdef ERROR
+	vextractf32x4 xmm8, ymm15, 0x29
+	vextractf32x4 xmm14, zmm9, 0xdf
+	vextractf32x4 oword [0xdc9], ymm15, 0xf8
+	vextractf32x4 oword [0x271], zmm13, 0x9
+	vextractf32x4 xmm16, ymm24, 0x58
+	vextractf32x4 xmm24, zmm24, 0x75
+	vextractf32x4 oword [0xb25], ymm27, 0xe9
+	vextractf32x4 oword [0xe22], zmm19, 0x94
+%endif

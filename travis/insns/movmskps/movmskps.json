@@ -31,4 +31,28 @@
    { "output": "movmskps.bin64", "match": "movmskps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVMSKPS",
+  "id": "movmskps16err",
+  "format": "bin",
+  "source": "movmskps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movmskps/",
+  "target": [
+   { "stderr": "movmskps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVMSKPS",
+  "id": "movmskps32err",
+  "format": "bin",
+  "source": "movmskps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movmskps/",
+  "target": [
+   { "stderr": "movmskps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

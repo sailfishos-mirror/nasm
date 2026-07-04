@@ -31,4 +31,28 @@
    { "output": "cmpnlepd.bin64", "match": "cmpnlepd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPNLEPD",
+  "id": "cmpnlepd16err",
+  "format": "bin",
+  "source": "cmpnlepd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnlepd/",
+  "target": [
+   { "stderr": "cmpnlepd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPNLEPD",
+  "id": "cmpnlepd32err",
+  "format": "bin",
+  "source": "cmpnlepd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnlepd/",
+  "target": [
+   { "stderr": "cmpnlepd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

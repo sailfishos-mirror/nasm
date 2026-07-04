@@ -32,4 +32,28 @@
    { "stderr": "test.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for TEST",
+  "id": "test16err",
+  "format": "bin",
+  "source": "test_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/test/",
+  "target": [
+   { "stderr": "test.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for TEST",
+  "id": "test32err",
+  "format": "bin",
+  "source": "test_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/test/",
+  "target": [
+   { "stderr": "test.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

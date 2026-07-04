@@ -8,3 +8,10 @@
 	vcmpneq_ospd k3, xmm2, xmm1
 	vcmpneq_ospd k1, ymm3, yword [0xb17]
 	vcmpneq_ospd k1, ymm0, ymm4
+
+%ifdef ERROR
+	vcmpneq_ospd xmm11, xmm11, xmm10
+	vcmpneq_ospd ymm11, ymm10, ymm8
+	vcmpneq_ospd k5, xmm15, xmm15
+	vcmpneq_ospd k5, ymm9, ymm14
+%endif

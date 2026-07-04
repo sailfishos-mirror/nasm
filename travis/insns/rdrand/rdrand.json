@@ -31,4 +31,28 @@
    { "output": "rdrand.bin64", "match": "rdrand.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for RDRAND",
+  "id": "rdrand16err",
+  "format": "bin",
+  "source": "rdrand_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdrand/",
+  "target": [
+   { "stderr": "rdrand.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for RDRAND",
+  "id": "rdrand32err",
+  "format": "bin",
+  "source": "rdrand_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdrand/",
+  "target": [
+   { "stderr": "rdrand.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

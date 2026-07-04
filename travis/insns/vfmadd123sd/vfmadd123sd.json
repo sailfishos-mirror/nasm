@@ -31,4 +31,28 @@
    { "output": "vfmadd123sd.bin64", "match": "vfmadd123sd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADD123SD",
+  "id": "vfmadd123sd16err",
+  "format": "bin",
+  "source": "vfmadd123sd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmadd123sd/",
+  "target": [
+   { "stderr": "vfmadd123sd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADD123SD",
+  "id": "vfmadd123sd32err",
+  "format": "bin",
+  "source": "vfmadd123sd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmadd123sd/",
+  "target": [
+   { "stderr": "vfmadd123sd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

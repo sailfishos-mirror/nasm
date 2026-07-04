@@ -31,4 +31,28 @@
    { "output": "vcmpeq_uqsd.bin64", "match": "vcmpeq_uqsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPEQ_UQSD",
+  "id": "vcmpeq_uqsd16err",
+  "format": "bin",
+  "source": "vcmpeq_uqsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpeq_uqsd/",
+  "target": [
+   { "stderr": "vcmpeq_uqsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPEQ_UQSD",
+  "id": "vcmpeq_uqsd32err",
+  "format": "bin",
+  "source": "vcmpeq_uqsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpeq_uqsd/",
+  "target": [
+   { "stderr": "vcmpeq_uqsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

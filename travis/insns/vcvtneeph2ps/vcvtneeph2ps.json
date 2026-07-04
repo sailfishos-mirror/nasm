@@ -31,4 +31,28 @@
    { "output": "vcvtneeph2ps.bin64", "match": "vcvtneeph2ps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTNEEPH2PS",
+  "id": "vcvtneeph2ps16err",
+  "format": "bin",
+  "source": "vcvtneeph2ps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtneeph2ps/",
+  "target": [
+   { "stderr": "vcvtneeph2ps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTNEEPH2PS",
+  "id": "vcvtneeph2ps32err",
+  "format": "bin",
+  "source": "vcvtneeph2ps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtneeph2ps/",
+  "target": [
+   { "stderr": "vcvtneeph2ps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

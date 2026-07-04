@@ -31,4 +31,28 @@
    { "output": "vcmpneq_usps.bin64", "match": "vcmpneq_usps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNEQ_USPS",
+  "id": "vcmpneq_usps16err",
+  "format": "bin",
+  "source": "vcmpneq_usps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_usps/",
+  "target": [
+   { "stderr": "vcmpneq_usps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNEQ_USPS",
+  "id": "vcmpneq_usps32err",
+  "format": "bin",
+  "source": "vcmpneq_usps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_usps/",
+  "target": [
+   { "stderr": "vcmpneq_usps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

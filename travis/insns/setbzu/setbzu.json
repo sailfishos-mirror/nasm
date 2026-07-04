@@ -9,4 +9,28 @@
    { "output": "setbzu.bin64", "match": "setbzu.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SETBZU",
+  "id": "setbzu16err",
+  "format": "bin",
+  "source": "setbzu_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setbzu/",
+  "target": [
+   { "stderr": "setbzu.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SETBZU",
+  "id": "setbzu32err",
+  "format": "bin",
+  "source": "setbzu_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setbzu/",
+  "target": [
+   { "stderr": "setbzu.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

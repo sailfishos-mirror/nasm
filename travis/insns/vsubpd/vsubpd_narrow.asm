@@ -10,3 +10,14 @@
 	vsubpd ymm5, ymm2, yword [0xb81]
 	vsubpd ymm5, yword [0xb81]
 	vsubpd ymm6, ymm5, ymm0
+
+%ifdef ERROR
+	vsubpd xmm10, xmm12, xmm12
+	vsubpd ymm12, ymm11, ymm14
+	vsubpd xmm12, xmm10, xmm9
+	vsubpd ymm8, ymm15, ymm15
+	vsubpd xmm24, xmm30, xmm30
+	vsubpd ymm16, ymm23, ymm21
+	vsubpd xmm23, xmm16, xmm25
+	vsubpd ymm31, ymm19, ymm18
+%endif

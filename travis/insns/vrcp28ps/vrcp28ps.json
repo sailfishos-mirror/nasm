@@ -31,4 +31,28 @@
    { "output": "vrcp28ps.bin64", "match": "vrcp28ps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRCP28PS",
+  "id": "vrcp28ps16err",
+  "format": "bin",
+  "source": "vrcp28ps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcp28ps/",
+  "target": [
+   { "stderr": "vrcp28ps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRCP28PS",
+  "id": "vrcp28ps32err",
+  "format": "bin",
+  "source": "vrcp28ps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcp28ps/",
+  "target": [
+   { "stderr": "vrcp28ps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

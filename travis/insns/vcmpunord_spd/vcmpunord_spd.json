@@ -31,4 +31,28 @@
    { "output": "vcmpunord_spd.bin64", "match": "vcmpunord_spd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPUNORD_SPD",
+  "id": "vcmpunord_spd16err",
+  "format": "bin",
+  "source": "vcmpunord_spd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunord_spd/",
+  "target": [
+   { "stderr": "vcmpunord_spd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPUNORD_SPD",
+  "id": "vcmpunord_spd32err",
+  "format": "bin",
+  "source": "vcmpunord_spd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpunord_spd/",
+  "target": [
+   { "stderr": "vcmpunord_spd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

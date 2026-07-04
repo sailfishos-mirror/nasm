@@ -31,4 +31,28 @@
    { "output": "vpmovdw.bin64", "match": "vpmovdw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMOVDW",
+  "id": "vpmovdw16err",
+  "format": "bin",
+  "source": "vpmovdw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovdw/",
+  "target": [
+   { "stderr": "vpmovdw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMOVDW",
+  "id": "vpmovdw32err",
+  "format": "bin",
+  "source": "vpmovdw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovdw/",
+  "target": [
+   { "stderr": "vpmovdw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

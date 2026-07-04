@@ -31,4 +31,28 @@
    { "output": "vfnmsub231pd.bin64", "match": "vfnmsub231pd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFNMSUB231PD",
+  "id": "vfnmsub231pd16err",
+  "format": "bin",
+  "source": "vfnmsub231pd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmsub231pd/",
+  "target": [
+   { "stderr": "vfnmsub231pd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFNMSUB231PD",
+  "id": "vfnmsub231pd32err",
+  "format": "bin",
+  "source": "vfnmsub231pd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmsub231pd/",
+  "target": [
+   { "stderr": "vfnmsub231pd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

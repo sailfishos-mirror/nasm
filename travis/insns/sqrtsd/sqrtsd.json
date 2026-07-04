@@ -31,4 +31,28 @@
    { "output": "sqrtsd.bin64", "match": "sqrtsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SQRTSD",
+  "id": "sqrtsd16err",
+  "format": "bin",
+  "source": "sqrtsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sqrtsd/",
+  "target": [
+   { "stderr": "sqrtsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SQRTSD",
+  "id": "sqrtsd32err",
+  "format": "bin",
+  "source": "sqrtsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sqrtsd/",
+  "target": [
+   { "stderr": "sqrtsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "ptest.bin64", "match": "ptest.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PTEST",
+  "id": "ptest16err",
+  "format": "bin",
+  "source": "ptest_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ptest/",
+  "target": [
+   { "stderr": "ptest.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PTEST",
+  "id": "ptest32err",
+  "format": "bin",
+  "source": "ptest_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ptest/",
+  "target": [
+   { "stderr": "ptest.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

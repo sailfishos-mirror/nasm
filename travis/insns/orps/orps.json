@@ -31,4 +31,28 @@
    { "output": "orps.bin64", "match": "orps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ORPS",
+  "id": "orps16err",
+  "format": "bin",
+  "source": "orps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/orps/",
+  "target": [
+   { "stderr": "orps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ORPS",
+  "id": "orps32err",
+  "format": "bin",
+  "source": "orps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/orps/",
+  "target": [
+   { "stderr": "orps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "cmpnless.bin64", "match": "cmpnless.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPNLESS",
+  "id": "cmpnless16err",
+  "format": "bin",
+  "source": "cmpnless_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnless/",
+  "target": [
+   { "stderr": "cmpnless.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPNLESS",
+  "id": "cmpnless32err",
+  "format": "bin",
+  "source": "cmpnless_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpnless/",
+  "target": [
+   { "stderr": "cmpnless.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

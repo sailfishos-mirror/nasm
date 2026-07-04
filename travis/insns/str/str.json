@@ -31,4 +31,28 @@
    { "output": "str.bin64", "match": "str.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for STR",
+  "id": "str16err",
+  "format": "bin",
+  "source": "str_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/str/",
+  "target": [
+   { "stderr": "str.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for STR",
+  "id": "str32err",
+  "format": "bin",
+  "source": "str_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/str/",
+  "target": [
+   { "stderr": "str.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

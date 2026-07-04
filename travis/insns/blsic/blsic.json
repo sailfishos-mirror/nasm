@@ -34,4 +34,28 @@
    { "stderr": "blsic.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BLSIC",
+  "id": "blsic16err",
+  "format": "bin",
+  "source": "blsic_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsic/",
+  "target": [
+   { "stderr": "blsic.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BLSIC",
+  "id": "blsic32err",
+  "format": "bin",
+  "source": "blsic_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsic/",
+  "target": [
+   { "stderr": "blsic.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

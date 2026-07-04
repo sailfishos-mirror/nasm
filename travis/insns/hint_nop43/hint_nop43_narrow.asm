@@ -4,3 +4,12 @@
 	hint_nop43 eax
 	hint_nop43 qword [0xccf]
 	hint_nop43 qword [0x8e9]
+
+%ifdef ERROR
+	hint_nop43 r9w
+	hint_nop43 r13d
+	hint_nop43 r8
+	hint_nop43 r22w
+	hint_nop43 r23d
+	hint_nop43 r23
+%endif

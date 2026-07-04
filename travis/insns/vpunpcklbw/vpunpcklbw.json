@@ -31,4 +31,28 @@
    { "output": "vpunpcklbw.bin64", "match": "vpunpcklbw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPUNPCKLBW",
+  "id": "vpunpcklbw16err",
+  "format": "bin",
+  "source": "vpunpcklbw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpunpcklbw/",
+  "target": [
+   { "stderr": "vpunpcklbw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPUNPCKLBW",
+  "id": "vpunpcklbw32err",
+  "format": "bin",
+  "source": "vpunpcklbw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpunpcklbw/",
+  "target": [
+   { "stderr": "vpunpcklbw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

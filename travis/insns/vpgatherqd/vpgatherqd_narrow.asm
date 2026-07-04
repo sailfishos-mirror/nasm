@@ -6,3 +6,10 @@
 	vpgatherqd xmm6, [xmm3*1]
 	vpgatherqd xmm6, [ymm6*1]
 	vpgatherqd xmm6, [ymm6*1]
+
+%ifdef ERROR
+	vpgatherqd xmm14, [xmm13*1], xmm14
+	vpgatherqd xmm12, [ymm10*1], xmm14
+	vpgatherqd xmm13, [xmm10*1]
+	vpgatherqd xmm10, [ymm10*1]
+%endif

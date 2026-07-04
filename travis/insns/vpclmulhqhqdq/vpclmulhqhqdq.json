@@ -31,4 +31,28 @@
    { "output": "vpclmulhqhqdq.bin64", "match": "vpclmulhqhqdq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCLMULHQHQDQ",
+  "id": "vpclmulhqhqdq16err",
+  "format": "bin",
+  "source": "vpclmulhqhqdq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpclmulhqhqdq/",
+  "target": [
+   { "stderr": "vpclmulhqhqdq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCLMULHQHQDQ",
+  "id": "vpclmulhqhqdq32err",
+  "format": "bin",
+  "source": "vpclmulhqhqdq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpclmulhqhqdq/",
+  "target": [
+   { "stderr": "vpclmulhqhqdq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

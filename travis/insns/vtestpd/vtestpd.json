@@ -31,4 +31,28 @@
    { "output": "vtestpd.bin64", "match": "vtestpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VTESTPD",
+  "id": "vtestpd16err",
+  "format": "bin",
+  "source": "vtestpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vtestpd/",
+  "target": [
+   { "stderr": "vtestpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VTESTPD",
+  "id": "vtestpd32err",
+  "format": "bin",
+  "source": "vtestpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vtestpd/",
+  "target": [
+   { "stderr": "vtestpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

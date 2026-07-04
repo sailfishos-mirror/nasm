@@ -31,4 +31,28 @@
    { "output": "vpcmpleub.bin64", "match": "vpcmpleub.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPLEUB",
+  "id": "vpcmpleub16err",
+  "format": "bin",
+  "source": "vpcmpleub_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpleub/",
+  "target": [
+   { "stderr": "vpcmpleub.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPLEUB",
+  "id": "vpcmpleub32err",
+  "format": "bin",
+  "source": "vpcmpleub_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpleub/",
+  "target": [
+   { "stderr": "vpcmpleub.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

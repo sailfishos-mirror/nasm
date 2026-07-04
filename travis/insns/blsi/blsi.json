@@ -31,4 +31,28 @@
    { "output": "blsi.bin64", "match": "blsi.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BLSI",
+  "id": "blsi16err",
+  "format": "bin",
+  "source": "blsi_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsi/",
+  "target": [
+   { "stderr": "blsi.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BLSI",
+  "id": "blsi32err",
+  "format": "bin",
+  "source": "blsi_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blsi/",
+  "target": [
+   { "stderr": "blsi.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

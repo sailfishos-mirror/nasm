@@ -31,4 +31,28 @@
    { "output": "vinserti32x8.bin64", "match": "vinserti32x8.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VINSERTI32X8",
+  "id": "vinserti32x816err",
+  "format": "bin",
+  "source": "vinserti32x8_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinserti32x8/",
+  "target": [
+   { "stderr": "vinserti32x8.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VINSERTI32X8",
+  "id": "vinserti32x832err",
+  "format": "bin",
+  "source": "vinserti32x8_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinserti32x8/",
+  "target": [
+   { "stderr": "vinserti32x8.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

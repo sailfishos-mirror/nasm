@@ -31,4 +31,28 @@
    { "output": "vbroadcasti32x2.bin64", "match": "vbroadcasti32x2.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VBROADCASTI32X2",
+  "id": "vbroadcasti32x216err",
+  "format": "bin",
+  "source": "vbroadcasti32x2_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbroadcasti32x2/",
+  "target": [
+   { "stderr": "vbroadcasti32x2.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VBROADCASTI32X2",
+  "id": "vbroadcasti32x232err",
+  "format": "bin",
+  "source": "vbroadcasti32x2_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbroadcasti32x2/",
+  "target": [
+   { "stderr": "vbroadcasti32x2.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

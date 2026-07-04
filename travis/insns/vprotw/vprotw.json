@@ -31,4 +31,28 @@
    { "output": "vprotw.bin64", "match": "vprotw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPROTW",
+  "id": "vprotw16err",
+  "format": "bin",
+  "source": "vprotw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprotw/",
+  "target": [
+   { "stderr": "vprotw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPROTW",
+  "id": "vprotw32err",
+  "format": "bin",
+  "source": "vprotw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprotw/",
+  "target": [
+   { "stderr": "vprotw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

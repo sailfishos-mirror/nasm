@@ -31,4 +31,28 @@
    { "output": "vpermq.bin64", "match": "vpermq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMQ",
+  "id": "vpermq16err",
+  "format": "bin",
+  "source": "vpermq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermq/",
+  "target": [
+   { "stderr": "vpermq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMQ",
+  "id": "vpermq32err",
+  "format": "bin",
+  "source": "vpermq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermq/",
+  "target": [
+   { "stderr": "vpermq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

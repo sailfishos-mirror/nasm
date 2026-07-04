@@ -8,3 +8,10 @@
 	vcmptrue_usps k2, xmm7, xmm1
 	vcmptrue_usps k7, ymm7, ymm0
 	vcmptrue_usps k6, ymm5, ymm5
+
+%ifdef ERROR
+	vcmptrue_usps xmm8, xmm11, xmm15
+	vcmptrue_usps ymm11, ymm12, ymm8
+	vcmptrue_usps k7, xmm11, xmm12
+	vcmptrue_usps k2, ymm11, ymm10
+%endif

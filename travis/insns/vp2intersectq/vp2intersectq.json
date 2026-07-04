@@ -31,4 +31,28 @@
    { "output": "vp2intersectq.bin64", "match": "vp2intersectq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VP2INTERSECTQ",
+  "id": "vp2intersectq16err",
+  "format": "bin",
+  "source": "vp2intersectq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vp2intersectq/",
+  "target": [
+   { "stderr": "vp2intersectq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VP2INTERSECTQ",
+  "id": "vp2intersectq32err",
+  "format": "bin",
+  "source": "vp2intersectq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vp2intersectq/",
+  "target": [
+   { "stderr": "vp2intersectq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

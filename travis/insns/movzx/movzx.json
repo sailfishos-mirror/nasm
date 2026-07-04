@@ -31,4 +31,28 @@
    { "output": "movzx.bin64", "match": "movzx.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVZX",
+  "id": "movzx16err",
+  "format": "bin",
+  "source": "movzx_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movzx/",
+  "target": [
+   { "stderr": "movzx.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVZX",
+  "id": "movzx32err",
+  "format": "bin",
+  "source": "movzx_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movzx/",
+  "target": [
+   { "stderr": "movzx.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

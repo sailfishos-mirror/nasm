@@ -31,4 +31,28 @@
    { "output": "pslldq.bin64", "match": "pslldq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PSLLDQ",
+  "id": "pslldq16err",
+  "format": "bin",
+  "source": "pslldq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pslldq/",
+  "target": [
+   { "stderr": "pslldq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PSLLDQ",
+  "id": "pslldq32err",
+  "format": "bin",
+  "source": "pslldq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pslldq/",
+  "target": [
+   { "stderr": "pslldq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

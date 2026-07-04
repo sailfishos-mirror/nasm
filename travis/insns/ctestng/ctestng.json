@@ -10,4 +10,28 @@
    { "stderr": "ctestng.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CTESTNG",
+  "id": "ctestng16err",
+  "format": "bin",
+  "source": "ctestng_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctestng/",
+  "target": [
+   { "stderr": "ctestng.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CTESTNG",
+  "id": "ctestng32err",
+  "format": "bin",
+  "source": "ctestng_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctestng/",
+  "target": [
+   { "stderr": "ctestng.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

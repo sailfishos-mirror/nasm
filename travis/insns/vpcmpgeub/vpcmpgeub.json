@@ -31,4 +31,28 @@
    { "output": "vpcmpgeub.bin64", "match": "vpcmpgeub.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGEUB",
+  "id": "vpcmpgeub16err",
+  "format": "bin",
+  "source": "vpcmpgeub_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgeub/",
+  "target": [
+   { "stderr": "vpcmpgeub.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGEUB",
+  "id": "vpcmpgeub32err",
+  "format": "bin",
+  "source": "vpcmpgeub_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgeub/",
+  "target": [
+   { "stderr": "vpcmpgeub.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

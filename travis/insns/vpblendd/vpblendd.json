@@ -31,4 +31,28 @@
    { "output": "vpblendd.bin64", "match": "vpblendd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBLENDD",
+  "id": "vpblendd16err",
+  "format": "bin",
+  "source": "vpblendd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpblendd/",
+  "target": [
+   { "stderr": "vpblendd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBLENDD",
+  "id": "vpblendd32err",
+  "format": "bin",
+  "source": "vpblendd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpblendd/",
+  "target": [
+   { "stderr": "vpblendd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

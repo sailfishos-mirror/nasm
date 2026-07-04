@@ -31,4 +31,28 @@
    { "output": "vfmsub312pd.bin64", "match": "vfmsub312pd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUB312PD",
+  "id": "vfmsub312pd16err",
+  "format": "bin",
+  "source": "vfmsub312pd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub312pd/",
+  "target": [
+   { "stderr": "vfmsub312pd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUB312PD",
+  "id": "vfmsub312pd32err",
+  "format": "bin",
+  "source": "vfmsub312pd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub312pd/",
+  "target": [
+   { "stderr": "vfmsub312pd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

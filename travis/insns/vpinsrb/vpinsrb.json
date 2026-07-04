@@ -31,4 +31,28 @@
    { "output": "vpinsrb.bin64", "match": "vpinsrb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPINSRB",
+  "id": "vpinsrb16err",
+  "format": "bin",
+  "source": "vpinsrb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpinsrb/",
+  "target": [
+   { "stderr": "vpinsrb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPINSRB",
+  "id": "vpinsrb32err",
+  "format": "bin",
+  "source": "vpinsrb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpinsrb/",
+  "target": [
+   { "stderr": "vpinsrb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "phsubsw.bin64", "match": "phsubsw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PHSUBSW",
+  "id": "phsubsw16err",
+  "format": "bin",
+  "source": "phsubsw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/phsubsw/",
+  "target": [
+   { "stderr": "phsubsw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PHSUBSW",
+  "id": "phsubsw32err",
+  "format": "bin",
+  "source": "phsubsw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/phsubsw/",
+  "target": [
+   { "stderr": "phsubsw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

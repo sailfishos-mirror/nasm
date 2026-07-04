@@ -10,3 +10,14 @@
 	vpshufb ymm1, ymm2, yword [0x2bf]
 	vpshufb ymm1, yword [0x2bf]
 	vpshufb ymm2, ymm7, ymm4
+
+%ifdef ERROR
+	vpshufb xmm15, xmm10, xmm10
+	vpshufb ymm8, ymm13, ymm12
+	vpshufb xmm10, xmm12, xmm15
+	vpshufb ymm10, ymm12, ymm15
+	vpshufb xmm21, xmm18, xmm22
+	vpshufb ymm29, ymm31, ymm26
+	vpshufb xmm24, xmm19, xmm24
+	vpshufb ymm23, ymm31, ymm31
+%endif

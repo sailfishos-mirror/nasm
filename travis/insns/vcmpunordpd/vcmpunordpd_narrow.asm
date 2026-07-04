@@ -8,3 +8,10 @@
 	vcmpunordpd k2, xmm2, xmm1
 	vcmpunordpd k7, ymm5, yword [0x9e3]
 	vcmpunordpd k4, ymm2, yword [0x6c5]
+
+%ifdef ERROR
+	vcmpunordpd xmm11, xmm8, xmm9
+	vcmpunordpd ymm14, ymm15, ymm15
+	vcmpunordpd k4, xmm8, xmm15
+	vcmpunordpd k4, ymm9, ymm15
+%endif

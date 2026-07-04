@@ -31,4 +31,28 @@
    { "output": "vcvtdq2ph.bin64", "match": "vcvtdq2ph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTDQ2PH",
+  "id": "vcvtdq2ph16err",
+  "format": "bin",
+  "source": "vcvtdq2ph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtdq2ph/",
+  "target": [
+   { "stderr": "vcvtdq2ph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTDQ2PH",
+  "id": "vcvtdq2ph32err",
+  "format": "bin",
+  "source": "vcvtdq2ph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtdq2ph/",
+  "target": [
+   { "stderr": "vcvtdq2ph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

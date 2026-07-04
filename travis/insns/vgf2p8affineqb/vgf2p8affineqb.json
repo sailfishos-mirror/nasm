@@ -31,4 +31,28 @@
    { "output": "vgf2p8affineqb.bin64", "match": "vgf2p8affineqb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VGF2P8AFFINEQB",
+  "id": "vgf2p8affineqb16err",
+  "format": "bin",
+  "source": "vgf2p8affineqb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgf2p8affineqb/",
+  "target": [
+   { "stderr": "vgf2p8affineqb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VGF2P8AFFINEQB",
+  "id": "vgf2p8affineqb32err",
+  "format": "bin",
+  "source": "vgf2p8affineqb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgf2p8affineqb/",
+  "target": [
+   { "stderr": "vgf2p8affineqb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "wrussd.bin64", "match": "wrussd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for WRUSSD",
+  "id": "wrussd16err",
+  "format": "bin",
+  "source": "wrussd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/wrussd/",
+  "target": [
+   { "stderr": "wrussd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for WRUSSD",
+  "id": "wrussd32err",
+  "format": "bin",
+  "source": "wrussd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/wrussd/",
+  "target": [
+   { "stderr": "wrussd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

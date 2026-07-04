@@ -7,3 +7,12 @@
 	vpermb zmm1, zmm4, zmm0
 	vpermb zmm1, zmm0
 	vpermb zmm4, zmm3, zmm3
+
+%ifdef ERROR
+	vpermb xmm11, xmm13, xmm10
+	vpermb ymm8, ymm12, ymm11
+	vpermb zmm10, zmm8, zmm15
+	vpermb xmm24, xmm24, xmm16
+	vpermb ymm31, ymm31, ymm31
+	vpermb zmm25, zmm29, zmm22
+%endif

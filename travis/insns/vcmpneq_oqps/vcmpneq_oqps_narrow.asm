@@ -8,3 +8,10 @@
 	vcmpneq_oqps k4, xmm1, xmm2
 	vcmpneq_oqps k2, ymm3, ymm2
 	vcmpneq_oqps k7, ymm0, ymm2
+
+%ifdef ERROR
+	vcmpneq_oqps xmm10, xmm11, xmm14
+	vcmpneq_oqps ymm14, ymm12, ymm9
+	vcmpneq_oqps k4, xmm13, xmm11
+	vcmpneq_oqps k2, ymm12, ymm14
+%endif

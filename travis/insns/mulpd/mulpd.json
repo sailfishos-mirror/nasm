@@ -31,4 +31,28 @@
    { "output": "mulpd.bin64", "match": "mulpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MULPD",
+  "id": "mulpd16err",
+  "format": "bin",
+  "source": "mulpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulpd/",
+  "target": [
+   { "stderr": "mulpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MULPD",
+  "id": "mulpd32err",
+  "format": "bin",
+  "source": "mulpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulpd/",
+  "target": [
+   { "stderr": "mulpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

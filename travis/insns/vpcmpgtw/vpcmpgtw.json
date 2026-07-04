@@ -31,4 +31,28 @@
    { "output": "vpcmpgtw.bin64", "match": "vpcmpgtw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGTW",
+  "id": "vpcmpgtw16err",
+  "format": "bin",
+  "source": "vpcmpgtw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgtw/",
+  "target": [
+   { "stderr": "vpcmpgtw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGTW",
+  "id": "vpcmpgtw32err",
+  "format": "bin",
+  "source": "vpcmpgtw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgtw/",
+  "target": [
+   { "stderr": "vpcmpgtw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

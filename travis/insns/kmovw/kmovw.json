@@ -31,4 +31,28 @@
    { "output": "kmovw.bin64", "match": "kmovw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for KMOVW",
+  "id": "kmovw16err",
+  "format": "bin",
+  "source": "kmovw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/kmovw/",
+  "target": [
+   { "stderr": "kmovw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for KMOVW",
+  "id": "kmovw32err",
+  "format": "bin",
+  "source": "kmovw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/kmovw/",
+  "target": [
+   { "stderr": "kmovw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

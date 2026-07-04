@@ -6,3 +6,10 @@
 	vmaskmovpd oword [0x5e0], xmm5, xmm5
 	vmaskmovpd yword [0xa29], ymm6, ymm1
 	vmaskmovpd yword [0x489], ymm2, ymm0
+
+%ifdef ERROR
+	vmaskmovpd xmm13, xmm15, oword [0xca9]
+	vmaskmovpd ymm10, ymm12, yword [0x491]
+	vmaskmovpd oword [0x405], xmm12, xmm12
+	vmaskmovpd yword [0x877], ymm10, ymm9
+%endif

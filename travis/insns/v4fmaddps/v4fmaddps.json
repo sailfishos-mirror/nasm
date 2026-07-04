@@ -31,4 +31,28 @@
    { "output": "v4fmaddps.bin64", "match": "v4fmaddps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for V4FMADDPS",
+  "id": "v4fmaddps16err",
+  "format": "bin",
+  "source": "v4fmaddps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/v4fmaddps/",
+  "target": [
+   { "stderr": "v4fmaddps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for V4FMADDPS",
+  "id": "v4fmaddps32err",
+  "format": "bin",
+  "source": "v4fmaddps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/v4fmaddps/",
+  "target": [
+   { "stderr": "v4fmaddps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

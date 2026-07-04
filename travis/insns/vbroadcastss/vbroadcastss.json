@@ -31,4 +31,28 @@
    { "output": "vbroadcastss.bin64", "match": "vbroadcastss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VBROADCASTSS",
+  "id": "vbroadcastss16err",
+  "format": "bin",
+  "source": "vbroadcastss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbroadcastss/",
+  "target": [
+   { "stderr": "vbroadcastss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VBROADCASTSS",
+  "id": "vbroadcastss32err",
+  "format": "bin",
+  "source": "vbroadcastss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbroadcastss/",
+  "target": [
+   { "stderr": "vbroadcastss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

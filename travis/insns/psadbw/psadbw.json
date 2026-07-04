@@ -31,4 +31,28 @@
    { "output": "psadbw.bin64", "match": "psadbw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PSADBW",
+  "id": "psadbw16err",
+  "format": "bin",
+  "source": "psadbw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psadbw/",
+  "target": [
+   { "stderr": "psadbw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PSADBW",
+  "id": "psadbw32err",
+  "format": "bin",
+  "source": "psadbw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psadbw/",
+  "target": [
+   { "stderr": "psadbw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -4,3 +4,8 @@
 	vblendvpd ymm0, ymm6, ymm3, ymm1
 	vblendvpd ymm0, ymm3, ymm1
 	vblendvpd ymm4, ymm0, ymm0, ymm5
+
+%ifdef ERROR
+	vblendvpd xmm14, xmm8, xmm13, xmm11
+	vblendvpd ymm12, ymm11, ymm10, ymm8
+%endif

@@ -31,4 +31,28 @@
    { "output": "cmpeqpd.bin64", "match": "cmpeqpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPEQPD",
+  "id": "cmpeqpd16err",
+  "format": "bin",
+  "source": "cmpeqpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpeqpd/",
+  "target": [
+   { "stderr": "cmpeqpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPEQPD",
+  "id": "cmpeqpd32err",
+  "format": "bin",
+  "source": "cmpeqpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpeqpd/",
+  "target": [
+   { "stderr": "cmpeqpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

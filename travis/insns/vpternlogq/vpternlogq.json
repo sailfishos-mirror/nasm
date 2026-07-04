@@ -31,4 +31,28 @@
    { "output": "vpternlogq.bin64", "match": "vpternlogq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTERNLOGQ",
+  "id": "vpternlogq16err",
+  "format": "bin",
+  "source": "vpternlogq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpternlogq/",
+  "target": [
+   { "stderr": "vpternlogq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTERNLOGQ",
+  "id": "vpternlogq32err",
+  "format": "bin",
+  "source": "vpternlogq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpternlogq/",
+  "target": [
+   { "stderr": "vpternlogq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

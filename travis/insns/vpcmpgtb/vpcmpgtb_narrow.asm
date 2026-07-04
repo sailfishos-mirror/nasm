@@ -8,3 +8,10 @@
 	vpcmpgtb k4, xmm1, xmm3
 	vpcmpgtb k2, ymm7, ymm1
 	vpcmpgtb k3, ymm4, yword [0x3f5]
+
+%ifdef ERROR
+	vpcmpgtb xmm9, xmm13, xmm8
+	vpcmpgtb ymm11, ymm15, ymm9
+	vpcmpgtb k5, xmm15, xmm9
+	vpcmpgtb k4, ymm8, ymm10
+%endif

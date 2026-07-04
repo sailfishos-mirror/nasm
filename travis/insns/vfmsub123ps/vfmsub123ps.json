@@ -31,4 +31,28 @@
    { "output": "vfmsub123ps.bin64", "match": "vfmsub123ps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUB123PS",
+  "id": "vfmsub123ps16err",
+  "format": "bin",
+  "source": "vfmsub123ps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub123ps/",
+  "target": [
+   { "stderr": "vfmsub123ps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUB123PS",
+  "id": "vfmsub123ps32err",
+  "format": "bin",
+  "source": "vfmsub123ps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub123ps/",
+  "target": [
+   { "stderr": "vfmsub123ps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

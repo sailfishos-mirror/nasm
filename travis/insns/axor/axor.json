@@ -9,4 +9,28 @@
    { "output": "axor.bin64", "match": "axor.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for AXOR",
+  "id": "axor16err",
+  "format": "bin",
+  "source": "axor_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/axor/",
+  "target": [
+   { "stderr": "axor.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for AXOR",
+  "id": "axor32err",
+  "format": "bin",
+  "source": "axor_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/axor/",
+  "target": [
+   { "stderr": "axor.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

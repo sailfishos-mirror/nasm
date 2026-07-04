@@ -31,4 +31,28 @@
    { "output": "vpsubsw.bin64", "match": "vpsubsw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBSW",
+  "id": "vpsubsw16err",
+  "format": "bin",
+  "source": "vpsubsw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubsw/",
+  "target": [
+   { "stderr": "vpsubsw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBSW",
+  "id": "vpsubsw32err",
+  "format": "bin",
+  "source": "vpsubsw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubsw/",
+  "target": [
+   { "stderr": "vpsubsw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

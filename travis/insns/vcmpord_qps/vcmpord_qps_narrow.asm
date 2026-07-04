@@ -8,3 +8,10 @@
 	vcmpord_qps k6, xmm3, xmm7
 	vcmpord_qps k3, ymm7, yword [0x7e0]
 	vcmpord_qps k1, ymm5, yword [0x789]
+
+%ifdef ERROR
+	vcmpord_qps xmm13, xmm11, xmm11
+	vcmpord_qps ymm13, ymm14, ymm10
+	vcmpord_qps k7, xmm12, xmm13
+	vcmpord_qps k1, ymm9, ymm15
+%endif

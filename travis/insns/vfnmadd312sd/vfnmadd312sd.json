@@ -31,4 +31,28 @@
    { "output": "vfnmadd312sd.bin64", "match": "vfnmadd312sd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFNMADD312SD",
+  "id": "vfnmadd312sd16err",
+  "format": "bin",
+  "source": "vfnmadd312sd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmadd312sd/",
+  "target": [
+   { "stderr": "vfnmadd312sd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFNMADD312SD",
+  "id": "vfnmadd312sd32err",
+  "format": "bin",
+  "source": "vfnmadd312sd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfnmadd312sd/",
+  "target": [
+   { "stderr": "vfnmadd312sd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

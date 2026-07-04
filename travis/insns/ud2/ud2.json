@@ -31,4 +31,28 @@
    { "output": "ud2.bin64", "match": "ud2.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for UD2",
+  "id": "ud216err",
+  "format": "bin",
+  "source": "ud2_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2/",
+  "target": [
+   { "stderr": "ud2.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for UD2",
+  "id": "ud232err",
+  "format": "bin",
+  "source": "ud2_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2/",
+  "target": [
+   { "stderr": "ud2.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

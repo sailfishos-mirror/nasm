@@ -31,4 +31,28 @@
    { "output": "vpdpbsud.bin64", "match": "vpdpbsud.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPDPBSUD",
+  "id": "vpdpbsud16err",
+  "format": "bin",
+  "source": "vpdpbsud_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpbsud/",
+  "target": [
+   { "stderr": "vpdpbsud.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPDPBSUD",
+  "id": "vpdpbsud32err",
+  "format": "bin",
+  "source": "vpdpbsud_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpbsud/",
+  "target": [
+   { "stderr": "vpdpbsud.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

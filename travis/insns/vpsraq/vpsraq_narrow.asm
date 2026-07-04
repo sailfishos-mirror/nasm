@@ -10,3 +10,14 @@
 	vpsraq xmm5, xmm2, 0xf9
 	vpsraq xmm5, 0xf9
 	vpsraq xmm3, xmm6, 0xa2
+
+%ifdef ERROR
+	vpsraq xmm8, xmm10, xmm13
+	vpsraq ymm15, ymm8, xmm15
+	vpsraq zmm10, zmm13, xmm14
+	vpsraq xmm10, xmm15, 0x53
+	vpsraq xmm23, xmm30, xmm30
+	vpsraq ymm20, ymm25, xmm28
+	vpsraq zmm31, zmm19, xmm16
+	vpsraq xmm19, xmm25, 0x4a
+%endif

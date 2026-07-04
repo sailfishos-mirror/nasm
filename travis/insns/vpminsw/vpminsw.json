@@ -31,4 +31,28 @@
    { "output": "vpminsw.bin64", "match": "vpminsw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMINSW",
+  "id": "vpminsw16err",
+  "format": "bin",
+  "source": "vpminsw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpminsw/",
+  "target": [
+   { "stderr": "vpminsw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMINSW",
+  "id": "vpminsw32err",
+  "format": "bin",
+  "source": "vpminsw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpminsw/",
+  "target": [
+   { "stderr": "vpminsw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -10,4 +10,28 @@
    { "stderr": "ctesto.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CTESTO",
+  "id": "ctesto16err",
+  "format": "bin",
+  "source": "ctesto_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctesto/",
+  "target": [
+   { "stderr": "ctesto.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CTESTO",
+  "id": "ctesto32err",
+  "format": "bin",
+  "source": "ctesto_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctesto/",
+  "target": [
+   { "stderr": "ctesto.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

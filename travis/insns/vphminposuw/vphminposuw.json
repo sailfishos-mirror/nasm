@@ -31,4 +31,28 @@
    { "output": "vphminposuw.bin64", "match": "vphminposuw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPHMINPOSUW",
+  "id": "vphminposuw16err",
+  "format": "bin",
+  "source": "vphminposuw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vphminposuw/",
+  "target": [
+   { "stderr": "vphminposuw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPHMINPOSUW",
+  "id": "vphminposuw32err",
+  "format": "bin",
+  "source": "vphminposuw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vphminposuw/",
+  "target": [
+   { "stderr": "vphminposuw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

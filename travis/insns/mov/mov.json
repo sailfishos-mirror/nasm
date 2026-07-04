@@ -32,4 +32,28 @@
    { "stderr": "mov.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MOV",
+  "id": "mov16err",
+  "format": "bin",
+  "source": "mov_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mov/",
+  "target": [
+   { "stderr": "mov.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MOV",
+  "id": "mov32err",
+  "format": "bin",
+  "source": "mov_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mov/",
+  "target": [
+   { "stderr": "mov.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

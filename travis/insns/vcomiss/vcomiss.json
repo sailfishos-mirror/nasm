@@ -31,4 +31,28 @@
    { "output": "vcomiss.bin64", "match": "vcomiss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCOMISS",
+  "id": "vcomiss16err",
+  "format": "bin",
+  "source": "vcomiss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcomiss/",
+  "target": [
+   { "stderr": "vcomiss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCOMISS",
+  "id": "vcomiss32err",
+  "format": "bin",
+  "source": "vcomiss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcomiss/",
+  "target": [
+   { "stderr": "vcomiss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

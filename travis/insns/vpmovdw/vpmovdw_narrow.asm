@@ -6,3 +6,14 @@
 	vpmovdw ymm2, zmm7
 	vpmovdw qword [0x64f], xmm1
 	vpmovdw qword [0xe5e], xmm5
+
+%ifdef ERROR
+	vpmovdw xmm14, xmm15
+	vpmovdw xmm12, ymm8
+	vpmovdw ymm14, zmm15
+	vpmovdw qword [0x397], xmm11
+	vpmovdw xmm17, xmm27
+	vpmovdw xmm29, ymm20
+	vpmovdw ymm19, zmm31
+	vpmovdw qword [0xd7d], xmm25
+%endif

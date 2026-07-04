@@ -31,4 +31,28 @@
    { "output": "vextracti32x4.bin64", "match": "vextracti32x4.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VEXTRACTI32X4",
+  "id": "vextracti32x416err",
+  "format": "bin",
+  "source": "vextracti32x4_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vextracti32x4/",
+  "target": [
+   { "stderr": "vextracti32x4.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VEXTRACTI32X4",
+  "id": "vextracti32x432err",
+  "format": "bin",
+  "source": "vextracti32x4_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vextracti32x4/",
+  "target": [
+   { "stderr": "vextracti32x4.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

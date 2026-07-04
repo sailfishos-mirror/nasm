@@ -31,4 +31,28 @@
    { "output": "vreducess.bin64", "match": "vreducess.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VREDUCESS",
+  "id": "vreducess16err",
+  "format": "bin",
+  "source": "vreducess_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vreducess/",
+  "target": [
+   { "stderr": "vreducess.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VREDUCESS",
+  "id": "vreducess32err",
+  "format": "bin",
+  "source": "vreducess_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vreducess/",
+  "target": [
+   { "stderr": "vreducess.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

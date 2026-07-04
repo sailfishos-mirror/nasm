@@ -31,4 +31,28 @@
    { "output": "vcmpfalsess.bin64", "match": "vcmpfalsess.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPFALSESS",
+  "id": "vcmpfalsess16err",
+  "format": "bin",
+  "source": "vcmpfalsess_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpfalsess/",
+  "target": [
+   { "stderr": "vcmpfalsess.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPFALSESS",
+  "id": "vcmpfalsess32err",
+  "format": "bin",
+  "source": "vcmpfalsess_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpfalsess/",
+  "target": [
+   { "stderr": "vcmpfalsess.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

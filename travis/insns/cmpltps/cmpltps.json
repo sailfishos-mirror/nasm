@@ -31,4 +31,28 @@
    { "output": "cmpltps.bin64", "match": "cmpltps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPLTPS",
+  "id": "cmpltps16err",
+  "format": "bin",
+  "source": "cmpltps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpltps/",
+  "target": [
+   { "stderr": "cmpltps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPLTPS",
+  "id": "cmpltps32err",
+  "format": "bin",
+  "source": "cmpltps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpltps/",
+  "target": [
+   { "stderr": "cmpltps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

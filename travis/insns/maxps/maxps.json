@@ -31,4 +31,28 @@
    { "output": "maxps.bin64", "match": "maxps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MAXPS",
+  "id": "maxps16err",
+  "format": "bin",
+  "source": "maxps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/maxps/",
+  "target": [
+   { "stderr": "maxps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MAXPS",
+  "id": "maxps32err",
+  "format": "bin",
+  "source": "maxps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/maxps/",
+  "target": [
+   { "stderr": "maxps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

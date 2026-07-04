@@ -10,3 +10,14 @@
 	vunpcklps ymm3, ymm5, yword [0x3fc]
 	vunpcklps ymm3, yword [0x3fc]
 	vunpcklps ymm7, ymm3, yword [0xe8c]
+
+%ifdef ERROR
+	vunpcklps xmm12, xmm15, xmm11
+	vunpcklps ymm12, ymm9, ymm9
+	vunpcklps xmm12, xmm13, xmm11
+	vunpcklps ymm13, ymm14, ymm11
+	vunpcklps xmm26, xmm19, xmm16
+	vunpcklps ymm30, ymm31, ymm22
+	vunpcklps xmm16, xmm28, xmm18
+	vunpcklps ymm21, ymm21, ymm21
+%endif

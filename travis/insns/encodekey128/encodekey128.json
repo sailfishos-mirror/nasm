@@ -31,4 +31,28 @@
    { "output": "encodekey128.bin64", "match": "encodekey128.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ENCODEKEY128",
+  "id": "encodekey12816err",
+  "format": "bin",
+  "source": "encodekey128_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/encodekey128/",
+  "target": [
+   { "stderr": "encodekey128.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ENCODEKEY128",
+  "id": "encodekey12832err",
+  "format": "bin",
+  "source": "encodekey128_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/encodekey128/",
+  "target": [
+   { "stderr": "encodekey128.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

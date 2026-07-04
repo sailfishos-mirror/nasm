@@ -31,4 +31,28 @@
    { "output": "sha1msg2.bin64", "match": "sha1msg2.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SHA1MSG2",
+  "id": "sha1msg216err",
+  "format": "bin",
+  "source": "sha1msg2_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1msg2/",
+  "target": [
+   { "stderr": "sha1msg2.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SHA1MSG2",
+  "id": "sha1msg232err",
+  "format": "bin",
+  "source": "sha1msg2_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1msg2/",
+  "target": [
+   { "stderr": "sha1msg2.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

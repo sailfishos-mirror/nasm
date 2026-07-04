@@ -8,3 +8,10 @@
 	vcmpngtps k3, xmm5, oword [0xa6d]
 	vcmpngtps k7, ymm4, yword [0x3c9]
 	vcmpngtps k6, ymm6, ymm0
+
+%ifdef ERROR
+	vcmpngtps xmm9, xmm9, xmm10
+	vcmpngtps ymm12, ymm8, ymm13
+	vcmpngtps k7, xmm11, xmm10
+	vcmpngtps k7, ymm10, ymm15
+%endif

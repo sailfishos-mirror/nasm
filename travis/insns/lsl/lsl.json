@@ -31,4 +31,28 @@
    { "output": "lsl.bin64", "match": "lsl.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for LSL",
+  "id": "lsl16err",
+  "format": "bin",
+  "source": "lsl_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lsl/",
+  "target": [
+   { "stderr": "lsl.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for LSL",
+  "id": "lsl32err",
+  "format": "bin",
+  "source": "lsl_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lsl/",
+  "target": [
+   { "stderr": "lsl.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

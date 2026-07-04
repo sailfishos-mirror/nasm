@@ -31,4 +31,28 @@
    { "output": "vgetexpsd.bin64", "match": "vgetexpsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VGETEXPSD",
+  "id": "vgetexpsd16err",
+  "format": "bin",
+  "source": "vgetexpsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetexpsd/",
+  "target": [
+   { "stderr": "vgetexpsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VGETEXPSD",
+  "id": "vgetexpsd32err",
+  "format": "bin",
+  "source": "vgetexpsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgetexpsd/",
+  "target": [
+   { "stderr": "vgetexpsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

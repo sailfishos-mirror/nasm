@@ -20,4 +20,28 @@
    { "output": "bndcu.bin32", "match": "bndcu.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BNDCU",
+  "id": "bndcu16err",
+  "format": "bin",
+  "source": "bndcu_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcu/",
+  "target": [
+   { "stderr": "bndcu.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BNDCU",
+  "id": "bndcu32err",
+  "format": "bin",
+  "source": "bndcu_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcu/",
+  "target": [
+   { "stderr": "bndcu.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

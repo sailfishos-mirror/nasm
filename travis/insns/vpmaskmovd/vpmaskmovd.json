@@ -31,4 +31,28 @@
    { "output": "vpmaskmovd.bin64", "match": "vpmaskmovd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMASKMOVD",
+  "id": "vpmaskmovd16err",
+  "format": "bin",
+  "source": "vpmaskmovd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaskmovd/",
+  "target": [
+   { "stderr": "vpmaskmovd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMASKMOVD",
+  "id": "vpmaskmovd32err",
+  "format": "bin",
+  "source": "vpmaskmovd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaskmovd/",
+  "target": [
+   { "stderr": "vpmaskmovd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

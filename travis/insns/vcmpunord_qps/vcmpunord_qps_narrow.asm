@@ -8,3 +8,10 @@
 	vcmpunord_qps k5, xmm3, xmm4
 	vcmpunord_qps k4, ymm6, yword [0x522]
 	vcmpunord_qps k6, ymm0, ymm7
+
+%ifdef ERROR
+	vcmpunord_qps xmm10, xmm8, xmm15
+	vcmpunord_qps ymm13, ymm9, ymm9
+	vcmpunord_qps k6, xmm13, xmm15
+	vcmpunord_qps k1, ymm15, ymm12
+%endif

@@ -7,3 +7,12 @@
 	vfixupimmpd zmm0, zmm1, zword [0xd97], 0x66
 	vfixupimmpd zmm0, zword [0xd97], 0x66
 	vfixupimmpd zmm4, zmm3, zmm7, 0xc4
+
+%ifdef ERROR
+	vfixupimmpd xmm11, xmm13, xmm10, 0x1d
+	vfixupimmpd ymm10, ymm9, ymm8, 0x48
+	vfixupimmpd zmm8, zmm9, zmm14, 0xbc
+	vfixupimmpd xmm31, xmm24, xmm31, 0x58
+	vfixupimmpd ymm21, ymm20, ymm23, 0xa6
+	vfixupimmpd zmm25, zmm19, zmm17, 0xcd
+%endif

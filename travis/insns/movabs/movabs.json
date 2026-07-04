@@ -20,4 +20,28 @@
    { "output": "movabs.bin32", "match": "movabs.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVABS",
+  "id": "movabs16err",
+  "format": "bin",
+  "source": "movabs_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movabs/",
+  "target": [
+   { "stderr": "movabs.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVABS",
+  "id": "movabs32err",
+  "format": "bin",
+  "source": "movabs_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movabs/",
+  "target": [
+   { "stderr": "movabs.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

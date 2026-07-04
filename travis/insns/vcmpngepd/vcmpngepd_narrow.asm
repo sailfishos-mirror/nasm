@@ -8,3 +8,10 @@
 	vcmpngepd k1, xmm2, xmm0
 	vcmpngepd k2, ymm1, ymm4
 	vcmpngepd k3, ymm4, ymm2
+
+%ifdef ERROR
+	vcmpngepd xmm12, xmm12, xmm11
+	vcmpngepd ymm12, ymm10, ymm12
+	vcmpngepd k6, xmm14, xmm15
+	vcmpngepd k1, ymm10, ymm8
+%endif

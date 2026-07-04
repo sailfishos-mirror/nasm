@@ -31,4 +31,28 @@
    { "output": "bswap.bin64", "match": "bswap.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BSWAP",
+  "id": "bswap16err",
+  "format": "bin",
+  "source": "bswap_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bswap/",
+  "target": [
+   { "stderr": "bswap.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BSWAP",
+  "id": "bswap32err",
+  "format": "bin",
+  "source": "bswap_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bswap/",
+  "target": [
+   { "stderr": "bswap.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

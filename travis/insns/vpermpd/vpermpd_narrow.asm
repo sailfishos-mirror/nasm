@@ -7,3 +7,14 @@
 	vpermpd ymm0, ymm4, ymm1
 	vpermpd ymm0, ymm1
 	vpermpd ymm3, ymm0, ymm6
+
+%ifdef ERROR
+	vpermpd ymm11, ymm10, 0x79
+	vpermpd ymm9, ymm10, 0x52
+	vpermpd zmm9, zmm14, 0xc7
+	vpermpd ymm9, ymm14, ymm9
+	vpermpd ymm25, ymm19, 0x63
+	vpermpd ymm28, ymm27, 0x31
+	vpermpd zmm23, zmm27, 0x73
+	vpermpd ymm19, ymm20, ymm28
+%endif

@@ -4,3 +4,8 @@
 	vpshaw xmm2, xmm4, oword [0xe41]
 	vpshaw xmm2, oword [0xe41]
 	vpshaw xmm4, xmm6, xmm0
+
+%ifdef ERROR
+	vpshaw xmm10, xmm8, xmm15
+	vpshaw xmm10, xmm11, xmm10
+%endif

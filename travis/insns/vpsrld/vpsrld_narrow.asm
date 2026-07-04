@@ -10,3 +10,14 @@
 	vpsrld ymm0, ymm7, 0xa2
 	vpsrld ymm0, 0xa2
 	vpsrld ymm3, ymm6, 0x25
+
+%ifdef ERROR
+	vpsrld xmm11, xmm15, xmm15
+	vpsrld xmm9, xmm14, 0xb8
+	vpsrld ymm13, ymm8, xmm8
+	vpsrld ymm13, ymm8, 0x7b
+	vpsrld xmm18, xmm19, xmm16
+	vpsrld xmm26, xmm28, 0x34
+	vpsrld ymm30, ymm25, xmm18
+	vpsrld ymm21, ymm25, 0x7a
+%endif

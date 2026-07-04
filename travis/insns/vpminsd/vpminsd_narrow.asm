@@ -10,3 +10,14 @@
 	vpminsd ymm5, ymm5, ymm2
 	vpminsd ymm5, ymm2
 	vpminsd ymm6, ymm5, ymm5
+
+%ifdef ERROR
+	vpminsd xmm13, xmm13, xmm15
+	vpminsd ymm15, ymm9, ymm10
+	vpminsd xmm12, xmm13, xmm13
+	vpminsd ymm11, ymm12, ymm11
+	vpminsd xmm27, xmm17, xmm16
+	vpminsd ymm21, ymm21, ymm25
+	vpminsd xmm17, xmm30, xmm19
+	vpminsd ymm18, ymm25, ymm24
+%endif

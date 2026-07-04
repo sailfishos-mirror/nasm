@@ -31,4 +31,28 @@
    { "output": "vpsadbw.bin64", "match": "vpsadbw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSADBW",
+  "id": "vpsadbw16err",
+  "format": "bin",
+  "source": "vpsadbw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsadbw/",
+  "target": [
+   { "stderr": "vpsadbw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSADBW",
+  "id": "vpsadbw32err",
+  "format": "bin",
+  "source": "vpsadbw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsadbw/",
+  "target": [
+   { "stderr": "vpsadbw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

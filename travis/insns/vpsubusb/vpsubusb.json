@@ -31,4 +31,28 @@
    { "output": "vpsubusb.bin64", "match": "vpsubusb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBUSB",
+  "id": "vpsubusb16err",
+  "format": "bin",
+  "source": "vpsubusb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubusb/",
+  "target": [
+   { "stderr": "vpsubusb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBUSB",
+  "id": "vpsubusb32err",
+  "format": "bin",
+  "source": "vpsubusb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubusb/",
+  "target": [
+   { "stderr": "vpsubusb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

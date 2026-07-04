@@ -31,4 +31,28 @@
    { "output": "vpermi2d.bin64", "match": "vpermi2d.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMI2D",
+  "id": "vpermi2d16err",
+  "format": "bin",
+  "source": "vpermi2d_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermi2d/",
+  "target": [
+   { "stderr": "vpermi2d.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMI2D",
+  "id": "vpermi2d32err",
+  "format": "bin",
+  "source": "vpermi2d_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermi2d/",
+  "target": [
+   { "stderr": "vpermi2d.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

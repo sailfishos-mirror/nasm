@@ -31,4 +31,28 @@
    { "output": "vcmpord_qss.bin64", "match": "vcmpord_qss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPORD_QSS",
+  "id": "vcmpord_qss16err",
+  "format": "bin",
+  "source": "vcmpord_qss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpord_qss/",
+  "target": [
+   { "stderr": "vcmpord_qss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPORD_QSS",
+  "id": "vcmpord_qss32err",
+  "format": "bin",
+  "source": "vcmpord_qss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpord_qss/",
+  "target": [
+   { "stderr": "vcmpord_qss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "aesenclast.bin64", "match": "aesenclast.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for AESENCLAST",
+  "id": "aesenclast16err",
+  "format": "bin",
+  "source": "aesenclast_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesenclast/",
+  "target": [
+   { "stderr": "aesenclast.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for AESENCLAST",
+  "id": "aesenclast32err",
+  "format": "bin",
+  "source": "aesenclast_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesenclast/",
+  "target": [
+   { "stderr": "aesenclast.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

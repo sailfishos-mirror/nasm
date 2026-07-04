@@ -7,3 +7,12 @@
 	vcmpph k4, zmm4, zmm3, 0xc
 	vcmpph k4, zmm3, 0xc
 	vcmpph k3, zmm4, zword [0x8a9], 0x3e
+
+%ifdef ERROR
+	vcmpph k4, xmm9, xmm10, 0x4b
+	vcmpph k2, ymm15, ymm9, 0x1e
+	vcmpph k6, zmm15, zmm10, 0xe9
+	vcmpph k1, xmm28, xmm16, 0x1e
+	vcmpph k3, ymm27, ymm31, 0x3e
+	vcmpph k6, zmm25, zmm27, 0x62
+%endif

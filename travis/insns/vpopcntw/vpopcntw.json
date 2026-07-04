@@ -31,4 +31,28 @@
    { "output": "vpopcntw.bin64", "match": "vpopcntw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPOPCNTW",
+  "id": "vpopcntw16err",
+  "format": "bin",
+  "source": "vpopcntw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpopcntw/",
+  "target": [
+   { "stderr": "vpopcntw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPOPCNTW",
+  "id": "vpopcntw32err",
+  "format": "bin",
+  "source": "vpopcntw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpopcntw/",
+  "target": [
+   { "stderr": "vpopcntw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

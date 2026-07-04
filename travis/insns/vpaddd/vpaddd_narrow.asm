@@ -10,3 +10,14 @@
 	vpaddd ymm2, ymm7, ymm7
 	vpaddd ymm2, ymm7
 	vpaddd ymm2, ymm7, ymm2
+
+%ifdef ERROR
+	vpaddd xmm15, xmm14, xmm8
+	vpaddd ymm10, ymm9, ymm12
+	vpaddd xmm8, xmm13, xmm15
+	vpaddd ymm9, ymm9, ymm14
+	vpaddd xmm31, xmm23, xmm16
+	vpaddd ymm31, ymm30, ymm30
+	vpaddd xmm19, xmm31, xmm18
+	vpaddd ymm24, ymm30, ymm23
+%endif

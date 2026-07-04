@@ -31,4 +31,28 @@
    { "output": "sha1rnds4.bin64", "match": "sha1rnds4.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SHA1RNDS4",
+  "id": "sha1rnds416err",
+  "format": "bin",
+  "source": "sha1rnds4_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1rnds4/",
+  "target": [
+   { "stderr": "sha1rnds4.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SHA1RNDS4",
+  "id": "sha1rnds432err",
+  "format": "bin",
+  "source": "sha1rnds4_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sha1rnds4/",
+  "target": [
+   { "stderr": "sha1rnds4.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

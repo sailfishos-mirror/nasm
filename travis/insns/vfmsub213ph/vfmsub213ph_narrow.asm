@@ -7,3 +7,12 @@
 	vfmsub213ph zmm3, zmm1, zmm6
 	vfmsub213ph zmm3, zmm6
 	vfmsub213ph zmm1, zmm3, zword [0x5ca]
+
+%ifdef ERROR
+	vfmsub213ph xmm10, xmm10, xmm12
+	vfmsub213ph ymm15, ymm15, ymm14
+	vfmsub213ph zmm14, zmm13, zmm10
+	vfmsub213ph xmm28, xmm22, xmm30
+	vfmsub213ph ymm29, ymm23, ymm31
+	vfmsub213ph zmm18, zmm21, zmm26
+%endif

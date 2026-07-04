@@ -31,4 +31,28 @@
    { "output": "vpcmpgew.bin64", "match": "vpcmpgew.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGEW",
+  "id": "vpcmpgew16err",
+  "format": "bin",
+  "source": "vpcmpgew_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgew/",
+  "target": [
+   { "stderr": "vpcmpgew.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGEW",
+  "id": "vpcmpgew32err",
+  "format": "bin",
+  "source": "vpcmpgew_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgew/",
+  "target": [
+   { "stderr": "vpcmpgew.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

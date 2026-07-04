@@ -31,4 +31,28 @@
    { "output": "vpbroadcastmb2q.bin64", "match": "vpbroadcastmb2q.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBROADCASTMB2Q",
+  "id": "vpbroadcastmb2q16err",
+  "format": "bin",
+  "source": "vpbroadcastmb2q_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpbroadcastmb2q/",
+  "target": [
+   { "stderr": "vpbroadcastmb2q.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBROADCASTMB2Q",
+  "id": "vpbroadcastmb2q32err",
+  "format": "bin",
+  "source": "vpbroadcastmb2q_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpbroadcastmb2q/",
+  "target": [
+   { "stderr": "vpbroadcastmb2q.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -20,4 +20,28 @@
    { "output": "vgatherqps.bin64", "match": "vgatherqps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VGATHERQPS",
+  "id": "vgatherqps16err",
+  "format": "bin",
+  "source": "vgatherqps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherqps/",
+  "target": [
+   { "stderr": "vgatherqps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VGATHERQPS",
+  "id": "vgatherqps32err",
+  "format": "bin",
+  "source": "vgatherqps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherqps/",
+  "target": [
+   { "stderr": "vgatherqps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "cmpxchg.bin64", "match": "cmpxchg.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPXCHG",
+  "id": "cmpxchg16err",
+  "format": "bin",
+  "source": "cmpxchg_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpxchg/",
+  "target": [
+   { "stderr": "cmpxchg.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPXCHG",
+  "id": "cmpxchg32err",
+  "format": "bin",
+  "source": "cmpxchg_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpxchg/",
+  "target": [
+   { "stderr": "cmpxchg.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

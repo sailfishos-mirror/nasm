@@ -8,3 +8,10 @@
 	vcmpfalseps k7, xmm0, xmm2
 	vcmpfalseps k7, ymm3, ymm6
 	vcmpfalseps k3, ymm5, ymm7
+
+%ifdef ERROR
+	vcmpfalseps xmm10, xmm12, xmm11
+	vcmpfalseps ymm11, ymm11, ymm10
+	vcmpfalseps k3, xmm12, xmm10
+	vcmpfalseps k7, ymm9, ymm8
+%endif

@@ -31,4 +31,28 @@
    { "output": "vshufps.bin64", "match": "vshufps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VSHUFPS",
+  "id": "vshufps16err",
+  "format": "bin",
+  "source": "vshufps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vshufps/",
+  "target": [
+   { "stderr": "vshufps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VSHUFPS",
+  "id": "vshufps32err",
+  "format": "bin",
+  "source": "vshufps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vshufps/",
+  "target": [
+   { "stderr": "vshufps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

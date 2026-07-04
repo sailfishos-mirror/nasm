@@ -31,4 +31,28 @@
    { "output": "vfmsubsd.bin64", "match": "vfmsubsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUBSD",
+  "id": "vfmsubsd16err",
+  "format": "bin",
+  "source": "vfmsubsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsubsd/",
+  "target": [
+   { "stderr": "vfmsubsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUBSD",
+  "id": "vfmsubsd32err",
+  "format": "bin",
+  "source": "vfmsubsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsubsd/",
+  "target": [
+   { "stderr": "vfmsubsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

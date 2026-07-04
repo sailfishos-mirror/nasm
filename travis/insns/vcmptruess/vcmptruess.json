@@ -31,4 +31,28 @@
    { "output": "vcmptruess.bin64", "match": "vcmptruess.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPTRUESS",
+  "id": "vcmptruess16err",
+  "format": "bin",
+  "source": "vcmptruess_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmptruess/",
+  "target": [
+   { "stderr": "vcmptruess.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPTRUESS",
+  "id": "vcmptruess32err",
+  "format": "bin",
+  "source": "vcmptruess_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmptruess/",
+  "target": [
+   { "stderr": "vcmptruess.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

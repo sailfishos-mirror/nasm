@@ -8,3 +8,10 @@
 	vcmptrue_uspd k6, xmm2, xmm7
 	vcmptrue_uspd k4, ymm2, yword [0x655]
 	vcmptrue_uspd k5, ymm3, yword [0xbfd]
+
+%ifdef ERROR
+	vcmptrue_uspd xmm9, xmm14, xmm10
+	vcmptrue_uspd ymm9, ymm13, ymm15
+	vcmptrue_uspd k7, xmm12, xmm11
+	vcmptrue_uspd k1, ymm12, ymm12
+%endif

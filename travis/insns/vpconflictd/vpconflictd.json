@@ -31,4 +31,28 @@
    { "output": "vpconflictd.bin64", "match": "vpconflictd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCONFLICTD",
+  "id": "vpconflictd16err",
+  "format": "bin",
+  "source": "vpconflictd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpconflictd/",
+  "target": [
+   { "stderr": "vpconflictd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCONFLICTD",
+  "id": "vpconflictd32err",
+  "format": "bin",
+  "source": "vpconflictd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpconflictd/",
+  "target": [
+   { "stderr": "vpconflictd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

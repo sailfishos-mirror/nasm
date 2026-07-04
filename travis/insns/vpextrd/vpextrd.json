@@ -31,4 +31,28 @@
    { "output": "vpextrd.bin64", "match": "vpextrd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXTRD",
+  "id": "vpextrd16err",
+  "format": "bin",
+  "source": "vpextrd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpextrd/",
+  "target": [
+   { "stderr": "vpextrd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXTRD",
+  "id": "vpextrd32err",
+  "format": "bin",
+  "source": "vpextrd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpextrd/",
+  "target": [
+   { "stderr": "vpextrd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

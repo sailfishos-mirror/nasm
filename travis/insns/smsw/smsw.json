@@ -31,4 +31,28 @@
    { "output": "smsw.bin64", "match": "smsw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SMSW",
+  "id": "smsw16err",
+  "format": "bin",
+  "source": "smsw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/smsw/",
+  "target": [
+   { "stderr": "smsw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SMSW",
+  "id": "smsw32err",
+  "format": "bin",
+  "source": "smsw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/smsw/",
+  "target": [
+   { "stderr": "smsw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

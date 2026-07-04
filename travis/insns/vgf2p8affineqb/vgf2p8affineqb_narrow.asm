@@ -10,3 +10,14 @@
 	vgf2p8affineqb ymm4, ymm2, yword [0x9e2], 0x20
 	vgf2p8affineqb ymm4, yword [0x9e2], 0x20
 	vgf2p8affineqb ymm0, ymm2, ymm7, 0x54
+
+%ifdef ERROR
+	vgf2p8affineqb xmm13, xmm9, xmm14, 0xea
+	vgf2p8affineqb ymm14, ymm14, ymm12, 0x62
+	vgf2p8affineqb xmm12, xmm12, xmm12, 0x7c
+	vgf2p8affineqb ymm15, ymm11, ymm15, 0xea
+	vgf2p8affineqb xmm20, xmm22, xmm18, 0x93
+	vgf2p8affineqb ymm27, ymm29, ymm31, 0xd9
+	vgf2p8affineqb xmm26, xmm21, xmm24, 0x3f
+	vgf2p8affineqb ymm18, ymm30, ymm27, 0x39
+%endif

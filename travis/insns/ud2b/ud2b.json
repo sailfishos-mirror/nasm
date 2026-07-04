@@ -31,4 +31,28 @@
    { "output": "ud2b.bin64", "match": "ud2b.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for UD2B",
+  "id": "ud2b16err",
+  "format": "bin",
+  "source": "ud2b_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2b/",
+  "target": [
+   { "stderr": "ud2b.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for UD2B",
+  "id": "ud2b32err",
+  "format": "bin",
+  "source": "ud2b_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ud2b/",
+  "target": [
+   { "stderr": "ud2b.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

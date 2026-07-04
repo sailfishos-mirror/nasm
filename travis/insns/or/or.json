@@ -32,4 +32,28 @@
    { "stderr": "or.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for OR",
+  "id": "or16err",
+  "format": "bin",
+  "source": "or_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/or/",
+  "target": [
+   { "stderr": "or.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for OR",
+  "id": "or32err",
+  "format": "bin",
+  "source": "or_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/or/",
+  "target": [
+   { "stderr": "or.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

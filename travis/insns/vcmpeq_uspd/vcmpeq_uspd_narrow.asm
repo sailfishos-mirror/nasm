@@ -8,3 +8,10 @@
 	vcmpeq_uspd k4, xmm1, xmm3
 	vcmpeq_uspd k6, ymm1, ymm0
 	vcmpeq_uspd k4, ymm4, yword [0x86f]
+
+%ifdef ERROR
+	vcmpeq_uspd xmm10, xmm12, xmm12
+	vcmpeq_uspd ymm12, ymm15, ymm11
+	vcmpeq_uspd k2, xmm9, xmm12
+	vcmpeq_uspd k3, ymm9, ymm8
+%endif

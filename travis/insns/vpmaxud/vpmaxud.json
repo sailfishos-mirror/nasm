@@ -31,4 +31,28 @@
    { "output": "vpmaxud.bin64", "match": "vpmaxud.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMAXUD",
+  "id": "vpmaxud16err",
+  "format": "bin",
+  "source": "vpmaxud_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaxud/",
+  "target": [
+   { "stderr": "vpmaxud.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMAXUD",
+  "id": "vpmaxud32err",
+  "format": "bin",
+  "source": "vpmaxud_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaxud/",
+  "target": [
+   { "stderr": "vpmaxud.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

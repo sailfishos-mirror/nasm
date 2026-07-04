@@ -10,3 +10,14 @@
 	vminps ymm2, ymm4, yword [0x1fb]
 	vminps ymm2, yword [0x1fb]
 	vminps ymm0, ymm5, ymm5
+
+%ifdef ERROR
+	vminps xmm10, xmm12, xmm15
+	vminps ymm15, ymm10, ymm8
+	vminps xmm13, xmm11, xmm11
+	vminps ymm13, ymm14, ymm8
+	vminps xmm20, xmm21, xmm22
+	vminps ymm25, ymm29, ymm19
+	vminps xmm16, xmm23, xmm18
+	vminps ymm26, ymm17, ymm22
+%endif

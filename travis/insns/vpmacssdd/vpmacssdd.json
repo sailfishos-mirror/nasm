@@ -31,4 +31,28 @@
    { "output": "vpmacssdd.bin64", "match": "vpmacssdd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMACSSDD",
+  "id": "vpmacssdd16err",
+  "format": "bin",
+  "source": "vpmacssdd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmacssdd/",
+  "target": [
+   { "stderr": "vpmacssdd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMACSSDD",
+  "id": "vpmacssdd32err",
+  "format": "bin",
+  "source": "vpmacssdd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmacssdd/",
+  "target": [
+   { "stderr": "vpmacssdd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

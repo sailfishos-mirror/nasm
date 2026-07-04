@@ -31,4 +31,28 @@
    { "output": "vpord.bin64", "match": "vpord.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPORD",
+  "id": "vpord16err",
+  "format": "bin",
+  "source": "vpord_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpord/",
+  "target": [
+   { "stderr": "vpord.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPORD",
+  "id": "vpord32err",
+  "format": "bin",
+  "source": "vpord_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpord/",
+  "target": [
+   { "stderr": "vpord.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vmulsd.bin64", "match": "vmulsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMULSD",
+  "id": "vmulsd16err",
+  "format": "bin",
+  "source": "vmulsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmulsd/",
+  "target": [
+   { "stderr": "vmulsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMULSD",
+  "id": "vmulsd32err",
+  "format": "bin",
+  "source": "vmulsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmulsd/",
+  "target": [
+   { "stderr": "vmulsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

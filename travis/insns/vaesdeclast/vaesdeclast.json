@@ -31,4 +31,28 @@
    { "output": "vaesdeclast.bin64", "match": "vaesdeclast.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VAESDECLAST",
+  "id": "vaesdeclast16err",
+  "format": "bin",
+  "source": "vaesdeclast_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaesdeclast/",
+  "target": [
+   { "stderr": "vaesdeclast.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VAESDECLAST",
+  "id": "vaesdeclast32err",
+  "format": "bin",
+  "source": "vaesdeclast_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaesdeclast/",
+  "target": [
+   { "stderr": "vaesdeclast.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

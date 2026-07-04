@@ -31,4 +31,28 @@
    { "output": "vcmpgt_oqpd.bin64", "match": "vcmpgt_oqpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGT_OQPD",
+  "id": "vcmpgt_oqpd16err",
+  "format": "bin",
+  "source": "vcmpgt_oqpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgt_oqpd/",
+  "target": [
+   { "stderr": "vcmpgt_oqpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGT_OQPD",
+  "id": "vcmpgt_oqpd32err",
+  "format": "bin",
+  "source": "vcmpgt_oqpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgt_oqpd/",
+  "target": [
+   { "stderr": "vcmpgt_oqpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

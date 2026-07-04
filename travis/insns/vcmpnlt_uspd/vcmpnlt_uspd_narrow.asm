@@ -8,3 +8,10 @@
 	vcmpnlt_uspd k7, xmm2, oword [0xc03]
 	vcmpnlt_uspd k5, ymm2, ymm3
 	vcmpnlt_uspd k2, ymm7, ymm4
+
+%ifdef ERROR
+	vcmpnlt_uspd xmm8, xmm12, xmm15
+	vcmpnlt_uspd ymm10, ymm12, ymm12
+	vcmpnlt_uspd k7, xmm10, xmm15
+	vcmpnlt_uspd k7, ymm8, ymm8
+%endif

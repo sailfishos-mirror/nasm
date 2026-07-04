@@ -6,16 +6,13 @@ default rel
 	call .L1
 	call .L1
 	call .L1
-	call .L1
-	call .L1
-	call .L1
-	call .L1
-	call [0x2e1]
-	call [0x6c6]
-	call [0x8e1]
-	call [0x14e]
-	call [0xca7]
-	call [0x3eb]
-	call [0x895]
-	call [0xc39]
-	call [0xe20]
+	call [0xb37]
+	call [0xe48]
+	call [0xc6f]
+	call [0x205]
+	call [0x974]
+
+%ifdef ERROR
+	call cx
+	call word [0x3eb]
+%endif

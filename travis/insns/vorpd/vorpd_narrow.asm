@@ -10,3 +10,14 @@
 	vorpd ymm1, ymm5, ymm3
 	vorpd ymm1, ymm3
 	vorpd ymm2, ymm7, ymm7
+
+%ifdef ERROR
+	vorpd xmm8, xmm10, xmm12
+	vorpd ymm11, ymm15, ymm10
+	vorpd xmm10, xmm9, xmm10
+	vorpd ymm14, ymm8, ymm15
+	vorpd xmm23, xmm20, xmm30
+	vorpd ymm26, ymm18, ymm25
+	vorpd xmm22, xmm26, xmm19
+	vorpd ymm26, ymm28, ymm17
+%endif

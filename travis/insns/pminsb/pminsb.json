@@ -31,4 +31,28 @@
    { "output": "pminsb.bin64", "match": "pminsb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PMINSB",
+  "id": "pminsb16err",
+  "format": "bin",
+  "source": "pminsb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pminsb/",
+  "target": [
+   { "stderr": "pminsb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PMINSB",
+  "id": "pminsb32err",
+  "format": "bin",
+  "source": "pminsb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pminsb/",
+  "target": [
+   { "stderr": "pminsb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

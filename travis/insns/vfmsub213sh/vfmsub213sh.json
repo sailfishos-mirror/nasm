@@ -31,4 +31,28 @@
    { "output": "vfmsub213sh.bin64", "match": "vfmsub213sh.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUB213SH",
+  "id": "vfmsub213sh16err",
+  "format": "bin",
+  "source": "vfmsub213sh_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub213sh/",
+  "target": [
+   { "stderr": "vfmsub213sh.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUB213SH",
+  "id": "vfmsub213sh32err",
+  "format": "bin",
+  "source": "vfmsub213sh_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsub213sh/",
+  "target": [
+   { "stderr": "vfmsub213sh.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

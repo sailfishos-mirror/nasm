@@ -31,4 +31,28 @@
    { "output": "andpd.bin64", "match": "andpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ANDPD",
+  "id": "andpd16err",
+  "format": "bin",
+  "source": "andpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/andpd/",
+  "target": [
+   { "stderr": "andpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ANDPD",
+  "id": "andpd32err",
+  "format": "bin",
+  "source": "andpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/andpd/",
+  "target": [
+   { "stderr": "andpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "cvtdq2pd.bin64", "match": "cvtdq2pd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CVTDQ2PD",
+  "id": "cvtdq2pd16err",
+  "format": "bin",
+  "source": "cvtdq2pd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cvtdq2pd/",
+  "target": [
+   { "stderr": "cvtdq2pd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CVTDQ2PD",
+  "id": "cvtdq2pd32err",
+  "format": "bin",
+  "source": "cvtdq2pd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cvtdq2pd/",
+  "target": [
+   { "stderr": "cvtdq2pd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

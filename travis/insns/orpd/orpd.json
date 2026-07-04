@@ -31,4 +31,28 @@
    { "output": "orpd.bin64", "match": "orpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ORPD",
+  "id": "orpd16err",
+  "format": "bin",
+  "source": "orpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/orpd/",
+  "target": [
+   { "stderr": "orpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ORPD",
+  "id": "orpd32err",
+  "format": "bin",
+  "source": "orpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/orpd/",
+  "target": [
+   { "stderr": "orpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -8,3 +8,10 @@
 	vcmplt_osps k6, xmm7, xmm3
 	vcmplt_osps k1, ymm3, ymm1
 	vcmplt_osps k3, ymm4, yword [0x7a3]
+
+%ifdef ERROR
+	vcmplt_osps xmm13, xmm12, xmm11
+	vcmplt_osps ymm9, ymm11, ymm10
+	vcmplt_osps k2, xmm12, xmm11
+	vcmplt_osps k6, ymm13, ymm8
+%endif

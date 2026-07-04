@@ -6,3 +6,14 @@
 	vpexpandq zmm2, zword [0x3ff]
 	vpexpandq xmm6, xmm3
 	vpexpandq xmm3, xmm3
+
+%ifdef ERROR
+	vpexpandq xmm9, oword [0xbbd]
+	vpexpandq ymm8, yword [0x28c]
+	vpexpandq zmm9, zword [0xde7]
+	vpexpandq xmm15, xmm15
+	vpexpandq xmm27, oword [0x69b]
+	vpexpandq ymm19, yword [0xeda]
+	vpexpandq zmm17, zword [0x4ff]
+	vpexpandq xmm24, xmm17
+%endif

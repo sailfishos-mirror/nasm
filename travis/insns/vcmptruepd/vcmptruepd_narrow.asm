@@ -8,3 +8,10 @@
 	vcmptruepd k6, xmm5, oword [0xce5]
 	vcmptruepd k2, ymm1, yword [0x514]
 	vcmptruepd k6, ymm3, ymm4
+
+%ifdef ERROR
+	vcmptruepd xmm12, xmm13, xmm14
+	vcmptruepd ymm11, ymm14, ymm8
+	vcmptruepd k2, xmm8, xmm15
+	vcmptruepd k3, ymm15, ymm11
+%endif

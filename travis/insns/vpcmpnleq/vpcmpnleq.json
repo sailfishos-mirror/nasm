@@ -31,4 +31,28 @@
    { "output": "vpcmpnleq.bin64", "match": "vpcmpnleq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPNLEQ",
+  "id": "vpcmpnleq16err",
+  "format": "bin",
+  "source": "vpcmpnleq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnleq/",
+  "target": [
+   { "stderr": "vpcmpnleq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPNLEQ",
+  "id": "vpcmpnleq32err",
+  "format": "bin",
+  "source": "vpcmpnleq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnleq/",
+  "target": [
+   { "stderr": "vpcmpnleq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

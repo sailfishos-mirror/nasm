@@ -31,4 +31,28 @@
    { "output": "mulsd.bin64", "match": "mulsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MULSD",
+  "id": "mulsd16err",
+  "format": "bin",
+  "source": "mulsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulsd/",
+  "target": [
+   { "stderr": "mulsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MULSD",
+  "id": "mulsd32err",
+  "format": "bin",
+  "source": "mulsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulsd/",
+  "target": [
+   { "stderr": "mulsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

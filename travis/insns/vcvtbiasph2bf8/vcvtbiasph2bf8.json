@@ -31,4 +31,28 @@
    { "output": "vcvtbiasph2bf8.bin64", "match": "vcvtbiasph2bf8.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTBIASPH2BF8",
+  "id": "vcvtbiasph2bf816err",
+  "format": "bin",
+  "source": "vcvtbiasph2bf8_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtbiasph2bf8/",
+  "target": [
+   { "stderr": "vcvtbiasph2bf8.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTBIASPH2BF8",
+  "id": "vcvtbiasph2bf832err",
+  "format": "bin",
+  "source": "vcvtbiasph2bf8_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtbiasph2bf8/",
+  "target": [
+   { "stderr": "vcvtbiasph2bf8.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

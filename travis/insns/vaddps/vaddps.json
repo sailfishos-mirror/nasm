@@ -31,4 +31,28 @@
    { "output": "vaddps.bin64", "match": "vaddps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VADDPS",
+  "id": "vaddps16err",
+  "format": "bin",
+  "source": "vaddps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaddps/",
+  "target": [
+   { "stderr": "vaddps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VADDPS",
+  "id": "vaddps32err",
+  "format": "bin",
+  "source": "vaddps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaddps/",
+  "target": [
+   { "stderr": "vaddps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

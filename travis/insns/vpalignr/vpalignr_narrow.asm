@@ -10,3 +10,14 @@
 	vpalignr ymm4, ymm7, yword [0x95d], 0xf6
 	vpalignr ymm4, yword [0x95d], 0xf6
 	vpalignr ymm4, ymm7, yword [0xb6c], 0xc6
+
+%ifdef ERROR
+	vpalignr xmm13, xmm14, xmm14, 0xad
+	vpalignr ymm8, ymm9, ymm12, 0xad
+	vpalignr xmm11, xmm14, xmm9, 0x28
+	vpalignr ymm10, ymm12, ymm10, 0xc0
+	vpalignr xmm30, xmm30, xmm23, 0xd9
+	vpalignr ymm30, ymm24, ymm25, 0xbd
+	vpalignr xmm27, xmm30, xmm16, 0xd6
+	vpalignr ymm27, ymm16, ymm20, 0xab
+%endif

@@ -9,4 +9,28 @@
    { "output": "cfcmovnb.bin64", "match": "cfcmovnb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CFCMOVNB",
+  "id": "cfcmovnb16err",
+  "format": "bin",
+  "source": "cfcmovnb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cfcmovnb/",
+  "target": [
+   { "stderr": "cfcmovnb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CFCMOVNB",
+  "id": "cfcmovnb32err",
+  "format": "bin",
+  "source": "cfcmovnb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cfcmovnb/",
+  "target": [
+   { "stderr": "cfcmovnb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

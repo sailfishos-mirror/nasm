@@ -20,4 +20,28 @@
    { "output": "vpscatterqd.bin64", "match": "vpscatterqd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSCATTERQD",
+  "id": "vpscatterqd16err",
+  "format": "bin",
+  "source": "vpscatterqd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpscatterqd/",
+  "target": [
+   { "stderr": "vpscatterqd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSCATTERQD",
+  "id": "vpscatterqd32err",
+  "format": "bin",
+  "source": "vpscatterqd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpscatterqd/",
+  "target": [
+   { "stderr": "vpscatterqd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

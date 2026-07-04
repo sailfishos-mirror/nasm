@@ -7,3 +7,9 @@
 	vprotq xmm6, xmm3, 0xbc
 	vprotq xmm6, 0xbc
 	vprotq xmm1, oword [0x7c3], 0x4d
+
+%ifdef ERROR
+	vprotq xmm8, xmm14, xmm11
+	vprotq xmm11, xmm12, xmm8
+	vprotq xmm13, xmm8, 0x9
+%endif

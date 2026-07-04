@@ -6,3 +6,14 @@
 	vpabsw xmm5, oword [0x45f]
 	vpabsw ymm3, yword [0xa3c]
 	vpabsw ymm7, ymm5
+
+%ifdef ERROR
+	vpabsw xmm9, xmm8
+	vpabsw ymm12, ymm10
+	vpabsw xmm12, xmm8
+	vpabsw ymm8, ymm15
+	vpabsw xmm20, xmm28
+	vpabsw ymm24, ymm24
+	vpabsw xmm24, xmm28
+	vpabsw ymm31, ymm29
+%endif

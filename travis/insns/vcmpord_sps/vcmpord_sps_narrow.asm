@@ -8,3 +8,10 @@
 	vcmpord_sps k3, xmm6, xmm4
 	vcmpord_sps k3, ymm2, ymm2
 	vcmpord_sps k7, ymm3, yword [0x37c]
+
+%ifdef ERROR
+	vcmpord_sps xmm8, xmm12, xmm11
+	vcmpord_sps ymm14, ymm14, ymm15
+	vcmpord_sps k4, xmm11, xmm12
+	vcmpord_sps k1, ymm11, ymm14
+%endif

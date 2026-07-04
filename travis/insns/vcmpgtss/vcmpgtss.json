@@ -31,4 +31,28 @@
    { "output": "vcmpgtss.bin64", "match": "vcmpgtss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGTSS",
+  "id": "vcmpgtss16err",
+  "format": "bin",
+  "source": "vcmpgtss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgtss/",
+  "target": [
+   { "stderr": "vcmpgtss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGTSS",
+  "id": "vcmpgtss32err",
+  "format": "bin",
+  "source": "vcmpgtss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgtss/",
+  "target": [
+   { "stderr": "vcmpgtss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

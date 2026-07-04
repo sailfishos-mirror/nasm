@@ -4,3 +4,8 @@
 	vpand ymm5, ymm3, ymm4
 	vpand ymm5, ymm4
 	vpand ymm6, ymm2, ymm3
+
+%ifdef ERROR
+	vpand xmm10, xmm13, xmm12
+	vpand ymm10, ymm13, ymm9
+%endif

@@ -34,4 +34,28 @@
    { "stderr": "blcmsk.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BLCMSK",
+  "id": "blcmsk16err",
+  "format": "bin",
+  "source": "blcmsk_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blcmsk/",
+  "target": [
+   { "stderr": "blcmsk.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BLCMSK",
+  "id": "blcmsk32err",
+  "format": "bin",
+  "source": "blcmsk_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/blcmsk/",
+  "target": [
+   { "stderr": "blcmsk.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

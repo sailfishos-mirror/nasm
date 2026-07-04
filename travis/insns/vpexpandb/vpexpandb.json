@@ -31,4 +31,28 @@
    { "output": "vpexpandb.bin64", "match": "vpexpandb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXPANDB",
+  "id": "vpexpandb16err",
+  "format": "bin",
+  "source": "vpexpandb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandb/",
+  "target": [
+   { "stderr": "vpexpandb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXPANDB",
+  "id": "vpexpandb32err",
+  "format": "bin",
+  "source": "vpexpandb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandb/",
+  "target": [
+   { "stderr": "vpexpandb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

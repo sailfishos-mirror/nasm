@@ -31,4 +31,28 @@
    { "output": "haddpd.bin64", "match": "haddpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for HADDPD",
+  "id": "haddpd16err",
+  "format": "bin",
+  "source": "haddpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/haddpd/",
+  "target": [
+   { "stderr": "haddpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for HADDPD",
+  "id": "haddpd32err",
+  "format": "bin",
+  "source": "haddpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/haddpd/",
+  "target": [
+   { "stderr": "haddpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

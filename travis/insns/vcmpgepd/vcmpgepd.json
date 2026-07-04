@@ -31,4 +31,28 @@
    { "output": "vcmpgepd.bin64", "match": "vcmpgepd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGEPD",
+  "id": "vcmpgepd16err",
+  "format": "bin",
+  "source": "vcmpgepd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgepd/",
+  "target": [
+   { "stderr": "vcmpgepd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGEPD",
+  "id": "vcmpgepd32err",
+  "format": "bin",
+  "source": "vcmpgepd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpgepd/",
+  "target": [
+   { "stderr": "vcmpgepd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

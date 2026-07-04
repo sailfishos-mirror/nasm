@@ -31,4 +31,28 @@
    { "output": "movntsd.bin64", "match": "movntsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVNTSD",
+  "id": "movntsd16err",
+  "format": "bin",
+  "source": "movntsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movntsd/",
+  "target": [
+   { "stderr": "movntsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVNTSD",
+  "id": "movntsd32err",
+  "format": "bin",
+  "source": "movntsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movntsd/",
+  "target": [
+   { "stderr": "movntsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

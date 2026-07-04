@@ -31,4 +31,28 @@
    { "output": "vrcp14pd.bin64", "match": "vrcp14pd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRCP14PD",
+  "id": "vrcp14pd16err",
+  "format": "bin",
+  "source": "vrcp14pd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcp14pd/",
+  "target": [
+   { "stderr": "vrcp14pd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRCP14PD",
+  "id": "vrcp14pd32err",
+  "format": "bin",
+  "source": "vrcp14pd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrcp14pd/",
+  "target": [
+   { "stderr": "vrcp14pd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

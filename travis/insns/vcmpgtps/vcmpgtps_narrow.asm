@@ -8,3 +8,10 @@
 	vcmpgtps k2, xmm7, xmm4
 	vcmpgtps k2, ymm1, ymm2
 	vcmpgtps k2, ymm6, ymm5
+
+%ifdef ERROR
+	vcmpgtps xmm10, xmm14, xmm14
+	vcmpgtps ymm8, ymm15, ymm14
+	vcmpgtps k5, xmm14, xmm10
+	vcmpgtps k2, ymm13, ymm9
+%endif

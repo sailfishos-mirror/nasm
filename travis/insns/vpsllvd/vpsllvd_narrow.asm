@@ -10,3 +10,14 @@
 	vpsllvd ymm5, ymm4, ymm7
 	vpsllvd ymm5, ymm7
 	vpsllvd ymm3, ymm5, yword [0x448]
+
+%ifdef ERROR
+	vpsllvd xmm11, xmm15, xmm14
+	vpsllvd ymm12, ymm15, ymm10
+	vpsllvd xmm10, xmm9, xmm8
+	vpsllvd ymm15, ymm14, ymm12
+	vpsllvd xmm18, xmm21, xmm18
+	vpsllvd ymm25, ymm25, ymm28
+	vpsllvd xmm19, xmm19, xmm26
+	vpsllvd ymm24, ymm30, ymm22
+%endif

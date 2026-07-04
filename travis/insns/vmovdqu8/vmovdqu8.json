@@ -31,4 +31,28 @@
    { "output": "vmovdqu8.bin64", "match": "vmovdqu8.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVDQU8",
+  "id": "vmovdqu816err",
+  "format": "bin",
+  "source": "vmovdqu8_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovdqu8/",
+  "target": [
+   { "stderr": "vmovdqu8.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVDQU8",
+  "id": "vmovdqu832err",
+  "format": "bin",
+  "source": "vmovdqu8_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovdqu8/",
+  "target": [
+   { "stderr": "vmovdqu8.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

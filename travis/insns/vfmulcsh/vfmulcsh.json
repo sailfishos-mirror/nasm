@@ -31,4 +31,28 @@
    { "output": "vfmulcsh.bin64", "match": "vfmulcsh.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMULCSH",
+  "id": "vfmulcsh16err",
+  "format": "bin",
+  "source": "vfmulcsh_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmulcsh/",
+  "target": [
+   { "stderr": "vfmulcsh.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMULCSH",
+  "id": "vfmulcsh32err",
+  "format": "bin",
+  "source": "vfmulcsh_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmulcsh/",
+  "target": [
+   { "stderr": "vfmulcsh.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

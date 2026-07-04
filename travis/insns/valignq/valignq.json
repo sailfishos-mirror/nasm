@@ -31,4 +31,28 @@
    { "output": "valignq.bin64", "match": "valignq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VALIGNQ",
+  "id": "valignq16err",
+  "format": "bin",
+  "source": "valignq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/valignq/",
+  "target": [
+   { "stderr": "valignq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VALIGNQ",
+  "id": "valignq32err",
+  "format": "bin",
+  "source": "valignq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/valignq/",
+  "target": [
+   { "stderr": "valignq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

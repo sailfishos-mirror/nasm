@@ -10,3 +10,14 @@
 	vpsubsw ymm6, ymm4, ymm6
 	vpsubsw ymm6, ymm6
 	vpsubsw ymm1, ymm1, ymm7
+
+%ifdef ERROR
+	vpsubsw xmm10, xmm8, xmm13
+	vpsubsw ymm8, ymm14, ymm9
+	vpsubsw xmm10, xmm8, xmm11
+	vpsubsw ymm10, ymm8, ymm10
+	vpsubsw xmm25, xmm23, xmm25
+	vpsubsw ymm31, ymm22, ymm16
+	vpsubsw xmm22, xmm27, xmm23
+	vpsubsw ymm24, ymm16, ymm25
+%endif

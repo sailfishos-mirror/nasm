@@ -10,3 +10,10 @@
 	vfmaddpd ymm2, ymm1, ymm1, ymm6
 	vfmaddpd ymm2, ymm1, ymm6
 	vfmaddpd ymm0, ymm7, ymm5, ymm5
+
+%ifdef ERROR
+	vfmaddpd xmm12, xmm15, xmm14, xmm12
+	vfmaddpd ymm9, ymm14, ymm8, ymm12
+	vfmaddpd xmm14, xmm13, xmm8, xmm9
+	vfmaddpd ymm13, ymm10, ymm14, ymm12
+%endif

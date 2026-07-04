@@ -20,4 +20,28 @@
    { "output": "vpgatherdq.bin64", "match": "vpgatherdq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPGATHERDQ",
+  "id": "vpgatherdq16err",
+  "format": "bin",
+  "source": "vpgatherdq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpgatherdq/",
+  "target": [
+   { "stderr": "vpgatherdq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPGATHERDQ",
+  "id": "vpgatherdq32err",
+  "format": "bin",
+  "source": "vpgatherdq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpgatherdq/",
+  "target": [
+   { "stderr": "vpgatherdq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

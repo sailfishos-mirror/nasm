@@ -31,4 +31,28 @@
    { "output": "vblendmps.bin64", "match": "vblendmps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VBLENDMPS",
+  "id": "vblendmps16err",
+  "format": "bin",
+  "source": "vblendmps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vblendmps/",
+  "target": [
+   { "stderr": "vblendmps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VBLENDMPS",
+  "id": "vblendmps32err",
+  "format": "bin",
+  "source": "vblendmps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vblendmps/",
+  "target": [
+   { "stderr": "vblendmps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

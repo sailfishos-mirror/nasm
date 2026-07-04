@@ -8,3 +8,10 @@
 	vcmpnge_uqps k3, xmm1, xmm2
 	vcmpnge_uqps k2, ymm7, ymm0
 	vcmpnge_uqps k2, ymm0, ymm7
+
+%ifdef ERROR
+	vcmpnge_uqps xmm10, xmm10, xmm13
+	vcmpnge_uqps ymm14, ymm11, ymm10
+	vcmpnge_uqps k3, xmm9, xmm9
+	vcmpnge_uqps k7, ymm12, ymm13
+%endif

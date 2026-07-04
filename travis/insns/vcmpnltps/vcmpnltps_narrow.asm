@@ -8,3 +8,10 @@
 	vcmpnltps k5, xmm0, xmm3
 	vcmpnltps k1, ymm6, yword [0xa90]
 	vcmpnltps k1, ymm1, yword [0xdd0]
+
+%ifdef ERROR
+	vcmpnltps xmm8, xmm14, xmm12
+	vcmpnltps ymm14, ymm9, ymm15
+	vcmpnltps k6, xmm12, xmm9
+	vcmpnltps k3, ymm11, ymm9
+%endif

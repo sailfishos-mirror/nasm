@@ -31,4 +31,28 @@
    { "output": "pdep.bin64", "match": "pdep.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PDEP",
+  "id": "pdep16err",
+  "format": "bin",
+  "source": "pdep_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pdep/",
+  "target": [
+   { "stderr": "pdep.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PDEP",
+  "id": "pdep32err",
+  "format": "bin",
+  "source": "pdep_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pdep/",
+  "target": [
+   { "stderr": "pdep.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

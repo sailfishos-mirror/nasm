@@ -31,4 +31,28 @@
    { "output": "lfs.bin64", "match": "lfs.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for LFS",
+  "id": "lfs16err",
+  "format": "bin",
+  "source": "lfs_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lfs/",
+  "target": [
+   { "stderr": "lfs.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for LFS",
+  "id": "lfs32err",
+  "format": "bin",
+  "source": "lfs_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/lfs/",
+  "target": [
+   { "stderr": "lfs.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

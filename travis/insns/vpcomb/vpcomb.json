@@ -31,4 +31,28 @@
    { "output": "vpcomb.bin64", "match": "vpcomb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMB",
+  "id": "vpcomb16err",
+  "format": "bin",
+  "source": "vpcomb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomb/",
+  "target": [
+   { "stderr": "vpcomb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMB",
+  "id": "vpcomb32err",
+  "format": "bin",
+  "source": "vpcomb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomb/",
+  "target": [
+   { "stderr": "vpcomb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -6,3 +6,10 @@
 	kmovd k6, ebp
 	kmovd eax, k3
 	kmovd ebx, k4
+
+%ifdef ERROR
+	kmovd k7, r15d
+	kmovd r15d, k4
+	kmovd k7, r22d
+	kmovd r18d, k3
+%endif

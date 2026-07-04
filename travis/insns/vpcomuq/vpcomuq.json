@@ -31,4 +31,28 @@
    { "output": "vpcomuq.bin64", "match": "vpcomuq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMUQ",
+  "id": "vpcomuq16err",
+  "format": "bin",
+  "source": "vpcomuq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomuq/",
+  "target": [
+   { "stderr": "vpcomuq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMUQ",
+  "id": "vpcomuq32err",
+  "format": "bin",
+  "source": "vpcomuq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcomuq/",
+  "target": [
+   { "stderr": "vpcomuq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

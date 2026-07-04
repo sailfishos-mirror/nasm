@@ -31,4 +31,16 @@
    { "output": "call.bin64", "match": "call.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CALL",
+  "id": "call64err",
+  "format": "bin",
+  "source": "call.asm",
+  "option": "--bits 64 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/call/",
+  "target": [
+   { "stderr": "call.stderr64err" }
+  ],
+  "error": "expected"
+ }
 ]

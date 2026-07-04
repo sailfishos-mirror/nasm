@@ -20,4 +20,28 @@
    { "output": "enqcmd.bin32", "match": "enqcmd.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ENQCMD",
+  "id": "enqcmd16err",
+  "format": "bin",
+  "source": "enqcmd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/enqcmd/",
+  "target": [
+   { "stderr": "enqcmd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ENQCMD",
+  "id": "enqcmd32err",
+  "format": "bin",
+  "source": "enqcmd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/enqcmd/",
+  "target": [
+   { "stderr": "enqcmd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

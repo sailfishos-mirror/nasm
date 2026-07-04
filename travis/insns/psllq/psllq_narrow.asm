@@ -6,3 +6,8 @@
 	psllq xmm2, xmm0
 	psllq xmm3, 0x30
 	psllq xmm3, 0x61
+
+%ifdef ERROR
+	psllq xmm8, xmm10
+	psllq xmm12, 0x35
+%endif

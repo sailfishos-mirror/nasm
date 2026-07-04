@@ -6,3 +6,10 @@
 	movw k2, edx
 	movw k3, di
 	movw k2, bp
+
+%ifdef ERROR
+	movw k1, r10d
+	movw k3, r9w
+	movw k7, r18d
+	movw k6, r20w
+%endif

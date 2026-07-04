@@ -31,4 +31,28 @@
    { "output": "vpcmpgeb.bin64", "match": "vpcmpgeb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGEB",
+  "id": "vpcmpgeb16err",
+  "format": "bin",
+  "source": "vpcmpgeb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgeb/",
+  "target": [
+   { "stderr": "vpcmpgeb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGEB",
+  "id": "vpcmpgeb32err",
+  "format": "bin",
+  "source": "vpcmpgeb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgeb/",
+  "target": [
+   { "stderr": "vpcmpgeb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

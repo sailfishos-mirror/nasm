@@ -31,4 +31,28 @@
    { "output": "vpermd.bin64", "match": "vpermd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMD",
+  "id": "vpermd16err",
+  "format": "bin",
+  "source": "vpermd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermd/",
+  "target": [
+   { "stderr": "vpermd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMD",
+  "id": "vpermd32err",
+  "format": "bin",
+  "source": "vpermd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermd/",
+  "target": [
+   { "stderr": "vpermd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

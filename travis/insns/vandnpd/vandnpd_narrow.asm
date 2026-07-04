@@ -10,3 +10,14 @@
 	vandnpd ymm4, ymm6, ymm0
 	vandnpd ymm4, ymm0
 	vandnpd ymm5, ymm3, ymm6
+
+%ifdef ERROR
+	vandnpd xmm11, xmm14, xmm10
+	vandnpd ymm15, ymm10, ymm11
+	vandnpd xmm11, xmm9, xmm8
+	vandnpd ymm8, ymm10, ymm15
+	vandnpd xmm16, xmm25, xmm17
+	vandnpd ymm26, ymm19, ymm30
+	vandnpd xmm19, xmm24, xmm24
+	vandnpd ymm24, ymm16, ymm29
+%endif

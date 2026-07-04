@@ -31,4 +31,28 @@
    { "output": "paddq.bin64", "match": "paddq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PADDQ",
+  "id": "paddq16err",
+  "format": "bin",
+  "source": "paddq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddq/",
+  "target": [
+   { "stderr": "paddq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PADDQ",
+  "id": "paddq32err",
+  "format": "bin",
+  "source": "paddq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddq/",
+  "target": [
+   { "stderr": "paddq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

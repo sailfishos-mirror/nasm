@@ -7,3 +7,12 @@
 	vpmaxsq zmm6, zmm1, zmm2
 	vpmaxsq zmm6, zmm2
 	vpmaxsq zmm5, zmm3, zword [0x14b]
+
+%ifdef ERROR
+	vpmaxsq xmm12, xmm9, xmm8
+	vpmaxsq ymm12, ymm13, ymm15
+	vpmaxsq zmm14, zmm14, zmm12
+	vpmaxsq xmm22, xmm18, xmm19
+	vpmaxsq ymm22, ymm16, ymm30
+	vpmaxsq zmm23, zmm25, zmm28
+%endif

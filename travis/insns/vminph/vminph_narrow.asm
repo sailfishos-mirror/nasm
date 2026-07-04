@@ -7,3 +7,12 @@
 	vminph zmm0, zmm3, zmm5
 	vminph zmm0, zmm5
 	vminph zmm5, zmm1, zmm2
+
+%ifdef ERROR
+	vminph xmm9, xmm9, xmm8
+	vminph ymm15, ymm13, ymm11
+	vminph zmm12, zmm9, zmm9
+	vminph xmm19, xmm25, xmm25
+	vminph ymm20, ymm29, ymm16
+	vminph zmm26, zmm17, zmm29
+%endif

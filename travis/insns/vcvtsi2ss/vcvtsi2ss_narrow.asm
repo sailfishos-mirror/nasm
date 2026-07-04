@@ -10,3 +10,14 @@
 	vcvtsi2ss xmm6, xmm6, dword [0x462]
 	vcvtsi2ss xmm6, dword [0x462]
 	vcvtsi2ss xmm6, xmm4, eax
+
+%ifdef ERROR
+	vcvtsi2ss xmm10, xmm8, r15d
+	vcvtsi2ss xmm10, xmm9, dword [0xcff]
+	vcvtsi2ss xmm12, xmm13, r14
+	vcvtsi2ss xmm9, xmm8, r9d
+	vcvtsi2ss xmm28, xmm17, r28d
+	vcvtsi2ss xmm18, xmm26, dword [0xf6d]
+	vcvtsi2ss xmm23, xmm16, r16
+	vcvtsi2ss xmm18, xmm29, r20d
+%endif

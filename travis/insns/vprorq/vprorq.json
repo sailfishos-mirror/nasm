@@ -31,4 +31,28 @@
    { "output": "vprorq.bin64", "match": "vprorq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPRORQ",
+  "id": "vprorq16err",
+  "format": "bin",
+  "source": "vprorq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprorq/",
+  "target": [
+   { "stderr": "vprorq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPRORQ",
+  "id": "vprorq32err",
+  "format": "bin",
+  "source": "vprorq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprorq/",
+  "target": [
+   { "stderr": "vprorq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

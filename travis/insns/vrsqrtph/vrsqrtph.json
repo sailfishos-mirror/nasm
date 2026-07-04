@@ -31,4 +31,28 @@
    { "output": "vrsqrtph.bin64", "match": "vrsqrtph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRSQRTPH",
+  "id": "vrsqrtph16err",
+  "format": "bin",
+  "source": "vrsqrtph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrsqrtph/",
+  "target": [
+   { "stderr": "vrsqrtph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRSQRTPH",
+  "id": "vrsqrtph32err",
+  "format": "bin",
+  "source": "vrsqrtph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrsqrtph/",
+  "target": [
+   { "stderr": "vrsqrtph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

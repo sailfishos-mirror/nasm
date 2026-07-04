@@ -31,4 +31,28 @@
    { "output": "loadiwkey.bin64", "match": "loadiwkey.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for LOADIWKEY",
+  "id": "loadiwkey16err",
+  "format": "bin",
+  "source": "loadiwkey_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/loadiwkey/",
+  "target": [
+   { "stderr": "loadiwkey.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for LOADIWKEY",
+  "id": "loadiwkey32err",
+  "format": "bin",
+  "source": "loadiwkey_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/loadiwkey/",
+  "target": [
+   { "stderr": "loadiwkey.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

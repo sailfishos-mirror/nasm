@@ -31,4 +31,28 @@
    { "output": "vcvtsd2usi.bin64", "match": "vcvtsd2usi.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTSD2USI",
+  "id": "vcvtsd2usi16err",
+  "format": "bin",
+  "source": "vcvtsd2usi_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtsd2usi/",
+  "target": [
+   { "stderr": "vcvtsd2usi.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTSD2USI",
+  "id": "vcvtsd2usi32err",
+  "format": "bin",
+  "source": "vcvtsd2usi_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtsd2usi/",
+  "target": [
+   { "stderr": "vcvtsd2usi.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

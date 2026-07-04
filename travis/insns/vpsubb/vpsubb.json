@@ -31,4 +31,28 @@
    { "output": "vpsubb.bin64", "match": "vpsubb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBB",
+  "id": "vpsubb16err",
+  "format": "bin",
+  "source": "vpsubb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubb/",
+  "target": [
+   { "stderr": "vpsubb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSUBB",
+  "id": "vpsubb32err",
+  "format": "bin",
+  "source": "vpsubb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsubb/",
+  "target": [
+   { "stderr": "vpsubb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

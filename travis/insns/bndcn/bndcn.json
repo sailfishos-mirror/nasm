@@ -20,4 +20,28 @@
    { "output": "bndcn.bin32", "match": "bndcn.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BNDCN",
+  "id": "bndcn16err",
+  "format": "bin",
+  "source": "bndcn_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcn/",
+  "target": [
+   { "stderr": "bndcn.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BNDCN",
+  "id": "bndcn32err",
+  "format": "bin",
+  "source": "bndcn_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/bndcn/",
+  "target": [
+   { "stderr": "bndcn.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

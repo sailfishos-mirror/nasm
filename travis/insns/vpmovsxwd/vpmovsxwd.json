@@ -31,4 +31,28 @@
    { "output": "vpmovsxwd.bin64", "match": "vpmovsxwd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMOVSXWD",
+  "id": "vpmovsxwd16err",
+  "format": "bin",
+  "source": "vpmovsxwd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovsxwd/",
+  "target": [
+   { "stderr": "vpmovsxwd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMOVSXWD",
+  "id": "vpmovsxwd32err",
+  "format": "bin",
+  "source": "vpmovsxwd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovsxwd/",
+  "target": [
+   { "stderr": "vpmovsxwd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

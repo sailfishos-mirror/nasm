@@ -8,3 +8,10 @@
 	vcmpngt_uspd k5, xmm1, xmm0
 	vcmpngt_uspd k4, ymm5, ymm3
 	vcmpngt_uspd k1, ymm1, yword [0xad9]
+
+%ifdef ERROR
+	vcmpngt_uspd xmm12, xmm13, xmm13
+	vcmpngt_uspd ymm8, ymm11, ymm10
+	vcmpngt_uspd k5, xmm12, xmm11
+	vcmpngt_uspd k1, ymm9, ymm8
+%endif

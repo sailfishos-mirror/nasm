@@ -31,4 +31,28 @@
    { "output": "haddps.bin64", "match": "haddps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for HADDPS",
+  "id": "haddps16err",
+  "format": "bin",
+  "source": "haddps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/haddps/",
+  "target": [
+   { "stderr": "haddps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for HADDPS",
+  "id": "haddps32err",
+  "format": "bin",
+  "source": "haddps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/haddps/",
+  "target": [
+   { "stderr": "haddps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

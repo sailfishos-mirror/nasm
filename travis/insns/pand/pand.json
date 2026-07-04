@@ -31,4 +31,28 @@
    { "output": "pand.bin64", "match": "pand.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PAND",
+  "id": "pand16err",
+  "format": "bin",
+  "source": "pand_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pand/",
+  "target": [
+   { "stderr": "pand.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PAND",
+  "id": "pand32err",
+  "format": "bin",
+  "source": "pand_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pand/",
+  "target": [
+   { "stderr": "pand.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

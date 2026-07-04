@@ -8,3 +8,10 @@
 	vcmpfalse_ospd k1, xmm3, xmm1
 	vcmpfalse_ospd k1, ymm4, ymm1
 	vcmpfalse_ospd k7, ymm7, ymm0
+
+%ifdef ERROR
+	vcmpfalse_ospd xmm12, xmm13, xmm9
+	vcmpfalse_ospd ymm15, ymm12, ymm11
+	vcmpfalse_ospd k1, xmm10, xmm10
+	vcmpfalse_ospd k6, ymm12, ymm10
+%endif

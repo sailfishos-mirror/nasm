@@ -31,4 +31,28 @@
    { "output": "psubsb.bin64", "match": "psubsb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PSUBSB",
+  "id": "psubsb16err",
+  "format": "bin",
+  "source": "psubsb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psubsb/",
+  "target": [
+   { "stderr": "psubsb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PSUBSB",
+  "id": "psubsb32err",
+  "format": "bin",
+  "source": "psubsb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psubsb/",
+  "target": [
+   { "stderr": "psubsb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

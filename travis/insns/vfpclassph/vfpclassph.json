@@ -31,4 +31,28 @@
    { "output": "vfpclassph.bin64", "match": "vfpclassph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFPCLASSPH",
+  "id": "vfpclassph16err",
+  "format": "bin",
+  "source": "vfpclassph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfpclassph/",
+  "target": [
+   { "stderr": "vfpclassph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFPCLASSPH",
+  "id": "vfpclassph32err",
+  "format": "bin",
+  "source": "vfpclassph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfpclassph/",
+  "target": [
+   { "stderr": "vfpclassph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

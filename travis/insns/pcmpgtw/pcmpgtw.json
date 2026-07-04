@@ -31,4 +31,28 @@
    { "output": "pcmpgtw.bin64", "match": "pcmpgtw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PCMPGTW",
+  "id": "pcmpgtw16err",
+  "format": "bin",
+  "source": "pcmpgtw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpgtw/",
+  "target": [
+   { "stderr": "pcmpgtw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PCMPGTW",
+  "id": "pcmpgtw32err",
+  "format": "bin",
+  "source": "pcmpgtw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpgtw/",
+  "target": [
+   { "stderr": "pcmpgtw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vpaddw.bin64", "match": "vpaddw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPADDW",
+  "id": "vpaddw16err",
+  "format": "bin",
+  "source": "vpaddw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpaddw/",
+  "target": [
+   { "stderr": "vpaddw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPADDW",
+  "id": "vpaddw32err",
+  "format": "bin",
+  "source": "vpaddw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpaddw/",
+  "target": [
+   { "stderr": "vpaddw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

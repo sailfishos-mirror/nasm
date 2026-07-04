@@ -6,3 +6,14 @@
 	vmovdqa64 zmm2, zword [0x72f]
 	vmovdqa64 xmm6, xmm3
 	vmovdqa64 xmm3, xmm5
+
+%ifdef ERROR
+	vmovdqa64 xmm8, xmm11
+	vmovdqa64 ymm8, ymm8
+	vmovdqa64 zmm11, zmm15
+	vmovdqa64 xmm8, xmm12
+	vmovdqa64 xmm31, xmm17
+	vmovdqa64 ymm27, ymm24
+	vmovdqa64 zmm27, zmm21
+	vmovdqa64 xmm31, xmm18
+%endif

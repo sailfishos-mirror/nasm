@@ -10,3 +10,10 @@
 	vfmsubaddps ymm0, ymm7, ymm6, ymm1
 	vfmsubaddps ymm0, ymm6, ymm1
 	vfmsubaddps ymm7, ymm0, ymm4, ymm0
+
+%ifdef ERROR
+	vfmsubaddps xmm8, xmm12, xmm13, xmm15
+	vfmsubaddps ymm13, ymm13, ymm10, ymm10
+	vfmsubaddps xmm8, xmm9, xmm10, xmm12
+	vfmsubaddps ymm15, ymm12, ymm14, ymm15
+%endif

@@ -31,4 +31,28 @@
    { "output": "vfmsubadd213pd.bin64", "match": "vfmsubadd213pd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUBADD213PD",
+  "id": "vfmsubadd213pd16err",
+  "format": "bin",
+  "source": "vfmsubadd213pd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsubadd213pd/",
+  "target": [
+   { "stderr": "vfmsubadd213pd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMSUBADD213PD",
+  "id": "vfmsubadd213pd32err",
+  "format": "bin",
+  "source": "vfmsubadd213pd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmsubadd213pd/",
+  "target": [
+   { "stderr": "vfmsubadd213pd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

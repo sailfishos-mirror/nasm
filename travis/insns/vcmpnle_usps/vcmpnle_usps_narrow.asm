@@ -8,3 +8,10 @@
 	vcmpnle_usps k6, xmm0, xmm6
 	vcmpnle_usps k1, ymm3, ymm3
 	vcmpnle_usps k7, ymm5, ymm4
+
+%ifdef ERROR
+	vcmpnle_usps xmm13, xmm15, xmm9
+	vcmpnle_usps ymm9, ymm11, ymm15
+	vcmpnle_usps k6, xmm10, xmm15
+	vcmpnle_usps k2, ymm11, ymm14
+%endif

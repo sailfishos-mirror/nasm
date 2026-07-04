@@ -31,4 +31,28 @@
    { "output": "psignb.bin64", "match": "psignb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PSIGNB",
+  "id": "psignb16err",
+  "format": "bin",
+  "source": "psignb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psignb/",
+  "target": [
+   { "stderr": "psignb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PSIGNB",
+  "id": "psignb32err",
+  "format": "bin",
+  "source": "psignb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psignb/",
+  "target": [
+   { "stderr": "psignb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

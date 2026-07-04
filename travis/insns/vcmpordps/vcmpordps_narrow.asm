@@ -8,3 +8,10 @@
 	vcmpordps k5, xmm4, oword [0xe5f]
 	vcmpordps k4, ymm3, ymm5
 	vcmpordps k6, ymm5, yword [0xab2]
+
+%ifdef ERROR
+	vcmpordps xmm11, xmm9, xmm11
+	vcmpordps ymm8, ymm14, ymm10
+	vcmpordps k6, xmm12, xmm10
+	vcmpordps k6, ymm9, ymm12
+%endif

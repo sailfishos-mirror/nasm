@@ -10,3 +10,14 @@
 	vshufpd ymm4, ymm2, ymm5, 0x3a
 	vshufpd ymm4, ymm5, 0x3a
 	vshufpd ymm2, ymm7, ymm0, 0xe6
+
+%ifdef ERROR
+	vshufpd xmm9, xmm11, xmm14, 0x48
+	vshufpd ymm9, ymm9, ymm12, 0x79
+	vshufpd xmm15, xmm15, xmm13, 0x50
+	vshufpd ymm10, ymm11, ymm9, 0xfe
+	vshufpd xmm20, xmm21, xmm24, 0x4
+	vshufpd ymm27, ymm25, ymm29, 0x72
+	vshufpd xmm21, xmm21, xmm20, 0xad
+	vshufpd ymm24, ymm29, ymm25, 0x92
+%endif

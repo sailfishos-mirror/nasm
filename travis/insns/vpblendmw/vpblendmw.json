@@ -31,4 +31,28 @@
    { "output": "vpblendmw.bin64", "match": "vpblendmw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBLENDMW",
+  "id": "vpblendmw16err",
+  "format": "bin",
+  "source": "vpblendmw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpblendmw/",
+  "target": [
+   { "stderr": "vpblendmw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBLENDMW",
+  "id": "vpblendmw32err",
+  "format": "bin",
+  "source": "vpblendmw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpblendmw/",
+  "target": [
+   { "stderr": "vpblendmw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

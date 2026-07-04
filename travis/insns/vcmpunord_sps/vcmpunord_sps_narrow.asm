@@ -8,3 +8,10 @@
 	vcmpunord_sps k3, xmm7, oword [0xd84]
 	vcmpunord_sps k3, ymm6, ymm5
 	vcmpunord_sps k5, ymm6, ymm0
+
+%ifdef ERROR
+	vcmpunord_sps xmm15, xmm15, xmm15
+	vcmpunord_sps ymm8, ymm13, ymm12
+	vcmpunord_sps k4, xmm9, xmm12
+	vcmpunord_sps k2, ymm13, ymm14
+%endif

@@ -31,4 +31,28 @@
    { "output": "vcvtbf162ibs.bin64", "match": "vcvtbf162ibs.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTBF162IBS",
+  "id": "vcvtbf162ibs16err",
+  "format": "bin",
+  "source": "vcvtbf162ibs_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtbf162ibs/",
+  "target": [
+   { "stderr": "vcvtbf162ibs.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCVTBF162IBS",
+  "id": "vcvtbf162ibs32err",
+  "format": "bin",
+  "source": "vcvtbf162ibs_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcvtbf162ibs/",
+  "target": [
+   { "stderr": "vcvtbf162ibs.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

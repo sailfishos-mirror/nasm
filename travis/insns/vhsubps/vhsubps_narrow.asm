@@ -4,3 +4,8 @@
 	vhsubps ymm5, ymm7, ymm2
 	vhsubps ymm5, ymm2
 	vhsubps ymm4, ymm0, ymm2
+
+%ifdef ERROR
+	vhsubps xmm13, xmm15, xmm15
+	vhsubps ymm15, ymm15, ymm13
+%endif

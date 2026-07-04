@@ -31,4 +31,28 @@
    { "output": "vptestmd.bin64", "match": "vptestmd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTESTMD",
+  "id": "vptestmd16err",
+  "format": "bin",
+  "source": "vptestmd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestmd/",
+  "target": [
+   { "stderr": "vptestmd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTESTMD",
+  "id": "vptestmd32err",
+  "format": "bin",
+  "source": "vptestmd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestmd/",
+  "target": [
+   { "stderr": "vptestmd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

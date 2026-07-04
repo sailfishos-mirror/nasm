@@ -31,4 +31,28 @@
    { "output": "vminmaxbf16.bin64", "match": "vminmaxbf16.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMINMAXBF16",
+  "id": "vminmaxbf1616err",
+  "format": "bin",
+  "source": "vminmaxbf16_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminmaxbf16/",
+  "target": [
+   { "stderr": "vminmaxbf16.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMINMAXBF16",
+  "id": "vminmaxbf1632err",
+  "format": "bin",
+  "source": "vminmaxbf16_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminmaxbf16/",
+  "target": [
+   { "stderr": "vminmaxbf16.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

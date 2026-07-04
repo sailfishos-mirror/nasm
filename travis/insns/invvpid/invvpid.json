@@ -20,4 +20,28 @@
    { "output": "invvpid.bin32", "match": "invvpid.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for INVVPID",
+  "id": "invvpid16err",
+  "format": "bin",
+  "source": "invvpid_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invvpid/",
+  "target": [
+   { "stderr": "invvpid.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for INVVPID",
+  "id": "invvpid32err",
+  "format": "bin",
+  "source": "invvpid_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invvpid/",
+  "target": [
+   { "stderr": "invvpid.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

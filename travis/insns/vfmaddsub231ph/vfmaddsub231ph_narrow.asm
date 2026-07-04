@@ -7,3 +7,12 @@
 	vfmaddsub231ph zmm0, zmm4, zmm1
 	vfmaddsub231ph zmm0, zmm1
 	vfmaddsub231ph zmm3, zmm1, zword [0xf00]
+
+%ifdef ERROR
+	vfmaddsub231ph xmm14, xmm12, xmm11
+	vfmaddsub231ph ymm9, ymm11, ymm12
+	vfmaddsub231ph zmm13, zmm13, zmm13
+	vfmaddsub231ph xmm22, xmm26, xmm21
+	vfmaddsub231ph ymm24, ymm30, ymm25
+	vfmaddsub231ph zmm22, zmm29, zmm20
+%endif

@@ -31,4 +31,28 @@
    { "output": "shlx.bin64", "match": "shlx.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SHLX",
+  "id": "shlx16err",
+  "format": "bin",
+  "source": "shlx_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/shlx/",
+  "target": [
+   { "stderr": "shlx.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SHLX",
+  "id": "shlx32err",
+  "format": "bin",
+  "source": "shlx_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/shlx/",
+  "target": [
+   { "stderr": "shlx.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

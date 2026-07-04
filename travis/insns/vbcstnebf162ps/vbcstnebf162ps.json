@@ -31,4 +31,28 @@
    { "output": "vbcstnebf162ps.bin64", "match": "vbcstnebf162ps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VBCSTNEBF162PS",
+  "id": "vbcstnebf162ps16err",
+  "format": "bin",
+  "source": "vbcstnebf162ps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbcstnebf162ps/",
+  "target": [
+   { "stderr": "vbcstnebf162ps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VBCSTNEBF162PS",
+  "id": "vbcstnebf162ps32err",
+  "format": "bin",
+  "source": "vbcstnebf162ps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vbcstnebf162ps/",
+  "target": [
+   { "stderr": "vbcstnebf162ps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

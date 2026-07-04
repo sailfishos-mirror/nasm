@@ -10,3 +10,14 @@
 	vpsubusw ymm6, ymm0, yword [0xa24]
 	vpsubusw ymm6, yword [0xa24]
 	vpsubusw ymm2, ymm0, yword [0xf54]
+
+%ifdef ERROR
+	vpsubusw xmm12, xmm13, xmm13
+	vpsubusw ymm12, ymm14, ymm11
+	vpsubusw xmm9, xmm9, xmm8
+	vpsubusw ymm12, ymm12, ymm13
+	vpsubusw xmm21, xmm22, xmm29
+	vpsubusw ymm27, ymm31, ymm29
+	vpsubusw xmm24, xmm16, xmm28
+	vpsubusw ymm23, ymm30, ymm30
+%endif

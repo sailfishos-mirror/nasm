@@ -31,4 +31,28 @@
    { "output": "pmulhrsw.bin64", "match": "pmulhrsw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PMULHRSW",
+  "id": "pmulhrsw16err",
+  "format": "bin",
+  "source": "pmulhrsw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmulhrsw/",
+  "target": [
+   { "stderr": "pmulhrsw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PMULHRSW",
+  "id": "pmulhrsw32err",
+  "format": "bin",
+  "source": "pmulhrsw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmulhrsw/",
+  "target": [
+   { "stderr": "pmulhrsw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vptestnmw.bin64", "match": "vptestnmw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTESTNMW",
+  "id": "vptestnmw16err",
+  "format": "bin",
+  "source": "vptestnmw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestnmw/",
+  "target": [
+   { "stderr": "vptestnmw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPTESTNMW",
+  "id": "vptestnmw32err",
+  "format": "bin",
+  "source": "vptestnmw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vptestnmw/",
+  "target": [
+   { "stderr": "vptestnmw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

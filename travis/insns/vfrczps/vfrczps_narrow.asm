@@ -4,3 +4,8 @@
 	vfrczps ymm5, yword [0x9af]
 	vfrczps ymm5
 	vfrczps ymm3, yword [0xf36]
+
+%ifdef ERROR
+	vfrczps xmm14, xmm8
+	vfrczps ymm14, ymm9
+%endif

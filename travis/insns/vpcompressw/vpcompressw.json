@@ -31,4 +31,28 @@
    { "output": "vpcompressw.bin64", "match": "vpcompressw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMPRESSW",
+  "id": "vpcompressw16err",
+  "format": "bin",
+  "source": "vpcompressw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcompressw/",
+  "target": [
+   { "stderr": "vpcompressw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCOMPRESSW",
+  "id": "vpcompressw32err",
+  "format": "bin",
+  "source": "vpcompressw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcompressw/",
+  "target": [
+   { "stderr": "vpcompressw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

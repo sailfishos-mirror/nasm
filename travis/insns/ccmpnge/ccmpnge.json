@@ -10,4 +10,28 @@
    { "stderr": "ccmpnge.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPNGE",
+  "id": "ccmpnge16err",
+  "format": "bin",
+  "source": "ccmpnge_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnge/",
+  "target": [
+   { "stderr": "ccmpnge.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPNGE",
+  "id": "ccmpnge32err",
+  "format": "bin",
+  "source": "ccmpnge_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnge/",
+  "target": [
+   { "stderr": "ccmpnge.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

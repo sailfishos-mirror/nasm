@@ -31,4 +31,28 @@
    { "output": "vpextrq.bin64", "match": "vpextrq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXTRQ",
+  "id": "vpextrq16err",
+  "format": "bin",
+  "source": "vpextrq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpextrq/",
+  "target": [
+   { "stderr": "vpextrq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXTRQ",
+  "id": "vpextrq32err",
+  "format": "bin",
+  "source": "vpextrq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpextrq/",
+  "target": [
+   { "stderr": "vpextrq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

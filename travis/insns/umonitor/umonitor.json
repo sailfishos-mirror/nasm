@@ -20,4 +20,28 @@
    { "output": "umonitor.bin32", "match": "umonitor.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for UMONITOR",
+  "id": "umonitor16err",
+  "format": "bin",
+  "source": "umonitor_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/umonitor/",
+  "target": [
+   { "stderr": "umonitor.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for UMONITOR",
+  "id": "umonitor32err",
+  "format": "bin",
+  "source": "umonitor_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/umonitor/",
+  "target": [
+   { "stderr": "umonitor.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

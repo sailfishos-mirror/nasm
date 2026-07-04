@@ -31,4 +31,28 @@
    { "output": "vprotd.bin64", "match": "vprotd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPROTD",
+  "id": "vprotd16err",
+  "format": "bin",
+  "source": "vprotd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprotd/",
+  "target": [
+   { "stderr": "vprotd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPROTD",
+  "id": "vprotd32err",
+  "format": "bin",
+  "source": "vprotd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vprotd/",
+  "target": [
+   { "stderr": "vprotd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

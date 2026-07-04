@@ -31,4 +31,28 @@
    { "output": "vpcmpgtuw.bin64", "match": "vpcmpgtuw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGTUW",
+  "id": "vpcmpgtuw16err",
+  "format": "bin",
+  "source": "vpcmpgtuw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgtuw/",
+  "target": [
+   { "stderr": "vpcmpgtuw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPGTUW",
+  "id": "vpcmpgtuw32err",
+  "format": "bin",
+  "source": "vpcmpgtuw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpgtuw/",
+  "target": [
+   { "stderr": "vpcmpgtuw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

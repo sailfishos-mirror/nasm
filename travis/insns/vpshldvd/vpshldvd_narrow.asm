@@ -7,3 +7,12 @@
 	vpshldvd zmm0, zmm2, zmm7
 	vpshldvd zmm0, zmm7
 	vpshldvd zmm6, zmm7, zword [0xd04]
+
+%ifdef ERROR
+	vpshldvd xmm15, xmm11, xmm15
+	vpshldvd ymm15, ymm8, ymm13
+	vpshldvd zmm9, zmm8, zmm8
+	vpshldvd xmm26, xmm17, xmm26
+	vpshldvd ymm18, ymm16, ymm26
+	vpshldvd zmm22, zmm28, zmm20
+%endif

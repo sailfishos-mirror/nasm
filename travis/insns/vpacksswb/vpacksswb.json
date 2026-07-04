@@ -31,4 +31,28 @@
    { "output": "vpacksswb.bin64", "match": "vpacksswb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPACKSSWB",
+  "id": "vpacksswb16err",
+  "format": "bin",
+  "source": "vpacksswb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpacksswb/",
+  "target": [
+   { "stderr": "vpacksswb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPACKSSWB",
+  "id": "vpacksswb32err",
+  "format": "bin",
+  "source": "vpacksswb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpacksswb/",
+  "target": [
+   { "stderr": "vpacksswb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "addss.bin64", "match": "addss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ADDSS",
+  "id": "addss16err",
+  "format": "bin",
+  "source": "addss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/addss/",
+  "target": [
+   { "stderr": "addss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ADDSS",
+  "id": "addss32err",
+  "format": "bin",
+  "source": "addss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/addss/",
+  "target": [
+   { "stderr": "addss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

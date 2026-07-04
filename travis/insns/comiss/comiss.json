@@ -31,4 +31,28 @@
    { "output": "comiss.bin64", "match": "comiss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for COMISS",
+  "id": "comiss16err",
+  "format": "bin",
+  "source": "comiss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/comiss/",
+  "target": [
+   { "stderr": "comiss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for COMISS",
+  "id": "comiss32err",
+  "format": "bin",
+  "source": "comiss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/comiss/",
+  "target": [
+   { "stderr": "comiss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

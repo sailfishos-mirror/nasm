@@ -20,4 +20,28 @@
    { "output": "monitor.bin32", "match": "monitor.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MONITOR",
+  "id": "monitor16err",
+  "format": "bin",
+  "source": "monitor_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/monitor/",
+  "target": [
+   { "stderr": "monitor.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MONITOR",
+  "id": "monitor32err",
+  "format": "bin",
+  "source": "monitor_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/monitor/",
+  "target": [
+   { "stderr": "monitor.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

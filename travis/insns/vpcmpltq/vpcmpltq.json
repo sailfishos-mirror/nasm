@@ -31,4 +31,28 @@
    { "output": "vpcmpltq.bin64", "match": "vpcmpltq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPLTQ",
+  "id": "vpcmpltq16err",
+  "format": "bin",
+  "source": "vpcmpltq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpltq/",
+  "target": [
+   { "stderr": "vpcmpltq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPLTQ",
+  "id": "vpcmpltq32err",
+  "format": "bin",
+  "source": "vpcmpltq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpltq/",
+  "target": [
+   { "stderr": "vpcmpltq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

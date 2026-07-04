@@ -6,3 +6,14 @@
 	vfnmsub213ps xmm2, xmm4, xmm5
 	vfnmsub213ps ymm6, ymm1, ymm7
 	vfnmsub213ps ymm0, ymm0, ymm5
+
+%ifdef ERROR
+	vfnmsub213ps xmm14, xmm11, xmm12
+	vfnmsub213ps ymm15, ymm11, ymm13
+	vfnmsub213ps xmm13, xmm11, xmm8
+	vfnmsub213ps ymm11, ymm15, ymm12
+	vfnmsub213ps xmm31, xmm27, xmm24
+	vfnmsub213ps ymm23, ymm30, ymm21
+	vfnmsub213ps xmm30, xmm23, xmm21
+	vfnmsub213ps ymm16, ymm16, ymm23
+%endif

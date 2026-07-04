@@ -31,4 +31,28 @@
    { "output": "mulps.bin64", "match": "mulps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MULPS",
+  "id": "mulps16err",
+  "format": "bin",
+  "source": "mulps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulps/",
+  "target": [
+   { "stderr": "mulps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MULPS",
+  "id": "mulps32err",
+  "format": "bin",
+  "source": "mulps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/mulps/",
+  "target": [
+   { "stderr": "mulps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

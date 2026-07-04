@@ -31,4 +31,28 @@
    { "output": "vpcmpistri.bin64", "match": "vpcmpistri.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPISTRI",
+  "id": "vpcmpistri16err",
+  "format": "bin",
+  "source": "vpcmpistri_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpistri/",
+  "target": [
+   { "stderr": "vpcmpistri.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPISTRI",
+  "id": "vpcmpistri32err",
+  "format": "bin",
+  "source": "vpcmpistri_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpistri/",
+  "target": [
+   { "stderr": "vpcmpistri.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

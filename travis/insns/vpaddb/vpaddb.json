@@ -31,4 +31,28 @@
    { "output": "vpaddb.bin64", "match": "vpaddb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPADDB",
+  "id": "vpaddb16err",
+  "format": "bin",
+  "source": "vpaddb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpaddb/",
+  "target": [
+   { "stderr": "vpaddb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPADDB",
+  "id": "vpaddb32err",
+  "format": "bin",
+  "source": "vpaddb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpaddb/",
+  "target": [
+   { "stderr": "vpaddb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

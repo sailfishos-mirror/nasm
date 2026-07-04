@@ -7,3 +7,12 @@
 	vscalefps zmm5, zmm6, zword [0x959]
 	vscalefps zmm5, zword [0x959]
 	vscalefps zmm6, zmm4, zmm6
+
+%ifdef ERROR
+	vscalefps xmm8, xmm12, xmm8
+	vscalefps ymm11, ymm13, ymm11
+	vscalefps zmm15, zmm14, zmm14
+	vscalefps xmm25, xmm18, xmm20
+	vscalefps ymm21, ymm29, ymm27
+	vscalefps zmm27, zmm16, zmm29
+%endif

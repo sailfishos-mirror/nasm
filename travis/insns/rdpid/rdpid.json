@@ -31,4 +31,28 @@
    { "output": "rdpid.bin64", "match": "rdpid.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for RDPID",
+  "id": "rdpid16err",
+  "format": "bin",
+  "source": "rdpid_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdpid/",
+  "target": [
+   { "stderr": "rdpid.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for RDPID",
+  "id": "rdpid32err",
+  "format": "bin",
+  "source": "rdpid_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rdpid/",
+  "target": [
+   { "stderr": "rdpid.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

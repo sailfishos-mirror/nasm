@@ -31,4 +31,28 @@
    { "output": "vpexpandq.bin64", "match": "vpexpandq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXPANDQ",
+  "id": "vpexpandq16err",
+  "format": "bin",
+  "source": "vpexpandq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandq/",
+  "target": [
+   { "stderr": "vpexpandq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPEXPANDQ",
+  "id": "vpexpandq32err",
+  "format": "bin",
+  "source": "vpexpandq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpexpandq/",
+  "target": [
+   { "stderr": "vpexpandq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

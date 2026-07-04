@@ -31,4 +31,28 @@
    { "output": "vmovlps.bin64", "match": "vmovlps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVLPS",
+  "id": "vmovlps16err",
+  "format": "bin",
+  "source": "vmovlps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovlps/",
+  "target": [
+   { "stderr": "vmovlps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVLPS",
+  "id": "vmovlps32err",
+  "format": "bin",
+  "source": "vmovlps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovlps/",
+  "target": [
+   { "stderr": "vmovlps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

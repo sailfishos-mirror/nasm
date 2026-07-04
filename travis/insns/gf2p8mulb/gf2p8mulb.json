@@ -31,4 +31,28 @@
    { "output": "gf2p8mulb.bin64", "match": "gf2p8mulb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for GF2P8MULB",
+  "id": "gf2p8mulb16err",
+  "format": "bin",
+  "source": "gf2p8mulb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/gf2p8mulb/",
+  "target": [
+   { "stderr": "gf2p8mulb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for GF2P8MULB",
+  "id": "gf2p8mulb32err",
+  "format": "bin",
+  "source": "gf2p8mulb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/gf2p8mulb/",
+  "target": [
+   { "stderr": "gf2p8mulb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

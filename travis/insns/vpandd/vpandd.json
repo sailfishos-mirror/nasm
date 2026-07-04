@@ -31,4 +31,28 @@
    { "output": "vpandd.bin64", "match": "vpandd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPANDD",
+  "id": "vpandd16err",
+  "format": "bin",
+  "source": "vpandd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpandd/",
+  "target": [
+   { "stderr": "vpandd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPANDD",
+  "id": "vpandd32err",
+  "format": "bin",
+  "source": "vpandd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpandd/",
+  "target": [
+   { "stderr": "vpandd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "pminud.bin64", "match": "pminud.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PMINUD",
+  "id": "pminud16err",
+  "format": "bin",
+  "source": "pminud_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pminud/",
+  "target": [
+   { "stderr": "pminud.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PMINUD",
+  "id": "pminud32err",
+  "format": "bin",
+  "source": "pminud_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pminud/",
+  "target": [
+   { "stderr": "pminud.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

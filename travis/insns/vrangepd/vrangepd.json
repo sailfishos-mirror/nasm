@@ -31,4 +31,28 @@
    { "output": "vrangepd.bin64", "match": "vrangepd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRANGEPD",
+  "id": "vrangepd16err",
+  "format": "bin",
+  "source": "vrangepd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrangepd/",
+  "target": [
+   { "stderr": "vrangepd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRANGEPD",
+  "id": "vrangepd32err",
+  "format": "bin",
+  "source": "vrangepd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrangepd/",
+  "target": [
+   { "stderr": "vrangepd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

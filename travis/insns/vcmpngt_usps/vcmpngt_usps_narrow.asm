@@ -8,3 +8,10 @@
 	vcmpngt_usps k2, xmm0, xmm3
 	vcmpngt_usps k7, ymm4, ymm6
 	vcmpngt_usps k5, ymm2, ymm5
+
+%ifdef ERROR
+	vcmpngt_usps xmm15, xmm10, xmm11
+	vcmpngt_usps ymm9, ymm10, ymm15
+	vcmpngt_usps k2, xmm11, xmm8
+	vcmpngt_usps k5, ymm12, ymm14
+%endif

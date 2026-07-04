@@ -10,3 +10,14 @@
 	vpmaxsw ymm5, ymm0, yword [0x39b]
 	vpmaxsw ymm5, yword [0x39b]
 	vpmaxsw ymm3, ymm0, yword [0x9de]
+
+%ifdef ERROR
+	vpmaxsw xmm13, xmm12, xmm12
+	vpmaxsw ymm10, ymm12, ymm12
+	vpmaxsw xmm14, xmm13, xmm12
+	vpmaxsw ymm11, ymm15, ymm15
+	vpmaxsw xmm27, xmm29, xmm17
+	vpmaxsw ymm23, ymm25, ymm19
+	vpmaxsw xmm28, xmm18, xmm21
+	vpmaxsw ymm26, ymm25, ymm19
+%endif

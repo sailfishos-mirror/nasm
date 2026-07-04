@@ -6,3 +6,14 @@
 	vmovapd ymm1, ymm1
 	vmovapd ymm0, ymm7
 	vmovapd ymm7, ymm6
+
+%ifdef ERROR
+	vmovapd xmm15, xmm8
+	vmovapd xmm14, xmm9
+	vmovapd ymm14, ymm9
+	vmovapd ymm15, ymm11
+	vmovapd xmm16, xmm22
+	vmovapd xmm31, xmm26
+	vmovapd ymm30, ymm18
+	vmovapd ymm28, ymm17
+%endif

@@ -31,4 +31,28 @@
    { "output": "vpmovusqb.bin64", "match": "vpmovusqb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMOVUSQB",
+  "id": "vpmovusqb16err",
+  "format": "bin",
+  "source": "vpmovusqb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovusqb/",
+  "target": [
+   { "stderr": "vpmovusqb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMOVUSQB",
+  "id": "vpmovusqb32err",
+  "format": "bin",
+  "source": "vpmovusqb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmovusqb/",
+  "target": [
+   { "stderr": "vpmovusqb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

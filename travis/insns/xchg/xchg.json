@@ -31,4 +31,28 @@
    { "output": "xchg.bin64", "match": "xchg.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for XCHG",
+  "id": "xchg16err",
+  "format": "bin",
+  "source": "xchg_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xchg/",
+  "target": [
+   { "stderr": "xchg.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for XCHG",
+  "id": "xchg32err",
+  "format": "bin",
+  "source": "xchg_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xchg/",
+  "target": [
+   { "stderr": "xchg.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

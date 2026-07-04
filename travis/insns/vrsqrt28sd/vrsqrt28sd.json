@@ -31,4 +31,28 @@
    { "output": "vrsqrt28sd.bin64", "match": "vrsqrt28sd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRSQRT28SD",
+  "id": "vrsqrt28sd16err",
+  "format": "bin",
+  "source": "vrsqrt28sd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrsqrt28sd/",
+  "target": [
+   { "stderr": "vrsqrt28sd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRSQRT28SD",
+  "id": "vrsqrt28sd32err",
+  "format": "bin",
+  "source": "vrsqrt28sd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrsqrt28sd/",
+  "target": [
+   { "stderr": "vrsqrt28sd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

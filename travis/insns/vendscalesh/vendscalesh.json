@@ -31,4 +31,28 @@
    { "output": "vendscalesh.bin64", "match": "vendscalesh.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VENDSCALESH",
+  "id": "vendscalesh16err",
+  "format": "bin",
+  "source": "vendscalesh_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vendscalesh/",
+  "target": [
+   { "stderr": "vendscalesh.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VENDSCALESH",
+  "id": "vendscalesh32err",
+  "format": "bin",
+  "source": "vendscalesh_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vendscalesh/",
+  "target": [
+   { "stderr": "vendscalesh.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

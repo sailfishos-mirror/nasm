@@ -10,4 +10,28 @@
    { "stderr": "ctestne.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CTESTNE",
+  "id": "ctestne16err",
+  "format": "bin",
+  "source": "ctestne_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctestne/",
+  "target": [
+   { "stderr": "ctestne.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CTESTNE",
+  "id": "ctestne32err",
+  "format": "bin",
+  "source": "ctestne_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ctestne/",
+  "target": [
+   { "stderr": "ctestne.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

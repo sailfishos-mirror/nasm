@@ -32,4 +32,28 @@
    { "stderr": "cmp.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMP",
+  "id": "cmp16err",
+  "format": "bin",
+  "source": "cmp_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmp/",
+  "target": [
+   { "stderr": "cmp.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMP",
+  "id": "cmp32err",
+  "format": "bin",
+  "source": "cmp_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmp/",
+  "target": [
+   { "stderr": "cmp.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

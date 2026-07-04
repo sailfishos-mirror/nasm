@@ -31,4 +31,28 @@
    { "output": "vcmplepd.bin64", "match": "vcmplepd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPLEPD",
+  "id": "vcmplepd16err",
+  "format": "bin",
+  "source": "vcmplepd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmplepd/",
+  "target": [
+   { "stderr": "vcmplepd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPLEPD",
+  "id": "vcmplepd32err",
+  "format": "bin",
+  "source": "vcmplepd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmplepd/",
+  "target": [
+   { "stderr": "vcmplepd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

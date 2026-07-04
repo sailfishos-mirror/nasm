@@ -20,4 +20,28 @@
    { "output": "vgatherpf0dps.bin64", "match": "vgatherpf0dps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VGATHERPF0DPS",
+  "id": "vgatherpf0dps16err",
+  "format": "bin",
+  "source": "vgatherpf0dps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf0dps/",
+  "target": [
+   { "stderr": "vgatherpf0dps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VGATHERPF0DPS",
+  "id": "vgatherpf0dps32err",
+  "format": "bin",
+  "source": "vgatherpf0dps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vgatherpf0dps/",
+  "target": [
+   { "stderr": "vgatherpf0dps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

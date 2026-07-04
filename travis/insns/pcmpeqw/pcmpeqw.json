@@ -31,4 +31,28 @@
    { "output": "pcmpeqw.bin64", "match": "pcmpeqw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PCMPEQW",
+  "id": "pcmpeqw16err",
+  "format": "bin",
+  "source": "pcmpeqw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpeqw/",
+  "target": [
+   { "stderr": "pcmpeqw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PCMPEQW",
+  "id": "pcmpeqw32err",
+  "format": "bin",
+  "source": "pcmpeqw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pcmpeqw/",
+  "target": [
+   { "stderr": "pcmpeqw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vpxor.bin64", "match": "vpxor.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPXOR",
+  "id": "vpxor16err",
+  "format": "bin",
+  "source": "vpxor_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpxor/",
+  "target": [
+   { "stderr": "vpxor.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPXOR",
+  "id": "vpxor32err",
+  "format": "bin",
+  "source": "vpxor_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpxor/",
+  "target": [
+   { "stderr": "vpxor.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

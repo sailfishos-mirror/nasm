@@ -31,4 +31,28 @@
    { "output": "vucomisd.bin64", "match": "vucomisd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VUCOMISD",
+  "id": "vucomisd16err",
+  "format": "bin",
+  "source": "vucomisd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vucomisd/",
+  "target": [
+   { "stderr": "vucomisd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VUCOMISD",
+  "id": "vucomisd32err",
+  "format": "bin",
+  "source": "vucomisd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vucomisd/",
+  "target": [
+   { "stderr": "vucomisd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

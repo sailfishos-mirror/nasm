@@ -31,4 +31,28 @@
    { "output": "vphaddbw.bin64", "match": "vphaddbw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPHADDBW",
+  "id": "vphaddbw16err",
+  "format": "bin",
+  "source": "vphaddbw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vphaddbw/",
+  "target": [
+   { "stderr": "vphaddbw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPHADDBW",
+  "id": "vphaddbw32err",
+  "format": "bin",
+  "source": "vphaddbw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vphaddbw/",
+  "target": [
+   { "stderr": "vphaddbw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -7,3 +7,12 @@
 	vfmaddsub132ph zmm6, zmm4, zword [0xa0b]
 	vfmaddsub132ph zmm6, zword [0xa0b]
 	vfmaddsub132ph zmm6, zmm6, zmm6
+
+%ifdef ERROR
+	vfmaddsub132ph xmm11, xmm8, xmm15
+	vfmaddsub132ph ymm15, ymm15, ymm9
+	vfmaddsub132ph zmm13, zmm9, zmm11
+	vfmaddsub132ph xmm24, xmm26, xmm30
+	vfmaddsub132ph ymm21, ymm27, ymm29
+	vfmaddsub132ph zmm20, zmm22, zmm22
+%endif

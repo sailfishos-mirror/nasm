@@ -31,4 +31,28 @@
    { "output": "vandnpd.bin64", "match": "vandnpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VANDNPD",
+  "id": "vandnpd16err",
+  "format": "bin",
+  "source": "vandnpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vandnpd/",
+  "target": [
+   { "stderr": "vandnpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VANDNPD",
+  "id": "vandnpd32err",
+  "format": "bin",
+  "source": "vandnpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vandnpd/",
+  "target": [
+   { "stderr": "vandnpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

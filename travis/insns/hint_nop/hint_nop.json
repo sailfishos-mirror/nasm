@@ -34,4 +34,28 @@
    { "stderr": "hint_nop.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for HINT_NOP",
+  "id": "hint_nop16err",
+  "format": "bin",
+  "source": "hint_nop_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/hint_nop/",
+  "target": [
+   { "stderr": "hint_nop.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for HINT_NOP",
+  "id": "hint_nop32err",
+  "format": "bin",
+  "source": "hint_nop_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/hint_nop/",
+  "target": [
+   { "stderr": "hint_nop.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

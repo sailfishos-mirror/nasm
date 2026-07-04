@@ -31,4 +31,28 @@
    { "output": "v4fnmaddss.bin64", "match": "v4fnmaddss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for V4FNMADDSS",
+  "id": "v4fnmaddss16err",
+  "format": "bin",
+  "source": "v4fnmaddss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/v4fnmaddss/",
+  "target": [
+   { "stderr": "v4fnmaddss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for V4FNMADDSS",
+  "id": "v4fnmaddss32err",
+  "format": "bin",
+  "source": "v4fnmaddss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/v4fnmaddss/",
+  "target": [
+   { "stderr": "v4fnmaddss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

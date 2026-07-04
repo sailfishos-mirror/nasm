@@ -31,4 +31,28 @@
    { "output": "vpdpwusds.bin64", "match": "vpdpwusds.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPDPWUSDS",
+  "id": "vpdpwusds16err",
+  "format": "bin",
+  "source": "vpdpwusds_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpwusds/",
+  "target": [
+   { "stderr": "vpdpwusds.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPDPWUSDS",
+  "id": "vpdpwusds32err",
+  "format": "bin",
+  "source": "vpdpwusds_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpdpwusds/",
+  "target": [
+   { "stderr": "vpdpwusds.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

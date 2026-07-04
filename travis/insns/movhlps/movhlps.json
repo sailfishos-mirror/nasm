@@ -31,4 +31,28 @@
    { "output": "movhlps.bin64", "match": "movhlps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVHLPS",
+  "id": "movhlps16err",
+  "format": "bin",
+  "source": "movhlps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movhlps/",
+  "target": [
+   { "stderr": "movhlps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MOVHLPS",
+  "id": "movhlps32err",
+  "format": "bin",
+  "source": "movhlps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movhlps/",
+  "target": [
+   { "stderr": "movhlps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

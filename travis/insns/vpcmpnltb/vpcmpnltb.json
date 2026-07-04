@@ -31,4 +31,28 @@
    { "output": "vpcmpnltb.bin64", "match": "vpcmpnltb.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPNLTB",
+  "id": "vpcmpnltb16err",
+  "format": "bin",
+  "source": "vpcmpnltb_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnltb/",
+  "target": [
+   { "stderr": "vpcmpnltb.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPNLTB",
+  "id": "vpcmpnltb32err",
+  "format": "bin",
+  "source": "vpcmpnltb_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmpnltb/",
+  "target": [
+   { "stderr": "vpcmpnltb.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

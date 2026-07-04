@@ -31,4 +31,28 @@
    { "output": "vpsignw.bin64", "match": "vpsignw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSIGNW",
+  "id": "vpsignw16err",
+  "format": "bin",
+  "source": "vpsignw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsignw/",
+  "target": [
+   { "stderr": "vpsignw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSIGNW",
+  "id": "vpsignw32err",
+  "format": "bin",
+  "source": "vpsignw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsignw/",
+  "target": [
+   { "stderr": "vpsignw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

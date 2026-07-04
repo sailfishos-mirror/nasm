@@ -8,3 +8,10 @@
 	vcmpeq_usps k6, xmm1, xmm6
 	vcmpeq_usps k4, ymm5, yword [0xd33]
 	vcmpeq_usps k3, ymm2, yword [0xd6c]
+
+%ifdef ERROR
+	vcmpeq_usps xmm15, xmm12, xmm10
+	vcmpeq_usps ymm10, ymm12, ymm14
+	vcmpeq_usps k2, xmm13, xmm13
+	vcmpeq_usps k5, ymm15, ymm13
+%endif

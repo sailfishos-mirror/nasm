@@ -10,3 +10,10 @@
 	vfmsubpd ymm7, ymm6, ymm4, ymm7
 	vfmsubpd ymm7, ymm4, ymm7
 	vfmsubpd ymm4, ymm7, ymm4, ymm0
+
+%ifdef ERROR
+	vfmsubpd xmm12, xmm9, xmm15, xmm8
+	vfmsubpd ymm14, ymm14, ymm14, ymm8
+	vfmsubpd xmm8, xmm8, xmm10, xmm8
+	vfmsubpd ymm10, ymm13, ymm13, ymm13
+%endif

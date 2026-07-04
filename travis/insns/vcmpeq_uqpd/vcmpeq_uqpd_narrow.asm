@@ -8,3 +8,10 @@
 	vcmpeq_uqpd k5, xmm4, xmm1
 	vcmpeq_uqpd k6, ymm6, ymm7
 	vcmpeq_uqpd k3, ymm3, ymm3
+
+%ifdef ERROR
+	vcmpeq_uqpd xmm11, xmm8, xmm10
+	vcmpeq_uqpd ymm10, ymm11, ymm8
+	vcmpeq_uqpd k7, xmm8, xmm12
+	vcmpeq_uqpd k2, ymm11, ymm8
+%endif

@@ -31,4 +31,28 @@
    { "output": "vhsubpd.bin64", "match": "vhsubpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VHSUBPD",
+  "id": "vhsubpd16err",
+  "format": "bin",
+  "source": "vhsubpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vhsubpd/",
+  "target": [
+   { "stderr": "vhsubpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VHSUBPD",
+  "id": "vhsubpd32err",
+  "format": "bin",
+  "source": "vhsubpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vhsubpd/",
+  "target": [
+   { "stderr": "vhsubpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

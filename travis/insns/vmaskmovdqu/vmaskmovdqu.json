@@ -31,4 +31,28 @@
    { "output": "vmaskmovdqu.bin64", "match": "vmaskmovdqu.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMASKMOVDQU",
+  "id": "vmaskmovdqu16err",
+  "format": "bin",
+  "source": "vmaskmovdqu_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaskmovdqu/",
+  "target": [
+   { "stderr": "vmaskmovdqu.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMASKMOVDQU",
+  "id": "vmaskmovdqu32err",
+  "format": "bin",
+  "source": "vmaskmovdqu_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaskmovdqu/",
+  "target": [
+   { "stderr": "vmaskmovdqu.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

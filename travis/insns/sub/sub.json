@@ -32,4 +32,28 @@
    { "stderr": "sub.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SUB",
+  "id": "sub16err",
+  "format": "bin",
+  "source": "sub_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sub/",
+  "target": [
+   { "stderr": "sub.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SUB",
+  "id": "sub32err",
+  "format": "bin",
+  "source": "sub_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/sub/",
+  "target": [
+   { "stderr": "sub.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

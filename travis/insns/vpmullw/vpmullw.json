@@ -31,4 +31,28 @@
    { "output": "vpmullw.bin64", "match": "vpmullw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMULLW",
+  "id": "vpmullw16err",
+  "format": "bin",
+  "source": "vpmullw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmullw/",
+  "target": [
+   { "stderr": "vpmullw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMULLW",
+  "id": "vpmullw32err",
+  "format": "bin",
+  "source": "vpmullw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmullw/",
+  "target": [
+   { "stderr": "vpmullw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

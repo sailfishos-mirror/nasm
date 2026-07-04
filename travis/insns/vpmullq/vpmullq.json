@@ -31,4 +31,28 @@
    { "output": "vpmullq.bin64", "match": "vpmullq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMULLQ",
+  "id": "vpmullq16err",
+  "format": "bin",
+  "source": "vpmullq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmullq/",
+  "target": [
+   { "stderr": "vpmullq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMULLQ",
+  "id": "vpmullq32err",
+  "format": "bin",
+  "source": "vpmullq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmullq/",
+  "target": [
+   { "stderr": "vpmullq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

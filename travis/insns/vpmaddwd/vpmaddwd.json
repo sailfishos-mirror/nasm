@@ -31,4 +31,28 @@
    { "output": "vpmaddwd.bin64", "match": "vpmaddwd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMADDWD",
+  "id": "vpmaddwd16err",
+  "format": "bin",
+  "source": "vpmaddwd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaddwd/",
+  "target": [
+   { "stderr": "vpmaddwd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPMADDWD",
+  "id": "vpmaddwd32err",
+  "format": "bin",
+  "source": "vpmaddwd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpmaddwd/",
+  "target": [
+   { "stderr": "vpmaddwd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "packusdw.bin64", "match": "packusdw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PACKUSDW",
+  "id": "packusdw16err",
+  "format": "bin",
+  "source": "packusdw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/packusdw/",
+  "target": [
+   { "stderr": "packusdw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PACKUSDW",
+  "id": "packusdw32err",
+  "format": "bin",
+  "source": "packusdw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/packusdw/",
+  "target": [
+   { "stderr": "packusdw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

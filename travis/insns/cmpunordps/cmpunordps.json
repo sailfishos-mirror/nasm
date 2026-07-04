@@ -31,4 +31,28 @@
    { "output": "cmpunordps.bin64", "match": "cmpunordps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPUNORDPS",
+  "id": "cmpunordps16err",
+  "format": "bin",
+  "source": "cmpunordps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpunordps/",
+  "target": [
+   { "stderr": "cmpunordps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CMPUNORDPS",
+  "id": "cmpunordps32err",
+  "format": "bin",
+  "source": "cmpunordps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpunordps/",
+  "target": [
+   { "stderr": "cmpunordps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

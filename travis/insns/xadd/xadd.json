@@ -31,4 +31,28 @@
    { "output": "xadd.bin64", "match": "xadd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for XADD",
+  "id": "xadd16err",
+  "format": "bin",
+  "source": "xadd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xadd/",
+  "target": [
+   { "stderr": "xadd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for XADD",
+  "id": "xadd32err",
+  "format": "bin",
+  "source": "xadd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xadd/",
+  "target": [
+   { "stderr": "xadd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vcmpltps.bin64", "match": "vcmpltps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPLTPS",
+  "id": "vcmpltps16err",
+  "format": "bin",
+  "source": "vcmpltps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpltps/",
+  "target": [
+   { "stderr": "vcmpltps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPLTPS",
+  "id": "vcmpltps32err",
+  "format": "bin",
+  "source": "vcmpltps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpltps/",
+  "target": [
+   { "stderr": "vcmpltps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

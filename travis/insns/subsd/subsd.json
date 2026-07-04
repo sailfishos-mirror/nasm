@@ -31,4 +31,28 @@
    { "output": "subsd.bin64", "match": "subsd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SUBSD",
+  "id": "subsd16err",
+  "format": "bin",
+  "source": "subsd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subsd/",
+  "target": [
+   { "stderr": "subsd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SUBSD",
+  "id": "subsd32err",
+  "format": "bin",
+  "source": "subsd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subsd/",
+  "target": [
+   { "stderr": "subsd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

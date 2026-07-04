@@ -31,4 +31,28 @@
    { "output": "vrndscalebf16.bin64", "match": "vrndscalebf16.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRNDSCALEBF16",
+  "id": "vrndscalebf1616err",
+  "format": "bin",
+  "source": "vrndscalebf16_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrndscalebf16/",
+  "target": [
+   { "stderr": "vrndscalebf16.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRNDSCALEBF16",
+  "id": "vrndscalebf1632err",
+  "format": "bin",
+  "source": "vrndscalebf16_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrndscalebf16/",
+  "target": [
+   { "stderr": "vrndscalebf16.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

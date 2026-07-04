@@ -7,3 +7,12 @@
 	vfmsubadd231ph zmm0, zmm3, zmm1
 	vfmsubadd231ph zmm0, zmm1
 	vfmsubadd231ph zmm5, zmm0, zword [0x7ce]
+
+%ifdef ERROR
+	vfmsubadd231ph xmm15, xmm10, xmm9
+	vfmsubadd231ph ymm10, ymm14, ymm10
+	vfmsubadd231ph zmm8, zmm12, zmm9
+	vfmsubadd231ph xmm25, xmm16, xmm25
+	vfmsubadd231ph ymm19, ymm16, ymm27
+	vfmsubadd231ph zmm27, zmm28, zmm24
+%endif

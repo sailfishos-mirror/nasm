@@ -31,4 +31,28 @@
    { "output": "vminmaxpd.bin64", "match": "vminmaxpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMINMAXPD",
+  "id": "vminmaxpd16err",
+  "format": "bin",
+  "source": "vminmaxpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminmaxpd/",
+  "target": [
+   { "stderr": "vminmaxpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMINMAXPD",
+  "id": "vminmaxpd32err",
+  "format": "bin",
+  "source": "vminmaxpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminmaxpd/",
+  "target": [
+   { "stderr": "vminmaxpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

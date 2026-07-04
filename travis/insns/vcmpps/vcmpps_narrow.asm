@@ -8,3 +8,10 @@
 	vcmpps k6, xmm3, oword [0xc8d], 0x8
 	vcmpps k7, ymm0, ymm2, 0xc9
 	vcmpps k5, ymm5, ymm5, 0xe7
+
+%ifdef ERROR
+	vcmpps xmm12, xmm12, xmm15, 0xfa
+	vcmpps ymm8, ymm12, ymm8, 0x47
+	vcmpps k3, xmm13, xmm13, 0x4b
+	vcmpps k1, ymm13, ymm15, 0x27
+%endif

@@ -6,3 +6,8 @@
 	psrld xmm2, xmm3
 	psrld xmm7, 0x63
 	psrld xmm7, 0x2c
+
+%ifdef ERROR
+	psrld xmm13, xmm11
+	psrld xmm12, 0x64
+%endif

@@ -31,4 +31,28 @@
    { "output": "vpermt2w.bin64", "match": "vpermt2w.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMT2W",
+  "id": "vpermt2w16err",
+  "format": "bin",
+  "source": "vpermt2w_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermt2w/",
+  "target": [
+   { "stderr": "vpermt2w.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPERMT2W",
+  "id": "vpermt2w32err",
+  "format": "bin",
+  "source": "vpermt2w_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpermt2w/",
+  "target": [
+   { "stderr": "vpermt2w.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

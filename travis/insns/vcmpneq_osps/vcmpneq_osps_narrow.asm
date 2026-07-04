@@ -8,3 +8,10 @@
 	vcmpneq_osps k4, xmm4, xmm5
 	vcmpneq_osps k7, ymm4, ymm5
 	vcmpneq_osps k2, ymm1, yword [0xccf]
+
+%ifdef ERROR
+	vcmpneq_osps xmm14, xmm15, xmm14
+	vcmpneq_osps ymm8, ymm14, ymm12
+	vcmpneq_osps k4, xmm8, xmm9
+	vcmpneq_osps k6, ymm10, ymm9
+%endif

@@ -31,4 +31,28 @@
    { "output": "vpcmplew.bin64", "match": "vpcmplew.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPLEW",
+  "id": "vpcmplew16err",
+  "format": "bin",
+  "source": "vpcmplew_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmplew/",
+  "target": [
+   { "stderr": "vpcmplew.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPCMPLEW",
+  "id": "vpcmplew32err",
+  "format": "bin",
+  "source": "vpcmplew_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpcmplew/",
+  "target": [
+   { "stderr": "vpcmplew.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

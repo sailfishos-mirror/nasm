@@ -31,4 +31,28 @@
    { "output": "vmovntdqa.bin64", "match": "vmovntdqa.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVNTDQA",
+  "id": "vmovntdqa16err",
+  "format": "bin",
+  "source": "vmovntdqa_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovntdqa/",
+  "target": [
+   { "stderr": "vmovntdqa.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVNTDQA",
+  "id": "vmovntdqa32err",
+  "format": "bin",
+  "source": "vmovntdqa_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovntdqa/",
+  "target": [
+   { "stderr": "vmovntdqa.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

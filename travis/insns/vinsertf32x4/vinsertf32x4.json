@@ -31,4 +31,28 @@
    { "output": "vinsertf32x4.bin64", "match": "vinsertf32x4.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VINSERTF32X4",
+  "id": "vinsertf32x416err",
+  "format": "bin",
+  "source": "vinsertf32x4_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinsertf32x4/",
+  "target": [
+   { "stderr": "vinsertf32x4.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VINSERTF32X4",
+  "id": "vinsertf32x432err",
+  "format": "bin",
+  "source": "vinsertf32x4_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vinsertf32x4/",
+  "target": [
+   { "stderr": "vinsertf32x4.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

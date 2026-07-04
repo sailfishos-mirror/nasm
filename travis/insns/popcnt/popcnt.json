@@ -31,4 +31,28 @@
    { "output": "popcnt.bin64", "match": "popcnt.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for POPCNT",
+  "id": "popcnt16err",
+  "format": "bin",
+  "source": "popcnt_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/popcnt/",
+  "target": [
+   { "stderr": "popcnt.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for POPCNT",
+  "id": "popcnt32err",
+  "format": "bin",
+  "source": "popcnt_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/popcnt/",
+  "target": [
+   { "stderr": "popcnt.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

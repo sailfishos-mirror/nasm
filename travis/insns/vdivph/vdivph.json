@@ -31,4 +31,28 @@
    { "output": "vdivph.bin64", "match": "vdivph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VDIVPH",
+  "id": "vdivph16err",
+  "format": "bin",
+  "source": "vdivph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdivph/",
+  "target": [
+   { "stderr": "vdivph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VDIVPH",
+  "id": "vdivph32err",
+  "format": "bin",
+  "source": "vdivph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdivph/",
+  "target": [
+   { "stderr": "vdivph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

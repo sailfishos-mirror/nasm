@@ -9,4 +9,28 @@
    { "output": "setg.bin64", "match": "setg.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SETG",
+  "id": "setg16err",
+  "format": "bin",
+  "source": "setg_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setg/",
+  "target": [
+   { "stderr": "setg.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SETG",
+  "id": "setg32err",
+  "format": "bin",
+  "source": "setg_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/setg/",
+  "target": [
+   { "stderr": "setg.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vcmpnle_usps.bin64", "match": "vcmpnle_usps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNLE_USPS",
+  "id": "vcmpnle_usps16err",
+  "format": "bin",
+  "source": "vcmpnle_usps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnle_usps/",
+  "target": [
+   { "stderr": "vcmpnle_usps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNLE_USPS",
+  "id": "vcmpnle_usps32err",
+  "format": "bin",
+  "source": "vcmpnle_usps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpnle_usps/",
+  "target": [
+   { "stderr": "vcmpnle_usps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

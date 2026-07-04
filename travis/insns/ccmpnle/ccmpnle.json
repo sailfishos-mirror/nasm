@@ -10,4 +10,28 @@
    { "stderr": "ccmpnle.stderr64" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPNLE",
+  "id": "ccmpnle16err",
+  "format": "bin",
+  "source": "ccmpnle_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnle/",
+  "target": [
+   { "stderr": "ccmpnle.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for CCMPNLE",
+  "id": "ccmpnle32err",
+  "format": "bin",
+  "source": "ccmpnle_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ccmpnle/",
+  "target": [
+   { "stderr": "ccmpnle.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

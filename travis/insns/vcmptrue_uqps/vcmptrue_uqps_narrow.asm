@@ -8,3 +8,10 @@
 	vcmptrue_uqps k3, xmm0, oword [0x56e]
 	vcmptrue_uqps k6, ymm0, ymm5
 	vcmptrue_uqps k3, ymm6, ymm4
+
+%ifdef ERROR
+	vcmptrue_uqps xmm14, xmm14, xmm11
+	vcmptrue_uqps ymm14, ymm14, ymm11
+	vcmptrue_uqps k4, xmm13, xmm11
+	vcmptrue_uqps k1, ymm10, ymm13
+%endif

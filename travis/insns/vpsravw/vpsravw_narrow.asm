@@ -7,3 +7,12 @@
 	vpsravw zmm2, zmm3, zword [0x180]
 	vpsravw zmm2, zword [0x180]
 	vpsravw zmm5, zmm3, zword [0x2b8]
+
+%ifdef ERROR
+	vpsravw xmm13, xmm15, xmm13
+	vpsravw ymm8, ymm15, ymm8
+	vpsravw zmm8, zmm14, zmm14
+	vpsravw xmm19, xmm28, xmm18
+	vpsravw ymm24, ymm28, ymm21
+	vpsravw zmm20, zmm21, zmm26
+%endif

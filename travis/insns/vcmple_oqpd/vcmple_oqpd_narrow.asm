@@ -8,3 +8,10 @@
 	vcmple_oqpd k7, xmm2, oword [0x83b]
 	vcmple_oqpd k6, ymm5, yword [0x6d9]
 	vcmple_oqpd k7, ymm6, yword [0x92e]
+
+%ifdef ERROR
+	vcmple_oqpd xmm12, xmm15, xmm12
+	vcmple_oqpd ymm10, ymm13, ymm10
+	vcmple_oqpd k6, xmm10, xmm8
+	vcmple_oqpd k7, ymm14, ymm9
+%endif

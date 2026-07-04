@@ -31,4 +31,28 @@
    { "output": "vsm3rnds2.bin64", "match": "vsm3rnds2.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VSM3RNDS2",
+  "id": "vsm3rnds216err",
+  "format": "bin",
+  "source": "vsm3rnds2_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsm3rnds2/",
+  "target": [
+   { "stderr": "vsm3rnds2.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VSM3RNDS2",
+  "id": "vsm3rnds232err",
+  "format": "bin",
+  "source": "vsm3rnds2_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsm3rnds2/",
+  "target": [
+   { "stderr": "vsm3rnds2.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

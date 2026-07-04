@@ -6,3 +6,8 @@
 	psraw xmm7, xmm2
 	psraw xmm1, 0x5f
 	psraw xmm7, 0x21
+
+%ifdef ERROR
+	psraw xmm11, xmm14
+	psraw xmm9, 0x46
+%endif

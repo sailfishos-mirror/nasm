@@ -31,4 +31,28 @@
    { "output": "vmaxph.bin64", "match": "vmaxph.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMAXPH",
+  "id": "vmaxph16err",
+  "format": "bin",
+  "source": "vmaxph_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxph/",
+  "target": [
+   { "stderr": "vmaxph.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMAXPH",
+  "id": "vmaxph32err",
+  "format": "bin",
+  "source": "vmaxph_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaxph/",
+  "target": [
+   { "stderr": "vmaxph.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

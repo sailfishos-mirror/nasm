@@ -31,4 +31,28 @@
    { "output": "vpsravd.bin64", "match": "vpsravd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSRAVD",
+  "id": "vpsravd16err",
+  "format": "bin",
+  "source": "vpsravd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsravd/",
+  "target": [
+   { "stderr": "vpsravd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSRAVD",
+  "id": "vpsravd32err",
+  "format": "bin",
+  "source": "vpsravd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsravd/",
+  "target": [
+   { "stderr": "vpsravd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

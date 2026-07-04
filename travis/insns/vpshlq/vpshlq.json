@@ -31,4 +31,28 @@
    { "output": "vpshlq.bin64", "match": "vpshlq.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSHLQ",
+  "id": "vpshlq16err",
+  "format": "bin",
+  "source": "vpshlq_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshlq/",
+  "target": [
+   { "stderr": "vpshlq.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSHLQ",
+  "id": "vpshlq32err",
+  "format": "bin",
+  "source": "vpshlq_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpshlq/",
+  "target": [
+   { "stderr": "vpshlq.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

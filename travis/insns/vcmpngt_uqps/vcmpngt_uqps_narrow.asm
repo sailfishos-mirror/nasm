@@ -8,3 +8,10 @@
 	vcmpngt_uqps k2, xmm4, xmm0
 	vcmpngt_uqps k6, ymm0, ymm7
 	vcmpngt_uqps k2, ymm7, ymm3
+
+%ifdef ERROR
+	vcmpngt_uqps xmm14, xmm12, xmm12
+	vcmpngt_uqps ymm12, ymm11, ymm10
+	vcmpngt_uqps k7, xmm12, xmm10
+	vcmpngt_uqps k7, ymm14, ymm15
+%endif

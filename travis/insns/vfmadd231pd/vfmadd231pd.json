@@ -31,4 +31,28 @@
    { "output": "vfmadd231pd.bin64", "match": "vfmadd231pd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADD231PD",
+  "id": "vfmadd231pd16err",
+  "format": "bin",
+  "source": "vfmadd231pd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmadd231pd/",
+  "target": [
+   { "stderr": "vfmadd231pd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFMADD231PD",
+  "id": "vfmadd231pd32err",
+  "format": "bin",
+  "source": "vfmadd231pd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfmadd231pd/",
+  "target": [
+   { "stderr": "vfmadd231pd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

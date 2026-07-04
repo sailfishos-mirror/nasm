@@ -31,4 +31,28 @@
    { "output": "divss.bin64", "match": "divss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for DIVSS",
+  "id": "divss16err",
+  "format": "bin",
+  "source": "divss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/divss/",
+  "target": [
+   { "stderr": "divss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for DIVSS",
+  "id": "divss32err",
+  "format": "bin",
+  "source": "divss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/divss/",
+  "target": [
+   { "stderr": "divss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

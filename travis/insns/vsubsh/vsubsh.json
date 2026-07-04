@@ -31,4 +31,28 @@
    { "output": "vsubsh.bin64", "match": "vsubsh.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VSUBSH",
+  "id": "vsubsh16err",
+  "format": "bin",
+  "source": "vsubsh_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsubsh/",
+  "target": [
+   { "stderr": "vsubsh.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VSUBSH",
+  "id": "vsubsh32err",
+  "format": "bin",
+  "source": "vsubsh_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsubsh/",
+  "target": [
+   { "stderr": "vsubsh.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "subpd.bin64", "match": "subpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SUBPD",
+  "id": "subpd16err",
+  "format": "bin",
+  "source": "subpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subpd/",
+  "target": [
+   { "stderr": "subpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SUBPD",
+  "id": "subpd32err",
+  "format": "bin",
+  "source": "subpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subpd/",
+  "target": [
+   { "stderr": "subpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

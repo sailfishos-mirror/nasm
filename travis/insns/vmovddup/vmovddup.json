@@ -31,4 +31,28 @@
    { "output": "vmovddup.bin64", "match": "vmovddup.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVDDUP",
+  "id": "vmovddup16err",
+  "format": "bin",
+  "source": "vmovddup_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovddup/",
+  "target": [
+   { "stderr": "vmovddup.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVDDUP",
+  "id": "vmovddup32err",
+  "format": "bin",
+  "source": "vmovddup_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovddup/",
+  "target": [
+   { "stderr": "vmovddup.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

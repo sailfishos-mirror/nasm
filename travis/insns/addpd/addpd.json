@@ -31,4 +31,28 @@
    { "output": "addpd.bin64", "match": "addpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for ADDPD",
+  "id": "addpd16err",
+  "format": "bin",
+  "source": "addpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/addpd/",
+  "target": [
+   { "stderr": "addpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for ADDPD",
+  "id": "addpd32err",
+  "format": "bin",
+  "source": "addpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/addpd/",
+  "target": [
+   { "stderr": "addpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vpbroadcastw.bin64", "match": "vpbroadcastw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBROADCASTW",
+  "id": "vpbroadcastw16err",
+  "format": "bin",
+  "source": "vpbroadcastw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpbroadcastw/",
+  "target": [
+   { "stderr": "vpbroadcastw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPBROADCASTW",
+  "id": "vpbroadcastw32err",
+  "format": "bin",
+  "source": "vpbroadcastw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpbroadcastw/",
+  "target": [
+   { "stderr": "vpbroadcastw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

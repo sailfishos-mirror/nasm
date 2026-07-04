@@ -31,4 +31,28 @@
    { "output": "vdpps.bin64", "match": "vdpps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VDPPS",
+  "id": "vdpps16err",
+  "format": "bin",
+  "source": "vdpps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdpps/",
+  "target": [
+   { "stderr": "vdpps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VDPPS",
+  "id": "vdpps32err",
+  "format": "bin",
+  "source": "vdpps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vdpps/",
+  "target": [
+   { "stderr": "vdpps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

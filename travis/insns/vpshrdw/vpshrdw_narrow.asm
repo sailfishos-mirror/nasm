@@ -7,3 +7,12 @@
 	vpshrdw zmm0, zmm0, zword [0xc2a], 0xd8
 	vpshrdw zmm0, zword [0xc2a], 0xd8
 	vpshrdw zmm5, zmm2, zmm6, 0x2a
+
+%ifdef ERROR
+	vpshrdw xmm10, xmm9, xmm12, 0x12
+	vpshrdw ymm13, ymm13, ymm9, 0x63
+	vpshrdw zmm14, zmm13, zmm9, 0xad
+	vpshrdw xmm22, xmm19, xmm25, 0xf4
+	vpshrdw ymm30, ymm28, ymm25, 0x4f
+	vpshrdw zmm28, zmm21, zmm16, 0xe9
+%endif

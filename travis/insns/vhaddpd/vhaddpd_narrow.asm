@@ -4,3 +4,8 @@
 	vhaddpd ymm1, ymm2, ymm4
 	vhaddpd ymm1, ymm4
 	vhaddpd ymm1, ymm2, ymm6
+
+%ifdef ERROR
+	vhaddpd xmm11, xmm14, xmm12
+	vhaddpd ymm8, ymm15, ymm15
+%endif

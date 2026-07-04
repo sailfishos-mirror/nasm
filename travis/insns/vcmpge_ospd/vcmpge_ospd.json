@@ -31,4 +31,28 @@
    { "output": "vcmpge_ospd.bin64", "match": "vcmpge_ospd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGE_OSPD",
+  "id": "vcmpge_ospd16err",
+  "format": "bin",
+  "source": "vcmpge_ospd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpge_ospd/",
+  "target": [
+   { "stderr": "vcmpge_ospd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPGE_OSPD",
+  "id": "vcmpge_ospd32err",
+  "format": "bin",
+  "source": "vcmpge_ospd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpge_ospd/",
+  "target": [
+   { "stderr": "vcmpge_ospd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

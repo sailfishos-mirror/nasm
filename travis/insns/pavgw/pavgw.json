@@ -31,4 +31,28 @@
    { "output": "pavgw.bin64", "match": "pavgw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PAVGW",
+  "id": "pavgw16err",
+  "format": "bin",
+  "source": "pavgw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pavgw/",
+  "target": [
+   { "stderr": "pavgw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PAVGW",
+  "id": "pavgw32err",
+  "format": "bin",
+  "source": "pavgw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pavgw/",
+  "target": [
+   { "stderr": "pavgw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

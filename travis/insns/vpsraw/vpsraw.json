@@ -31,4 +31,28 @@
    { "output": "vpsraw.bin64", "match": "vpsraw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSRAW",
+  "id": "vpsraw16err",
+  "format": "bin",
+  "source": "vpsraw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsraw/",
+  "target": [
+   { "stderr": "vpsraw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VPSRAW",
+  "id": "vpsraw32err",
+  "format": "bin",
+  "source": "vpsraw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vpsraw/",
+  "target": [
+   { "stderr": "vpsraw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

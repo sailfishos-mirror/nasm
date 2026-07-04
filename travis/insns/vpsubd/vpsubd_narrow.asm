@@ -10,3 +10,14 @@
 	vpsubd ymm6, ymm7, yword [0xf5d]
 	vpsubd ymm6, yword [0xf5d]
 	vpsubd ymm0, ymm0, yword [0x56e]
+
+%ifdef ERROR
+	vpsubd xmm10, xmm12, xmm12
+	vpsubd ymm12, ymm14, ymm8
+	vpsubd xmm9, xmm15, xmm8
+	vpsubd ymm12, ymm12, ymm15
+	vpsubd xmm23, xmm24, xmm30
+	vpsubd ymm17, ymm16, ymm29
+	vpsubd xmm19, xmm25, xmm23
+	vpsubd ymm31, ymm27, ymm27
+%endif

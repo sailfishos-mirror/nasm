@@ -31,4 +31,28 @@
    { "output": "pextrw.bin64", "match": "pextrw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PEXTRW",
+  "id": "pextrw16err",
+  "format": "bin",
+  "source": "pextrw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pextrw/",
+  "target": [
+   { "stderr": "pextrw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PEXTRW",
+  "id": "pextrw32err",
+  "format": "bin",
+  "source": "pextrw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pextrw/",
+  "target": [
+   { "stderr": "pextrw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

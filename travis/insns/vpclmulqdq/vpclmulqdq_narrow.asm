@@ -7,3 +7,12 @@
 	vpclmulqdq zmm2, zmm1, zmm0, 0xb1
 	vpclmulqdq zmm2, zmm0, 0xb1
 	vpclmulqdq zmm6, zmm1, zmm3, 0x1a
+
+%ifdef ERROR
+	vpclmulqdq xmm9, xmm12, xmm9, 0x2c
+	vpclmulqdq ymm10, ymm8, ymm14, 0xa0
+	vpclmulqdq zmm10, zmm10, zmm8, 0xfb
+	vpclmulqdq xmm30, xmm27, xmm23, 0xbf
+	vpclmulqdq ymm21, ymm25, ymm21, 0xda
+	vpclmulqdq zmm25, zmm17, zmm29, 0x5b
+%endif

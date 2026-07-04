@@ -31,4 +31,28 @@
    { "output": "vcmpbf16.bin64", "match": "vcmpbf16.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPBF16",
+  "id": "vcmpbf1616err",
+  "format": "bin",
+  "source": "vcmpbf16_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpbf16/",
+  "target": [
+   { "stderr": "vcmpbf16.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPBF16",
+  "id": "vcmpbf1632err",
+  "format": "bin",
+  "source": "vcmpbf16_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpbf16/",
+  "target": [
+   { "stderr": "vcmpbf16.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

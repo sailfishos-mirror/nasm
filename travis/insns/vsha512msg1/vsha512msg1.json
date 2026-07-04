@@ -31,4 +31,28 @@
    { "output": "vsha512msg1.bin64", "match": "vsha512msg1.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VSHA512MSG1",
+  "id": "vsha512msg116err",
+  "format": "bin",
+  "source": "vsha512msg1_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsha512msg1/",
+  "target": [
+   { "stderr": "vsha512msg1.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VSHA512MSG1",
+  "id": "vsha512msg132err",
+  "format": "bin",
+  "source": "vsha512msg1_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vsha512msg1/",
+  "target": [
+   { "stderr": "vsha512msg1.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

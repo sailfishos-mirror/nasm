@@ -31,4 +31,28 @@
    { "output": "hsubps.bin64", "match": "hsubps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for HSUBPS",
+  "id": "hsubps16err",
+  "format": "bin",
+  "source": "hsubps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/hsubps/",
+  "target": [
+   { "stderr": "hsubps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for HSUBPS",
+  "id": "hsubps32err",
+  "format": "bin",
+  "source": "hsubps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/hsubps/",
+  "target": [
+   { "stderr": "hsubps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

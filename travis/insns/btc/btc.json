@@ -31,4 +31,28 @@
    { "output": "btc.bin64", "match": "btc.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for BTC",
+  "id": "btc16err",
+  "format": "bin",
+  "source": "btc_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/btc/",
+  "target": [
+   { "stderr": "btc.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for BTC",
+  "id": "btc32err",
+  "format": "bin",
+  "source": "btc_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/btc/",
+  "target": [
+   { "stderr": "btc.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

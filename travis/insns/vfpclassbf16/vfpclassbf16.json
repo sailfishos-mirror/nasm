@@ -31,4 +31,28 @@
    { "output": "vfpclassbf16.bin64", "match": "vfpclassbf16.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VFPCLASSBF16",
+  "id": "vfpclassbf1616err",
+  "format": "bin",
+  "source": "vfpclassbf16_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfpclassbf16/",
+  "target": [
+   { "stderr": "vfpclassbf16.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VFPCLASSBF16",
+  "id": "vfpclassbf1632err",
+  "format": "bin",
+  "source": "vfpclassbf16_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vfpclassbf16/",
+  "target": [
+   { "stderr": "vfpclassbf16.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

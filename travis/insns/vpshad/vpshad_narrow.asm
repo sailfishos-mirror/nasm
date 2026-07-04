@@ -4,3 +4,8 @@
 	vpshad xmm6, xmm2, xmm1
 	vpshad xmm6, xmm1
 	vpshad xmm0, xmm7, xmm2
+
+%ifdef ERROR
+	vpshad xmm13, xmm14, xmm13
+	vpshad xmm9, xmm10, xmm9
+%endif

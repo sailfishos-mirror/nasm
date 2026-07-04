@@ -8,3 +8,10 @@
 	vcmptrueps k5, xmm0, xmm1
 	vcmptrueps k1, ymm4, yword [0x3de]
 	vcmptrueps k2, ymm6, yword [0x335]
+
+%ifdef ERROR
+	vcmptrueps xmm13, xmm13, xmm15
+	vcmptrueps ymm11, ymm12, ymm8
+	vcmptrueps k4, xmm11, xmm13
+	vcmptrueps k5, ymm11, ymm13
+%endif

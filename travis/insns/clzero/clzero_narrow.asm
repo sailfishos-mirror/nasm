@@ -4,3 +4,8 @@
 	clzero eax
 	clzero
 	clzero
+
+%ifdef ERROR
+	clzero rax
+	clzero rax
+%endif

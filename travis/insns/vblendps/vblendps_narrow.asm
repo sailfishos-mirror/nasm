@@ -4,3 +4,8 @@
 	vblendps ymm2, ymm2, ymm7, 0x4b
 	vblendps ymm2, ymm7, 0x4b
 	vblendps ymm7, ymm2, yword [0xcfe], 0x42
+
+%ifdef ERROR
+	vblendps xmm12, xmm12, xmm10, 0x5d
+	vblendps ymm13, ymm9, ymm12, 0x4a
+%endif

@@ -31,4 +31,28 @@
    { "output": "vmovss.bin64", "match": "vmovss.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVSS",
+  "id": "vmovss16err",
+  "format": "bin",
+  "source": "vmovss_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovss/",
+  "target": [
+   { "stderr": "vmovss.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVSS",
+  "id": "vmovss32err",
+  "format": "bin",
+  "source": "vmovss_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovss/",
+  "target": [
+   { "stderr": "vmovss.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

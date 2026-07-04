@@ -31,4 +31,28 @@
    { "output": "verw.bin64", "match": "verw.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VERW",
+  "id": "verw16err",
+  "format": "bin",
+  "source": "verw_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/verw/",
+  "target": [
+   { "stderr": "verw.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VERW",
+  "id": "verw32err",
+  "format": "bin",
+  "source": "verw_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/verw/",
+  "target": [
+   { "stderr": "verw.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

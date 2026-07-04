@@ -31,4 +31,28 @@
    { "output": "vmaskmovpd.bin64", "match": "vmaskmovpd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMASKMOVPD",
+  "id": "vmaskmovpd16err",
+  "format": "bin",
+  "source": "vmaskmovpd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaskmovpd/",
+  "target": [
+   { "stderr": "vmaskmovpd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMASKMOVPD",
+  "id": "vmaskmovpd32err",
+  "format": "bin",
+  "source": "vmaskmovpd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmaskmovpd/",
+  "target": [
+   { "stderr": "vmaskmovpd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

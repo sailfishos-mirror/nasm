@@ -31,4 +31,28 @@
    { "output": "vminmaxsh.bin64", "match": "vminmaxsh.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMINMAXSH",
+  "id": "vminmaxsh16err",
+  "format": "bin",
+  "source": "vminmaxsh_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminmaxsh/",
+  "target": [
+   { "stderr": "vminmaxsh.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMINMAXSH",
+  "id": "vminmaxsh32err",
+  "format": "bin",
+  "source": "vminmaxsh_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vminmaxsh/",
+  "target": [
+   { "stderr": "vminmaxsh.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

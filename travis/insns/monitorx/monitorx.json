@@ -20,4 +20,28 @@
    { "output": "monitorx.bin32", "match": "monitorx.bin32.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for MONITORX",
+  "id": "monitorx16err",
+  "format": "bin",
+  "source": "monitorx_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/monitorx/",
+  "target": [
+   { "stderr": "monitorx.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for MONITORX",
+  "id": "monitorx32err",
+  "format": "bin",
+  "source": "monitorx_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/monitorx/",
+  "target": [
+   { "stderr": "monitorx.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

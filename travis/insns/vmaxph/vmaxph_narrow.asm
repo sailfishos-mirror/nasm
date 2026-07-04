@@ -7,3 +7,12 @@
 	vmaxph zmm4, zmm3, zmm7
 	vmaxph zmm4, zmm7
 	vmaxph zmm6, zmm4, zmm0
+
+%ifdef ERROR
+	vmaxph xmm10, xmm15, xmm8
+	vmaxph ymm14, ymm9, ymm12
+	vmaxph zmm15, zmm14, zmm8
+	vmaxph xmm22, xmm16, xmm19
+	vmaxph ymm18, ymm30, ymm17
+	vmaxph zmm17, zmm20, zmm28
+%endif

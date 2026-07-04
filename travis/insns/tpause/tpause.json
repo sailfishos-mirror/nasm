@@ -31,4 +31,28 @@
    { "output": "tpause.bin64", "match": "tpause.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for TPAUSE",
+  "id": "tpause16err",
+  "format": "bin",
+  "source": "tpause_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/tpause/",
+  "target": [
+   { "stderr": "tpause.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for TPAUSE",
+  "id": "tpause32err",
+  "format": "bin",
+  "source": "tpause_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/tpause/",
+  "target": [
+   { "stderr": "tpause.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -4,3 +4,8 @@
 	vpshlb xmm5, xmm3, xmm4
 	vpshlb xmm5, xmm4
 	vpshlb xmm0, xmm4, xmm4
+
+%ifdef ERROR
+	vpshlb xmm12, xmm9, xmm14
+	vpshlb xmm11, xmm11, xmm11
+%endif

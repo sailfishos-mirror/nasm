@@ -31,4 +31,28 @@
    { "output": "vrndscaless.bin64", "match": "vrndscaless.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VRNDSCALESS",
+  "id": "vrndscaless16err",
+  "format": "bin",
+  "source": "vrndscaless_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrndscaless/",
+  "target": [
+   { "stderr": "vrndscaless.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VRNDSCALESS",
+  "id": "vrndscaless32err",
+  "format": "bin",
+  "source": "vrndscaless_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vrndscaless/",
+  "target": [
+   { "stderr": "vrndscaless.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

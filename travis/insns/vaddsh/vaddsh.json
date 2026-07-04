@@ -31,4 +31,28 @@
    { "output": "vaddsh.bin64", "match": "vaddsh.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VADDSH",
+  "id": "vaddsh16err",
+  "format": "bin",
+  "source": "vaddsh_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaddsh/",
+  "target": [
+   { "stderr": "vaddsh.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VADDSH",
+  "id": "vaddsh32err",
+  "format": "bin",
+  "source": "vaddsh_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vaddsh/",
+  "target": [
+   { "stderr": "vaddsh.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

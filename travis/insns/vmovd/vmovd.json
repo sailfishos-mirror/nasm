@@ -31,4 +31,28 @@
    { "output": "vmovd.bin64", "match": "vmovd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVD",
+  "id": "vmovd16err",
+  "format": "bin",
+  "source": "vmovd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovd/",
+  "target": [
+   { "stderr": "vmovd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VMOVD",
+  "id": "vmovd32err",
+  "format": "bin",
+  "source": "vmovd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmovd/",
+  "target": [
+   { "stderr": "vmovd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

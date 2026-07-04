@@ -31,4 +31,28 @@
    { "output": "pinsrd.bin64", "match": "pinsrd.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for PINSRD",
+  "id": "pinsrd16err",
+  "format": "bin",
+  "source": "pinsrd_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pinsrd/",
+  "target": [
+   { "stderr": "pinsrd.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for PINSRD",
+  "id": "pinsrd32err",
+  "format": "bin",
+  "source": "pinsrd_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pinsrd/",
+  "target": [
+   { "stderr": "pinsrd.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

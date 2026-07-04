@@ -31,4 +31,28 @@
    { "output": "subps.bin64", "match": "subps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for SUBPS",
+  "id": "subps16err",
+  "format": "bin",
+  "source": "subps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subps/",
+  "target": [
+   { "stderr": "subps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for SUBPS",
+  "id": "subps32err",
+  "format": "bin",
+  "source": "subps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/subps/",
+  "target": [
+   { "stderr": "subps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]

@@ -31,4 +31,28 @@
    { "output": "vcmpneq_uqps.bin64", "match": "vcmpneq_uqps.bin64.t" }
   ]
  }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNEQ_UQPS",
+  "id": "vcmpneq_uqps16err",
+  "format": "bin",
+  "source": "vcmpneq_uqps_narrow.asm",
+  "option": "--bits 16 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_uqps/",
+  "target": [
+   { "stderr": "vcmpneq_uqps.stderr16err" }
+  ],
+  "error": "expected"
+ }
+,
+ {
+  "description": "Pseudorandom error-case test for VCMPNEQ_UQPS",
+  "id": "vcmpneq_uqps32err",
+  "format": "bin",
+  "source": "vcmpneq_uqps_narrow.asm",
+  "option": "--bits 32 -DERROR -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vcmpneq_uqps/",
+  "target": [
+   { "stderr": "vcmpneq_uqps.stderr32err" }
+  ],
+  "error": "expected"
+ }
 ]
