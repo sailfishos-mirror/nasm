@@ -21,3 +21,9 @@ default rel
 	vscalefps ymm3{k6}{z}, ymm4, ymm4
 	vscalefps zmm6{k6}{z}, zmm2, zmm4
 	vscalefps zmm1, zmm6, zmm4, {ru-sae}
+	vscalefps xmm6, xmm6, oword [eax+1]
+	vscalefps xmm7, xmm6, oword [eax+64]
+	vscalefps ymm2, ymm1, yword [eax+1]
+	vscalefps ymm3, ymm1, yword [eax+64]
+	vscalefps zmm3, zmm6, zword [eax+1]
+	vscalefps zmm3, zmm2, zword [eax+64]

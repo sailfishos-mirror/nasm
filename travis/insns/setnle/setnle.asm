@@ -11,3 +11,5 @@ default rel
 	setnle r16b
 	setnle r20
 	setnle r18d
+	setnle byte [eax+1]
+	setnle byte [eax+64]

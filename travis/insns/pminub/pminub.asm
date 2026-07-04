@@ -4,3 +4,7 @@ default rel
 	pminub xmm2, xmm2
 	pminub xmm5, xmm3
 	pminub xmm12, xmm14
+	pminub mm0, qword [eax+1]
+	pminub mm2, qword [eax+64]
+	pminub xmm5, oword [eax+1]
+	pminub xmm4, oword [eax+64]

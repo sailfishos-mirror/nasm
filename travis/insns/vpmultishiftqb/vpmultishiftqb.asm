@@ -20,3 +20,9 @@ default rel
 	vpmultishiftqb xmm2{k7}{z}, xmm3, xmm7
 	vpmultishiftqb ymm1{k4}{z}, ymm2, ymm1
 	vpmultishiftqb zmm6{k5}{z}, zmm5, zmm2
+	vpmultishiftqb xmm7, xmm4, oword [eax+1]
+	vpmultishiftqb xmm0, xmm4, oword [eax+64]
+	vpmultishiftqb ymm6, ymm1, yword [eax+1]
+	vpmultishiftqb ymm2, ymm5, yword [eax+64]
+	vpmultishiftqb zmm7, zmm5, zword [eax+1]
+	vpmultishiftqb zmm5, zmm3, zword [eax+64]

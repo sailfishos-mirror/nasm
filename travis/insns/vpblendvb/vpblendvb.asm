@@ -7,3 +7,7 @@ default rel
 	vpblendvb ymm3, ymm0, ymm4, ymm3
 	vpblendvb xmm12, xmm15, xmm14, xmm8
 	vpblendvb ymm8, ymm14, ymm8, ymm11
+	vpblendvb xmm5, xmm3, oword [eax+1], xmm2
+	vpblendvb xmm3, xmm2, oword [eax+64], xmm1
+	vpblendvb ymm4, ymm1, yword [eax+1], ymm2
+	vpblendvb ymm0, ymm1, yword [eax+64], ymm5

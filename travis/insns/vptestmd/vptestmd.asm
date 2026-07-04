@@ -14,3 +14,9 @@ default rel
 	vptestmd k6{k7}, xmm3, xmm3
 	vptestmd k4{k6}, ymm4, yword [0xda9]
 	vptestmd k3{k5}, zmm7, zmm7
+	vptestmd k6, xmm3, oword [eax+1]
+	vptestmd k3, xmm7, oword [eax+64]
+	vptestmd k3, ymm4, yword [eax+1]
+	vptestmd k2, ymm6, yword [eax+64]
+	vptestmd k7, zmm1, zword [eax+1]
+	vptestmd k3, zmm6, zword [eax+64]

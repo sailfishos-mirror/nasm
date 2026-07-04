@@ -15,3 +15,11 @@ default rel
 	vpcmov ymm11, ymm8, ymm13, ymm14
 	vpcmov xmm15, xmm8, xmm8, xmm10
 	vpcmov ymm10, ymm15, ymm15, ymm10
+	vpcmov xmm6, xmm0, oword [eax+1], xmm6
+	vpcmov xmm3, xmm2, oword [eax+64], xmm0
+	vpcmov ymm6, ymm5, yword [eax+1], ymm3
+	vpcmov ymm4, ymm7, yword [eax+64], ymm1
+	vpcmov xmm1, xmm6, xmm1, oword [eax+1]
+	vpcmov xmm4, xmm7, xmm6, oword [eax+64]
+	vpcmov ymm5, ymm7, ymm5, yword [eax+1]
+	vpcmov ymm4, ymm1, ymm1, yword [eax+64]

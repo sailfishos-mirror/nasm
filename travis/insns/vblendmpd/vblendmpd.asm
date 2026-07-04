@@ -17,3 +17,9 @@ default rel
 	vblendmpd xmm6{k5}{z}, xmm7, xmm6
 	vblendmpd ymm7{k3}{z}, ymm0, yword [0xcf8]
 	vblendmpd zmm0{k6}{z}, zmm2, zmm3
+	vblendmpd xmm6, xmm5, oword [eax+1]
+	vblendmpd xmm5, xmm5, oword [eax+64]
+	vblendmpd ymm3, ymm2, yword [eax+1]
+	vblendmpd ymm5, ymm3, yword [eax+64]
+	vblendmpd zmm0, zmm5, zword [eax+1]
+	vblendmpd zmm3, zmm7, zword [eax+64]

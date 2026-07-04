@@ -11,3 +11,5 @@ default rel
 	kmovw k4, r14w
 	kmovw k4, r25d
 	kmovw k5, r29w
+	kmovw word [eax+1], k3
+	kmovw word [eax+64], k5

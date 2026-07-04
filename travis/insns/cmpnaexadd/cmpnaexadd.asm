@@ -7,3 +7,7 @@ default rel
 	cmpnaexadd qword [0x6f5], r15, r15
 	cmpnaexadd dword [0x962], r19d, r18d
 	cmpnaexadd qword [0xc8b], r22, r26
+	cmpnaexadd dword [eax+1], eax, ebx
+	cmpnaexadd dword [eax+64], ebx, esi
+	cmpnaexadd qword [eax+1], rax, rsi
+	cmpnaexadd qword [eax+64], rdi, rbp

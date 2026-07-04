@@ -16,3 +16,13 @@ default rel
 	vcmppd k7{k6}, xmm7, xmm6, 0x50
 	vcmppd k7{k6}, ymm7, ymm4, 0x7a
 	vcmppd k1{k2}, zmm4, zmm7, 0x5f
+	vcmppd xmm4, xmm5, oword [eax+1], 0x63
+	vcmppd xmm7, xmm5, oword [eax+64], 0x53
+	vcmppd ymm1, ymm5, yword [eax+1], 0xc7
+	vcmppd ymm4, ymm4, yword [eax+64], 0x90
+	vcmppd k4, xmm5, oword [eax+1], 0x76
+	vcmppd k2, xmm4, oword [eax+64], 0x3a
+	vcmppd k2, ymm1, yword [eax+1], 0x3a
+	vcmppd k5, ymm7, yword [eax+64], 0xda
+	vcmppd k5, zmm5, zword [eax+1], 0x64
+	vcmppd k2, zmm5, zword [eax+64], 0x91

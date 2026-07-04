@@ -7,3 +7,7 @@ default rel
 	rorx r9, r12, 0xfc
 	rorx r18d, r31d, 0xb
 	rorx r17, r20, 0x69
+	rorx ebp, dword [eax+1], 0x60
+	rorx edx, dword [eax+64], 0xdf
+	rorx rdi, qword [eax+1], 0x9d
+	rorx rdi, qword [eax+64], 0x39

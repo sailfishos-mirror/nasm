@@ -9,3 +9,7 @@ default rel
 	vpinsrq xmm14, xmm13, r9, 0xaa
 	vpinsrq xmm19, xmm20, qword [0x131], 0x4d
 	vpinsrq xmm19, xmm23, r31, 0xdb
+	vpinsrq xmm4, xmm4, qword [eax+1], 0x7a
+	vpinsrq xmm7, xmm0, qword [eax+64], 0x6e
+	vpinsrq xmm7, xmm4, qword [eax+1], 0x8c
+	vpinsrq xmm5, xmm2, qword [eax+64], 0x7f

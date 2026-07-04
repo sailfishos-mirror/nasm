@@ -5,3 +5,7 @@ default rel
 	blsic rsi, rcx
 	blsic r13d, r9d
 	blsic r14, r9
+	blsic edi, dword [eax+1]
+	blsic edi, dword [eax+64]
+	blsic rdx, qword [eax+1]
+	blsic rcx, qword [eax+64]

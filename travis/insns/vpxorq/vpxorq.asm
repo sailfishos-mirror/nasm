@@ -20,3 +20,9 @@ default rel
 	vpxorq xmm0{k6}{z}, xmm6, xmm5
 	vpxorq ymm2{k2}{z}, ymm3, ymm5
 	vpxorq zmm3{k5}{z}, zmm7, zword [0x78c]
+	vpxorq xmm4, xmm6, oword [eax+1]
+	vpxorq xmm3, xmm3, oword [eax+64]
+	vpxorq ymm4, ymm3, yword [eax+1]
+	vpxorq ymm6, ymm5, yword [eax+64]
+	vpxorq zmm2, zmm2, zword [eax+1]
+	vpxorq zmm2, zmm2, zword [eax+64]

@@ -8,3 +8,7 @@ default rel
 	vcmptrue_ussd k1, xmm12, xmm10
 	vcmptrue_ussd k4{k1}, xmm0, xmm0
 	vcmptrue_ussd k5, xmm1, xmm6, {sae}
+	vcmptrue_ussd xmm4, xmm5, qword [eax+1]
+	vcmptrue_ussd xmm0, xmm0, qword [eax+64]
+	vcmptrue_ussd k4, xmm2, qword [eax+1]
+	vcmptrue_ussd k7, xmm6, qword [eax+64]

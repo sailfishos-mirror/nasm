@@ -13,3 +13,5 @@ default rel
 	ltr r18w
 	ltr r28d
 	ltr r26
+	ltr word [eax+1]
+	ltr word [eax+64]

@@ -11,3 +11,9 @@ default rel
 	vp2intersectq k7, xmm18, xmm18
 	vp2intersectq k1, ymm28, ymm30
 	vp2intersectq k6, zmm31, zmm27
+	vp2intersectq k5, xmm0, oword [eax+1]
+	vp2intersectq k5, xmm0, oword [eax+64]
+	vp2intersectq k7, ymm4, yword [eax+1]
+	vp2intersectq k4, ymm7, yword [eax+64]
+	vp2intersectq k6, zmm6, zword [eax+1]
+	vp2intersectq k4, zmm0, zword [eax+64]

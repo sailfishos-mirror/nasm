@@ -7,3 +7,7 @@ default rel
 	vpor ymm2, ymm0, ymm7
 	vpor xmm9, xmm10, xmm10
 	vpor ymm12, ymm11, ymm9
+	vpor xmm3, xmm6, oword [eax+1]
+	vpor xmm6, xmm6, oword [eax+64]
+	vpor ymm7, ymm5, yword [eax+1]
+	vpor ymm6, ymm7, yword [eax+64]

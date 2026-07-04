@@ -6,3 +6,5 @@ default rel
 	vgetexpsd xmm5{k2}, xmm6, xmm6
 	vgetexpsd xmm0{k3}{z}, xmm0, xmm3
 	vgetexpsd xmm3, xmm6, xmm1, {sae}
+	vgetexpsd xmm5, xmm2, qword [eax+1]
+	vgetexpsd xmm0, xmm1, qword [eax+64]

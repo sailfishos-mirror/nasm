@@ -11,3 +11,5 @@ default rel
 	setnp r27b
 	setnp r28
 	setnp r21d
+	setnp byte [eax+1]
+	setnp byte [eax+64]

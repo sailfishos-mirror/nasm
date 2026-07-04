@@ -15,3 +15,11 @@ default rel
 	vmovd r28d, xmm28
 	vmovd xmm17, xmm21
 	vmovd xmm20, xmm29
+	vmovd xmm1, dword [eax+1]
+	vmovd xmm0, dword [eax+64]
+	vmovd dword [eax+1], xmm1
+	vmovd dword [eax+64], xmm7
+	vmovd xmm3, dword [eax+1]
+	vmovd xmm1, dword [eax+64]
+	vmovd dword [eax+1], xmm3
+	vmovd dword [eax+64], xmm3

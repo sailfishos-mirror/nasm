@@ -5,3 +5,7 @@ default rel
 	vfnmadd312pd ymm0, ymm1, ymm5
 	vfnmadd312pd xmm15, xmm9, xmm15
 	vfnmadd312pd ymm9, ymm14, ymm13
+	vfnmadd312pd xmm0, xmm1, oword [eax+1]
+	vfnmadd312pd xmm3, xmm6, oword [eax+64]
+	vfnmadd312pd ymm4, ymm2, yword [eax+1]
+	vfnmadd312pd ymm6, ymm1, yword [eax+64]

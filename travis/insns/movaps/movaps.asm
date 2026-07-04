@@ -5,3 +5,7 @@ default rel
 	movaps xmm4, xmm5
 	movaps xmm13, xmm14
 	movaps xmm13, xmm10
+	movaps xmm3, oword [eax+1]
+	movaps xmm6, oword [eax+64]
+	movaps oword [eax+1], xmm7
+	movaps oword [eax+64], xmm7

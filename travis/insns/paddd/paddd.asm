@@ -4,3 +4,7 @@ default rel
 	paddd xmm5, xmm4
 	paddd xmm7, oword [0x695]
 	paddd xmm15, xmm15
+	paddd mm0, qword [eax+1]
+	paddd mm6, qword [eax+64]
+	paddd xmm1, oword [eax+1]
+	paddd xmm7, oword [eax+64]

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FIST",
   "id": "fist16",
   "format": "bin",
-  "source": "fist.asm",
+  "source": "fist_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fist/",
   "target": [
    { "output": "fist.bin16", "match": "fist.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FIST",
   "id": "fist32",
   "format": "bin",
-  "source": "fist.asm",
+  "source": "fist_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fist/",
   "target": [
    { "output": "fist.bin32", "match": "fist.bin32.t" }

@@ -15,3 +15,9 @@ default rel
 	vcmpeq_oqpd k2{k5}, ymm5, yword [0x1b9]
 	vcmpeq_oqpd k6{k1}, zmm5, zword [0xcdd]
 	vcmpeq_oqpd k7, zmm6, zmm7, {sae}
+	vcmpeq_oqpd k7, xmm5, oword [eax+1]
+	vcmpeq_oqpd k4, xmm7, oword [eax+64]
+	vcmpeq_oqpd k6, ymm3, yword [eax+1]
+	vcmpeq_oqpd k5, ymm4, yword [eax+64]
+	vcmpeq_oqpd k6, zmm5, zword [eax+1]
+	vcmpeq_oqpd k5, zmm4, zword [eax+64]

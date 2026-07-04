@@ -25,3 +25,13 @@ default rel
 	vpminub xmm7{k7}{z}, xmm4, xmm6
 	vpminub ymm6{k3}{z}, ymm0, yword [0x166]
 	vpminub zmm4{k7}{z}, zmm4, zmm3
+	vpminub xmm5, xmm1, oword [eax+1]
+	vpminub xmm5, xmm7, oword [eax+64]
+	vpminub ymm0, ymm7, yword [eax+1]
+	vpminub ymm5, ymm1, yword [eax+64]
+	vpminub xmm0, xmm4, oword [eax+1]
+	vpminub xmm4, xmm3, oword [eax+64]
+	vpminub ymm0, ymm7, yword [eax+1]
+	vpminub ymm6, ymm3, yword [eax+64]
+	vpminub zmm1, zmm3, zword [eax+1]
+	vpminub zmm5, zmm6, zword [eax+64]

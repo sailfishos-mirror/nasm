@@ -19,3 +19,19 @@ default rel
 	shlx r18d, r20d, r23w
 	shlx r18d, r25d, r27d
 	shlx r21d, r24d, r19
+	shlx ebp, dword [eax+1], cl
+	shlx ecx, dword [eax+64], al
+	shlx ebx, dword [eax+1], di
+	shlx eax, dword [eax+64], cx
+	shlx eax, dword [eax+1], edx
+	shlx edi, dword [eax+64], ebx
+	shlx esi, dword [eax+1], rdx
+	shlx eax, dword [eax+64], rax
+	shlx rsi, qword [eax+1], al
+	shlx rbp, qword [eax+64], dl
+	shlx rax, qword [eax+1], di
+	shlx rbx, qword [eax+64], cx
+	shlx rdx, qword [eax+1], esi
+	shlx rcx, qword [eax+64], edi
+	shlx rbp, qword [eax+1], rbp
+	shlx rbx, qword [eax+64], rdi

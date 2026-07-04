@@ -15,3 +15,15 @@ default rel
 	cmovnb r30d, r27d
 	cmovnb r29, r30
 	cmovnb r20w, r31w, r23w
+	cmovnb si, word [eax+1]
+	cmovnb bx, word [eax+64]
+	cmovnb eax, dword [eax+1]
+	cmovnb ebp, dword [eax+64]
+	cmovnb rbp, qword [eax+1]
+	cmovnb rax, qword [eax+64]
+	cmovnb ax, bp, word [eax+1]
+	cmovnb si, bx, word [eax+64]
+	cmovnb edx, edx, dword [eax+1]
+	cmovnb eax, edx, dword [eax+64]
+	cmovnb rcx, rbx, qword [eax+1]
+	cmovnb rdx, rcx, qword [eax+64]

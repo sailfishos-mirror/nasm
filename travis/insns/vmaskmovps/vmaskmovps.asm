@@ -11,3 +11,11 @@ default rel
 	vmaskmovps ymm15, ymm12, yword [0x3e5]
 	vmaskmovps oword [0x29c], xmm13, xmm13
 	vmaskmovps yword [0x849], ymm11, ymm15
+	vmaskmovps xmm5, xmm7, oword [eax+1]
+	vmaskmovps xmm5, xmm3, oword [eax+64]
+	vmaskmovps ymm6, ymm3, yword [eax+1]
+	vmaskmovps ymm1, ymm7, yword [eax+64]
+	vmaskmovps oword [eax+1], xmm5, xmm4
+	vmaskmovps oword [eax+64], xmm2, xmm7
+	vmaskmovps yword [eax+1], ymm2, ymm2
+	vmaskmovps yword [eax+64], ymm0, ymm6

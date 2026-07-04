@@ -15,3 +15,33 @@ default rel
 	ccmp 9, r27w, r19w
 	ccmp 6, r24d, r28d
 	ccmp 1, r27, r22
+	ccmp 4, byte [eax+1], bl
+	ccmp 0, byte [eax+64], al
+	ccmp 8, word [eax+1], si
+	ccmp 4, word [eax+64], bx
+	ccmp 11, dword [eax+1], edx
+	ccmp 2, dword [eax+64], ebx
+	ccmp 7, qword [eax+1], rax
+	ccmp 3, qword [eax+64], rbx
+	ccmp 12, bl, byte [eax+1]
+	ccmp 5, cl, byte [eax+64]
+	ccmp 11, bx, word [eax+1]
+	ccmp 15, bx, word [eax+64]
+	ccmp 2, ebp, dword [eax+1]
+	ccmp 6, edx, dword [eax+64]
+	ccmp 10, rdi, qword [eax+1]
+	ccmp 9, rcx, qword [eax+64]
+	ccmp 11, word [eax+1], -108
+	ccmp 15, word [eax+64], 23
+	ccmp 4, dword [eax+1], 111
+	ccmp 9, dword [eax+64], 64
+	ccmp 4, qword [eax+1], 125
+	ccmp 9, qword [eax+64], -1
+	ccmp 5, byte [eax+1], 0xdc
+	ccmp 4, byte [eax+64], 0xe9
+	ccmp 13, word [eax+1], 0x9e12
+	ccmp 4, word [eax+64], 0xfb87
+	ccmp 0, dword [eax+1], 0x3e3b33d3
+	ccmp 4, dword [eax+64], 0xe02a7f7
+	ccmp 1, qword [eax+1], 350346
+	ccmp 10, qword [eax+64], -222208413

@@ -6,3 +6,5 @@ default rel
 	vgetexpss xmm5{k1}, xmm2, xmm7
 	vgetexpss xmm0{k4}{z}, xmm2, dword [0xc0d]
 	vgetexpss xmm0, xmm7, xmm4, {sae}
+	vgetexpss xmm7, xmm4, dword [eax+1]
+	vgetexpss xmm7, xmm3, dword [eax+64]

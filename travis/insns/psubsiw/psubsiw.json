@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PSUBSIW",
   "id": "psubsiw16",
   "format": "bin",
-  "source": "psubsiw.asm",
+  "source": "psubsiw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psubsiw/",
   "target": [
    { "output": "psubsiw.bin16", "match": "psubsiw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PSUBSIW",
   "id": "psubsiw32",
   "format": "bin",
-  "source": "psubsiw.asm",
+  "source": "psubsiw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/psubsiw/",
   "target": [
    { "output": "psubsiw.bin32", "match": "psubsiw.bin32.t" }

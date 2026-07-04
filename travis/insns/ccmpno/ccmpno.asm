@@ -15,3 +15,33 @@ default rel
 	ccmpno 8, r18w, r27w
 	ccmpno 8, r17d, r17d
 	ccmpno 12, r24, r22
+	ccmpno 5, byte [eax+1], cl
+	ccmpno 6, byte [eax+64], bl
+	ccmpno 4, word [eax+1], dx
+	ccmpno 4, word [eax+64], si
+	ccmpno 15, dword [eax+1], ebp
+	ccmpno 0, dword [eax+64], eax
+	ccmpno 8, qword [eax+1], rbp
+	ccmpno 0, qword [eax+64], rcx
+	ccmpno 3, cl, byte [eax+1]
+	ccmpno 7, bl, byte [eax+64]
+	ccmpno 15, di, word [eax+1]
+	ccmpno 6, si, word [eax+64]
+	ccmpno 9, ebx, dword [eax+1]
+	ccmpno 13, edi, dword [eax+64]
+	ccmpno 6, rax, qword [eax+1]
+	ccmpno 15, rbx, qword [eax+64]
+	ccmpno 1, word [eax+1], -63
+	ccmpno 8, word [eax+64], 6
+	ccmpno 3, dword [eax+1], 3
+	ccmpno 9, dword [eax+64], -96
+	ccmpno 14, qword [eax+1], -21
+	ccmpno 13, qword [eax+64], -16
+	ccmpno 9, byte [eax+1], 0x55
+	ccmpno 4, byte [eax+64], 0xc4
+	ccmpno 4, word [eax+1], 0xa879
+	ccmpno 11, word [eax+64], 0x4e73
+	ccmpno 8, dword [eax+1], 0x24b1ac1b
+	ccmpno 13, dword [eax+64], 0x49120ca
+	ccmpno 12, qword [eax+1], -396866397
+	ccmpno 14, qword [eax+64], -42467842

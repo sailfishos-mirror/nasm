@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FXRSTOR",
   "id": "fxrstor16",
   "format": "bin",
-  "source": "fxrstor.asm",
+  "source": "fxrstor_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fxrstor/",
   "target": [
    { "output": "fxrstor.bin16", "match": "fxrstor.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FXRSTOR",
   "id": "fxrstor32",
   "format": "bin",
-  "source": "fxrstor.asm",
+  "source": "fxrstor_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fxrstor/",
   "target": [
    { "output": "fxrstor.bin32", "match": "fxrstor.bin32.t" }

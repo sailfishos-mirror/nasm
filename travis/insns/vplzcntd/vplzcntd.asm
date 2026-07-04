@@ -17,3 +17,9 @@ default rel
 	vplzcntd xmm7{k6}{z}, xmm2
 	vplzcntd ymm2{k6}{z}, yword [0xedd]
 	vplzcntd zmm7{k3}{z}, zmm3
+	vplzcntd xmm1, oword [eax+1]
+	vplzcntd xmm4, oword [eax+64]
+	vplzcntd ymm6, yword [eax+1]
+	vplzcntd ymm0, yword [eax+64]
+	vplzcntd zmm2, zword [eax+1]
+	vplzcntd zmm6, zword [eax+64]

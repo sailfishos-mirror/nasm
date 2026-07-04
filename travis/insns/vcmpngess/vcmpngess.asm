@@ -8,3 +8,7 @@ default rel
 	vcmpngess k1, xmm15, xmm8
 	vcmpngess k2{k4}, xmm4, dword [0x952]
 	vcmpngess k7, xmm0, xmm3, {sae}
+	vcmpngess xmm7, xmm3, qword [eax+1]
+	vcmpngess xmm2, xmm0, qword [eax+64]
+	vcmpngess k4, xmm0, dword [eax+1]
+	vcmpngess k6, xmm7, dword [eax+64]

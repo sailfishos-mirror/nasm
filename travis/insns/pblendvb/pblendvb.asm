@@ -5,3 +5,7 @@ default rel
 	pblendvb xmm1, oword [0x719]
 	pblendvb xmm12, xmm9, xmm0
 	pblendvb xmm10, xmm14
+	pblendvb xmm2, oword [eax+1], xmm0
+	pblendvb xmm7, oword [eax+64], xmm0
+	pblendvb xmm5, oword [eax+1]
+	pblendvb xmm3, oword [eax+64]

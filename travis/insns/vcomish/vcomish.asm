@@ -4,3 +4,5 @@ default rel
 	vcomish xmm10, xmm11
 	vcomish xmm29, xmm28
 	vcomish xmm5, xmm0, {sae}
+	vcomish xmm2, word [eax+1]
+	vcomish xmm5, word [eax+64]

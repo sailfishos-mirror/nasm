@@ -25,3 +25,13 @@ default rel
 	vpackssdw xmm0{k5}{z}, xmm7, oword [0xa97]
 	vpackssdw ymm5{k7}{z}, ymm1, ymm6
 	vpackssdw zmm3{k3}{z}, zmm0, zmm3
+	vpackssdw xmm4, xmm7, oword [eax+1]
+	vpackssdw xmm1, xmm4, oword [eax+64]
+	vpackssdw ymm3, ymm7, yword [eax+1]
+	vpackssdw ymm4, ymm6, yword [eax+64]
+	vpackssdw xmm1, xmm1, oword [eax+1]
+	vpackssdw xmm1, xmm2, oword [eax+64]
+	vpackssdw ymm2, ymm7, yword [eax+1]
+	vpackssdw ymm6, ymm0, yword [eax+64]
+	vpackssdw zmm1, zmm0, zword [eax+1]
+	vpackssdw zmm3, zmm0, zword [eax+64]

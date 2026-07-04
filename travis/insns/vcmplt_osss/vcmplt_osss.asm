@@ -8,3 +8,7 @@ default rel
 	vcmplt_osss k2, xmm13, xmm13
 	vcmplt_osss k7{k3}, xmm3, xmm3
 	vcmplt_osss k1, xmm7, xmm5, {sae}
+	vcmplt_osss xmm1, xmm2, qword [eax+1]
+	vcmplt_osss xmm5, xmm4, qword [eax+64]
+	vcmplt_osss k2, xmm0, dword [eax+1]
+	vcmplt_osss k3, xmm2, dword [eax+64]

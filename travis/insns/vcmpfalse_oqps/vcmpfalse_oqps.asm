@@ -17,3 +17,13 @@ default rel
 	vcmpfalse_oqps k1{k5}, ymm3, ymm6
 	vcmpfalse_oqps k1{k6}, zmm6, zmm3
 	vcmpfalse_oqps k6, zmm6, zmm1, {sae}
+	vcmpfalse_oqps xmm5, xmm1, oword [eax+1]
+	vcmpfalse_oqps xmm3, xmm0, oword [eax+64]
+	vcmpfalse_oqps ymm2, ymm2, yword [eax+1]
+	vcmpfalse_oqps ymm2, ymm6, yword [eax+64]
+	vcmpfalse_oqps k4, xmm7, oword [eax+1]
+	vcmpfalse_oqps k7, xmm6, oword [eax+64]
+	vcmpfalse_oqps k6, ymm1, yword [eax+1]
+	vcmpfalse_oqps k4, ymm2, yword [eax+64]
+	vcmpfalse_oqps k1, zmm0, zword [eax+1]
+	vcmpfalse_oqps k6, zmm6, zword [eax+64]

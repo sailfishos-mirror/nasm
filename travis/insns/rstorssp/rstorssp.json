@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for RSTORSSP",
   "id": "rstorssp16",
   "format": "bin",
-  "source": "rstorssp.asm",
+  "source": "rstorssp_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rstorssp/",
   "target": [
    { "output": "rstorssp.bin16", "match": "rstorssp.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for RSTORSSP",
   "id": "rstorssp32",
   "format": "bin",
-  "source": "rstorssp.asm",
+  "source": "rstorssp_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/rstorssp/",
   "target": [
    { "output": "rstorssp.bin32", "match": "rstorssp.bin32.t" }

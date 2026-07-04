@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FDIVR",
   "id": "fdivr16",
   "format": "bin",
-  "source": "fdivr.asm",
+  "source": "fdivr_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fdivr/",
   "target": [
    { "output": "fdivr.bin16", "match": "fdivr.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FDIVR",
   "id": "fdivr32",
   "format": "bin",
-  "source": "fdivr.asm",
+  "source": "fdivr_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fdivr/",
   "target": [
    { "output": "fdivr.bin32", "match": "fdivr.bin32.t" }

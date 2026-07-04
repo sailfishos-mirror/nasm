@@ -8,3 +8,7 @@ default rel
 	vcmpless k6, xmm10, xmm10
 	vcmpless k5{k4}, xmm3, xmm2
 	vcmpless k7, xmm5, xmm1, {sae}
+	vcmpless xmm7, xmm7, qword [eax+1]
+	vcmpless xmm4, xmm4, qword [eax+64]
+	vcmpless k1, xmm0, dword [eax+1]
+	vcmpless k3, xmm0, dword [eax+64]

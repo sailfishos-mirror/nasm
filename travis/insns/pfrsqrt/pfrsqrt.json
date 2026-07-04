@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFRSQRT",
   "id": "pfrsqrt16",
   "format": "bin",
-  "source": "pfrsqrt.asm",
+  "source": "pfrsqrt_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrsqrt/",
   "target": [
    { "output": "pfrsqrt.bin16", "match": "pfrsqrt.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFRSQRT",
   "id": "pfrsqrt32",
   "format": "bin",
-  "source": "pfrsqrt.asm",
+  "source": "pfrsqrt_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrsqrt/",
   "target": [
    { "output": "pfrsqrt.bin32", "match": "pfrsqrt.bin32.t" }

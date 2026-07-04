@@ -20,3 +20,9 @@ default rel
 	vmulph xmm3{k4}{z}, xmm7, xmm4
 	vmulph ymm4{k6}{z}, ymm7, ymm1
 	vmulph zmm1{k6}{z}, zmm2, zmm3
+	vmulph xmm5, xmm7, oword [eax+1]
+	vmulph xmm5, xmm6, oword [eax+64]
+	vmulph ymm3, ymm5, yword [eax+1]
+	vmulph ymm4, ymm5, yword [eax+64]
+	vmulph zmm1, zmm5, zword [eax+1]
+	vmulph zmm7, zmm6, zword [eax+64]

@@ -21,3 +21,13 @@ default rel
 	vpdpwusds xmm3{k5}{z}, xmm3, xmm0
 	vpdpwusds ymm5{k7}{z}, ymm5, yword [0x179]
 	vpdpwusds zmm3{k7}{z}, zmm1, zword [0x178]
+	vpdpwusds xmm1, xmm5, oword [eax+1]
+	vpdpwusds xmm7, xmm2, oword [eax+64]
+	vpdpwusds ymm1, ymm3, yword [eax+1]
+	vpdpwusds ymm7, ymm0, yword [eax+64]
+	vpdpwusds xmm4, xmm1, oword [eax+1]
+	vpdpwusds xmm6, xmm5, oword [eax+64]
+	vpdpwusds ymm0, ymm2, yword [eax+1]
+	vpdpwusds ymm4, ymm1, yword [eax+64]
+	vpdpwusds zmm5, zmm4, zword [eax+1]
+	vpdpwusds zmm0, zmm2, zword [eax+64]

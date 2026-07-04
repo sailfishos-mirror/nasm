@@ -11,3 +11,9 @@ default rel
 	movzxw r21w, r31w
 	movzxw r20d, r28w
 	movzxw r30, r24w
+	movzxw cx, word [eax+1]
+	movzxw di, word [eax+64]
+	movzxw edi, word [eax+1]
+	movzxw eax, word [eax+64]
+	movzxw rsi, word [eax+1]
+	movzxw rsi, word [eax+64]

@@ -17,3 +17,11 @@ default rel
 	vcvttss2si r19, xmm31
 	vcvttss2si ebp, xmm1, {sae}
 	vcvttss2si rbp, xmm5, {sae}
+	vcvttss2si ebp, dword [eax+1]
+	vcvttss2si ebp, dword [eax+64]
+	vcvttss2si rdi, dword [eax+1]
+	vcvttss2si rax, dword [eax+64]
+	vcvttss2si edi, dword [eax+1]
+	vcvttss2si ecx, dword [eax+64]
+	vcvttss2si rbx, dword [eax+1]
+	vcvttss2si rax, dword [eax+64]

@@ -21,3 +21,9 @@ default rel
 	vpmovuswb qword [0xa0f]{k3}, xmm2
 	vpmovuswb oword [0xbc3]{k3}, ymm0
 	vpmovuswb yword [0x726]{k7}, zmm5
+	vpmovuswb qword [eax+1], xmm0
+	vpmovuswb qword [eax+64], xmm1
+	vpmovuswb oword [eax+1], ymm7
+	vpmovuswb oword [eax+64], ymm5
+	vpmovuswb yword [eax+1], zmm1
+	vpmovuswb yword [eax+64], zmm6

@@ -14,3 +14,9 @@ default rel
 	vpcmpnled k6{k7}, xmm2, xmm3
 	vpcmpnled k4{k5}, ymm3, ymm3
 	vpcmpnled k4{k2}, zmm3, zmm7
+	vpcmpnled k3, xmm3, oword [eax+1]
+	vpcmpnled k1, xmm6, oword [eax+64]
+	vpcmpnled k7, ymm5, yword [eax+1]
+	vpcmpnled k4, ymm3, yword [eax+64]
+	vpcmpnled k7, zmm1, zword [eax+1]
+	vpcmpnled k5, zmm1, zword [eax+64]

@@ -25,3 +25,13 @@ default rel
 	vpminud xmm1{k7}{z}, xmm0, oword [0x688]
 	vpminud ymm3{k4}{z}, ymm4, yword [0x922]
 	vpminud zmm2{k3}{z}, zmm5, zmm2
+	vpminud xmm3, xmm5, oword [eax+1]
+	vpminud xmm4, xmm6, oword [eax+64]
+	vpminud ymm4, ymm5, yword [eax+1]
+	vpminud ymm4, ymm3, yword [eax+64]
+	vpminud xmm5, xmm6, oword [eax+1]
+	vpminud xmm7, xmm7, oword [eax+64]
+	vpminud ymm1, ymm3, yword [eax+1]
+	vpminud ymm4, ymm6, yword [eax+64]
+	vpminud zmm5, zmm7, zword [eax+1]
+	vpminud zmm6, zmm2, zword [eax+64]

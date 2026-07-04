@@ -17,3 +17,13 @@ default rel
 	vcmpge_oqpd k3{k4}, ymm5, yword [0x6fc]
 	vcmpge_oqpd k4{k3}, zmm4, zword [0x6e4]
 	vcmpge_oqpd k5, zmm1, zmm7, {sae}
+	vcmpge_oqpd xmm3, xmm4, oword [eax+1]
+	vcmpge_oqpd xmm1, xmm4, oword [eax+64]
+	vcmpge_oqpd ymm7, ymm6, yword [eax+1]
+	vcmpge_oqpd ymm2, ymm7, yword [eax+64]
+	vcmpge_oqpd k2, xmm4, oword [eax+1]
+	vcmpge_oqpd k1, xmm3, oword [eax+64]
+	vcmpge_oqpd k7, ymm6, yword [eax+1]
+	vcmpge_oqpd k4, ymm3, yword [eax+64]
+	vcmpge_oqpd k5, zmm3, zword [eax+1]
+	vcmpge_oqpd k6, zmm7, zword [eax+64]

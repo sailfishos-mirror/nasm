@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for CLDEMOTE",
   "id": "cldemote16",
   "format": "bin",
-  "source": "cldemote.asm",
+  "source": "cldemote_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cldemote/",
   "target": [
    { "output": "cldemote.bin16", "match": "cldemote.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for CLDEMOTE",
   "id": "cldemote32",
   "format": "bin",
-  "source": "cldemote.asm",
+  "source": "cldemote_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cldemote/",
   "target": [
    { "output": "cldemote.bin32", "match": "cldemote.bin32.t" }

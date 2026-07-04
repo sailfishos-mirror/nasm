@@ -5,3 +5,5 @@ default rel
 	vpextrd ebp, xmm2, 0xad
 	vpextrd r8, xmm12, 0x1b
 	vpextrd r9d, xmm12, 0x6d
+	vpextrd dword [eax+1], xmm4, 0x84
+	vpextrd dword [eax+64], xmm0, 0xa5

@@ -9,3 +9,7 @@ default rel
 	bzhi r8, r10, r10
 	bzhi r17d, r17d, r19d
 	bzhi r27, r27, r24
+	bzhi edx, dword [eax+1], ebp
+	bzhi ecx, dword [eax+64], ebp
+	bzhi rax, qword [eax+1], rax
+	bzhi rbx, qword [eax+64], rcx

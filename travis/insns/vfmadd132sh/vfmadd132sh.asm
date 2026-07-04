@@ -7,3 +7,5 @@ default rel
 	vfmadd132sh xmm7{k7}, xmm7, xmm2
 	vfmadd132sh xmm0{k5}{z}, xmm4, word [0xa55]
 	vfmadd132sh xmm5, xmm1, xmm1, {rd-sae}
+	vfmadd132sh xmm1, xmm4, word [eax+1]
+	vfmadd132sh xmm7, xmm5, word [eax+64]

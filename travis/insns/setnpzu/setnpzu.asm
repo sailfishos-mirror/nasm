@@ -11,3 +11,5 @@ default rel
 	setnpzu r18
 	setnpzu r30d
 	setnpzu r22b
+	setnpzu byte [eax+1]
+	setnpzu byte [eax+64]

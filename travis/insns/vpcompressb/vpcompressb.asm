@@ -21,3 +21,9 @@ default rel
 	vpcompressb xmm3{k2}, xmm4
 	vpcompressb ymm6{k4}, ymm1
 	vpcompressb zmm0{k5}, zmm0
+	vpcompressb oword [eax+1], xmm0
+	vpcompressb oword [eax+64], xmm6
+	vpcompressb yword [eax+1], ymm2
+	vpcompressb yword [eax+64], ymm5
+	vpcompressb zword [eax+1], zmm0
+	vpcompressb zword [eax+64], zmm6

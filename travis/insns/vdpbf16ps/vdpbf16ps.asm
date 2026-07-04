@@ -20,3 +20,9 @@ default rel
 	vdpbf16ps xmm1{k2}{z}, xmm5, xmm2
 	vdpbf16ps ymm7{k5}{z}, ymm2, ymm5
 	vdpbf16ps zmm3{k6}{z}, zmm0, zmm6
+	vdpbf16ps xmm2, xmm4, oword [eax+1]
+	vdpbf16ps xmm2, xmm0, oword [eax+64]
+	vdpbf16ps ymm7, ymm3, yword [eax+1]
+	vdpbf16ps ymm5, ymm2, yword [eax+64]
+	vdpbf16ps zmm3, zmm1, zword [eax+1]
+	vdpbf16ps zmm5, zmm3, zword [eax+64]

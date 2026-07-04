@@ -7,3 +7,9 @@ default rel
 	fld [0x200]
 	fld st7
 	fld st6
+	fld dword [eax+1]
+	fld dword [eax+64]
+	fld qword [eax+1]
+	fld qword [eax+64]
+	fld [eax+1]
+	fld [eax+64]

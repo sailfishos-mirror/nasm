@@ -20,3 +20,9 @@ default rel
 	vpminuq xmm3{k4}{z}, xmm1, oword [0xaf1]
 	vpminuq ymm6{k3}{z}, ymm1, ymm5
 	vpminuq zmm7{k6}{z}, zmm1, zmm0
+	vpminuq xmm0, xmm7, oword [eax+1]
+	vpminuq xmm3, xmm1, oword [eax+64]
+	vpminuq ymm4, ymm2, yword [eax+1]
+	vpminuq ymm5, ymm0, yword [eax+64]
+	vpminuq zmm0, zmm0, zword [eax+1]
+	vpminuq zmm4, zmm1, zword [eax+64]

@@ -21,3 +21,9 @@ default rel
 	vscalefpd ymm3{k5}{z}, ymm5, ymm3
 	vscalefpd zmm3{k4}{z}, zmm1, zmm7
 	vscalefpd zmm0, zmm4, zmm5, {rn-sae}
+	vscalefpd xmm0, xmm5, oword [eax+1]
+	vscalefpd xmm4, xmm7, oword [eax+64]
+	vscalefpd ymm7, ymm5, yword [eax+1]
+	vscalefpd ymm1, ymm7, yword [eax+64]
+	vscalefpd zmm1, zmm6, zword [eax+1]
+	vscalefpd zmm3, zmm5, zword [eax+64]

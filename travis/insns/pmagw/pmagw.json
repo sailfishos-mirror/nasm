@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PMAGW",
   "id": "pmagw16",
   "format": "bin",
-  "source": "pmagw.asm",
+  "source": "pmagw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmagw/",
   "target": [
    { "output": "pmagw.bin16", "match": "pmagw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PMAGW",
   "id": "pmagw32",
   "format": "bin",
-  "source": "pmagw.asm",
+  "source": "pmagw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmagw/",
   "target": [
    { "output": "pmagw.bin32", "match": "pmagw.bin32.t" }

@@ -11,3 +11,5 @@ default rel
 	setazu r28
 	setazu r22d
 	setazu r30b
+	setazu byte [eax+1]
+	setazu byte [eax+64]

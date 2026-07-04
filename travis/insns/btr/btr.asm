@@ -15,3 +15,15 @@ default rel
 	btr r21d, r28d
 	btr r22, r26
 	btr r24w, 0xad
+	btr word [eax+1], cx
+	btr word [eax+64], cx
+	btr dword [eax+1], edi
+	btr dword [eax+64], ecx
+	btr qword [eax+1], rbx
+	btr qword [eax+64], rcx
+	btr word [eax+1], 0xf5
+	btr word [eax+64], 0xb5
+	btr dword [eax+1], 0xb4
+	btr dword [eax+64], 0x8c
+	btr qword [eax+1], 0xd8
+	btr qword [eax+64], 0xa5

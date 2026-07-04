@@ -6,3 +6,5 @@ default rel
 	vrsqrt14ss xmm30, xmm28, xmm20
 	vrsqrt14ss xmm2{k7}, xmm5, xmm3
 	vrsqrt14ss xmm1{k2}{z}, xmm2, xmm2
+	vrsqrt14ss xmm1, xmm5, dword [eax+1]
+	vrsqrt14ss xmm1, xmm3, dword [eax+64]

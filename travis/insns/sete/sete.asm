@@ -11,3 +11,5 @@ default rel
 	sete r18b
 	sete r26
 	sete r21d
+	sete byte [eax+1]
+	sete byte [eax+64]

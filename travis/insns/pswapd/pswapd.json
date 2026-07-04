@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PSWAPD",
   "id": "pswapd16",
   "format": "bin",
-  "source": "pswapd.asm",
+  "source": "pswapd_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pswapd/",
   "target": [
    { "output": "pswapd.bin16", "match": "pswapd.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PSWAPD",
   "id": "pswapd32",
   "format": "bin",
-  "source": "pswapd.asm",
+  "source": "pswapd_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pswapd/",
   "target": [
    { "output": "pswapd.bin32", "match": "pswapd.bin32.t" }

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FRSTOR",
   "id": "frstor16",
   "format": "bin",
-  "source": "frstor.asm",
+  "source": "frstor_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/frstor/",
   "target": [
    { "output": "frstor.bin16", "match": "frstor.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FRSTOR",
   "id": "frstor32",
   "format": "bin",
-  "source": "frstor.asm",
+  "source": "frstor_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/frstor/",
   "target": [
    { "output": "frstor.bin32", "match": "frstor.bin32.t" }

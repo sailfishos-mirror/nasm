@@ -13,3 +13,5 @@ default rel
 	str r18w
 	str r30d
 	str r26
+	str word [eax+1]
+	str word [eax+64]

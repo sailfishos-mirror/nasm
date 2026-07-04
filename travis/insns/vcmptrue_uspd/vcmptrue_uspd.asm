@@ -17,3 +17,13 @@ default rel
 	vcmptrue_uspd k5{k3}, ymm1, yword [0x527]
 	vcmptrue_uspd k2{k4}, zmm1, zword [0xcfa]
 	vcmptrue_uspd k7, zmm3, zmm0, {sae}
+	vcmptrue_uspd xmm7, xmm0, oword [eax+1]
+	vcmptrue_uspd xmm3, xmm6, oword [eax+64]
+	vcmptrue_uspd ymm5, ymm4, yword [eax+1]
+	vcmptrue_uspd ymm7, ymm1, yword [eax+64]
+	vcmptrue_uspd k1, xmm1, oword [eax+1]
+	vcmptrue_uspd k1, xmm6, oword [eax+64]
+	vcmptrue_uspd k4, ymm0, yword [eax+1]
+	vcmptrue_uspd k2, ymm7, yword [eax+64]
+	vcmptrue_uspd k1, zmm1, zword [eax+1]
+	vcmptrue_uspd k5, zmm3, zword [eax+64]

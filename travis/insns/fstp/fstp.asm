@@ -7,3 +7,9 @@ default rel
 	fstp [0x154]
 	fstp st2
 	fstp st6
+	fstp dword [eax+1]
+	fstp dword [eax+64]
+	fstp qword [eax+1]
+	fstp qword [eax+64]
+	fstp [eax+1]
+	fstp [eax+64]

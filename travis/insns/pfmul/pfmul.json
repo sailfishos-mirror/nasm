@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFMUL",
   "id": "pfmul16",
   "format": "bin",
-  "source": "pfmul.asm",
+  "source": "pfmul_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfmul/",
   "target": [
    { "output": "pfmul.bin16", "match": "pfmul.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFMUL",
   "id": "pfmul32",
   "format": "bin",
-  "source": "pfmul.asm",
+  "source": "pfmul_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfmul/",
   "target": [
    { "output": "pfmul.bin32", "match": "pfmul.bin32.t" }

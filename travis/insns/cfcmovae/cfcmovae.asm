@@ -15,3 +15,21 @@ default rel
 	cfcmovae r26d, r18d
 	cfcmovae r19, r31
 	cfcmovae r28w, r26w
+	cfcmovae word [eax+1], ax
+	cfcmovae word [eax+64], bx
+	cfcmovae dword [eax+1], eax
+	cfcmovae dword [eax+64], edx
+	cfcmovae qword [eax+1], rdx
+	cfcmovae qword [eax+64], rsi
+	cfcmovae cx, word [eax+1]
+	cfcmovae cx, word [eax+64]
+	cfcmovae edi, dword [eax+1]
+	cfcmovae edx, dword [eax+64]
+	cfcmovae rbp, qword [eax+1]
+	cfcmovae rbx, qword [eax+64]
+	cfcmovae bp, dx, word [eax+1]
+	cfcmovae dx, di, word [eax+64]
+	cfcmovae edx, ecx, dword [eax+1]
+	cfcmovae edi, ebp, dword [eax+64]
+	cfcmovae rbx, rdi, qword [eax+1]
+	cfcmovae rbx, rax, qword [eax+64]

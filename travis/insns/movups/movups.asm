@@ -5,3 +5,7 @@ default rel
 	movups xmm2, xmm7
 	movups xmm14, xmm13
 	movups xmm8, xmm8
+	movups xmm4, oword [eax+1]
+	movups xmm6, oword [eax+64]
+	movups oword [eax+1], xmm5
+	movups oword [eax+64], xmm1

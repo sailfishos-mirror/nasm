@@ -11,3 +11,21 @@ default rel
 	movq r10, mm7
 	movq mm4, r25
 	movq r25, mm1
+	movq mm3, qword [eax+1]
+	movq mm0, qword [eax+64]
+	movq qword [eax+1], mm7
+	movq qword [eax+64], mm5
+	movq mm3, qword [eax+1]
+	movq mm6, qword [eax+64]
+	movq qword [eax+1], mm0
+	movq qword [eax+64], mm4
+	movq [eax+1], xmm6
+	movq [eax+64], xmm3
+	movq xmm2, [eax+1]
+	movq xmm4, [eax+64]
+	movq xmm6, qword [eax+1]
+	movq xmm1, qword [eax+64]
+	movq qword [eax+1], xmm2
+	movq qword [eax+64], xmm5
+	movq qword [eax+1], k1
+	movq qword [eax+64], k7

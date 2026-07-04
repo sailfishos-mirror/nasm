@@ -17,3 +17,13 @@ default rel
 	vcmpneq_ospd k4{k3}, ymm2, ymm1
 	vcmpneq_ospd k3{k4}, zmm6, zmm1
 	vcmpneq_ospd k1, zmm7, zmm4, {sae}
+	vcmpneq_ospd xmm0, xmm4, oword [eax+1]
+	vcmpneq_ospd xmm5, xmm0, oword [eax+64]
+	vcmpneq_ospd ymm6, ymm4, yword [eax+1]
+	vcmpneq_ospd ymm0, ymm2, yword [eax+64]
+	vcmpneq_ospd k2, xmm4, oword [eax+1]
+	vcmpneq_ospd k2, xmm0, oword [eax+64]
+	vcmpneq_ospd k3, ymm1, yword [eax+1]
+	vcmpneq_ospd k1, ymm7, yword [eax+64]
+	vcmpneq_ospd k3, zmm3, zword [eax+1]
+	vcmpneq_ospd k1, zmm7, zword [eax+64]

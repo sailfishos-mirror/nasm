@@ -7,3 +7,7 @@ default rel
 	fcomp st4
 	fcomp st0, st1
 	fcomp st0, st2
+	fcomp dword [eax+1]
+	fcomp dword [eax+64]
+	fcomp qword [eax+1]
+	fcomp qword [eax+64]

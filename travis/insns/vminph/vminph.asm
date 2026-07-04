@@ -21,3 +21,9 @@ default rel
 	vminph ymm6{k1}{z}, ymm7, yword [0xabe]
 	vminph zmm7{k1}{z}, zmm2, zmm4
 	vminph zmm1, zmm4, zmm0, {sae}
+	vminph xmm1, xmm7, oword [eax+1]
+	vminph xmm5, xmm5, oword [eax+64]
+	vminph ymm1, ymm4, yword [eax+1]
+	vminph ymm7, ymm1, yword [eax+64]
+	vminph zmm1, zmm3, zword [eax+1]
+	vminph zmm2, zmm4, zword [eax+64]

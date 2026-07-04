@@ -17,3 +17,9 @@ default rel
 	vpexpandb xmm3{k2}{z}, xmm2
 	vpexpandb ymm6{k1}{z}, ymm6
 	vpexpandb zmm0{k2}{z}, zword [0x4b2]
+	vpexpandb xmm5, oword [eax+1]
+	vpexpandb xmm7, oword [eax+64]
+	vpexpandb ymm7, yword [eax+1]
+	vpexpandb ymm0, yword [eax+64]
+	vpexpandb zmm4, zword [eax+1]
+	vpexpandb zmm5, zword [eax+64]

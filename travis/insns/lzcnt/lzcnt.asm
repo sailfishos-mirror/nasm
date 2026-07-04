@@ -11,3 +11,9 @@ default rel
 	lzcnt r17w, r27w
 	lzcnt r17d, r21d
 	lzcnt r20, r31
+	lzcnt si, word [eax+1]
+	lzcnt ax, word [eax+64]
+	lzcnt edi, dword [eax+1]
+	lzcnt edx, dword [eax+64]
+	lzcnt rax, qword [eax+1]
+	lzcnt rdx, qword [eax+64]

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FADD",
   "id": "fadd16",
   "format": "bin",
-  "source": "fadd.asm",
+  "source": "fadd_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fadd/",
   "target": [
    { "output": "fadd.bin16", "match": "fadd.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FADD",
   "id": "fadd32",
   "format": "bin",
-  "source": "fadd.asm",
+  "source": "fadd_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fadd/",
   "target": [
    { "output": "fadd.bin32", "match": "fadd.bin32.t" }

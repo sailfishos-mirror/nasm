@@ -15,3 +15,19 @@ default rel
 	ctestnle 1, r25w, r31w
 	ctestnle 1, r21d, r22d
 	ctestnle 7, r20, r22
+	ctestnle 7, byte [eax+1], bl
+	ctestnle 14, byte [eax+64], bl
+	ctestnle 0, word [eax+1], si
+	ctestnle 11, word [eax+64], di
+	ctestnle 4, dword [eax+1], edi
+	ctestnle 1, dword [eax+64], edx
+	ctestnle 5, qword [eax+1], rsi
+	ctestnle 10, qword [eax+64], rbp
+	ctestnle 9, byte [eax+1], 0x59
+	ctestnle 0, byte [eax+64], 0xdc
+	ctestnle 2, word [eax+1], 0x8682
+	ctestnle 9, word [eax+64], 0x2c1d
+	ctestnle 2, dword [eax+1], 0x3a5d941c
+	ctestnle 4, dword [eax+64], 0xb10b9fc
+	ctestnle 6, qword [eax+1], 332394512
+	ctestnle 13, qword [eax+64], -465038390

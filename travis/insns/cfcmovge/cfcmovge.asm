@@ -15,3 +15,21 @@ default rel
 	cfcmovge r24d, r30d
 	cfcmovge r19, r16
 	cfcmovge r31w, r18w
+	cfcmovge word [eax+1], si
+	cfcmovge word [eax+64], si
+	cfcmovge dword [eax+1], ecx
+	cfcmovge dword [eax+64], eax
+	cfcmovge qword [eax+1], rsi
+	cfcmovge qword [eax+64], rsi
+	cfcmovge di, word [eax+1]
+	cfcmovge si, word [eax+64]
+	cfcmovge eax, dword [eax+1]
+	cfcmovge edx, dword [eax+64]
+	cfcmovge rdi, qword [eax+1]
+	cfcmovge rax, qword [eax+64]
+	cfcmovge ax, bx, word [eax+1]
+	cfcmovge cx, dx, word [eax+64]
+	cfcmovge ebx, ebp, dword [eax+1]
+	cfcmovge eax, eax, dword [eax+64]
+	cfcmovge rax, rbp, qword [eax+1]
+	cfcmovge rbp, rcx, qword [eax+64]

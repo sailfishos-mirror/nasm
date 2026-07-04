@@ -15,3 +15,19 @@ default rel
 	dec r28d
 	dec r19b
 	dec r26w
+	dec byte [eax+1]
+	dec byte [eax+64]
+	dec word [eax+1]
+	dec word [eax+64]
+	dec dword [eax+1]
+	dec dword [eax+64]
+	dec qword [eax+1]
+	dec qword [eax+64]
+	dec cl, byte [eax+1]
+	dec cl, byte [eax+64]
+	dec di, word [eax+1]
+	dec bx, word [eax+64]
+	dec ecx, dword [eax+1]
+	dec edx, dword [eax+64]
+	dec rbp, qword [eax+1]
+	dec rbx, qword [eax+64]

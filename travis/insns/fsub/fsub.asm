@@ -7,3 +7,7 @@ default rel
 	fsub st3
 	fsub st3, st0
 	fsub st6, st0
+	fsub dword [eax+1]
+	fsub dword [eax+64]
+	fsub qword [eax+1]
+	fsub qword [eax+64]

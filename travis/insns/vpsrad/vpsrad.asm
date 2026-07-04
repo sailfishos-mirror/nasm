@@ -31,3 +31,19 @@ default rel
 	vpsrad xmm0{k4}{z}, oword [0x2ba], 0xc6
 	vpsrad ymm2{k6}{z}, yword [0x50e], 0xfa
 	vpsrad zmm3{k3}{z}, zmm6, 0xbf
+	vpsrad xmm6, xmm0, oword [eax+1]
+	vpsrad xmm0, xmm2, oword [eax+64]
+	vpsrad ymm6, ymm0, oword [eax+1]
+	vpsrad ymm7, ymm3, oword [eax+64]
+	vpsrad xmm0, xmm3, oword [eax+1]
+	vpsrad xmm4, xmm6, oword [eax+64]
+	vpsrad ymm5, ymm3, oword [eax+1]
+	vpsrad ymm2, ymm5, oword [eax+64]
+	vpsrad zmm0, zmm3, oword [eax+1]
+	vpsrad zmm3, zmm4, oword [eax+64]
+	vpsrad xmm0, oword [eax+1], 0xce
+	vpsrad xmm5, oword [eax+64], 0xcc
+	vpsrad ymm6, yword [eax+1], 0x70
+	vpsrad ymm0, yword [eax+64], 0x35
+	vpsrad zmm1, zword [eax+1], 0x99
+	vpsrad zmm1, zword [eax+64], 0x9f

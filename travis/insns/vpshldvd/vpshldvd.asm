@@ -20,3 +20,9 @@ default rel
 	vpshldvd xmm6{k4}{z}, xmm0, xmm0
 	vpshldvd ymm1{k1}{z}, ymm6, yword [0x6ce]
 	vpshldvd zmm4{k7}{z}, zmm1, zword [0xa7f]
+	vpshldvd xmm6, xmm1, oword [eax+1]
+	vpshldvd xmm0, xmm0, oword [eax+64]
+	vpshldvd ymm6, ymm1, yword [eax+1]
+	vpshldvd ymm4, ymm5, yword [eax+64]
+	vpshldvd zmm1, zmm1, zword [eax+1]
+	vpshldvd zmm1, zmm2, zword [eax+64]

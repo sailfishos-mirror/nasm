@@ -5,3 +5,7 @@ default rel
 	vfmaddsub312ps ymm3, ymm5, ymm2
 	vfmaddsub312ps xmm13, xmm14, xmm13
 	vfmaddsub312ps ymm14, ymm10, ymm9
+	vfmaddsub312ps xmm1, xmm5, oword [eax+1]
+	vfmaddsub312ps xmm1, xmm6, oword [eax+64]
+	vfmaddsub312ps ymm1, ymm5, yword [eax+1]
+	vfmaddsub312ps ymm1, ymm5, yword [eax+64]

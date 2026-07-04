@@ -11,3 +11,9 @@ default rel
 	hint_nop51 r18w
 	hint_nop51 r17d
 	hint_nop51 r29
+	hint_nop51 word [eax+1]
+	hint_nop51 word [eax+64]
+	hint_nop51 dword [eax+1]
+	hint_nop51 dword [eax+64]
+	hint_nop51 qword [eax+1]
+	hint_nop51 qword [eax+64]

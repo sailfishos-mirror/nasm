@@ -17,3 +17,13 @@ default rel
 	vcmpordps k7{k7}, ymm1, ymm7
 	vcmpordps k3{k3}, zmm7, zmm4
 	vcmpordps k7, zmm5, zmm7, {sae}
+	vcmpordps xmm3, xmm3, oword [eax+1]
+	vcmpordps xmm4, xmm6, oword [eax+64]
+	vcmpordps ymm3, ymm1, yword [eax+1]
+	vcmpordps ymm5, ymm5, yword [eax+64]
+	vcmpordps k5, xmm0, oword [eax+1]
+	vcmpordps k2, xmm1, oword [eax+64]
+	vcmpordps k6, ymm4, yword [eax+1]
+	vcmpordps k2, ymm0, yword [eax+64]
+	vcmpordps k6, zmm4, zword [eax+1]
+	vcmpordps k3, zmm3, zword [eax+64]

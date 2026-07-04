@@ -20,3 +20,9 @@ default rel
 	valignd xmm2{k6}{z}, xmm5, xmm4, 0x25
 	valignd ymm3{k2}{z}, ymm5, ymm7, 0x45
 	valignd zmm1{k2}{z}, zmm5, zword [0xc01], 0x22
+	valignd xmm7, xmm0, oword [eax+1], 0xc7
+	valignd xmm3, xmm4, oword [eax+64], 0x73
+	valignd ymm1, ymm1, yword [eax+1], 0x99
+	valignd ymm6, ymm6, yword [eax+64], 0xd
+	valignd zmm7, zmm2, zword [eax+1], 0x63
+	valignd zmm5, zmm5, zword [eax+64], 0x86

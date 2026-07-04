@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFMAX",
   "id": "pfmax16",
   "format": "bin",
-  "source": "pfmax.asm",
+  "source": "pfmax_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfmax/",
   "target": [
    { "output": "pfmax.bin16", "match": "pfmax.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFMAX",
   "id": "pfmax32",
   "format": "bin",
-  "source": "pfmax.asm",
+  "source": "pfmax_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfmax/",
   "target": [
    { "output": "pfmax.bin32", "match": "pfmax.bin32.t" }

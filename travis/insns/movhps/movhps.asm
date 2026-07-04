@@ -5,3 +5,7 @@ default rel
 	movhps qword [0xaa8], xmm6
 	movhps xmm12, qword [0x7f2]
 	movhps qword [0x30e], xmm9
+	movhps xmm2, qword [eax+1]
+	movhps xmm3, qword [eax+64]
+	movhps qword [eax+1], xmm0
+	movhps qword [eax+64], xmm1

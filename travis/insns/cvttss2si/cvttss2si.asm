@@ -5,3 +5,7 @@ default rel
 	cvttss2si rsi, dword [0xf70]
 	cvttss2si r8d, xmm14
 	cvttss2si r8, xmm11
+	cvttss2si ecx, dword [eax+1]
+	cvttss2si ebx, dword [eax+64]
+	cvttss2si rax, dword [eax+1]
+	cvttss2si rdx, dword [eax+64]

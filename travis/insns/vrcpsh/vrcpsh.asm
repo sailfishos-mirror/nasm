@@ -7,3 +7,5 @@ default rel
 	vrcpsh xmm2{k7}, xmm2, xmm3
 	vrcpsh xmm0{k6}{z}, xmm7, xmm3
 	vrcpsh xmm4, xmm5, xmm4, {sae}
+	vrcpsh xmm3, xmm1, word [eax+1]
+	vrcpsh xmm5, xmm0, word [eax+64]

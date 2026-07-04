@@ -21,3 +21,9 @@ default rel
 	vpmovsqb word [0x1f9]{k4}, xmm5
 	vpmovsqb dword [0x315]{k4}, ymm2
 	vpmovsqb qword [0x39e]{k2}, zmm2
+	vpmovsqb word [eax+1], xmm2
+	vpmovsqb word [eax+64], xmm1
+	vpmovsqb dword [eax+1], ymm5
+	vpmovsqb dword [eax+64], ymm3
+	vpmovsqb qword [eax+1], zmm1
+	vpmovsqb qword [eax+64], zmm6

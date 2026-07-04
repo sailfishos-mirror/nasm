@@ -21,3 +21,9 @@ default rel
 	vfnmsub231ph ymm2{k4}{z}, ymm0, ymm4
 	vfnmsub231ph zmm5{k6}{z}, zmm4, zword [0x606]
 	vfnmsub231ph zmm7, zmm7, zmm4, {rd-sae}
+	vfnmsub231ph xmm1, xmm6, oword [eax+1]
+	vfnmsub231ph xmm7, xmm7, oword [eax+64]
+	vfnmsub231ph ymm4, ymm2, yword [eax+1]
+	vfnmsub231ph ymm1, ymm1, yword [eax+64]
+	vfnmsub231ph zmm3, zmm4, zword [eax+1]
+	vfnmsub231ph zmm4, zmm2, zword [eax+64]

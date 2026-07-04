@@ -14,3 +14,7 @@ default rel
 	vminsh xmm3{k6}{z}, xmm1, xmm1
 	vminsh xmm1, xmm7, xmm2, {sae}
 	vminsh xmm7, xmm4, xmm4, {sae}
+	vminsh xmm5, xmm7, word [eax+1]
+	vminsh xmm2, xmm7, word [eax+64]
+	vminsh xmm5, xmm5, word [eax+1]
+	vminsh xmm1, xmm7, word [eax+64]

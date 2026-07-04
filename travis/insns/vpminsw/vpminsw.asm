@@ -25,3 +25,13 @@ default rel
 	vpminsw xmm2{k7}{z}, xmm6, xmm4
 	vpminsw ymm6{k6}{z}, ymm4, yword [0xe42]
 	vpminsw zmm4{k4}{z}, zmm0, zword [0xb56]
+	vpminsw xmm6, xmm0, oword [eax+1]
+	vpminsw xmm6, xmm7, oword [eax+64]
+	vpminsw ymm2, ymm6, yword [eax+1]
+	vpminsw ymm6, ymm5, yword [eax+64]
+	vpminsw xmm4, xmm5, oword [eax+1]
+	vpminsw xmm3, xmm7, oword [eax+64]
+	vpminsw ymm7, ymm6, yword [eax+1]
+	vpminsw ymm1, ymm7, yword [eax+64]
+	vpminsw zmm5, zmm7, zword [eax+1]
+	vpminsw zmm0, zmm6, zword [eax+64]

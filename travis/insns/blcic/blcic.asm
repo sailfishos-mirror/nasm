@@ -5,3 +5,7 @@ default rel
 	blcic rsi, qword [0x243]
 	blcic r11d, r13d
 	blcic r11, r12
+	blcic edi, dword [eax+1]
+	blcic eax, dword [eax+64]
+	blcic rdi, qword [eax+1]
+	blcic rbx, qword [eax+64]

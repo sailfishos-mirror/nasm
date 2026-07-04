@@ -21,3 +21,13 @@ default rel
 	vcvtps2ph qword [0xe5a]{k6}, xmm7, 0x5c
 	vcvtps2ph oword [0xa5c]{k5}, ymm7, 0xa2
 	vcvtps2ph yword [0xc45]{k7}, zmm4, 0xf5
+	vcvtps2ph oword [eax+1], ymm0, 0xd3
+	vcvtps2ph oword [eax+64], ymm3, 0x62
+	vcvtps2ph qword [eax+1], xmm0, 0x5e
+	vcvtps2ph qword [eax+64], xmm7, 0x25
+	vcvtps2ph qword [eax+1], xmm5, 0xff
+	vcvtps2ph qword [eax+64], xmm5, 0xf8
+	vcvtps2ph oword [eax+1], ymm2, 0x21
+	vcvtps2ph oword [eax+64], ymm5, 0xb2
+	vcvtps2ph yword [eax+1], zmm1, 0xae
+	vcvtps2ph yword [eax+64], zmm6, 0xe4

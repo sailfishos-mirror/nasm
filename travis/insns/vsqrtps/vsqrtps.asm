@@ -22,3 +22,13 @@ default rel
 	vsqrtps ymm5{k1}{z}, ymm4
 	vsqrtps zmm0{k7}{z}, zmm7
 	vsqrtps zmm2, zmm5, {rn-sae}
+	vsqrtps xmm6, oword [eax+1]
+	vsqrtps xmm3, oword [eax+64]
+	vsqrtps ymm4, yword [eax+1]
+	vsqrtps ymm3, yword [eax+64]
+	vsqrtps xmm4, oword [eax+1]
+	vsqrtps xmm6, oword [eax+64]
+	vsqrtps ymm7, yword [eax+1]
+	vsqrtps ymm4, yword [eax+64]
+	vsqrtps zmm1, zword [eax+1]
+	vsqrtps zmm7, zword [eax+64]

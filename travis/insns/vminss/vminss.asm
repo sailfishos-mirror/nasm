@@ -12,3 +12,7 @@ default rel
 	vminss xmm5{k6}, xmm3, xmm1
 	vminss xmm1{k4}{z}, xmm3, xmm4
 	vminss xmm2, xmm7, xmm7, {sae}
+	vminss xmm0, xmm6, dword [eax+1]
+	vminss xmm4, xmm7, dword [eax+64]
+	vminss xmm4, xmm5, dword [eax+1]
+	vminss xmm4, xmm6, dword [eax+64]

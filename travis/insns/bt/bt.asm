@@ -15,3 +15,15 @@ default rel
 	bt r22d, r16d
 	bt r21, r25
 	bt r17w, 0xd9
+	bt word [eax+1], di
+	bt word [eax+64], ax
+	bt dword [eax+1], ecx
+	bt dword [eax+64], ebx
+	bt qword [eax+1], rsi
+	bt qword [eax+64], rbx
+	bt word [eax+1], 0xe8
+	bt word [eax+64], 0x1e
+	bt dword [eax+1], 0x1d
+	bt dword [eax+64], 0x9b
+	bt qword [eax+1], 0x4b
+	bt qword [eax+64], 0x69

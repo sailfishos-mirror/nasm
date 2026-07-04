@@ -17,3 +17,11 @@ default rel
 	adcx r17, r29
 	adcx r18d, r26d, r16d
 	adcx r20, r23, r31
+	adcx ebx, dword [eax+1]
+	adcx edx, dword [eax+64]
+	adcx rdi, qword [eax+1]
+	adcx rbx, qword [eax+64]
+	adcx ecx, edx, dword [eax+1]
+	adcx ebx, ecx, dword [eax+64]
+	adcx rdi, rax, qword [eax+1]
+	adcx rax, rbx, qword [eax+64]

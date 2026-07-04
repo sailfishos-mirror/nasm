@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFADD",
   "id": "pfadd16",
   "format": "bin",
-  "source": "pfadd.asm",
+  "source": "pfadd_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfadd/",
   "target": [
    { "output": "pfadd.bin16", "match": "pfadd.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFADD",
   "id": "pfadd32",
   "format": "bin",
-  "source": "pfadd.asm",
+  "source": "pfadd_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfadd/",
   "target": [
    { "output": "pfadd.bin32", "match": "pfadd.bin32.t" }

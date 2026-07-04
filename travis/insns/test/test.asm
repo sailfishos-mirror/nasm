@@ -15,3 +15,27 @@ default rel
 	test r22w, r28w
 	test r17d, r23d
 	test r28, r16
+	test byte [eax+1], bl
+	test byte [eax+64], bl
+	test word [eax+1], bp
+	test word [eax+64], dx
+	test dword [eax+1], ebp
+	test dword [eax+64], edi
+	test qword [eax+1], rdi
+	test qword [eax+64], rax
+	test dl, byte [eax+1]
+	test al, byte [eax+64]
+	test di, word [eax+1]
+	test di, word [eax+64]
+	test esi, dword [eax+1]
+	test ebp, dword [eax+64]
+	test rdx, qword [eax+1]
+	test rdx, qword [eax+64]
+	test byte [eax+1], 0x3c
+	test byte [eax+64], 0x26
+	test word [eax+1], 0xd787
+	test word [eax+64], 0xea90
+	test dword [eax+1], 0x1587e7cf
+	test dword [eax+64], 0x6bd7579
+	test qword [eax+1], 174016346
+	test qword [eax+64], -197546387

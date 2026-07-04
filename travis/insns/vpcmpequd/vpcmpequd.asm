@@ -14,3 +14,9 @@ default rel
 	vpcmpequd k4{k6}, xmm0, xmm4
 	vpcmpequd k7{k6}, ymm1, ymm6
 	vpcmpequd k4{k5}, zmm7, zword [0xdd0]
+	vpcmpequd k6, xmm5, oword [eax+1]
+	vpcmpequd k5, xmm7, oword [eax+64]
+	vpcmpequd k3, ymm2, yword [eax+1]
+	vpcmpequd k3, ymm0, yword [eax+64]
+	vpcmpequd k7, zmm1, zword [eax+1]
+	vpcmpequd k7, zmm5, zword [eax+64]

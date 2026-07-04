@@ -11,3 +11,5 @@ default rel
 	setpe r31b
 	setpe r19
 	setpe r31d
+	setpe byte [eax+1]
+	setpe byte [eax+64]

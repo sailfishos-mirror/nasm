@@ -7,3 +7,39 @@ default rel
 	mov eax, [0x28d]
 	mov rax, [0x959]
 	mov rax, [0x8ea]
+	mov byte [eax+1], bl
+	mov byte [eax+64], al
+	mov word [eax+1], dx
+	mov word [eax+64], bx
+	mov dword [eax+1], esi
+	mov dword [eax+64], ebp
+	mov qword [eax+1], rbp
+	mov qword [eax+64], rcx
+	mov cl, byte [eax+1]
+	mov cl, byte [eax+64]
+	mov dx, word [eax+1]
+	mov dx, word [eax+64]
+	mov ecx, dword [eax+1]
+	mov edi, dword [eax+64]
+	mov rdi, qword [eax+1]
+	mov rbp, qword [eax+64]
+	mov byte [eax+1], 0x5f
+	mov byte [eax+64], 0x18
+	mov word [eax+1], 0x8884
+	mov word [eax+64], 0x1f41
+	mov dword [eax+1], 0xa787858
+	mov dword [eax+64], 0x2b22df3e
+	mov qword [eax+1], 141032669
+	mov qword [eax+64], 141726563
+	mov word [eax+1], gs
+	mov word [eax+64], gs
+	mov gs, word [eax+1]
+	mov gs, word [eax+64]
+	mov byte [eax+1], k4
+	mov byte [eax+64], k6
+	mov word [eax+1], k1
+	mov word [eax+64], k3
+	mov dword [eax+1], k6
+	mov dword [eax+64], k1
+	mov qword [eax+1], k2
+	mov qword [eax+64], k6

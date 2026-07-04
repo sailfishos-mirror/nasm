@@ -11,3 +11,9 @@ default rel
 	hint_nop42 r16w
 	hint_nop42 r27d
 	hint_nop42 r22
+	hint_nop42 word [eax+1]
+	hint_nop42 word [eax+64]
+	hint_nop42 dword [eax+1]
+	hint_nop42 dword [eax+64]
+	hint_nop42 qword [eax+1]
+	hint_nop42 qword [eax+64]

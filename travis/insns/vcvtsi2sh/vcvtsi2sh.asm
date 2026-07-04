@@ -11,3 +11,7 @@ default rel
 	vcvtsi2sh xmm18, xmm20, r22
 	vcvtsi2sh xmm1, xmm2, ebp, {ru-sae}
 	vcvtsi2sh xmm6, xmm6, rax, {rn-sae}
+	vcvtsi2sh xmm2, xmm6, dword [eax+1]
+	vcvtsi2sh xmm6, xmm5, dword [eax+64]
+	vcvtsi2sh xmm3, xmm3, qword [eax+1]
+	vcvtsi2sh xmm0, xmm3, qword [eax+64]

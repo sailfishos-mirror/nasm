@@ -25,3 +25,13 @@ default rel
 	vpsrlvq xmm7{k3}{z}, xmm0, xmm2
 	vpsrlvq ymm5{k1}{z}, ymm5, ymm2
 	vpsrlvq zmm2{k7}{z}, zmm3, zmm0
+	vpsrlvq xmm1, xmm5, oword [eax+1]
+	vpsrlvq xmm1, xmm5, oword [eax+64]
+	vpsrlvq ymm0, ymm0, yword [eax+1]
+	vpsrlvq ymm3, ymm0, yword [eax+64]
+	vpsrlvq xmm4, xmm2, oword [eax+1]
+	vpsrlvq xmm7, xmm6, oword [eax+64]
+	vpsrlvq ymm1, ymm4, yword [eax+1]
+	vpsrlvq ymm4, ymm1, yword [eax+64]
+	vpsrlvq zmm6, zmm6, zword [eax+1]
+	vpsrlvq zmm5, zmm4, zword [eax+64]

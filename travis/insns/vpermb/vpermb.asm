@@ -20,3 +20,9 @@ default rel
 	vpermb xmm2{k2}{z}, xmm1, xmm1
 	vpermb ymm7{k3}{z}, ymm2, ymm1
 	vpermb zmm5{k6}{z}, zmm0, zmm7
+	vpermb xmm3, xmm1, oword [eax+1]
+	vpermb xmm6, xmm1, oword [eax+64]
+	vpermb ymm6, ymm4, yword [eax+1]
+	vpermb ymm2, ymm1, yword [eax+64]
+	vpermb zmm0, zmm3, zword [eax+1]
+	vpermb zmm0, zmm2, zword [eax+64]

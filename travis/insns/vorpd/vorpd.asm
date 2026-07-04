@@ -25,3 +25,13 @@ default rel
 	vorpd xmm5{k2}{z}, xmm7, xmm3
 	vorpd ymm7{k5}{z}, ymm3, yword [0xc45]
 	vorpd zmm2{k1}{z}, zmm7, zword [0x7ae]
+	vorpd xmm2, xmm6, oword [eax+1]
+	vorpd xmm7, xmm2, oword [eax+64]
+	vorpd ymm1, ymm6, yword [eax+1]
+	vorpd ymm0, ymm5, yword [eax+64]
+	vorpd xmm2, xmm7, oword [eax+1]
+	vorpd xmm5, xmm7, oword [eax+64]
+	vorpd ymm6, ymm0, yword [eax+1]
+	vorpd ymm4, ymm0, yword [eax+64]
+	vorpd zmm2, zmm3, zword [eax+1]
+	vorpd zmm3, zmm4, zword [eax+64]

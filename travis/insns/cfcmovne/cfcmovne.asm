@@ -15,3 +15,21 @@ default rel
 	cfcmovne r27d, r30d
 	cfcmovne r21, r22
 	cfcmovne r19w, r25w
+	cfcmovne word [eax+1], bx
+	cfcmovne word [eax+64], cx
+	cfcmovne dword [eax+1], eax
+	cfcmovne dword [eax+64], eax
+	cfcmovne qword [eax+1], rax
+	cfcmovne qword [eax+64], rcx
+	cfcmovne bx, word [eax+1]
+	cfcmovne cx, word [eax+64]
+	cfcmovne ebx, dword [eax+1]
+	cfcmovne ebp, dword [eax+64]
+	cfcmovne rcx, qword [eax+1]
+	cfcmovne rsi, qword [eax+64]
+	cfcmovne si, si, word [eax+1]
+	cfcmovne ax, ax, word [eax+64]
+	cfcmovne edx, esi, dword [eax+1]
+	cfcmovne ebx, edi, dword [eax+64]
+	cfcmovne rbp, rdx, qword [eax+1]
+	cfcmovne rbp, rdi, qword [eax+64]

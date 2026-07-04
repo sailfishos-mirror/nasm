@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFCMPEQ",
   "id": "pfcmpeq16",
   "format": "bin",
-  "source": "pfcmpeq.asm",
+  "source": "pfcmpeq_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfcmpeq/",
   "target": [
    { "output": "pfcmpeq.bin16", "match": "pfcmpeq.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFCMPEQ",
   "id": "pfcmpeq32",
   "format": "bin",
-  "source": "pfcmpeq.asm",
+  "source": "pfcmpeq_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfcmpeq/",
   "target": [
    { "output": "pfcmpeq.bin32", "match": "pfcmpeq.bin32.t" }

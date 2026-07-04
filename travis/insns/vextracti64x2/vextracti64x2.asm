@@ -19,3 +19,7 @@ default rel
 	vextracti64x2 xmm6{k7}, zmm5, 0xd0
 	vextracti64x2 oword [0xde6]{k6}, ymm4, 0x75
 	vextracti64x2 oword [0x3f9]{k6}, zmm6, 0xdf
+	vextracti64x2 oword [eax+1], ymm3, 0x23
+	vextracti64x2 oword [eax+64], ymm3, 0xf2
+	vextracti64x2 oword [eax+1], zmm6, 0x88
+	vextracti64x2 oword [eax+64], zmm6, 0x36

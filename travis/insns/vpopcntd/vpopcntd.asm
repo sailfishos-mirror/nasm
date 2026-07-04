@@ -17,3 +17,9 @@ default rel
 	vpopcntd xmm4{k7}{z}, xmm1
 	vpopcntd ymm2{k6}{z}, ymm0
 	vpopcntd zmm4{k1}{z}, zmm2
+	vpopcntd xmm5, oword [eax+1]
+	vpopcntd xmm1, oword [eax+64]
+	vpopcntd ymm6, yword [eax+1]
+	vpopcntd ymm7, yword [eax+64]
+	vpopcntd zmm7, zword [eax+1]
+	vpopcntd zmm6, zword [eax+64]

@@ -11,3 +11,9 @@ default rel
 	hint_nop 0x32, r23w, r22w
 	hint_nop 0x45, r16d, r16d
 	hint_nop 0x64, r31, r16
+	hint_nop 0x69, si, word [eax+1]
+	hint_nop 0x56, si, word [eax+64]
+	hint_nop 0x73, ebx, dword [eax+1]
+	hint_nop 0x2a, ebx, dword [eax+64]
+	hint_nop 0x23, rbp, qword [eax+1]
+	hint_nop 0x2b, rsi, qword [eax+64]

@@ -9,3 +9,7 @@ default rel
 	pext r10, r13, r8
 	pext r27d, r30d, r24d
 	pext r19, r25, r22
+	pext eax, ecx, dword [eax+1]
+	pext edi, edi, dword [eax+64]
+	pext rdx, rsi, qword [eax+1]
+	pext rdi, rbp, qword [eax+64]

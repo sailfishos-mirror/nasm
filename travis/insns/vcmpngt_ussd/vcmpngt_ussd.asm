@@ -8,3 +8,7 @@ default rel
 	vcmpngt_ussd k2, xmm12, xmm8
 	vcmpngt_ussd k6{k1}, xmm2, xmm5
 	vcmpngt_ussd k2, xmm5, xmm5, {sae}
+	vcmpngt_ussd xmm0, xmm4, qword [eax+1]
+	vcmpngt_ussd xmm2, xmm5, qword [eax+64]
+	vcmpngt_ussd k2, xmm2, qword [eax+1]
+	vcmpngt_ussd k1, xmm6, qword [eax+64]

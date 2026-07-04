@@ -21,3 +21,13 @@ default rel
 	vmovsldup xmm5{k5}{z}, oword [0x236]
 	vmovsldup ymm2{k6}{z}, ymm1
 	vmovsldup zmm1{k1}{z}, zword [0xcf6]
+	vmovsldup xmm0, oword [eax+1]
+	vmovsldup xmm4, oword [eax+64]
+	vmovsldup ymm3, yword [eax+1]
+	vmovsldup ymm3, yword [eax+64]
+	vmovsldup xmm3, oword [eax+1]
+	vmovsldup xmm6, oword [eax+64]
+	vmovsldup ymm0, yword [eax+1]
+	vmovsldup ymm3, yword [eax+64]
+	vmovsldup zmm1, zword [eax+1]
+	vmovsldup zmm4, zword [eax+64]

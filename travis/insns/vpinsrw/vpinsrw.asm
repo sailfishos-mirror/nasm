@@ -11,3 +11,7 @@ default rel
 	vpinsrw xmm10, xmm13, word [0xba4], 0x1e
 	vpinsrw xmm14, xmm8, r12w, 0xc9
 	vpinsrw xmm12, xmm9, r11d, 0x63
+	vpinsrw xmm7, xmm5, word [eax+1], 0x97
+	vpinsrw xmm2, xmm7, word [eax+64], 0x8c
+	vpinsrw xmm4, xmm7, word [eax+1], 0x8a
+	vpinsrw xmm7, xmm0, word [eax+64], 0x2e

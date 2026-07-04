@@ -18,3 +18,9 @@ default rel
 	vrsqrtph ymm0{k1}{z}, ymm0
 	vrsqrtph zmm2{k3}{z}, zword [0x783]
 	vrsqrtph zmm6, zmm5, {sae}
+	vrsqrtph xmm7, oword [eax+1]
+	vrsqrtph xmm5, oword [eax+64]
+	vrsqrtph ymm2, yword [eax+1]
+	vrsqrtph ymm3, yword [eax+64]
+	vrsqrtph zmm1, zword [eax+1]
+	vrsqrtph zmm0, zword [eax+64]

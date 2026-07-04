@@ -9,3 +9,7 @@ default rel
 	vcvttsd2usis r31, xmm30
 	vcvttsd2usis eax, xmm2, {sae}
 	vcvttsd2usis rdi, xmm4, {sae}
+	vcvttsd2usis esi, qword [eax+1]
+	vcvttsd2usis ecx, qword [eax+64]
+	vcvttsd2usis rcx, qword [eax+1]
+	vcvttsd2usis rax, qword [eax+64]

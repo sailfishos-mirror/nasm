@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FST",
   "id": "fst16",
   "format": "bin",
-  "source": "fst.asm",
+  "source": "fst_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fst/",
   "target": [
    { "output": "fst.bin16", "match": "fst.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FST",
   "id": "fst32",
   "format": "bin",
-  "source": "fst.asm",
+  "source": "fst_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fst/",
   "target": [
    { "output": "fst.bin32", "match": "fst.bin32.t" }

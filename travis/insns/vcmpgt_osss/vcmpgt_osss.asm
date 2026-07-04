@@ -8,3 +8,7 @@ default rel
 	vcmpgt_osss k2, xmm11, xmm11
 	vcmpgt_osss k7{k5}, xmm6, xmm4
 	vcmpgt_osss k7, xmm1, xmm1, {sae}
+	vcmpgt_osss xmm1, xmm1, qword [eax+1]
+	vcmpgt_osss xmm6, xmm5, qword [eax+64]
+	vcmpgt_osss k2, xmm1, dword [eax+1]
+	vcmpgt_osss k2, xmm6, dword [eax+64]

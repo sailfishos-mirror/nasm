@@ -6,3 +6,5 @@ default rel
 	vreducess xmm24, xmm17, xmm20, 0x68
 	vreducess xmm0{k2}, xmm5, dword [0x6e0], 0xcc
 	vreducess xmm2{k6}{z}, xmm2, dword [0x78a], 0x65
+	vreducess xmm3, xmm1, dword [eax+1], 0xc4
+	vreducess xmm3, xmm3, dword [eax+64], 0xf8

@@ -15,3 +15,15 @@ default rel
 	cmovnp r20d, r24d
 	cmovnp r26, r24
 	cmovnp r21w, r28w, r29w
+	cmovnp ax, word [eax+1]
+	cmovnp si, word [eax+64]
+	cmovnp ebp, dword [eax+1]
+	cmovnp ebp, dword [eax+64]
+	cmovnp rbp, qword [eax+1]
+	cmovnp rbx, qword [eax+64]
+	cmovnp cx, cx, word [eax+1]
+	cmovnp bp, dx, word [eax+64]
+	cmovnp ebx, edi, dword [eax+1]
+	cmovnp ebx, edx, dword [eax+64]
+	cmovnp rdi, rax, qword [eax+1]
+	cmovnp rbp, rdi, qword [eax+64]

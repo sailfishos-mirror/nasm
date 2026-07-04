@@ -7,3 +7,7 @@ default rel
 	cmpnlxadd qword [0x69b], r9, r14
 	cmpnlxadd dword [0x90b], r22d, r16d
 	cmpnlxadd qword [0x9c6], r17, r24
+	cmpnlxadd dword [eax+1], ecx, edx
+	cmpnlxadd dword [eax+64], edx, eax
+	cmpnlxadd qword [eax+1], rcx, rsi
+	cmpnlxadd qword [eax+64], rbx, rcx

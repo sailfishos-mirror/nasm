@@ -15,3 +15,11 @@ default rel
 	vfmsubaddps ymm13, ymm13, ymm10, ymm10
 	vfmsubaddps xmm8, xmm9, xmm10, xmm12
 	vfmsubaddps ymm15, ymm12, ymm14, ymm15
+	vfmsubaddps xmm2, xmm7, oword [eax+1], xmm4
+	vfmsubaddps xmm1, xmm6, oword [eax+64], xmm7
+	vfmsubaddps ymm6, ymm1, yword [eax+1], ymm1
+	vfmsubaddps ymm5, ymm1, yword [eax+64], ymm3
+	vfmsubaddps xmm2, xmm4, xmm3, oword [eax+1]
+	vfmsubaddps xmm2, xmm5, xmm0, oword [eax+64]
+	vfmsubaddps ymm1, ymm7, ymm1, yword [eax+1]
+	vfmsubaddps ymm1, ymm2, ymm7, yword [eax+64]

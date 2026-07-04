@@ -14,3 +14,9 @@ default rel
 	vaesdeclast xmm19, xmm28, xmm25
 	vaesdeclast ymm16, ymm28, ymm22
 	vaesdeclast zmm23, zmm31, zmm16
+	vaesdeclast xmm6, xmm7, oword [eax+1]
+	vaesdeclast xmm7, xmm3, oword [eax+64]
+	vaesdeclast ymm4, ymm2, yword [eax+1]
+	vaesdeclast ymm0, ymm5, yword [eax+64]
+	vaesdeclast zmm1, zmm5, zword [eax+1]
+	vaesdeclast zmm4, zmm3, zword [eax+64]

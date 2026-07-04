@@ -22,3 +22,13 @@ default rel
 	vfnmsub132ps ymm3{k2}{z}, ymm5, ymm7
 	vfnmsub132ps zmm0{k6}{z}, zmm4, zmm7
 	vfnmsub132ps zmm4, zmm2, zmm4, {rd-sae}
+	vfnmsub132ps xmm1, xmm3, oword [eax+1]
+	vfnmsub132ps xmm2, xmm3, oword [eax+64]
+	vfnmsub132ps ymm7, ymm2, yword [eax+1]
+	vfnmsub132ps ymm6, ymm6, yword [eax+64]
+	vfnmsub132ps xmm7, xmm3, oword [eax+1]
+	vfnmsub132ps xmm2, xmm2, oword [eax+64]
+	vfnmsub132ps ymm7, ymm5, yword [eax+1]
+	vfnmsub132ps ymm5, ymm2, yword [eax+64]
+	vfnmsub132ps zmm2, zmm3, zword [eax+1]
+	vfnmsub132ps zmm1, zmm4, zword [eax+64]

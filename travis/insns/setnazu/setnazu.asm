@@ -11,3 +11,5 @@ default rel
 	setnazu r26
 	setnazu r16d
 	setnazu r16b
+	setnazu byte [eax+1]
+	setnazu byte [eax+64]

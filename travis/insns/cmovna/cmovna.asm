@@ -15,3 +15,15 @@ default rel
 	cmovna r19d, r21d
 	cmovna r28, r23
 	cmovna r31w, r19w, r31w
+	cmovna si, word [eax+1]
+	cmovna bp, word [eax+64]
+	cmovna eax, dword [eax+1]
+	cmovna ecx, dword [eax+64]
+	cmovna rax, qword [eax+1]
+	cmovna rsi, qword [eax+64]
+	cmovna bx, ax, word [eax+1]
+	cmovna bx, ax, word [eax+64]
+	cmovna ebp, ecx, dword [eax+1]
+	cmovna ecx, ebp, dword [eax+64]
+	cmovna rbx, rdx, qword [eax+1]
+	cmovna rbp, rbp, qword [eax+64]

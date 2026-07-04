@@ -11,3 +11,9 @@ default rel
 	hint_nop32 r16w
 	hint_nop32 r27d
 	hint_nop32 r18
+	hint_nop32 word [eax+1]
+	hint_nop32 word [eax+64]
+	hint_nop32 dword [eax+1]
+	hint_nop32 dword [eax+64]
+	hint_nop32 qword [eax+1]
+	hint_nop32 qword [eax+64]

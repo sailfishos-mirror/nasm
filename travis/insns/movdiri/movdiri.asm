@@ -7,3 +7,7 @@ default rel
 	movdiri qword [0x3dd], r12
 	movdiri dword [0x16a], r29d
 	movdiri qword [0xa38], r29
+	movdiri dword [eax+1], edi
+	movdiri dword [eax+64], eax
+	movdiri qword [eax+1], rbp
+	movdiri qword [eax+64], rsi

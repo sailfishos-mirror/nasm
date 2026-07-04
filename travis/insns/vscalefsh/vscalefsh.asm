@@ -7,3 +7,5 @@ default rel
 	vscalefsh xmm2{k1}, xmm0, xmm0
 	vscalefsh xmm1{k2}{z}, xmm3, xmm5
 	vscalefsh xmm3, xmm0, xmm4, {rz-sae}
+	vscalefsh xmm3, xmm5, word [eax+1]
+	vscalefsh xmm6, xmm3, word [eax+64]

@@ -15,3 +15,11 @@ default rel
 	vfnmaddps ymm9, ymm10, ymm9, ymm12
 	vfnmaddps xmm13, xmm11, xmm9, xmm9
 	vfnmaddps ymm15, ymm11, ymm9, ymm15
+	vfnmaddps xmm4, xmm2, oword [eax+1], xmm3
+	vfnmaddps xmm6, xmm7, oword [eax+64], xmm6
+	vfnmaddps ymm4, ymm1, yword [eax+1], ymm6
+	vfnmaddps ymm7, ymm5, yword [eax+64], ymm6
+	vfnmaddps xmm7, xmm0, xmm3, oword [eax+1]
+	vfnmaddps xmm7, xmm4, xmm4, oword [eax+64]
+	vfnmaddps ymm4, ymm7, ymm5, yword [eax+1]
+	vfnmaddps ymm3, ymm3, ymm3, yword [eax+64]

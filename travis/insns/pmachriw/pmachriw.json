@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PMACHRIW",
   "id": "pmachriw16",
   "format": "bin",
-  "source": "pmachriw.asm",
+  "source": "pmachriw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmachriw/",
   "target": [
    { "output": "pmachriw.bin16", "match": "pmachriw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PMACHRIW",
   "id": "pmachriw32",
   "format": "bin",
-  "source": "pmachriw.asm",
+  "source": "pmachriw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmachriw/",
   "target": [
    { "output": "pmachriw.bin32", "match": "pmachriw.bin32.t" }

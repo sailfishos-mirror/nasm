@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFSUB",
   "id": "pfsub16",
   "format": "bin",
-  "source": "pfsub.asm",
+  "source": "pfsub_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfsub/",
   "target": [
    { "output": "pfsub.bin16", "match": "pfsub.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFSUB",
   "id": "pfsub32",
   "format": "bin",
-  "source": "pfsub.asm",
+  "source": "pfsub_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfsub/",
   "target": [
    { "output": "pfsub.bin32", "match": "pfsub.bin32.t" }

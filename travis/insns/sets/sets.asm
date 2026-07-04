@@ -11,3 +11,5 @@ default rel
 	sets r28b
 	sets r17
 	sets r17d
+	sets byte [eax+1]
+	sets byte [eax+64]

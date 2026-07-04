@@ -7,3 +7,7 @@ default rel
 	cmpzxadd qword [0x31d], r8, r15
 	cmpzxadd dword [0x10a], r31d, r31d
 	cmpzxadd qword [0x4e6], r27, r26
+	cmpzxadd dword [eax+1], ebp, esi
+	cmpzxadd dword [eax+64], ecx, edx
+	cmpzxadd qword [eax+1], rsi, rbx
+	cmpzxadd qword [eax+64], rbp, rax

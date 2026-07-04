@@ -11,3 +11,5 @@ default rel
 	setnl r18b
 	setnl r29
 	setnl r23d
+	setnl byte [eax+1]
+	setnl byte [eax+64]

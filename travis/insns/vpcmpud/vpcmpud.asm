@@ -14,3 +14,9 @@ default rel
 	vpcmpud k6{k2}, xmm7, xmm2, 0xc9
 	vpcmpud k7{k4}, ymm5, ymm1, 0x18
 	vpcmpud k1{k5}, zmm1, zmm2, 0xee
+	vpcmpud k1, xmm0, oword [eax+1], 0xb1
+	vpcmpud k7, xmm6, oword [eax+64], 0xf8
+	vpcmpud k3, ymm0, yword [eax+1], 0xa6
+	vpcmpud k7, ymm4, yword [eax+64], 0x7b
+	vpcmpud k7, zmm3, zword [eax+1], 0x66
+	vpcmpud k2, zmm2, zword [eax+64], 0x5

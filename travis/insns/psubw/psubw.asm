@@ -4,3 +4,7 @@ default rel
 	psubw xmm6, xmm2
 	psubw xmm6, xmm7
 	psubw xmm12, xmm11
+	psubw mm4, qword [eax+1]
+	psubw mm4, qword [eax+64]
+	psubw xmm5, oword [eax+1]
+	psubw xmm0, oword [eax+64]

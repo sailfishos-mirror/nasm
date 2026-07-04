@@ -7,3 +7,7 @@ default rel
 	ptwrite r9
 	ptwrite r24d
 	ptwrite r28
+	ptwrite dword [eax+1]
+	ptwrite dword [eax+64]
+	ptwrite qword [eax+1]
+	ptwrite qword [eax+64]

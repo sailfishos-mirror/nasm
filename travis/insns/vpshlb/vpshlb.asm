@@ -7,3 +7,7 @@ default rel
 	vpshlb xmm0, xmm4, xmm4
 	vpshlb xmm12, xmm9, xmm14
 	vpshlb xmm11, xmm11, xmm11
+	vpshlb xmm0, oword [eax+1], xmm7
+	vpshlb xmm2, oword [eax+64], xmm2
+	vpshlb xmm3, xmm2, oword [eax+1]
+	vpshlb xmm7, xmm5, oword [eax+64]

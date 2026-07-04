@@ -13,3 +13,7 @@ default rel
 	vshufi32x4 zmm2{k2}, zmm0, zmm2, 0x24
 	vshufi32x4 ymm7{k4}{z}, ymm2, ymm6, 0xa1
 	vshufi32x4 zmm6{k5}{z}, zmm0, zmm7, 0xe0
+	vshufi32x4 ymm0, ymm4, yword [eax+1], 0xd8
+	vshufi32x4 ymm5, ymm7, yword [eax+64], 0xa2
+	vshufi32x4 zmm4, zmm2, zword [eax+1], 0x95
+	vshufi32x4 zmm1, zmm7, zword [eax+64], 0x7d

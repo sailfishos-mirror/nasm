@@ -4,3 +4,7 @@ default rel
 	pabsb xmm0, xmm6
 	pabsb xmm2, oword [0x4fb]
 	pabsb xmm15, xmm15
+	pabsb mm7, qword [eax+1]
+	pabsb mm1, qword [eax+64]
+	pabsb xmm4, oword [eax+1]
+	pabsb xmm4, oword [eax+64]

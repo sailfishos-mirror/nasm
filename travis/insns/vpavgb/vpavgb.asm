@@ -25,3 +25,13 @@ default rel
 	vpavgb xmm1{k6}{z}, xmm0, xmm5
 	vpavgb ymm4{k5}{z}, ymm7, yword [0x758]
 	vpavgb zmm0{k7}{z}, zmm1, zmm4
+	vpavgb xmm3, xmm6, oword [eax+1]
+	vpavgb xmm7, xmm6, oword [eax+64]
+	vpavgb ymm3, ymm6, yword [eax+1]
+	vpavgb ymm5, ymm5, yword [eax+64]
+	vpavgb xmm4, xmm0, oword [eax+1]
+	vpavgb xmm0, xmm6, oword [eax+64]
+	vpavgb ymm2, ymm3, yword [eax+1]
+	vpavgb ymm6, ymm3, yword [eax+64]
+	vpavgb zmm4, zmm7, zword [eax+1]
+	vpavgb zmm0, zmm3, zword [eax+64]

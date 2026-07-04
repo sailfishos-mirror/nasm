@@ -5,3 +5,7 @@ default rel
 	blsfill rdi, rbx
 	blsfill r11d, r13d
 	blsfill r11, r13
+	blsfill ebp, dword [eax+1]
+	blsfill edx, dword [eax+64]
+	blsfill rdx, qword [eax+1]
+	blsfill rcx, qword [eax+64]

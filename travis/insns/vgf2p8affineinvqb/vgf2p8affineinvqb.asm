@@ -25,3 +25,13 @@ default rel
 	vgf2p8affineinvqb xmm2{k4}{z}, xmm0, xmm0, 0xe2
 	vgf2p8affineinvqb ymm7{k2}{z}, ymm7, ymm6, 0xd6
 	vgf2p8affineinvqb zmm5{k4}{z}, zmm4, zmm3, 0x1f
+	vgf2p8affineinvqb xmm5, xmm4, oword [eax+1], 0xcd
+	vgf2p8affineinvqb xmm0, xmm7, oword [eax+64], 0x3e
+	vgf2p8affineinvqb ymm1, ymm7, yword [eax+1], 0x6f
+	vgf2p8affineinvqb ymm0, ymm3, yword [eax+64], 0x2
+	vgf2p8affineinvqb xmm7, xmm2, oword [eax+1], 0x6e
+	vgf2p8affineinvqb xmm0, xmm2, oword [eax+64], 0x28
+	vgf2p8affineinvqb ymm5, ymm2, yword [eax+1], 0x4b
+	vgf2p8affineinvqb ymm1, ymm5, yword [eax+64], 0xa2
+	vgf2p8affineinvqb zmm0, zmm4, zword [eax+1], 0xc2
+	vgf2p8affineinvqb zmm2, zmm6, zword [eax+64], 0xda

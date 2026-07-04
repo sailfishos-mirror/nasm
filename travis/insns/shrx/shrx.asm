@@ -19,3 +19,19 @@ default rel
 	shrx r30d, r27d, r28w
 	shrx r23d, r24d, r30d
 	shrx r30d, r23d, r21
+	shrx ebp, dword [eax+1], cl
+	shrx eax, dword [eax+64], al
+	shrx ecx, dword [eax+1], si
+	shrx ebx, dword [eax+64], ax
+	shrx ebp, dword [eax+1], edx
+	shrx edi, dword [eax+64], ebx
+	shrx eax, dword [eax+1], rbp
+	shrx edi, dword [eax+64], rsi
+	shrx rbp, qword [eax+1], bl
+	shrx rcx, qword [eax+64], bl
+	shrx rcx, qword [eax+1], di
+	shrx rcx, qword [eax+64], di
+	shrx rax, qword [eax+1], eax
+	shrx rbx, qword [eax+64], eax
+	shrx rbx, qword [eax+1], rdi
+	shrx rax, qword [eax+64], rbp

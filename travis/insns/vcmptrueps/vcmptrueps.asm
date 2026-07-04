@@ -17,3 +17,13 @@ default rel
 	vcmptrueps k5{k5}, ymm3, ymm7
 	vcmptrueps k4{k1}, zmm1, zmm1
 	vcmptrueps k2, zmm4, zmm6, {sae}
+	vcmptrueps xmm5, xmm4, oword [eax+1]
+	vcmptrueps xmm0, xmm3, oword [eax+64]
+	vcmptrueps ymm0, ymm0, yword [eax+1]
+	vcmptrueps ymm1, ymm2, yword [eax+64]
+	vcmptrueps k2, xmm2, oword [eax+1]
+	vcmptrueps k1, xmm5, oword [eax+64]
+	vcmptrueps k7, ymm6, yword [eax+1]
+	vcmptrueps k6, ymm0, yword [eax+64]
+	vcmptrueps k6, zmm1, zword [eax+1]
+	vcmptrueps k5, zmm7, zword [eax+64]

@@ -8,3 +8,7 @@ default rel
 	vcmpneq_osss k2, xmm9, xmm14
 	vcmpneq_osss k5{k6}, xmm2, dword [0xb8f]
 	vcmpneq_osss k4, xmm2, xmm0, {sae}
+	vcmpneq_osss xmm7, xmm4, qword [eax+1]
+	vcmpneq_osss xmm3, xmm3, qword [eax+64]
+	vcmpneq_osss k6, xmm5, dword [eax+1]
+	vcmpneq_osss k5, xmm5, dword [eax+64]

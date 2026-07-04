@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PREFETCHIT0",
   "id": "prefetchit016",
   "format": "bin",
-  "source": "prefetchit0.asm",
+  "source": "prefetchit0_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/prefetchit0/",
   "target": [
    { "output": "prefetchit0.bin16", "match": "prefetchit0.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PREFETCHIT0",
   "id": "prefetchit032",
   "format": "bin",
-  "source": "prefetchit0.asm",
+  "source": "prefetchit0_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/prefetchit0/",
   "target": [
    { "output": "prefetchit0.bin32", "match": "prefetchit0.bin32.t" }

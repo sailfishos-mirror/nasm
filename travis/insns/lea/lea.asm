@@ -15,3 +15,9 @@ default rel
 	lea r22d, [0x947]
 	lea r24, [0xdf7]
 	lea r16w, 0x2ac7
+	lea cx, [eax+1]
+	lea dx, [eax+64]
+	lea eax, [eax+1]
+	lea ebp, [eax+64]
+	lea rdx, [eax+1]
+	lea rcx, [eax+64]

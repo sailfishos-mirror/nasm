@@ -8,3 +8,7 @@ default rel
 	pinsrb xmm13, [0x1bf], 0xc5
 	pinsrb xmm15, r13b, 0x91
 	pinsrb xmm11, r12d, 0x3a
+	pinsrb xmm4, [eax+1], 0x1a
+	pinsrb xmm1, [eax+64], 0x3d
+	pinsrb xmm1, byte [eax+1], 0x52
+	pinsrb xmm7, byte [eax+64], 0x34

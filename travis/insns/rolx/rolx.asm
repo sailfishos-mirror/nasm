@@ -7,3 +7,7 @@ default rel
 	rolx r8, r14, 1
 	rolx r18d, r16d, 1
 	rolx r18, r23, 1
+	rolx ecx, dword [eax+1], 1
+	rolx esi, dword [eax+64], 1
+	rolx rbx, qword [eax+1], 1
+	rolx rbp, qword [eax+64], 1

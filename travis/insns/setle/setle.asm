@@ -11,3 +11,5 @@ default rel
 	setle r16b
 	setle r29
 	setle r24d
+	setle byte [eax+1]
+	setle byte [eax+64]

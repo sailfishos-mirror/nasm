@@ -21,3 +21,13 @@ default rel
 	vpmovzxbd xmm0{k4}{z}, dword [0xc4b]
 	vpmovzxbd ymm5{k1}{z}, xmm5
 	vpmovzxbd zmm2{k2}{z}, oword [0xaf5]
+	vpmovzxbd xmm7, dword [eax+1]
+	vpmovzxbd xmm6, dword [eax+64]
+	vpmovzxbd ymm6, qword [eax+1]
+	vpmovzxbd ymm0, qword [eax+64]
+	vpmovzxbd xmm2, dword [eax+1]
+	vpmovzxbd xmm3, dword [eax+64]
+	vpmovzxbd ymm3, qword [eax+1]
+	vpmovzxbd ymm4, qword [eax+64]
+	vpmovzxbd zmm4, oword [eax+1]
+	vpmovzxbd zmm6, oword [eax+64]

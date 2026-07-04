@@ -15,3 +15,19 @@ default rel
 	not r18w
 	not r24d
 	not r28
+	not byte [eax+1]
+	not byte [eax+64]
+	not word [eax+1]
+	not word [eax+64]
+	not dword [eax+1]
+	not dword [eax+64]
+	not qword [eax+1]
+	not qword [eax+64]
+	not dl, byte [eax+1]
+	not bl, byte [eax+64]
+	not cx, word [eax+1]
+	not si, word [eax+64]
+	not ebx, dword [eax+1]
+	not eax, dword [eax+64]
+	not rax, qword [eax+1]
+	not rdx, qword [eax+64]

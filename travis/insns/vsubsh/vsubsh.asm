@@ -7,3 +7,5 @@ default rel
 	vsubsh xmm4{k1}, xmm5, xmm6
 	vsubsh xmm3{k5}{z}, xmm5, word [0xb9f]
 	vsubsh xmm5, xmm3, xmm5, {rd-sae}
+	vsubsh xmm4, xmm4, word [eax+1]
+	vsubsh xmm6, xmm1, word [eax+64]

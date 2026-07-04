@@ -4,3 +4,7 @@ default rel
 	palignr xmm4, xmm6, 0xa
 	palignr xmm7, oword [0xaea], 0x7c
 	palignr xmm8, xmm9, 0x15
+	palignr mm0, qword [eax+1], 0x58
+	palignr mm2, qword [eax+64], 0x11
+	palignr xmm1, oword [eax+1], 0x7a
+	palignr xmm4, oword [eax+64], 0x71

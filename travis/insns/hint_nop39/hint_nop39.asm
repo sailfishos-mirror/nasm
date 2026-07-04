@@ -11,3 +11,9 @@ default rel
 	hint_nop39 r23w
 	hint_nop39 r23d
 	hint_nop39 r23
+	hint_nop39 word [eax+1]
+	hint_nop39 word [eax+64]
+	hint_nop39 dword [eax+1]
+	hint_nop39 dword [eax+64]
+	hint_nop39 qword [eax+1]
+	hint_nop39 qword [eax+64]

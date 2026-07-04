@@ -11,3 +11,9 @@ default rel
 	vprotq xmm8, xmm14, xmm11
 	vprotq xmm11, xmm12, xmm8
 	vprotq xmm13, xmm8, 0x9
+	vprotq xmm0, oword [eax+1], xmm3
+	vprotq xmm1, oword [eax+64], xmm5
+	vprotq xmm7, xmm3, oword [eax+1]
+	vprotq xmm6, xmm1, oword [eax+64]
+	vprotq xmm6, oword [eax+1], 0xe
+	vprotq xmm7, oword [eax+64], 0x5e

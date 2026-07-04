@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PAVEB",
   "id": "paveb16",
   "format": "bin",
-  "source": "paveb.asm",
+  "source": "paveb_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paveb/",
   "target": [
    { "output": "paveb.bin16", "match": "paveb.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PAVEB",
   "id": "paveb32",
   "format": "bin",
-  "source": "paveb.asm",
+  "source": "paveb_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paveb/",
   "target": [
    { "output": "paveb.bin32", "match": "paveb.bin32.t" }

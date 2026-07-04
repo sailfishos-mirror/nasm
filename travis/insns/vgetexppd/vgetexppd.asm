@@ -18,3 +18,9 @@ default rel
 	vgetexppd ymm4{k2}{z}, yword [0xf6e]
 	vgetexppd zmm3{k3}{z}, zmm0
 	vgetexppd zmm4, zmm1, {sae}
+	vgetexppd xmm1, oword [eax+1]
+	vgetexppd xmm0, oword [eax+64]
+	vgetexppd ymm4, yword [eax+1]
+	vgetexppd ymm7, yword [eax+64]
+	vgetexppd zmm1, zword [eax+1]
+	vgetexppd zmm4, zword [eax+64]

@@ -3,3 +3,7 @@ default rel
 	fimul dword [0x5a4]
 	fimul word [0x326]
 	fimul word [0xb96]
+	fimul dword [eax+1]
+	fimul dword [eax+64]
+	fimul word [eax+1]
+	fimul word [eax+64]

@@ -17,3 +17,13 @@ default rel
 	vcmpeq_usps k4{k6}, ymm3, ymm7
 	vcmpeq_usps k1{k4}, zmm1, zmm4
 	vcmpeq_usps k5, zmm7, zmm6, {sae}
+	vcmpeq_usps xmm2, xmm6, oword [eax+1]
+	vcmpeq_usps xmm6, xmm4, oword [eax+64]
+	vcmpeq_usps ymm0, ymm7, yword [eax+1]
+	vcmpeq_usps ymm7, ymm1, yword [eax+64]
+	vcmpeq_usps k6, xmm7, oword [eax+1]
+	vcmpeq_usps k2, xmm4, oword [eax+64]
+	vcmpeq_usps k1, ymm6, yword [eax+1]
+	vcmpeq_usps k7, ymm0, yword [eax+64]
+	vcmpeq_usps k4, zmm1, zword [eax+1]
+	vcmpeq_usps k6, zmm1, zword [eax+64]

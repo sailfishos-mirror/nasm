@@ -6,3 +6,5 @@ default rel
 	vendscalesh xmm19, xmm31, xmm25, 0x19
 	vendscalesh xmm4{k2}, xmm2, xmm0, 0xc9
 	vendscalesh xmm4{k5}{z}, xmm1, xmm1, 0x9
+	vendscalesh xmm7, xmm1, word [eax+1], 0x22
+	vendscalesh xmm3, xmm1, word [eax+64], 0x44

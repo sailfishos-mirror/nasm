@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FSTCW",
   "id": "fstcw16",
   "format": "bin",
-  "source": "fstcw.asm",
+  "source": "fstcw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fstcw/",
   "target": [
    { "output": "fstcw.bin16", "match": "fstcw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FSTCW",
   "id": "fstcw32",
   "format": "bin",
-  "source": "fstcw.asm",
+  "source": "fstcw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fstcw/",
   "target": [
    { "output": "fstcw.bin32", "match": "fstcw.bin32.t" }

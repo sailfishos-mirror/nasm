@@ -17,3 +17,13 @@ default rel
 	vcmpunord_sps k4{k5}, ymm4, ymm0
 	vcmpunord_sps k4{k3}, zmm7, zword [0x7d6]
 	vcmpunord_sps k5, zmm5, zmm3, {sae}
+	vcmpunord_sps xmm1, xmm0, oword [eax+1]
+	vcmpunord_sps xmm1, xmm6, oword [eax+64]
+	vcmpunord_sps ymm7, ymm3, yword [eax+1]
+	vcmpunord_sps ymm3, ymm3, yword [eax+64]
+	vcmpunord_sps k4, xmm3, oword [eax+1]
+	vcmpunord_sps k1, xmm3, oword [eax+64]
+	vcmpunord_sps k6, ymm2, yword [eax+1]
+	vcmpunord_sps k4, ymm2, yword [eax+64]
+	vcmpunord_sps k4, zmm5, zword [eax+1]
+	vcmpunord_sps k2, zmm1, zword [eax+64]

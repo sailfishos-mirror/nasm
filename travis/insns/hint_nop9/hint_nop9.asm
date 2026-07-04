@@ -11,3 +11,9 @@ default rel
 	hint_nop9 r22w
 	hint_nop9 r28d
 	hint_nop9 r28
+	hint_nop9 word [eax+1]
+	hint_nop9 word [eax+64]
+	hint_nop9 dword [eax+1]
+	hint_nop9 dword [eax+64]
+	hint_nop9 qword [eax+1]
+	hint_nop9 qword [eax+64]

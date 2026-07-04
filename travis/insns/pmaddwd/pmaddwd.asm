@@ -4,3 +4,7 @@ default rel
 	pmaddwd xmm5, oword [0x9bf]
 	pmaddwd xmm0, xmm1
 	pmaddwd xmm14, xmm12
+	pmaddwd mm2, qword [eax+1]
+	pmaddwd mm5, qword [eax+64]
+	pmaddwd xmm0, oword [eax+1]
+	pmaddwd xmm4, oword [eax+64]

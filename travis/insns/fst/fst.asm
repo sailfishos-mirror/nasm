@@ -7,3 +7,7 @@ default rel
 	fst st3
 	fst
 	fst
+	fst dword [eax+1]
+	fst dword [eax+64]
+	fst qword [eax+1]
+	fst qword [eax+64]

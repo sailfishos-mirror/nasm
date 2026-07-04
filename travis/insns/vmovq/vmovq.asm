@@ -15,3 +15,11 @@ default rel
 	vmovq xmm25, xmm20
 	vmovq xmm27, r28
 	vmovq r19, xmm24
+	vmovq xmm7, qword [eax+1]
+	vmovq xmm1, qword [eax+64]
+	vmovq qword [eax+1], xmm0
+	vmovq qword [eax+64], xmm7
+	vmovq xmm1, qword [eax+1]
+	vmovq xmm0, qword [eax+64]
+	vmovq qword [eax+1], xmm1
+	vmovq qword [eax+64], xmm4

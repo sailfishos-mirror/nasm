@@ -15,3 +15,33 @@ default rel
 	cmp r26w, r25w
 	cmp r24d, r19d
 	cmp r28, r25
+	cmp byte [eax+1], dl
+	cmp byte [eax+64], bl
+	cmp word [eax+1], bx
+	cmp word [eax+64], ax
+	cmp dword [eax+1], eax
+	cmp dword [eax+64], edi
+	cmp qword [eax+1], rdx
+	cmp qword [eax+64], rcx
+	cmp al, byte [eax+1]
+	cmp bl, byte [eax+64]
+	cmp di, word [eax+1]
+	cmp dx, word [eax+64]
+	cmp ebx, dword [eax+1]
+	cmp edi, dword [eax+64]
+	cmp rdx, qword [eax+1]
+	cmp rbx, qword [eax+64]
+	cmp byte [eax+1], 0xef
+	cmp byte [eax+64], 0x38
+	cmp word [eax+1], 58
+	cmp word [eax+64], -26
+	cmp word [eax+1], 0x528c
+	cmp word [eax+64], 0x6423
+	cmp dword [eax+1], -85
+	cmp dword [eax+64], -121
+	cmp dword [eax+1], 0x4aea856
+	cmp dword [eax+64], 0x2525186f
+	cmp qword [eax+1], -114
+	cmp qword [eax+64], -102
+	cmp qword [eax+1], -206666260
+	cmp qword [eax+64], 23681036

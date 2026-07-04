@@ -15,3 +15,7 @@ default rel
 	andn r14, r10, r15
 	andn r19d, r18d, r28d
 	andn r16, r21, r29
+	andn eax, esi, dword [eax+1]
+	andn eax, edi, dword [eax+64]
+	andn rbp, rdx, qword [eax+1]
+	andn rax, rcx, qword [eax+64]

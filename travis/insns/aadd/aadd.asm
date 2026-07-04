@@ -7,3 +7,7 @@ default rel
 	aadd qword [0xa2a], r10
 	aadd dword [0xcad], r16d
 	aadd qword [0x5c3], r17
+	aadd dword [eax+1], ecx
+	aadd dword [eax+64], eax
+	aadd qword [eax+1], rbx
+	aadd qword [eax+64], rcx

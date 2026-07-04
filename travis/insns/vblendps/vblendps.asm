@@ -7,3 +7,7 @@ default rel
 	vblendps ymm7, ymm2, yword [0xcfe], 0x42
 	vblendps xmm12, xmm12, xmm10, 0x5d
 	vblendps ymm13, ymm9, ymm12, 0x4a
+	vblendps xmm1, xmm1, oword [eax+1], 0x55
+	vblendps xmm1, xmm4, oword [eax+64], 0xe9
+	vblendps ymm1, ymm4, yword [eax+1], 0x3f
+	vblendps ymm3, ymm3, yword [eax+64], 0xc1

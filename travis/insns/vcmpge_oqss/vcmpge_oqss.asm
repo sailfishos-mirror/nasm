@@ -8,3 +8,7 @@ default rel
 	vcmpge_oqss k3, xmm9, xmm9
 	vcmpge_oqss k3{k4}, xmm6, xmm4
 	vcmpge_oqss k2, xmm3, xmm0, {sae}
+	vcmpge_oqss xmm0, xmm2, qword [eax+1]
+	vcmpge_oqss xmm2, xmm5, qword [eax+64]
+	vcmpge_oqss k5, xmm3, dword [eax+1]
+	vcmpge_oqss k3, xmm1, dword [eax+64]

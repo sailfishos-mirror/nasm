@@ -17,3 +17,9 @@ default rel
 	vpconflictd xmm1{k2}{z}, oword [0x6c3]
 	vpconflictd ymm1{k5}{z}, yword [0xe23]
 	vpconflictd zmm6{k4}{z}, zmm6
+	vpconflictd xmm7, oword [eax+1]
+	vpconflictd xmm5, oword [eax+64]
+	vpconflictd ymm5, yword [eax+1]
+	vpconflictd ymm7, yword [eax+64]
+	vpconflictd zmm7, zword [eax+1]
+	vpconflictd zmm2, zword [eax+64]

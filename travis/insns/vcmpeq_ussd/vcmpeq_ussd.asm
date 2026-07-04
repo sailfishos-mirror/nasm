@@ -8,3 +8,7 @@ default rel
 	vcmpeq_ussd k4, xmm13, xmm15
 	vcmpeq_ussd k4{k7}, xmm2, xmm3
 	vcmpeq_ussd k4, xmm4, xmm7, {sae}
+	vcmpeq_ussd xmm3, xmm7, qword [eax+1]
+	vcmpeq_ussd xmm4, xmm1, qword [eax+64]
+	vcmpeq_ussd k4, xmm2, qword [eax+1]
+	vcmpeq_ussd k3, xmm6, qword [eax+64]

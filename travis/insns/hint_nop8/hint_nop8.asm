@@ -11,3 +11,9 @@ default rel
 	hint_nop8 r31w
 	hint_nop8 r30d
 	hint_nop8 r26
+	hint_nop8 word [eax+1]
+	hint_nop8 word [eax+64]
+	hint_nop8 dword [eax+1]
+	hint_nop8 dword [eax+64]
+	hint_nop8 qword [eax+1]
+	hint_nop8 qword [eax+64]

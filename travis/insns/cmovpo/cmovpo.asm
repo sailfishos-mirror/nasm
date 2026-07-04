@@ -15,3 +15,15 @@ default rel
 	cmovpo r21d, r25d
 	cmovpo r26, r23
 	cmovpo r21w, r26w, r16w
+	cmovpo dx, word [eax+1]
+	cmovpo bp, word [eax+64]
+	cmovpo edi, dword [eax+1]
+	cmovpo ebx, dword [eax+64]
+	cmovpo rcx, qword [eax+1]
+	cmovpo rax, qword [eax+64]
+	cmovpo cx, dx, word [eax+1]
+	cmovpo si, bx, word [eax+64]
+	cmovpo edx, edi, dword [eax+1]
+	cmovpo ecx, eax, dword [eax+64]
+	cmovpo rdx, rbx, qword [eax+1]
+	cmovpo rbp, rbx, qword [eax+64]

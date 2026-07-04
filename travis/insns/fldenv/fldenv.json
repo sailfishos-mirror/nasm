@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FLDENV",
   "id": "fldenv16",
   "format": "bin",
-  "source": "fldenv.asm",
+  "source": "fldenv_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fldenv/",
   "target": [
    { "output": "fldenv.bin16", "match": "fldenv.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FLDENV",
   "id": "fldenv32",
   "format": "bin",
-  "source": "fldenv.asm",
+  "source": "fldenv_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fldenv/",
   "target": [
    { "output": "fldenv.bin32", "match": "fldenv.bin32.t" }

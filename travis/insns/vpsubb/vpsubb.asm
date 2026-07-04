@@ -25,3 +25,13 @@ default rel
 	vpsubb xmm0{k3}{z}, xmm0, xmm7
 	vpsubb ymm6{k4}{z}, ymm6, yword [0xcb2]
 	vpsubb zmm3{k4}{z}, zmm3, zmm2
+	vpsubb xmm0, xmm3, oword [eax+1]
+	vpsubb xmm7, xmm4, oword [eax+64]
+	vpsubb ymm3, ymm3, yword [eax+1]
+	vpsubb ymm6, ymm3, yword [eax+64]
+	vpsubb xmm5, xmm0, oword [eax+1]
+	vpsubb xmm5, xmm6, oword [eax+64]
+	vpsubb ymm5, ymm6, yword [eax+1]
+	vpsubb ymm2, ymm4, yword [eax+64]
+	vpsubb zmm1, zmm3, zword [eax+1]
+	vpsubb zmm4, zmm5, zword [eax+64]

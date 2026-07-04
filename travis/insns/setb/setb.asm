@@ -11,3 +11,5 @@ default rel
 	setb r26b
 	setb r17
 	setb r27d
+	setb byte [eax+1]
+	setb byte [eax+64]

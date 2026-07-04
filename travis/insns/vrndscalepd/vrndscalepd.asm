@@ -17,3 +17,9 @@ default rel
 	vrndscalepd xmm1{k2}{z}, oword [0x8c8], 0xc0
 	vrndscalepd ymm4{k4}{z}, ymm5, 0xd7
 	vrndscalepd zmm5{k7}{z}, zword [0x149], 0xe1
+	vrndscalepd xmm4, oword [eax+1], 0x7
+	vrndscalepd xmm1, oword [eax+64], 0x3c
+	vrndscalepd ymm2, yword [eax+1], 0xe0
+	vrndscalepd ymm0, yword [eax+64], 0x7d
+	vrndscalepd zmm0, zword [eax+1], 0x6b
+	vrndscalepd zmm1, zword [eax+64], 0xa0

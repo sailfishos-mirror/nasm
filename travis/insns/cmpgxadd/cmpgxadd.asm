@@ -7,3 +7,7 @@ default rel
 	cmpgxadd qword [0xa93], r10, r11
 	cmpgxadd dword [0xcf6], r29d, r28d
 	cmpgxadd qword [0xcf1], r20, r28
+	cmpgxadd dword [eax+1], edx, edx
+	cmpgxadd dword [eax+64], ebx, ebx
+	cmpgxadd qword [eax+1], rbp, rax
+	cmpgxadd qword [eax+64], rsi, rdi

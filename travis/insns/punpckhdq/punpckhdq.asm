@@ -4,3 +4,7 @@ default rel
 	punpckhdq xmm2, xmm0
 	punpckhdq xmm6, xmm1
 	punpckhdq xmm11, xmm14
+	punpckhdq mm1, qword [eax+1]
+	punpckhdq mm0, qword [eax+64]
+	punpckhdq xmm1, oword [eax+1]
+	punpckhdq xmm4, oword [eax+64]

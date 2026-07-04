@@ -18,3 +18,9 @@ default rel
 	vgetexpps ymm2{k5}{z}, ymm1
 	vgetexpps zmm7{k1}{z}, zword [0x370]
 	vgetexpps zmm3, zmm5, {sae}
+	vgetexpps xmm1, oword [eax+1]
+	vgetexpps xmm4, oword [eax+64]
+	vgetexpps ymm3, yword [eax+1]
+	vgetexpps ymm5, yword [eax+64]
+	vgetexpps zmm3, zword [eax+1]
+	vgetexpps zmm6, zword [eax+64]

@@ -7,3 +7,7 @@ default rel
 	fmul st3
 	fmul st0, st0
 	fmul st5, st0
+	fmul dword [eax+1]
+	fmul dword [eax+64]
+	fmul qword [eax+1]
+	fmul qword [eax+64]

@@ -8,3 +8,7 @@ default rel
 	vcmpnlt_usss k6, xmm11, xmm9
 	vcmpnlt_usss k2{k5}, xmm5, xmm6
 	vcmpnlt_usss k2, xmm2, xmm1, {sae}
+	vcmpnlt_usss xmm2, xmm4, qword [eax+1]
+	vcmpnlt_usss xmm1, xmm2, qword [eax+64]
+	vcmpnlt_usss k4, xmm3, dword [eax+1]
+	vcmpnlt_usss k1, xmm7, dword [eax+64]

@@ -14,3 +14,9 @@ default rel
 	vpcmpgeud k1{k7}, xmm5, xmm2
 	vpcmpgeud k6{k5}, ymm0, yword [0xac5]
 	vpcmpgeud k2{k5}, zmm7, zmm1
+	vpcmpgeud k1, xmm4, oword [eax+1]
+	vpcmpgeud k3, xmm7, oword [eax+64]
+	vpcmpgeud k3, ymm5, yword [eax+1]
+	vpcmpgeud k3, ymm0, yword [eax+64]
+	vpcmpgeud k4, zmm6, zword [eax+1]
+	vpcmpgeud k4, zmm6, zword [eax+64]

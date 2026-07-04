@@ -25,3 +25,13 @@ default rel
 	vpminsb xmm5{k6}{z}, xmm1, xmm7
 	vpminsb ymm2{k3}{z}, ymm6, ymm2
 	vpminsb zmm4{k3}{z}, zmm4, zmm7
+	vpminsb xmm7, xmm4, oword [eax+1]
+	vpminsb xmm7, xmm5, oword [eax+64]
+	vpminsb ymm3, ymm6, yword [eax+1]
+	vpminsb ymm3, ymm5, yword [eax+64]
+	vpminsb xmm0, xmm5, oword [eax+1]
+	vpminsb xmm2, xmm1, oword [eax+64]
+	vpminsb ymm4, ymm2, yword [eax+1]
+	vpminsb ymm7, ymm1, yword [eax+64]
+	vpminsb zmm1, zmm0, zword [eax+1]
+	vpminsb zmm6, zmm6, zword [eax+64]

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PREFETCHNTA",
   "id": "prefetchnta16",
   "format": "bin",
-  "source": "prefetchnta.asm",
+  "source": "prefetchnta_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/prefetchnta/",
   "target": [
    { "output": "prefetchnta.bin16", "match": "prefetchnta.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PREFETCHNTA",
   "id": "prefetchnta32",
   "format": "bin",
-  "source": "prefetchnta.asm",
+  "source": "prefetchnta_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/prefetchnta/",
   "target": [
    { "output": "prefetchnta.bin32", "match": "prefetchnta.bin32.t" }

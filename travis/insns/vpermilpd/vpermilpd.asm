@@ -29,3 +29,23 @@ default rel
 	vpermilpd xmm1{k6}{z}, xmm1, xmm7
 	vpermilpd ymm7{k6}{z}, ymm2, ymm3
 	vpermilpd zmm6{k5}{z}, zmm0, zword [0xf12]
+	vpermilpd xmm6, xmm0, oword [eax+1]
+	vpermilpd xmm6, xmm5, oword [eax+64]
+	vpermilpd ymm3, ymm1, yword [eax+1]
+	vpermilpd ymm2, ymm2, yword [eax+64]
+	vpermilpd xmm0, oword [eax+1], 0x92
+	vpermilpd xmm7, oword [eax+64], 0xbd
+	vpermilpd ymm7, yword [eax+1], 0x2a
+	vpermilpd ymm4, yword [eax+64], 0x7d
+	vpermilpd xmm7, oword [eax+1], 0x62
+	vpermilpd xmm5, oword [eax+64], 0xcd
+	vpermilpd ymm2, yword [eax+1], 0xd
+	vpermilpd ymm5, yword [eax+64], 0xc1
+	vpermilpd zmm7, zword [eax+1], 0xe5
+	vpermilpd zmm5, zword [eax+64], 0xd2
+	vpermilpd xmm0, xmm7, oword [eax+1]
+	vpermilpd xmm3, xmm5, oword [eax+64]
+	vpermilpd ymm5, ymm5, yword [eax+1]
+	vpermilpd ymm0, ymm6, yword [eax+64]
+	vpermilpd zmm5, zmm2, zword [eax+1]
+	vpermilpd zmm1, zmm2, zword [eax+64]

@@ -15,3 +15,15 @@ default rel
 	cmova r28d, r17d
 	cmova r28, r22
 	cmova r20w, r21w, r19w
+	cmova ax, word [eax+1]
+	cmova bx, word [eax+64]
+	cmova ebp, dword [eax+1]
+	cmova edi, dword [eax+64]
+	cmova rbx, qword [eax+1]
+	cmova rax, qword [eax+64]
+	cmova di, ax, word [eax+1]
+	cmova cx, bp, word [eax+64]
+	cmova edx, eax, dword [eax+1]
+	cmova edi, esi, dword [eax+64]
+	cmova rsi, rax, qword [eax+1]
+	cmova rsi, rbp, qword [eax+64]

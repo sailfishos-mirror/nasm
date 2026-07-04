@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FISUBR",
   "id": "fisubr16",
   "format": "bin",
-  "source": "fisubr.asm",
+  "source": "fisubr_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fisubr/",
   "target": [
    { "output": "fisubr.bin16", "match": "fisubr.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FISUBR",
   "id": "fisubr32",
   "format": "bin",
-  "source": "fisubr.asm",
+  "source": "fisubr_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fisubr/",
   "target": [
    { "output": "fisubr.bin32", "match": "fisubr.bin32.t" }

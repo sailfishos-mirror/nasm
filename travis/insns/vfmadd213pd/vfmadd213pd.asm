@@ -22,3 +22,13 @@ default rel
 	vfmadd213pd ymm5{k7}{z}, ymm6, ymm1
 	vfmadd213pd zmm1{k2}{z}, zmm7, zword [0xccb]
 	vfmadd213pd zmm6, zmm0, zmm4, {rd-sae}
+	vfmadd213pd xmm0, xmm1, oword [eax+1]
+	vfmadd213pd xmm2, xmm7, oword [eax+64]
+	vfmadd213pd ymm4, ymm1, yword [eax+1]
+	vfmadd213pd ymm4, ymm0, yword [eax+64]
+	vfmadd213pd xmm5, xmm3, oword [eax+1]
+	vfmadd213pd xmm2, xmm7, oword [eax+64]
+	vfmadd213pd ymm7, ymm2, yword [eax+1]
+	vfmadd213pd ymm3, ymm0, yword [eax+64]
+	vfmadd213pd zmm2, zmm2, zword [eax+1]
+	vfmadd213pd zmm1, zmm0, zword [eax+64]

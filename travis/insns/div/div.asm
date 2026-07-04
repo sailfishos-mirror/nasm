@@ -15,3 +15,11 @@ default rel
 	div r30w
 	div r20d
 	div r26
+	div byte [eax+1]
+	div byte [eax+64]
+	div word [eax+1]
+	div word [eax+64]
+	div dword [eax+1]
+	div dword [eax+64]
+	div qword [eax+1]
+	div qword [eax+64]

@@ -17,3 +17,9 @@ default rel
 	vfnmsub231bf16 xmm6{k1}{z}, xmm0, xmm7
 	vfnmsub231bf16 ymm3{k4}{z}, ymm7, yword [0x7a4]
 	vfnmsub231bf16 zmm1{k4}{z}, zmm1, zmm6
+	vfnmsub231bf16 xmm1, xmm0, oword [eax+1]
+	vfnmsub231bf16 xmm5, xmm4, oword [eax+64]
+	vfnmsub231bf16 ymm7, ymm2, yword [eax+1]
+	vfnmsub231bf16 ymm2, ymm4, yword [eax+64]
+	vfnmsub231bf16 zmm0, zmm4, zword [eax+1]
+	vfnmsub231bf16 zmm6, zmm6, zword [eax+64]

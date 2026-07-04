@@ -11,3 +11,5 @@ default rel
 	setnczu r22
 	setnczu r26d
 	setnczu r31b
+	setnczu byte [eax+1]
+	setnczu byte [eax+64]

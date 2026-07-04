@@ -4,3 +4,7 @@ default rel
 	pavgw xmm6, xmm1
 	pavgw xmm4, xmm1
 	pavgw xmm12, xmm15
+	pavgw mm4, qword [eax+1]
+	pavgw mm6, qword [eax+64]
+	pavgw xmm7, oword [eax+1]
+	pavgw xmm3, oword [eax+64]

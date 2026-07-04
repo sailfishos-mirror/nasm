@@ -21,3 +21,9 @@ default rel
 	vpmovqd qword [0xfdb]{k3}, xmm1
 	vpmovqd oword [0x2e7]{k7}, ymm6
 	vpmovqd yword [0x39e]{k4}, zmm6
+	vpmovqd qword [eax+1], xmm3
+	vpmovqd qword [eax+64], xmm6
+	vpmovqd oword [eax+1], ymm2
+	vpmovqd oword [eax+64], ymm1
+	vpmovqd yword [eax+1], zmm0
+	vpmovqd yword [eax+64], zmm3

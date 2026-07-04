@@ -11,3 +11,5 @@ default rel
 	setnbe r21b
 	setnbe r28
 	setnbe r19d
+	setnbe byte [eax+1]
+	setnbe byte [eax+64]

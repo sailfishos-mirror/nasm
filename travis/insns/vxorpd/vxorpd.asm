@@ -25,3 +25,13 @@ default rel
 	vxorpd xmm2{k6}{z}, xmm6, xmm7
 	vxorpd ymm5{k7}{z}, ymm0, yword [0xefa]
 	vxorpd zmm2{k4}{z}, zmm5, zword [0x2d2]
+	vxorpd xmm4, xmm2, oword [eax+1]
+	vxorpd xmm5, xmm2, oword [eax+64]
+	vxorpd ymm1, ymm2, yword [eax+1]
+	vxorpd ymm4, ymm5, yword [eax+64]
+	vxorpd xmm0, xmm2, oword [eax+1]
+	vxorpd xmm1, xmm4, oword [eax+64]
+	vxorpd ymm5, ymm1, yword [eax+1]
+	vxorpd ymm0, ymm1, yword [eax+64]
+	vxorpd zmm1, zmm2, zword [eax+1]
+	vxorpd zmm2, zmm5, zword [eax+64]

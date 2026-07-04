@@ -11,3 +11,7 @@ default rel
 	vbroadcastf32x2 zmm3{k4}, qword [0x978]
 	vbroadcastf32x2 ymm0{k6}{z}, qword [0xe0d]
 	vbroadcastf32x2 zmm4{k1}{z}, xmm0
+	vbroadcastf32x2 ymm1, qword [eax+1]
+	vbroadcastf32x2 ymm3, qword [eax+64]
+	vbroadcastf32x2 zmm5, qword [eax+1]
+	vbroadcastf32x2 zmm1, qword [eax+64]

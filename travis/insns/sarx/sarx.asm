@@ -19,3 +19,19 @@ default rel
 	sarx r25d, r16d, r26w
 	sarx r21d, r25d, r20d
 	sarx r23d, r16d, r28
+	sarx eax, dword [eax+1], cl
+	sarx edi, dword [eax+64], bl
+	sarx ebx, dword [eax+1], di
+	sarx edx, dword [eax+64], bp
+	sarx ebp, dword [eax+1], ecx
+	sarx ebx, dword [eax+64], ebp
+	sarx ecx, dword [eax+1], rbx
+	sarx ebp, dword [eax+64], rbx
+	sarx rcx, qword [eax+1], al
+	sarx rsi, qword [eax+64], al
+	sarx rdx, qword [eax+1], si
+	sarx rdi, qword [eax+64], cx
+	sarx rdx, qword [eax+1], ebx
+	sarx rbx, qword [eax+64], ebp
+	sarx rsi, qword [eax+1], rbp
+	sarx rdx, qword [eax+64], rdx

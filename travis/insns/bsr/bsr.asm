@@ -11,3 +11,9 @@ default rel
 	bsr r24w, r28w
 	bsr r23d, r21d
 	bsr r31, r21
+	bsr ax, word [eax+1]
+	bsr si, word [eax+64]
+	bsr edx, dword [eax+1]
+	bsr edi, dword [eax+64]
+	bsr rdx, qword [eax+1]
+	bsr rbx, qword [eax+64]

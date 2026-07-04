@@ -11,3 +11,9 @@ default rel
 	vprotd xmm14, xmm12, xmm8
 	vprotd xmm12, xmm14, xmm13
 	vprotd xmm10, xmm9, 0x8
+	vprotd xmm4, oword [eax+1], xmm4
+	vprotd xmm6, oword [eax+64], xmm7
+	vprotd xmm3, xmm5, oword [eax+1]
+	vprotd xmm6, xmm3, oword [eax+64]
+	vprotd xmm0, oword [eax+1], 0xf1
+	vprotd xmm0, oword [eax+64], 0x72

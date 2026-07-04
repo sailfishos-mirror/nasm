@@ -11,3 +11,5 @@ default rel
 	setz r29b
 	setz r22
 	setz r24d
+	setz byte [eax+1]
+	setz byte [eax+64]

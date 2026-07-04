@@ -4,3 +4,7 @@ default rel
 	pxor xmm2, xmm4
 	pxor xmm0, xmm6
 	pxor xmm14, xmm13
+	pxor mm4, qword [eax+1]
+	pxor mm4, qword [eax+64]
+	pxor xmm1, oword [eax+1]
+	pxor xmm2, oword [eax+64]

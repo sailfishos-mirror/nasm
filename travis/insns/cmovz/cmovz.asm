@@ -15,3 +15,15 @@ default rel
 	cmovz r27d, r22d
 	cmovz r20, r17
 	cmovz r18w, r18w, r27w
+	cmovz bp, word [eax+1]
+	cmovz bp, word [eax+64]
+	cmovz esi, dword [eax+1]
+	cmovz edx, dword [eax+64]
+	cmovz rsi, qword [eax+1]
+	cmovz rax, qword [eax+64]
+	cmovz bp, cx, word [eax+1]
+	cmovz si, dx, word [eax+64]
+	cmovz edi, edx, dword [eax+1]
+	cmovz edi, ebx, dword [eax+64]
+	cmovz rbx, rbx, qword [eax+1]
+	cmovz rax, rsi, qword [eax+64]

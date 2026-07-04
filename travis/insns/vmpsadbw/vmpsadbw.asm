@@ -23,3 +23,13 @@ default rel
 	vmpsadbw xmm4{k6}{z}, xmm1, xmm4, 0x8
 	vmpsadbw ymm3{k4}{z}, ymm1, ymm2, 0x99
 	vmpsadbw zmm4{k5}{z}, zmm7, zword [0x928], 0xa7
+	vmpsadbw xmm6, xmm1, oword [eax+1], 0x11
+	vmpsadbw xmm4, xmm3, oword [eax+64], 0x9c
+	vmpsadbw ymm1, ymm0, yword [eax+1], 0x7c
+	vmpsadbw ymm0, ymm5, yword [eax+64], 0x9d
+	vmpsadbw xmm7, xmm1, oword [eax+1], 0x27
+	vmpsadbw xmm1, xmm0, oword [eax+64], 0xa6
+	vmpsadbw ymm2, ymm0, yword [eax+1], 0xdd
+	vmpsadbw ymm5, ymm7, yword [eax+64], 0x1d
+	vmpsadbw zmm7, zmm0, zword [eax+1], 0x82
+	vmpsadbw zmm7, zmm5, zword [eax+64], 0xde

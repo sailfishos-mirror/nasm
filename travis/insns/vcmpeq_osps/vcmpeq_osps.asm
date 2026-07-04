@@ -17,3 +17,13 @@ default rel
 	vcmpeq_osps k5{k4}, ymm1, ymm5
 	vcmpeq_osps k1{k1}, zmm1, zmm3
 	vcmpeq_osps k6, zmm0, zmm5, {sae}
+	vcmpeq_osps xmm5, xmm1, oword [eax+1]
+	vcmpeq_osps xmm3, xmm2, oword [eax+64]
+	vcmpeq_osps ymm1, ymm2, yword [eax+1]
+	vcmpeq_osps ymm5, ymm3, yword [eax+64]
+	vcmpeq_osps k7, xmm1, oword [eax+1]
+	vcmpeq_osps k6, xmm7, oword [eax+64]
+	vcmpeq_osps k7, ymm0, yword [eax+1]
+	vcmpeq_osps k1, ymm5, yword [eax+64]
+	vcmpeq_osps k1, zmm5, zword [eax+1]
+	vcmpeq_osps k7, zmm6, zword [eax+64]

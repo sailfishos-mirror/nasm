@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FCOM",
   "id": "fcom16",
   "format": "bin",
-  "source": "fcom.asm",
+  "source": "fcom_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fcom/",
   "target": [
    { "output": "fcom.bin16", "match": "fcom.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FCOM",
   "id": "fcom32",
   "format": "bin",
-  "source": "fcom.asm",
+  "source": "fcom_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fcom/",
   "target": [
    { "output": "fcom.bin32", "match": "fcom.bin32.t" }

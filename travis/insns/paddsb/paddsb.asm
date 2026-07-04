@@ -4,3 +4,7 @@ default rel
 	paddsb xmm0, xmm4
 	paddsb xmm5, oword [0x4ae]
 	paddsb xmm11, xmm14
+	paddsb mm3, qword [eax+1]
+	paddsb mm0, qword [eax+64]
+	paddsb xmm4, oword [eax+1]
+	paddsb xmm7, oword [eax+64]

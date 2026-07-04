@@ -4,3 +4,7 @@ default rel
 	psadbw xmm4, oword [0x275]
 	psadbw xmm4, xmm3
 	psadbw xmm15, xmm12
+	psadbw mm1, qword [eax+1]
+	psadbw mm7, qword [eax+64]
+	psadbw xmm0, oword [eax+1]
+	psadbw xmm4, oword [eax+64]

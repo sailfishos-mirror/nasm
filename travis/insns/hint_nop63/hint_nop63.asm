@@ -11,3 +11,9 @@ default rel
 	hint_nop63 r18w
 	hint_nop63 r24d
 	hint_nop63 r27
+	hint_nop63 word [eax+1]
+	hint_nop63 word [eax+64]
+	hint_nop63 dword [eax+1]
+	hint_nop63 dword [eax+64]
+	hint_nop63 qword [eax+1]
+	hint_nop63 qword [eax+64]

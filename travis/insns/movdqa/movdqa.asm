@@ -5,3 +5,7 @@ default rel
 	movdqa oword [0x56b], xmm0
 	movdqa xmm8, xmm14
 	movdqa xmm11, xmm11
+	movdqa xmm2, oword [eax+1]
+	movdqa xmm3, oword [eax+64]
+	movdqa oword [eax+1], xmm0
+	movdqa oword [eax+64], xmm1

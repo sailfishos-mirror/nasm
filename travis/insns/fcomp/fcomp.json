@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FCOMP",
   "id": "fcomp16",
   "format": "bin",
-  "source": "fcomp.asm",
+  "source": "fcomp_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fcomp/",
   "target": [
    { "output": "fcomp.bin16", "match": "fcomp.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FCOMP",
   "id": "fcomp32",
   "format": "bin",
-  "source": "fcomp.asm",
+  "source": "fcomp_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fcomp/",
   "target": [
    { "output": "fcomp.bin32", "match": "fcomp.bin32.t" }

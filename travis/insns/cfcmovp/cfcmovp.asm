@@ -15,3 +15,21 @@ default rel
 	cfcmovp r28d, r19d
 	cfcmovp r20, r28
 	cfcmovp r28w, r28w
+	cfcmovp word [eax+1], ax
+	cfcmovp word [eax+64], dx
+	cfcmovp dword [eax+1], ebp
+	cfcmovp dword [eax+64], ebp
+	cfcmovp qword [eax+1], rdi
+	cfcmovp qword [eax+64], rdi
+	cfcmovp bx, word [eax+1]
+	cfcmovp bp, word [eax+64]
+	cfcmovp edi, dword [eax+1]
+	cfcmovp eax, dword [eax+64]
+	cfcmovp rax, qword [eax+1]
+	cfcmovp rdi, qword [eax+64]
+	cfcmovp dx, bx, word [eax+1]
+	cfcmovp cx, ax, word [eax+64]
+	cfcmovp ebp, ebx, dword [eax+1]
+	cfcmovp edx, edi, dword [eax+64]
+	cfcmovp rbx, rax, qword [eax+1]
+	cfcmovp rdx, rbx, qword [eax+64]

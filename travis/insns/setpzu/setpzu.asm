@@ -11,3 +11,5 @@ default rel
 	setpzu r24
 	setpzu r24d
 	setpzu r28b
+	setpzu byte [eax+1]
+	setpzu byte [eax+64]

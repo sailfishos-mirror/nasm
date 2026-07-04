@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFPNACC",
   "id": "pfpnacc16",
   "format": "bin",
-  "source": "pfpnacc.asm",
+  "source": "pfpnacc_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfpnacc/",
   "target": [
    { "output": "pfpnacc.bin16", "match": "pfpnacc.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFPNACC",
   "id": "pfpnacc32",
   "format": "bin",
-  "source": "pfpnacc.asm",
+  "source": "pfpnacc_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfpnacc/",
   "target": [
    { "output": "pfpnacc.bin32", "match": "pfpnacc.bin32.t" }

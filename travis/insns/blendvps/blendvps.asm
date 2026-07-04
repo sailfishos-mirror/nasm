@@ -5,3 +5,7 @@ default rel
 	blendvps xmm6, xmm0
 	blendvps xmm12, xmm10, xmm0
 	blendvps xmm14, xmm15
+	blendvps xmm3, oword [eax+1], xmm0
+	blendvps xmm7, oword [eax+64], xmm0
+	blendvps xmm5, oword [eax+1]
+	blendvps xmm5, oword [eax+64]

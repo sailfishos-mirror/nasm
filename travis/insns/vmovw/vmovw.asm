@@ -17,3 +17,11 @@ default rel
 	vmovw xmm22, xmm25
 	vmovw xmm2{k5}, bx
 	vmovw xmm6{k2}{z}, bx
+	vmovw xmm7, word [eax+1]
+	vmovw xmm1, word [eax+64]
+	vmovw word [eax+1], xmm4
+	vmovw word [eax+64], xmm1
+	vmovw xmm7, word [eax+1]
+	vmovw xmm6, word [eax+64]
+	vmovw word [eax+1], xmm5
+	vmovw word [eax+64], xmm0

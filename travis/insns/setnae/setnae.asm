@@ -11,3 +11,5 @@ default rel
 	setnae r20b
 	setnae r28
 	setnae r18d
+	setnae byte [eax+1]
+	setnae byte [eax+64]

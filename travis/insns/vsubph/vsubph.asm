@@ -21,3 +21,9 @@ default rel
 	vsubph ymm3{k6}{z}, ymm3, ymm2
 	vsubph zmm4{k5}{z}, zmm6, zword [0x98d]
 	vsubph zmm4, zmm4, zmm1, {ru-sae}
+	vsubph xmm3, xmm4, oword [eax+1]
+	vsubph xmm3, xmm1, oword [eax+64]
+	vsubph ymm0, ymm5, yword [eax+1]
+	vsubph ymm3, ymm3, yword [eax+64]
+	vsubph zmm2, zmm0, zword [eax+1]
+	vsubph zmm2, zmm2, zword [eax+64]

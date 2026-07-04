@@ -17,3 +17,13 @@ default rel
 	vcmpngtps k3{k6}, ymm7, yword [0xcc1]
 	vcmpngtps k4{k6}, zmm6, zmm0
 	vcmpngtps k2, zmm4, zmm5, {sae}
+	vcmpngtps xmm0, xmm2, oword [eax+1]
+	vcmpngtps xmm1, xmm7, oword [eax+64]
+	vcmpngtps ymm2, ymm7, yword [eax+1]
+	vcmpngtps ymm2, ymm6, yword [eax+64]
+	vcmpngtps k6, xmm1, oword [eax+1]
+	vcmpngtps k7, xmm3, oword [eax+64]
+	vcmpngtps k2, ymm7, yword [eax+1]
+	vcmpngtps k5, ymm2, yword [eax+64]
+	vcmpngtps k3, zmm0, zword [eax+1]
+	vcmpngtps k2, zmm1, zword [eax+64]

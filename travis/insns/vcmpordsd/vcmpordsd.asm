@@ -8,3 +8,7 @@ default rel
 	vcmpordsd k2, xmm8, xmm9
 	vcmpordsd k2{k5}, xmm3, xmm2
 	vcmpordsd k3, xmm0, xmm1, {sae}
+	vcmpordsd xmm7, xmm1, qword [eax+1]
+	vcmpordsd xmm5, xmm7, qword [eax+64]
+	vcmpordsd k4, xmm7, qword [eax+1]
+	vcmpordsd k7, xmm3, qword [eax+64]

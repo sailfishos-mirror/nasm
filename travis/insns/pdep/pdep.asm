@@ -9,3 +9,7 @@ default rel
 	pdep r12, r14, r10
 	pdep r26d, r27d, r27d
 	pdep r28, r18, r28
+	pdep esi, eax, dword [eax+1]
+	pdep edi, ebp, dword [eax+64]
+	pdep rbp, rsi, qword [eax+1]
+	pdep rbx, rsi, qword [eax+64]

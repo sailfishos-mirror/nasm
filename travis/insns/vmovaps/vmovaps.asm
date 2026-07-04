@@ -24,3 +24,23 @@ default rel
 	vmovaps oword [0x1f7]{k2}, xmm3
 	vmovaps yword [0xef0]{k4}, ymm5
 	vmovaps zword [0x33d]{k6}, zmm3
+	vmovaps xmm6, oword [eax+1]
+	vmovaps xmm4, oword [eax+64]
+	vmovaps oword [eax+1], xmm7
+	vmovaps oword [eax+64], xmm4
+	vmovaps ymm2, yword [eax+1]
+	vmovaps ymm6, yword [eax+64]
+	vmovaps yword [eax+1], ymm0
+	vmovaps yword [eax+64], ymm2
+	vmovaps xmm3, oword [eax+1]
+	vmovaps xmm6, oword [eax+64]
+	vmovaps ymm4, yword [eax+1]
+	vmovaps ymm4, yword [eax+64]
+	vmovaps zmm1, zword [eax+1]
+	vmovaps zmm6, zword [eax+64]
+	vmovaps oword [eax+1], xmm3
+	vmovaps oword [eax+64], xmm5
+	vmovaps yword [eax+1], ymm3
+	vmovaps yword [eax+64], ymm6
+	vmovaps zword [eax+1], zmm7
+	vmovaps zword [eax+64], zmm4

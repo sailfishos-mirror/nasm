@@ -17,3 +17,13 @@ default rel
 	vcmplt_oqpd k4{k7}, ymm6, ymm4
 	vcmplt_oqpd k7{k3}, zmm3, zmm5
 	vcmplt_oqpd k5, zmm3, zmm1, {sae}
+	vcmplt_oqpd xmm5, xmm1, oword [eax+1]
+	vcmplt_oqpd xmm0, xmm2, oword [eax+64]
+	vcmplt_oqpd ymm0, ymm5, yword [eax+1]
+	vcmplt_oqpd ymm3, ymm7, yword [eax+64]
+	vcmplt_oqpd k6, xmm0, oword [eax+1]
+	vcmplt_oqpd k6, xmm5, oword [eax+64]
+	vcmplt_oqpd k4, ymm0, yword [eax+1]
+	vcmplt_oqpd k4, ymm2, yword [eax+64]
+	vcmplt_oqpd k1, zmm5, zword [eax+1]
+	vcmplt_oqpd k3, zmm6, zword [eax+64]

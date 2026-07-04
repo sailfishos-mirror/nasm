@@ -17,3 +17,9 @@ default rel
 	vrsqrt14ps xmm5{k7}{z}, oword [0x24f]
 	vrsqrt14ps ymm0{k5}{z}, ymm3
 	vrsqrt14ps zmm1{k5}{z}, zmm6
+	vrsqrt14ps xmm5, oword [eax+1]
+	vrsqrt14ps xmm0, oword [eax+64]
+	vrsqrt14ps ymm6, yword [eax+1]
+	vrsqrt14ps ymm6, yword [eax+64]
+	vrsqrt14ps zmm5, zword [eax+1]
+	vrsqrt14ps zmm1, zword [eax+64]

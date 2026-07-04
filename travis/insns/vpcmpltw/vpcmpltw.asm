@@ -14,3 +14,9 @@ default rel
 	vpcmpltw k3{k3}, xmm3, xmm3
 	vpcmpltw k6{k2}, ymm0, ymm0
 	vpcmpltw k3{k7}, zmm4, zmm3
+	vpcmpltw k3, xmm3, oword [eax+1]
+	vpcmpltw k4, xmm2, oword [eax+64]
+	vpcmpltw k5, ymm0, yword [eax+1]
+	vpcmpltw k5, ymm1, yword [eax+64]
+	vpcmpltw k4, zmm2, zword [eax+1]
+	vpcmpltw k3, zmm2, zword [eax+64]

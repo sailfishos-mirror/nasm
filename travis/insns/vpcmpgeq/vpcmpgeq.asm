@@ -14,3 +14,9 @@ default rel
 	vpcmpgeq k7{k5}, xmm5, xmm0
 	vpcmpgeq k6{k5}, ymm0, ymm7
 	vpcmpgeq k3{k6}, zmm4, zmm2
+	vpcmpgeq k2, xmm7, oword [eax+1]
+	vpcmpgeq k7, xmm1, oword [eax+64]
+	vpcmpgeq k3, ymm5, yword [eax+1]
+	vpcmpgeq k3, ymm5, yword [eax+64]
+	vpcmpgeq k2, zmm7, zword [eax+1]
+	vpcmpgeq k5, zmm0, zword [eax+64]

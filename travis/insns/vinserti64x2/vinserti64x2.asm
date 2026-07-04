@@ -13,3 +13,7 @@ default rel
 	vinserti64x2 zmm6{k2}, zmm4, xmm3, 0x3
 	vinserti64x2 ymm5{k4}{z}, ymm3, xmm1, 0x31
 	vinserti64x2 zmm1{k7}{z}, zmm1, xmm5, 0x60
+	vinserti64x2 ymm7, ymm7, oword [eax+1], 0x5d
+	vinserti64x2 ymm0, ymm5, oword [eax+64], 0x4e
+	vinserti64x2 zmm2, zmm7, oword [eax+1], 0x33
+	vinserti64x2 zmm0, zmm3, oword [eax+64], 0xaf

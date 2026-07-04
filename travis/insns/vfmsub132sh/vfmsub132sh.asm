@@ -7,3 +7,5 @@ default rel
 	vfmsub132sh xmm6{k3}, xmm3, xmm4
 	vfmsub132sh xmm4{k6}{z}, xmm1, word [0xa33]
 	vfmsub132sh xmm5, xmm1, xmm6, {rd-sae}
+	vfmsub132sh xmm6, xmm4, word [eax+1]
+	vfmsub132sh xmm7, xmm5, word [eax+64]

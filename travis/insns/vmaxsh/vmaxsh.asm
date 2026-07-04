@@ -14,3 +14,7 @@ default rel
 	vmaxsh xmm3{k4}{z}, xmm3, word [0xadb]
 	vmaxsh xmm0, xmm7, xmm4, {sae}
 	vmaxsh xmm7, xmm0, xmm4, {sae}
+	vmaxsh xmm0, xmm1, word [eax+1]
+	vmaxsh xmm5, xmm5, word [eax+64]
+	vmaxsh xmm5, xmm6, word [eax+1]
+	vmaxsh xmm6, xmm4, word [eax+64]

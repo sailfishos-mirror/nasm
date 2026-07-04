@@ -13,3 +13,11 @@ default rel
 	vpmaskmovq ymm13, ymm15, yword [0x7aa]
 	vpmaskmovq oword [0x40c], xmm10, xmm8
 	vpmaskmovq yword [0xf36], ymm14, ymm8
+	vpmaskmovq xmm0, xmm4, oword [eax+1]
+	vpmaskmovq xmm2, xmm4, oword [eax+64]
+	vpmaskmovq ymm5, ymm4, yword [eax+1]
+	vpmaskmovq ymm2, ymm6, yword [eax+64]
+	vpmaskmovq oword [eax+1], xmm2, xmm5
+	vpmaskmovq oword [eax+64], xmm6, xmm6
+	vpmaskmovq yword [eax+1], ymm7, ymm2
+	vpmaskmovq yword [eax+64], ymm7, ymm2

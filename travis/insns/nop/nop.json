@@ -6,7 +6,8 @@
   "source": "nop.asm",
   "option": "--bits 64 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/nop/",
   "target": [
-   { "output": "nop.bin64", "match": "nop.bin64.t" }
+   { "output": "nop.bin64", "match": "nop.bin64.t" },
+   { "stderr": "nop.stderr64" }
   ]
  }
 ]

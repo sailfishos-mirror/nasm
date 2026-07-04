@@ -15,3 +15,15 @@ default rel
 	cmovno r22d, r28d
 	cmovno r25, r17
 	cmovno r25w, r19w, r20w
+	cmovno si, word [eax+1]
+	cmovno bp, word [eax+64]
+	cmovno ecx, dword [eax+1]
+	cmovno edx, dword [eax+64]
+	cmovno rdx, qword [eax+1]
+	cmovno rdi, qword [eax+64]
+	cmovno ax, dx, word [eax+1]
+	cmovno ax, bx, word [eax+64]
+	cmovno ebp, ebp, dword [eax+1]
+	cmovno edi, esi, dword [eax+64]
+	cmovno rax, rsi, qword [eax+1]
+	cmovno rbx, rdx, qword [eax+64]

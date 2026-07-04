@@ -8,3 +8,7 @@ default rel
 	vcmptrue_uqss k4, xmm12, xmm10
 	vcmptrue_uqss k2{k1}, xmm2, xmm0
 	vcmptrue_uqss k5, xmm3, xmm5, {sae}
+	vcmptrue_uqss xmm3, xmm1, qword [eax+1]
+	vcmptrue_uqss xmm6, xmm3, qword [eax+64]
+	vcmptrue_uqss k2, xmm1, dword [eax+1]
+	vcmptrue_uqss k6, xmm0, dword [eax+64]

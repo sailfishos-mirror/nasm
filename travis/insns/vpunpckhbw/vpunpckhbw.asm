@@ -25,3 +25,13 @@ default rel
 	vpunpckhbw xmm1{k5}{z}, xmm4, oword [0x48e]
 	vpunpckhbw ymm7{k7}{z}, ymm5, yword [0x209]
 	vpunpckhbw zmm5{k1}{z}, zmm4, zmm3
+	vpunpckhbw xmm4, xmm5, oword [eax+1]
+	vpunpckhbw xmm5, xmm7, oword [eax+64]
+	vpunpckhbw ymm3, ymm4, yword [eax+1]
+	vpunpckhbw ymm3, ymm5, yword [eax+64]
+	vpunpckhbw xmm7, xmm1, oword [eax+1]
+	vpunpckhbw xmm4, xmm3, oword [eax+64]
+	vpunpckhbw ymm3, ymm2, yword [eax+1]
+	vpunpckhbw ymm6, ymm7, yword [eax+64]
+	vpunpckhbw zmm0, zmm7, zword [eax+1]
+	vpunpckhbw zmm2, zmm3, zword [eax+64]

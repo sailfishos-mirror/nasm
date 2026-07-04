@@ -5,3 +5,7 @@ default rel
 	tzmsk rdi, rbx
 	tzmsk r11d, r12d
 	tzmsk r9, r8
+	tzmsk eax, dword [eax+1]
+	tzmsk eax, dword [eax+64]
+	tzmsk rbp, qword [eax+1]
+	tzmsk rdx, qword [eax+64]

@@ -17,3 +17,13 @@ default rel
 	vcmpord_spd k5{k4}, ymm0, ymm4
 	vcmpord_spd k3{k7}, zmm2, zword [0x7e4]
 	vcmpord_spd k2, zmm6, zmm5, {sae}
+	vcmpord_spd xmm4, xmm1, oword [eax+1]
+	vcmpord_spd xmm7, xmm4, oword [eax+64]
+	vcmpord_spd ymm1, ymm3, yword [eax+1]
+	vcmpord_spd ymm5, ymm0, yword [eax+64]
+	vcmpord_spd k5, xmm5, oword [eax+1]
+	vcmpord_spd k4, xmm3, oword [eax+64]
+	vcmpord_spd k2, ymm0, yword [eax+1]
+	vcmpord_spd k3, ymm0, yword [eax+64]
+	vcmpord_spd k1, zmm2, zword [eax+1]
+	vcmpord_spd k5, zmm7, zword [eax+64]

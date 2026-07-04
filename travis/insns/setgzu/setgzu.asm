@@ -11,3 +11,5 @@ default rel
 	setgzu r25
 	setgzu r30d
 	setgzu r27b
+	setgzu byte [eax+1]
+	setgzu byte [eax+64]

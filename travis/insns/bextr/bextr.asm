@@ -15,3 +15,11 @@ default rel
 	bextr r10, r14, r9
 	bextr r8d, r8d, 0x2ca3750d
 	bextr r8, r15, 0x385a9676
+	bextr esi, dword [eax+1], ebx
+	bextr eax, dword [eax+64], esi
+	bextr rcx, qword [eax+1], rcx
+	bextr rdi, qword [eax+64], rbp
+	bextr eax, dword [eax+1], 0x3a9b8af4
+	bextr edi, dword [eax+64], 0x35597fb8
+	bextr rbx, qword [eax+1], 0x18b8a0b7
+	bextr rcx, qword [eax+64], 0xc6b61d5

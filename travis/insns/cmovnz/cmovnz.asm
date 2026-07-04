@@ -15,3 +15,15 @@ default rel
 	cmovnz r26d, r22d
 	cmovnz r28, r17
 	cmovnz r22w, r27w, r23w
+	cmovnz di, word [eax+1]
+	cmovnz si, word [eax+64]
+	cmovnz eax, dword [eax+1]
+	cmovnz ebp, dword [eax+64]
+	cmovnz rsi, qword [eax+1]
+	cmovnz rdx, qword [eax+64]
+	cmovnz dx, bx, word [eax+1]
+	cmovnz bx, cx, word [eax+64]
+	cmovnz esi, eax, dword [eax+1]
+	cmovnz ebp, ebp, dword [eax+64]
+	cmovnz rbx, rcx, qword [eax+1]
+	cmovnz rbx, rdi, qword [eax+64]

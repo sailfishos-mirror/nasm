@@ -7,3 +7,5 @@ default rel
 	vfmadd213sh xmm4{k2}, xmm7, xmm3
 	vfmadd213sh xmm1{k6}{z}, xmm3, word [0xba6]
 	vfmadd213sh xmm6, xmm1, xmm1, {rd-sae}
+	vfmadd213sh xmm3, xmm1, word [eax+1]
+	vfmadd213sh xmm6, xmm1, word [eax+64]

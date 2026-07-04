@@ -31,3 +31,19 @@ default rel
 	vpsrlw xmm5{k6}{z}, oword [0xba4], 0xb0
 	vpsrlw ymm4{k1}{z}, ymm6, 0xa5
 	vpsrlw zmm1{k3}{z}, zmm6, 0x78
+	vpsrlw xmm2, xmm0, oword [eax+1]
+	vpsrlw xmm2, xmm2, oword [eax+64]
+	vpsrlw ymm5, ymm1, oword [eax+1]
+	vpsrlw ymm2, ymm2, oword [eax+64]
+	vpsrlw xmm4, xmm4, oword [eax+1]
+	vpsrlw xmm2, xmm2, oword [eax+64]
+	vpsrlw ymm2, ymm6, oword [eax+1]
+	vpsrlw ymm1, ymm6, oword [eax+64]
+	vpsrlw zmm2, zmm2, oword [eax+1]
+	vpsrlw zmm5, zmm1, oword [eax+64]
+	vpsrlw xmm1, oword [eax+1], 0x24
+	vpsrlw xmm5, oword [eax+64], 0xf2
+	vpsrlw ymm2, yword [eax+1], 0x4e
+	vpsrlw ymm6, yword [eax+64], 0xd7
+	vpsrlw zmm0, zword [eax+1], 0xb
+	vpsrlw zmm2, zword [eax+64], 0xc

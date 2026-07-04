@@ -15,3 +15,19 @@ default rel
 	inc r21d
 	inc r27b
 	inc r19w
+	inc byte [eax+1]
+	inc byte [eax+64]
+	inc word [eax+1]
+	inc word [eax+64]
+	inc dword [eax+1]
+	inc dword [eax+64]
+	inc qword [eax+1]
+	inc qword [eax+64]
+	inc bl, byte [eax+1]
+	inc cl, byte [eax+64]
+	inc di, word [eax+1]
+	inc di, word [eax+64]
+	inc edi, dword [eax+1]
+	inc edx, dword [eax+64]
+	inc rcx, qword [eax+1]
+	inc rax, qword [eax+64]

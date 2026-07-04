@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for XSAVEOPT",
   "id": "xsaveopt16",
   "format": "bin",
-  "source": "xsaveopt.asm",
+  "source": "xsaveopt_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xsaveopt/",
   "target": [
    { "output": "xsaveopt.bin16", "match": "xsaveopt.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for XSAVEOPT",
   "id": "xsaveopt32",
   "format": "bin",
-  "source": "xsaveopt.asm",
+  "source": "xsaveopt_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xsaveopt/",
   "target": [
    { "output": "xsaveopt.bin32", "match": "xsaveopt.bin32.t" }

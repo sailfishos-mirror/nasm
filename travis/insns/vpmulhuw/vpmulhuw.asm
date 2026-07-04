@@ -25,3 +25,13 @@ default rel
 	vpmulhuw xmm1{k7}{z}, xmm6, xmm4
 	vpmulhuw ymm4{k7}{z}, ymm4, ymm1
 	vpmulhuw zmm0{k7}{z}, zmm3, zmm3
+	vpmulhuw xmm2, xmm6, oword [eax+1]
+	vpmulhuw xmm3, xmm1, oword [eax+64]
+	vpmulhuw ymm6, ymm4, yword [eax+1]
+	vpmulhuw ymm6, ymm3, yword [eax+64]
+	vpmulhuw xmm5, xmm7, oword [eax+1]
+	vpmulhuw xmm2, xmm1, oword [eax+64]
+	vpmulhuw ymm1, ymm0, yword [eax+1]
+	vpmulhuw ymm2, ymm4, yword [eax+64]
+	vpmulhuw zmm2, zmm1, zword [eax+1]
+	vpmulhuw zmm6, zmm1, zword [eax+64]

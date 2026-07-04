@@ -4,3 +4,7 @@ default rel
 	pmulhuw xmm5, xmm2
 	pmulhuw xmm1, oword [0x6a0]
 	pmulhuw xmm9, xmm10
+	pmulhuw mm7, qword [eax+1]
+	pmulhuw mm0, qword [eax+64]
+	pmulhuw xmm3, oword [eax+1]
+	pmulhuw xmm6, oword [eax+64]

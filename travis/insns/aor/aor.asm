@@ -7,3 +7,7 @@ default rel
 	aor qword [0xe8a], r12
 	aor dword [0x5e7], r17d
 	aor qword [0xee8], r19
+	aor dword [eax+1], ecx
+	aor dword [eax+64], ecx
+	aor qword [eax+1], rdx
+	aor qword [eax+64], rdi

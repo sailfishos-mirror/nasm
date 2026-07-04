@@ -11,3 +11,5 @@ default rel
 	setngezu r22
 	setngezu r28d
 	setngezu r20b
+	setngezu byte [eax+1]
+	setngezu byte [eax+64]

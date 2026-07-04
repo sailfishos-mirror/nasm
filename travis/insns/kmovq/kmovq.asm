@@ -11,3 +11,5 @@ default rel
 	kmovq r10, k3
 	kmovq k1, r31
 	kmovq r28, k6
+	kmovq qword [eax+1], k5
+	kmovq qword [eax+64], k4

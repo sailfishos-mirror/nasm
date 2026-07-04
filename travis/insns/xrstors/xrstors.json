@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for XRSTORS",
   "id": "xrstors16",
   "format": "bin",
-  "source": "xrstors.asm",
+  "source": "xrstors_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xrstors/",
   "target": [
    { "output": "xrstors.bin16", "match": "xrstors.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for XRSTORS",
   "id": "xrstors32",
   "format": "bin",
-  "source": "xrstors.asm",
+  "source": "xrstors_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xrstors/",
   "target": [
    { "output": "xrstors.bin32", "match": "xrstors.bin32.t" }

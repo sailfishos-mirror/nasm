@@ -5,3 +5,5 @@ default rel
 	v4fmaddss xmm17, xmm16, [0x3cc]
 	v4fmaddss xmm2{k2}, xmm7, [0xe89]
 	v4fmaddss xmm5{k4}{z}, xmm2, [0x20b]
+	v4fmaddss xmm5, xmm0, [eax+1]
+	v4fmaddss xmm7, xmm6, [eax+64]

@@ -18,3 +18,9 @@ default rel
 	vcvtps2uqq ymm1{k3}{z}, xmm6
 	vcvtps2uqq zmm1{k4}{z}, ymm2
 	vcvtps2uqq zmm4, ymm0, {rn-sae}
+	vcvtps2uqq xmm7, qword [eax+1]
+	vcvtps2uqq xmm7, qword [eax+64]
+	vcvtps2uqq ymm0, oword [eax+1]
+	vcvtps2uqq ymm5, oword [eax+64]
+	vcvtps2uqq zmm2, yword [eax+1]
+	vcvtps2uqq zmm0, yword [eax+64]

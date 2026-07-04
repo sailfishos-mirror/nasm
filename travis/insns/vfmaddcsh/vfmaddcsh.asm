@@ -7,3 +7,5 @@ default rel
 	vfmaddcsh xmm3{k2}, xmm3, xmm6
 	vfmaddcsh xmm0{k1}{z}, xmm3, dword [0xd90]
 	vfmaddcsh xmm0, xmm6, xmm6, {rz-sae}
+	vfmaddcsh xmm6, xmm5, dword [eax+1]
+	vfmaddcsh xmm3, xmm7, dword [eax+64]

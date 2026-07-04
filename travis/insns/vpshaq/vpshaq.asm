@@ -7,3 +7,7 @@ default rel
 	vpshaq xmm6, xmm1, xmm3
 	vpshaq xmm10, xmm10, xmm8
 	vpshaq xmm13, xmm9, xmm8
+	vpshaq xmm0, oword [eax+1], xmm6
+	vpshaq xmm6, oword [eax+64], xmm1
+	vpshaq xmm5, xmm4, oword [eax+1]
+	vpshaq xmm4, xmm2, oword [eax+64]

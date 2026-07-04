@@ -5,3 +5,5 @@ default rel
 	vp4dpwssds zmm20, zmm25, [0x88c]
 	vp4dpwssds zmm7{k6}, zmm1, [0xdff]
 	vp4dpwssds zmm5{k2}{z}, zmm0, [0x60a]
+	vp4dpwssds zmm0, zmm6, [eax+1]
+	vp4dpwssds zmm0, zmm0, [eax+64]

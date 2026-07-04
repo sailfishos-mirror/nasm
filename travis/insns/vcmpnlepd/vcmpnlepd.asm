@@ -17,3 +17,13 @@ default rel
 	vcmpnlepd k5{k5}, ymm0, ymm3
 	vcmpnlepd k3{k7}, zmm2, zmm6
 	vcmpnlepd k4, zmm7, zmm7, {sae}
+	vcmpnlepd xmm2, xmm6, oword [eax+1]
+	vcmpnlepd xmm2, xmm7, oword [eax+64]
+	vcmpnlepd ymm6, ymm4, yword [eax+1]
+	vcmpnlepd ymm2, ymm1, yword [eax+64]
+	vcmpnlepd k7, xmm5, oword [eax+1]
+	vcmpnlepd k2, xmm6, oword [eax+64]
+	vcmpnlepd k7, ymm3, yword [eax+1]
+	vcmpnlepd k2, ymm4, yword [eax+64]
+	vcmpnlepd k2, zmm0, zword [eax+1]
+	vcmpnlepd k1, zmm2, zword [eax+64]

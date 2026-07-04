@@ -3,3 +3,5 @@ default rel
 	vphsubdq xmm2
 	vphsubdq xmm5, xmm2
 	vphsubdq xmm12, xmm11
+	vphsubdq xmm5, oword [eax+1]
+	vphsubdq xmm5, oword [eax+64]

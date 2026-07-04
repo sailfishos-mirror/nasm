@@ -15,3 +15,15 @@ default rel
 	cmovnge r30d, r24d
 	cmovnge r26, r17
 	cmovnge r30w, r30w, r16w
+	cmovnge bp, word [eax+1]
+	cmovnge si, word [eax+64]
+	cmovnge ebp, dword [eax+1]
+	cmovnge eax, dword [eax+64]
+	cmovnge rcx, qword [eax+1]
+	cmovnge rcx, qword [eax+64]
+	cmovnge bp, bp, word [eax+1]
+	cmovnge ax, di, word [eax+64]
+	cmovnge ebx, edx, dword [eax+1]
+	cmovnge ecx, ecx, dword [eax+64]
+	cmovnge rcx, rdi, qword [eax+1]
+	cmovnge rcx, rdi, qword [eax+64]

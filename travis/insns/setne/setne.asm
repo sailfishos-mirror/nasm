@@ -11,3 +11,5 @@ default rel
 	setne r22b
 	setne r17
 	setne r30d
+	setne byte [eax+1]
+	setne byte [eax+64]

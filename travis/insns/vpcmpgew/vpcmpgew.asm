@@ -14,3 +14,9 @@ default rel
 	vpcmpgew k5{k7}, xmm7, oword [0x346]
 	vpcmpgew k2{k2}, ymm1, ymm4
 	vpcmpgew k4{k7}, zmm7, zmm1
+	vpcmpgew k1, xmm2, oword [eax+1]
+	vpcmpgew k4, xmm5, oword [eax+64]
+	vpcmpgew k4, ymm0, yword [eax+1]
+	vpcmpgew k4, ymm0, yword [eax+64]
+	vpcmpgew k2, zmm3, zword [eax+1]
+	vpcmpgew k3, zmm0, zword [eax+64]

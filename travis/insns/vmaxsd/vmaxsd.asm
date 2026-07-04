@@ -12,3 +12,7 @@ default rel
 	vmaxsd xmm6{k3}, xmm0, xmm4
 	vmaxsd xmm6{k2}{z}, xmm3, qword [0xb31]
 	vmaxsd xmm7, xmm5, xmm4, {sae}
+	vmaxsd xmm3, xmm7, qword [eax+1]
+	vmaxsd xmm7, xmm5, qword [eax+64]
+	vmaxsd xmm4, xmm4, qword [eax+1]
+	vmaxsd xmm3, xmm4, qword [eax+64]

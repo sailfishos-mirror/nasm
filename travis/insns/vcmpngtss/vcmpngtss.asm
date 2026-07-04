@@ -8,3 +8,7 @@ default rel
 	vcmpngtss k5, xmm14, xmm9
 	vcmpngtss k1{k1}, xmm3, dword [0xce1]
 	vcmpngtss k1, xmm6, xmm5, {sae}
+	vcmpngtss xmm0, xmm7, qword [eax+1]
+	vcmpngtss xmm7, xmm7, qword [eax+64]
+	vcmpngtss k2, xmm7, dword [eax+1]
+	vcmpngtss k1, xmm6, dword [eax+64]

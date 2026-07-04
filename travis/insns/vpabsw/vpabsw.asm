@@ -21,3 +21,13 @@ default rel
 	vpabsw xmm1{k5}{z}, xmm0
 	vpabsw ymm7{k6}{z}, ymm6
 	vpabsw zmm3{k5}{z}, zmm4
+	vpabsw xmm2, oword [eax+1]
+	vpabsw xmm6, oword [eax+64]
+	vpabsw ymm5, yword [eax+1]
+	vpabsw ymm1, yword [eax+64]
+	vpabsw xmm2, oword [eax+1]
+	vpabsw xmm1, oword [eax+64]
+	vpabsw ymm1, yword [eax+1]
+	vpabsw ymm3, yword [eax+64]
+	vpabsw zmm2, zword [eax+1]
+	vpabsw zmm4, zword [eax+64]

@@ -15,3 +15,15 @@ default rel
 	bts r31d, r28d
 	bts r17, r24
 	bts r18w, 0x19
+	bts word [eax+1], si
+	bts word [eax+64], bp
+	bts dword [eax+1], eax
+	bts dword [eax+64], edx
+	bts qword [eax+1], rdx
+	bts qword [eax+64], rdi
+	bts word [eax+1], 0xb9
+	bts word [eax+64], 0x6
+	bts dword [eax+1], 0xda
+	bts dword [eax+64], 0x2b
+	bts qword [eax+1], 0x50
+	bts qword [eax+64], 0x8e

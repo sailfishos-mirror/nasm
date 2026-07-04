@@ -8,3 +8,7 @@ default rel
 	vcmpnge_ussd k1, xmm9, xmm12
 	vcmpnge_ussd k2{k1}, xmm7, qword [0xccd]
 	vcmpnge_ussd k2, xmm3, xmm4, {sae}
+	vcmpnge_ussd xmm5, xmm4, qword [eax+1]
+	vcmpnge_ussd xmm4, xmm6, qword [eax+64]
+	vcmpnge_ussd k2, xmm1, qword [eax+1]
+	vcmpnge_ussd k2, xmm4, qword [eax+64]

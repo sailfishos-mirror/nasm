@@ -26,3 +26,13 @@ default rel
 	vmaxps ymm5{k4}{z}, ymm1, ymm2
 	vmaxps zmm3{k1}{z}, zmm4, zword [0xab6]
 	vmaxps zmm2, zmm3, zmm4, {sae}
+	vmaxps xmm7, xmm4, oword [eax+1]
+	vmaxps xmm1, xmm0, oword [eax+64]
+	vmaxps ymm6, ymm4, yword [eax+1]
+	vmaxps ymm2, ymm6, yword [eax+64]
+	vmaxps xmm6, xmm5, oword [eax+1]
+	vmaxps xmm0, xmm4, oword [eax+64]
+	vmaxps ymm6, ymm1, yword [eax+1]
+	vmaxps ymm4, ymm4, yword [eax+64]
+	vmaxps zmm6, zmm7, zword [eax+1]
+	vmaxps zmm0, zmm1, zword [eax+64]

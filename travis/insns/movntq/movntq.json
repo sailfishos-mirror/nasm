@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for MOVNTQ",
   "id": "movntq16",
   "format": "bin",
-  "source": "movntq.asm",
+  "source": "movntq_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movntq/",
   "target": [
    { "output": "movntq.bin16", "match": "movntq.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for MOVNTQ",
   "id": "movntq32",
   "format": "bin",
-  "source": "movntq.asm",
+  "source": "movntq_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/movntq/",
   "target": [
    { "output": "movntq.bin32", "match": "movntq.bin32.t" }

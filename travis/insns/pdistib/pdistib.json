@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PDISTIB",
   "id": "pdistib16",
   "format": "bin",
-  "source": "pdistib.asm",
+  "source": "pdistib_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pdistib/",
   "target": [
    { "output": "pdistib.bin16", "match": "pdistib.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PDISTIB",
   "id": "pdistib32",
   "format": "bin",
-  "source": "pdistib.asm",
+  "source": "pdistib_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pdistib/",
   "target": [
    { "output": "pdistib.bin32", "match": "pdistib.bin32.t" }

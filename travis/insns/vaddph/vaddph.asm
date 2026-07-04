@@ -21,3 +21,9 @@ default rel
 	vaddph ymm1{k4}{z}, ymm4, ymm3
 	vaddph zmm5{k5}{z}, zmm3, zword [0xa89]
 	vaddph zmm3, zmm4, zmm6, {rd-sae}
+	vaddph xmm6, xmm4, oword [eax+1]
+	vaddph xmm0, xmm2, oword [eax+64]
+	vaddph ymm7, ymm7, yword [eax+1]
+	vaddph ymm6, ymm2, yword [eax+64]
+	vaddph zmm2, zmm3, zword [eax+1]
+	vaddph zmm4, zmm1, zword [eax+64]

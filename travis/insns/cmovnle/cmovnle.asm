@@ -15,3 +15,15 @@ default rel
 	cmovnle r30d, r21d
 	cmovnle r26, r30
 	cmovnle r25w, r26w, r18w
+	cmovnle bx, word [eax+1]
+	cmovnle dx, word [eax+64]
+	cmovnle ecx, dword [eax+1]
+	cmovnle eax, dword [eax+64]
+	cmovnle rbp, qword [eax+1]
+	cmovnle rax, qword [eax+64]
+	cmovnle di, bp, word [eax+1]
+	cmovnle bx, dx, word [eax+64]
+	cmovnle ebp, ebx, dword [eax+1]
+	cmovnle esi, ebx, dword [eax+64]
+	cmovnle rbx, rsi, qword [eax+1]
+	cmovnle rcx, rbx, qword [eax+64]

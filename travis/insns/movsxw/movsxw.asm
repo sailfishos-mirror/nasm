@@ -13,3 +13,9 @@ default rel
 	movsxw r17w, r23w
 	movsxw r16d, r18w
 	movsxw r29, r28w
+	movsxw bx, word [eax+1]
+	movsxw dx, word [eax+64]
+	movsxw ebp, word [eax+1]
+	movsxw ecx, word [eax+64]
+	movsxw rsi, word [eax+1]
+	movsxw rbp, word [eax+64]

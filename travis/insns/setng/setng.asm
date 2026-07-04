@@ -11,3 +11,5 @@ default rel
 	setng r23b
 	setng r20
 	setng r24d
+	setng byte [eax+1]
+	setng byte [eax+64]

@@ -13,3 +13,5 @@ default rel
 	lldt r16w
 	lldt r16d
 	lldt r18
+	lldt word [eax+1]
+	lldt word [eax+64]

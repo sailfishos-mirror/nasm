@@ -17,3 +17,9 @@ default rel
 	vpermi2b xmm3{k1}{z}, xmm0, xmm0
 	vpermi2b ymm2{k2}{z}, ymm3, ymm1
 	vpermi2b zmm0{k1}{z}, zmm0, zmm5
+	vpermi2b xmm6, xmm2, oword [eax+1]
+	vpermi2b xmm7, xmm6, oword [eax+64]
+	vpermi2b ymm0, ymm4, yword [eax+1]
+	vpermi2b ymm2, ymm5, yword [eax+64]
+	vpermi2b zmm3, zmm5, zword [eax+1]
+	vpermi2b zmm6, zmm7, zword [eax+64]

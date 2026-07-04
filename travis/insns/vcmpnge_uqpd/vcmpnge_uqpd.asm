@@ -17,3 +17,13 @@ default rel
 	vcmpnge_uqpd k5{k7}, ymm7, ymm5
 	vcmpnge_uqpd k2{k3}, zmm7, zmm0
 	vcmpnge_uqpd k3, zmm2, zmm2, {sae}
+	vcmpnge_uqpd xmm3, xmm5, oword [eax+1]
+	vcmpnge_uqpd xmm7, xmm4, oword [eax+64]
+	vcmpnge_uqpd ymm1, ymm7, yword [eax+1]
+	vcmpnge_uqpd ymm0, ymm6, yword [eax+64]
+	vcmpnge_uqpd k3, xmm6, oword [eax+1]
+	vcmpnge_uqpd k4, xmm5, oword [eax+64]
+	vcmpnge_uqpd k1, ymm0, yword [eax+1]
+	vcmpnge_uqpd k2, ymm4, yword [eax+64]
+	vcmpnge_uqpd k4, zmm7, zword [eax+1]
+	vcmpnge_uqpd k7, zmm1, zword [eax+64]

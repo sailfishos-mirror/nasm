@@ -33,3 +33,13 @@ default rel
 	vpbroadcastq xmm7{k1}{z}, rbp
 	vpbroadcastq ymm6{k5}{z}, rbx
 	vpbroadcastq zmm4{k3}{z}, rcx
+	vpbroadcastq xmm2, qword [eax+1]
+	vpbroadcastq xmm0, qword [eax+64]
+	vpbroadcastq ymm2, qword [eax+1]
+	vpbroadcastq ymm0, qword [eax+64]
+	vpbroadcastq xmm5, qword [eax+1]
+	vpbroadcastq xmm4, qword [eax+64]
+	vpbroadcastq ymm6, qword [eax+1]
+	vpbroadcastq ymm1, qword [eax+64]
+	vpbroadcastq zmm4, qword [eax+1]
+	vpbroadcastq zmm2, qword [eax+64]

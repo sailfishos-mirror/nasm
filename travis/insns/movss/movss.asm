@@ -5,3 +5,7 @@ default rel
 	movss xmm0, xmm3
 	movss xmm12, xmm12
 	movss xmm12, xmm15
+	movss xmm3, dword [eax+1]
+	movss xmm2, dword [eax+64]
+	movss dword [eax+1], xmm4
+	movss dword [eax+64], xmm3

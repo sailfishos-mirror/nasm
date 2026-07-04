@@ -17,3 +17,9 @@ default rel
 	vrsqrtbf16 xmm5{k6}{z}, xmm3
 	vrsqrtbf16 ymm7{k3}{z}, ymm7
 	vrsqrtbf16 zmm4{k6}{z}, zmm7
+	vrsqrtbf16 xmm1, oword [eax+1]
+	vrsqrtbf16 xmm4, oword [eax+64]
+	vrsqrtbf16 ymm2, yword [eax+1]
+	vrsqrtbf16 ymm1, yword [eax+64]
+	vrsqrtbf16 zmm0, zword [eax+1]
+	vrsqrtbf16 zmm0, zword [eax+64]

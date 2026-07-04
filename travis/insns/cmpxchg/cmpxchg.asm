@@ -15,3 +15,11 @@ default rel
 	cmpxchg r31w, r26w
 	cmpxchg r22d, r31d
 	cmpxchg r21, r17
+	cmpxchg byte [eax+1], bl
+	cmpxchg byte [eax+64], bl
+	cmpxchg word [eax+1], bp
+	cmpxchg word [eax+64], si
+	cmpxchg dword [eax+1], esi
+	cmpxchg dword [eax+64], esi
+	cmpxchg qword [eax+1], rax
+	cmpxchg qword [eax+64], rax

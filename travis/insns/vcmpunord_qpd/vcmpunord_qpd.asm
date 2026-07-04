@@ -17,3 +17,13 @@ default rel
 	vcmpunord_qpd k7{k7}, ymm1, yword [0xf26]
 	vcmpunord_qpd k6{k1}, zmm0, zword [0xd53]
 	vcmpunord_qpd k3, zmm6, zmm2, {sae}
+	vcmpunord_qpd xmm3, xmm1, oword [eax+1]
+	vcmpunord_qpd xmm4, xmm6, oword [eax+64]
+	vcmpunord_qpd ymm6, ymm3, yword [eax+1]
+	vcmpunord_qpd ymm1, ymm1, yword [eax+64]
+	vcmpunord_qpd k2, xmm3, oword [eax+1]
+	vcmpunord_qpd k4, xmm0, oword [eax+64]
+	vcmpunord_qpd k1, ymm6, yword [eax+1]
+	vcmpunord_qpd k1, ymm6, yword [eax+64]
+	vcmpunord_qpd k5, zmm0, zword [eax+1]
+	vcmpunord_qpd k2, zmm2, zword [eax+64]

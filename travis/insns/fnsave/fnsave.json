@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FNSAVE",
   "id": "fnsave16",
   "format": "bin",
-  "source": "fnsave.asm",
+  "source": "fnsave_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fnsave/",
   "target": [
    { "output": "fnsave.bin16", "match": "fnsave.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FNSAVE",
   "id": "fnsave32",
   "format": "bin",
-  "source": "fnsave.asm",
+  "source": "fnsave_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fnsave/",
   "target": [
    { "output": "fnsave.bin32", "match": "fnsave.bin32.t" }

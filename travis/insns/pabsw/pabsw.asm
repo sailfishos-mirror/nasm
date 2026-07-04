@@ -4,3 +4,7 @@ default rel
 	pabsw xmm7, oword [0x186]
 	pabsw xmm2, xmm2
 	pabsw xmm13, xmm8
+	pabsw mm3, qword [eax+1]
+	pabsw mm7, qword [eax+64]
+	pabsw xmm3, oword [eax+1]
+	pabsw xmm7, oword [eax+64]

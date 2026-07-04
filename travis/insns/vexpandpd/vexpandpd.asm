@@ -27,3 +27,9 @@ default rel
 	vexpandpd xmm7{k7}{z}, xmm3
 	vexpandpd ymm0{k6}{z}, ymm0
 	vexpandpd zmm7{k4}{z}, zmm6
+	vexpandpd xmm7, oword [eax+1]
+	vexpandpd xmm2, oword [eax+64]
+	vexpandpd ymm7, yword [eax+1]
+	vexpandpd ymm4, yword [eax+64]
+	vexpandpd zmm1, zword [eax+1]
+	vexpandpd zmm0, zword [eax+64]

@@ -20,3 +20,9 @@ default rel
 	vpminsq xmm6{k4}{z}, xmm5, xmm5
 	vpminsq ymm6{k7}{z}, ymm0, ymm3
 	vpminsq zmm0{k5}{z}, zmm1, zmm0
+	vpminsq xmm0, xmm1, oword [eax+1]
+	vpminsq xmm6, xmm5, oword [eax+64]
+	vpminsq ymm2, ymm6, yword [eax+1]
+	vpminsq ymm4, ymm3, yword [eax+64]
+	vpminsq zmm7, zmm4, zword [eax+1]
+	vpminsq zmm7, zmm1, zword [eax+64]

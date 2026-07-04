@@ -13,3 +13,7 @@ default rel
 	vshuff64x2 zmm7{k3}, zmm5, zword [0x26d], 0x3a
 	vshuff64x2 ymm7{k3}{z}, ymm1, ymm5, 0x7a
 	vshuff64x2 zmm4{k2}{z}, zmm5, zmm5, 0xc1
+	vshuff64x2 ymm2, ymm7, yword [eax+1], 0x90
+	vshuff64x2 ymm5, ymm3, yword [eax+64], 0x19
+	vshuff64x2 zmm6, zmm0, zword [eax+1], 0xc1
+	vshuff64x2 zmm0, zmm7, zword [eax+64], 0xcc

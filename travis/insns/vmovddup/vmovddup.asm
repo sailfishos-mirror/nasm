@@ -21,3 +21,13 @@ default rel
 	vmovddup xmm3{k6}{z}, xmm1
 	vmovddup ymm0{k6}{z}, yword [0xb50]
 	vmovddup zmm7{k4}{z}, zmm1
+	vmovddup xmm3, qword [eax+1]
+	vmovddup xmm4, qword [eax+64]
+	vmovddup ymm3, yword [eax+1]
+	vmovddup ymm0, yword [eax+64]
+	vmovddup xmm0, qword [eax+1]
+	vmovddup xmm3, qword [eax+64]
+	vmovddup ymm1, yword [eax+1]
+	vmovddup ymm1, yword [eax+64]
+	vmovddup zmm4, zword [eax+1]
+	vmovddup zmm2, zword [eax+64]

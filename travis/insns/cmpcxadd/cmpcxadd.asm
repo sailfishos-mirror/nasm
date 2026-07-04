@@ -7,3 +7,7 @@ default rel
 	cmpcxadd qword [0x62f], r8, r9
 	cmpcxadd dword [0x60c], r31d, r20d
 	cmpcxadd qword [0x396], r30, r20
+	cmpcxadd dword [eax+1], esi, ebx
+	cmpcxadd dword [eax+64], ebp, edi
+	cmpcxadd qword [eax+1], rbx, rdx
+	cmpcxadd qword [eax+64], rbp, rax

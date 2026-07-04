@@ -7,3 +7,5 @@ default rel
 	vfnmadd231sh xmm0{k6}, xmm5, word [0x57f]
 	vfnmadd231sh xmm4{k6}{z}, xmm7, xmm4
 	vfnmadd231sh xmm0, xmm1, xmm1, {rd-sae}
+	vfnmadd231sh xmm7, xmm7, word [eax+1]
+	vfnmadd231sh xmm0, xmm6, word [eax+64]

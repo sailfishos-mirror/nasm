@@ -11,3 +11,9 @@ default rel
 	tzcnt r24w, r18w
 	tzcnt r20d, r21d
 	tzcnt r23, r25
+	tzcnt cx, word [eax+1]
+	tzcnt bx, word [eax+64]
+	tzcnt esi, dword [eax+1]
+	tzcnt ebx, dword [eax+64]
+	tzcnt rbp, qword [eax+1]
+	tzcnt rdi, qword [eax+64]

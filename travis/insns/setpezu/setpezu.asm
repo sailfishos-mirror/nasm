@@ -11,3 +11,5 @@ default rel
 	setpezu r30
 	setpezu r27d
 	setpezu r16b
+	setpezu byte [eax+1]
+	setpezu byte [eax+64]

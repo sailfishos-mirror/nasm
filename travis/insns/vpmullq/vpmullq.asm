@@ -20,3 +20,9 @@ default rel
 	vpmullq xmm3{k6}{z}, xmm7, xmm3
 	vpmullq ymm5{k1}{z}, ymm6, yword [0x3da]
 	vpmullq zmm7{k5}{z}, zmm0, zmm1
+	vpmullq xmm0, xmm6, oword [eax+1]
+	vpmullq xmm5, xmm5, oword [eax+64]
+	vpmullq ymm2, ymm5, yword [eax+1]
+	vpmullq ymm3, ymm3, yword [eax+64]
+	vpmullq zmm6, zmm1, zword [eax+1]
+	vpmullq zmm0, zmm6, zword [eax+64]

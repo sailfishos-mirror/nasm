@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for INVLPG",
   "id": "invlpg16",
   "format": "bin",
-  "source": "invlpg.asm",
+  "source": "invlpg_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invlpg/",
   "target": [
    { "output": "invlpg.bin16", "match": "invlpg.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for INVLPG",
   "id": "invlpg32",
   "format": "bin",
-  "source": "invlpg.asm",
+  "source": "invlpg_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/invlpg/",
   "target": [
    { "output": "invlpg.bin32", "match": "invlpg.bin32.t" }

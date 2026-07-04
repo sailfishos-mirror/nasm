@@ -15,3 +15,33 @@ default rel
 	ccmpo 0, r26w, r23w
 	ccmpo 7, r30d, r21d
 	ccmpo 12, r17, r24
+	ccmpo 1, byte [eax+1], bl
+	ccmpo 12, byte [eax+64], al
+	ccmpo 6, word [eax+1], cx
+	ccmpo 1, word [eax+64], bx
+	ccmpo 6, dword [eax+1], edx
+	ccmpo 0, dword [eax+64], ebx
+	ccmpo 8, qword [eax+1], rax
+	ccmpo 1, qword [eax+64], rax
+	ccmpo 15, cl, byte [eax+1]
+	ccmpo 11, al, byte [eax+64]
+	ccmpo 3, cx, word [eax+1]
+	ccmpo 9, cx, word [eax+64]
+	ccmpo 4, ebp, dword [eax+1]
+	ccmpo 9, edi, dword [eax+64]
+	ccmpo 2, rsi, qword [eax+1]
+	ccmpo 5, rax, qword [eax+64]
+	ccmpo 1, word [eax+1], 95
+	ccmpo 6, word [eax+64], -68
+	ccmpo 15, dword [eax+1], 30
+	ccmpo 7, dword [eax+64], 128
+	ccmpo 0, qword [eax+1], -25
+	ccmpo 5, qword [eax+64], -77
+	ccmpo 0, byte [eax+1], 0xb7
+	ccmpo 5, byte [eax+64], 0x81
+	ccmpo 2, word [eax+1], 0x39f9
+	ccmpo 2, word [eax+64], 0xba5a
+	ccmpo 1, dword [eax+1], 0x225e0831
+	ccmpo 2, dword [eax+64], 0xd0d0c19
+	ccmpo 15, qword [eax+1], 439212364
+	ccmpo 8, qword [eax+64], 125419640

@@ -19,3 +19,11 @@ default rel
 	vmovsd xmm5{k4}, qword [0xf4f]
 	vmovsd qword [0xd55]{k3}, xmm7
 	vmovsd xmm3{k5}, xmm3, xmm2
+	vmovsd xmm4, qword [eax+1]
+	vmovsd xmm4, qword [eax+64]
+	vmovsd qword [eax+1], xmm4
+	vmovsd qword [eax+64], xmm3
+	vmovsd xmm7, qword [eax+1]
+	vmovsd xmm0, qword [eax+64]
+	vmovsd qword [eax+1], xmm1
+	vmovsd qword [eax+64], xmm1

@@ -15,3 +15,21 @@ default rel
 	movd r19d, mm7
 	movd mm3, r27
 	movd r16, mm5
+	movd mm0, dword [eax+1]
+	movd mm5, dword [eax+64]
+	movd dword [eax+1], mm1
+	movd dword [eax+64], mm1
+	movd mm3, qword [eax+1]
+	movd mm7, qword [eax+64]
+	movd qword [eax+1], mm6
+	movd qword [eax+64], mm7
+	movd [eax+1], xmm4
+	movd [eax+64], xmm6
+	movd xmm6, [eax+1]
+	movd xmm5, [eax+64]
+	movd xmm4, dword [eax+1]
+	movd xmm4, dword [eax+64]
+	movd dword [eax+1], xmm6
+	movd dword [eax+64], xmm6
+	movd dword [eax+1], k7
+	movd dword [eax+64], k3

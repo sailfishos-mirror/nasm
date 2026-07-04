@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FSTENV",
   "id": "fstenv16",
   "format": "bin",
-  "source": "fstenv.asm",
+  "source": "fstenv_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fstenv/",
   "target": [
    { "output": "fstenv.bin16", "match": "fstenv.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FSTENV",
   "id": "fstenv32",
   "format": "bin",
-  "source": "fstenv.asm",
+  "source": "fstenv_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fstenv/",
   "target": [
    { "output": "fstenv.bin32", "match": "fstenv.bin32.t" }

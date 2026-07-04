@@ -11,3 +11,9 @@ default rel
 	hint_nop34 r24w
 	hint_nop34 r16d
 	hint_nop34 r24
+	hint_nop34 word [eax+1]
+	hint_nop34 word [eax+64]
+	hint_nop34 dword [eax+1]
+	hint_nop34 dword [eax+64]
+	hint_nop34 qword [eax+1]
+	hint_nop34 qword [eax+64]

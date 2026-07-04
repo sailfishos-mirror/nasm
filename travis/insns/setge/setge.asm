@@ -11,3 +11,5 @@ default rel
 	setge r29b
 	setge r17
 	setge r27d
+	setge byte [eax+1]
+	setge byte [eax+64]

@@ -17,3 +17,9 @@ default rel
 	vcmpph k4{k2}, xmm5, oword [0x8a9], 0xaf
 	vcmpph k7{k5}, ymm3, yword [0x9a3], 0xed
 	vcmpph k7{k2}, zmm1, zmm4, 0xe2
+	vcmpph k2, xmm7, oword [eax+1], 0xd5
+	vcmpph k2, xmm5, oword [eax+64], 0x80
+	vcmpph k3, ymm7, yword [eax+1], 0x49
+	vcmpph k1, ymm2, yword [eax+64], 0x79
+	vcmpph k5, zmm4, zword [eax+1], 0xb3
+	vcmpph k7, zmm1, zword [eax+64], 0xab

@@ -15,3 +15,11 @@ default rel
 	xadd r18w, r16w
 	xadd r29d, r20d
 	xadd r27, r24
+	xadd byte [eax+1], dl
+	xadd byte [eax+64], bl
+	xadd word [eax+1], bx
+	xadd word [eax+64], ax
+	xadd dword [eax+1], ecx
+	xadd dword [eax+64], esi
+	xadd qword [eax+1], rdi
+	xadd qword [eax+64], rcx

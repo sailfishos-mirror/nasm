@@ -8,3 +8,7 @@ default rel
 	vcomiss xmm31, xmm26
 	vcomiss xmm22, xmm24
 	vcomiss xmm5, xmm1, {sae}
+	vcomiss xmm6, dword [eax+1]
+	vcomiss xmm0, dword [eax+64]
+	vcomiss xmm7, dword [eax+1]
+	vcomiss xmm3, dword [eax+64]

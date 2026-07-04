@@ -7,3 +7,5 @@ default rel
 	vdivsh xmm6{k5}, xmm1, word [0xda9]
 	vdivsh xmm4{k7}{z}, xmm2, xmm1
 	vdivsh xmm2, xmm3, xmm4, {rd-sae}
+	vdivsh xmm3, xmm4, word [eax+1]
+	vdivsh xmm6, xmm5, word [eax+64]

@@ -15,3 +15,19 @@ default rel
 	crc32 r23d, r26w
 	crc32 r26d, r25d
 	crc32 r26d, r30
+	crc32 ecx, byte [eax+1]
+	crc32 ecx, byte [eax+64]
+	crc32 esi, word [eax+1]
+	crc32 edi, word [eax+64]
+	crc32 esi, dword [eax+1]
+	crc32 edi, dword [eax+64]
+	crc32 edx, qword [eax+1]
+	crc32 esi, qword [eax+64]
+	crc32 rdi, byte [eax+1]
+	crc32 rdx, byte [eax+64]
+	crc32 rcx, word [eax+1]
+	crc32 rbp, word [eax+64]
+	crc32 rdi, dword [eax+1]
+	crc32 rax, dword [eax+64]
+	crc32 rax, qword [eax+1]
+	crc32 rcx, qword [eax+64]

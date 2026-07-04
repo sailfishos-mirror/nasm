@@ -8,3 +8,7 @@ default rel
 	vcmple_oqsd k5, xmm15, xmm8
 	vcmple_oqsd k6{k5}, xmm1, xmm2
 	vcmple_oqsd k1, xmm5, xmm7, {sae}
+	vcmple_oqsd xmm2, xmm5, qword [eax+1]
+	vcmple_oqsd xmm4, xmm4, qword [eax+64]
+	vcmple_oqsd k2, xmm4, qword [eax+1]
+	vcmple_oqsd k7, xmm6, qword [eax+64]

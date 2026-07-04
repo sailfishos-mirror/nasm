@@ -11,3 +11,5 @@ default rel
 	setpozu r19
 	setpozu r23d
 	setpozu r20b
+	setpozu byte [eax+1]
+	setpozu byte [eax+64]

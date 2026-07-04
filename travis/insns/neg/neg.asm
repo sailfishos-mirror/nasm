@@ -15,3 +15,19 @@ default rel
 	neg r18w
 	neg r21d
 	neg r20
+	neg byte [eax+1]
+	neg byte [eax+64]
+	neg word [eax+1]
+	neg word [eax+64]
+	neg dword [eax+1]
+	neg dword [eax+64]
+	neg qword [eax+1]
+	neg qword [eax+64]
+	neg cl, byte [eax+1]
+	neg dl, byte [eax+64]
+	neg di, word [eax+1]
+	neg dx, word [eax+64]
+	neg eax, dword [eax+1]
+	neg ebp, dword [eax+64]
+	neg rdx, qword [eax+1]
+	neg rcx, qword [eax+64]

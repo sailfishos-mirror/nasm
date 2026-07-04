@@ -11,3 +11,9 @@ default rel
 	hint_nop45 r21w
 	hint_nop45 r23d
 	hint_nop45 r21
+	hint_nop45 word [eax+1]
+	hint_nop45 word [eax+64]
+	hint_nop45 dword [eax+1]
+	hint_nop45 dword [eax+64]
+	hint_nop45 qword [eax+1]
+	hint_nop45 qword [eax+64]

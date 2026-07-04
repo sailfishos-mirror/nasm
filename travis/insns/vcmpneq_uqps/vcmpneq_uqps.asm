@@ -17,3 +17,13 @@ default rel
 	vcmpneq_uqps k2{k1}, ymm2, ymm2
 	vcmpneq_uqps k5{k7}, zmm7, zmm0
 	vcmpneq_uqps k1, zmm6, zmm0, {sae}
+	vcmpneq_uqps xmm6, xmm6, oword [eax+1]
+	vcmpneq_uqps xmm6, xmm4, oword [eax+64]
+	vcmpneq_uqps ymm6, ymm5, yword [eax+1]
+	vcmpneq_uqps ymm0, ymm4, yword [eax+64]
+	vcmpneq_uqps k4, xmm0, oword [eax+1]
+	vcmpneq_uqps k5, xmm1, oword [eax+64]
+	vcmpneq_uqps k5, ymm4, yword [eax+1]
+	vcmpneq_uqps k7, ymm4, yword [eax+64]
+	vcmpneq_uqps k5, zmm3, zword [eax+1]
+	vcmpneq_uqps k1, zmm1, zword [eax+64]

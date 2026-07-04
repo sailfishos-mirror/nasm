@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FIMUL",
   "id": "fimul16",
   "format": "bin",
-  "source": "fimul.asm",
+  "source": "fimul_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fimul/",
   "target": [
    { "output": "fimul.bin16", "match": "fimul.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FIMUL",
   "id": "fimul32",
   "format": "bin",
-  "source": "fimul.asm",
+  "source": "fimul_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fimul/",
   "target": [
    { "output": "fimul.bin32", "match": "fimul.bin32.t" }

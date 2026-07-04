@@ -15,3 +15,15 @@ default rel
 	cmovne r25d, r27d
 	cmovne r16, r27
 	cmovne r16w, r21w, r30w
+	cmovne bx, word [eax+1]
+	cmovne bx, word [eax+64]
+	cmovne edx, dword [eax+1]
+	cmovne edx, dword [eax+64]
+	cmovne rdx, qword [eax+1]
+	cmovne rbx, qword [eax+64]
+	cmovne bx, ax, word [eax+1]
+	cmovne di, ax, word [eax+64]
+	cmovne ebp, ecx, dword [eax+1]
+	cmovne eax, ebp, dword [eax+64]
+	cmovne rbp, rbp, qword [eax+1]
+	cmovne rax, rax, qword [eax+64]

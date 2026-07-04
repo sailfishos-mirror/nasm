@@ -27,3 +27,13 @@ default rel
 	vbroadcastss xmm6{k7}{z}, xmm0
 	vbroadcastss ymm2{k7}{z}, xmm3
 	vbroadcastss zmm3{k4}{z}, xmm3
+	vbroadcastss xmm7, dword [eax+1]
+	vbroadcastss xmm1, dword [eax+64]
+	vbroadcastss ymm7, dword [eax+1]
+	vbroadcastss ymm5, dword [eax+64]
+	vbroadcastss xmm6, dword [eax+1]
+	vbroadcastss xmm3, dword [eax+64]
+	vbroadcastss ymm2, dword [eax+1]
+	vbroadcastss ymm1, dword [eax+64]
+	vbroadcastss zmm6, dword [eax+1]
+	vbroadcastss zmm3, dword [eax+64]

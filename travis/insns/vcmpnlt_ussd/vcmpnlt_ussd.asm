@@ -8,3 +8,7 @@ default rel
 	vcmpnlt_ussd k4, xmm15, xmm13
 	vcmpnlt_ussd k6{k4}, xmm4, xmm3
 	vcmpnlt_ussd k4, xmm6, xmm3, {sae}
+	vcmpnlt_ussd xmm4, xmm6, qword [eax+1]
+	vcmpnlt_ussd xmm6, xmm0, qword [eax+64]
+	vcmpnlt_ussd k4, xmm6, qword [eax+1]
+	vcmpnlt_ussd k3, xmm3, qword [eax+64]

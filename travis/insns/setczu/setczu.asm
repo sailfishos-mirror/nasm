@@ -11,3 +11,5 @@ default rel
 	setczu r21
 	setczu r19d
 	setczu r26b
+	setczu byte [eax+1]
+	setczu byte [eax+64]

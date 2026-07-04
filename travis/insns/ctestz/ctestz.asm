@@ -15,3 +15,19 @@ default rel
 	ctestz 13, r29w, r27w
 	ctestz 3, r21d, r16d
 	ctestz 15, r28, r16
+	ctestz 14, byte [eax+1], bl
+	ctestz 6, byte [eax+64], bl
+	ctestz 7, word [eax+1], bx
+	ctestz 6, word [eax+64], bp
+	ctestz 10, dword [eax+1], ebx
+	ctestz 13, dword [eax+64], eax
+	ctestz 14, qword [eax+1], rax
+	ctestz 0, qword [eax+64], rbp
+	ctestz 12, byte [eax+1], 0x25
+	ctestz 2, byte [eax+64], 0xaf
+	ctestz 8, word [eax+1], 0x5ea4
+	ctestz 10, word [eax+64], 0xa266
+	ctestz 2, dword [eax+1], 0x94fbafa
+	ctestz 15, dword [eax+64], 0x1518c37d
+	ctestz 8, qword [eax+1], -115784371
+	ctestz 1, qword [eax+64], 494357808

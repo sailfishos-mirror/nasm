@@ -11,3 +11,5 @@ default rel
 	setlzu r25
 	setlzu r24d
 	setlzu r16b
+	setlzu byte [eax+1]
+	setlzu byte [eax+64]

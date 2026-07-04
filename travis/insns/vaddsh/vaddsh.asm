@@ -7,3 +7,5 @@ default rel
 	vaddsh xmm3{k4}, xmm7, xmm3
 	vaddsh xmm0{k1}{z}, xmm1, word [0x75a]
 	vaddsh xmm5, xmm6, xmm4, {rz-sae}
+	vaddsh xmm2, xmm2, word [eax+1]
+	vaddsh xmm3, xmm7, word [eax+64]

@@ -17,3 +17,9 @@ default rel
 	vdpphps xmm3{k7}{z}, xmm5, oword [0xff1]
 	vdpphps ymm0{k2}{z}, ymm1, ymm5
 	vdpphps zmm0{k4}{z}, zmm3, zmm7
+	vdpphps xmm0, xmm4, oword [eax+1]
+	vdpphps xmm7, xmm7, oword [eax+64]
+	vdpphps ymm0, ymm6, yword [eax+1]
+	vdpphps ymm5, ymm5, yword [eax+64]
+	vdpphps zmm1, zmm2, zword [eax+1]
+	vdpphps zmm0, zmm7, zword [eax+64]

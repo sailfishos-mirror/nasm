@@ -16,3 +16,13 @@ default rel
 	vpcmpgtw k7{k7}, xmm4, xmm1
 	vpcmpgtw k5{k2}, ymm7, yword [0x6a1]
 	vpcmpgtw k5{k7}, zmm0, zmm1
+	vpcmpgtw xmm1, xmm2, oword [eax+1]
+	vpcmpgtw xmm7, xmm3, oword [eax+64]
+	vpcmpgtw ymm2, ymm0, yword [eax+1]
+	vpcmpgtw ymm4, ymm3, yword [eax+64]
+	vpcmpgtw k6, xmm6, oword [eax+1]
+	vpcmpgtw k1, xmm3, oword [eax+64]
+	vpcmpgtw k7, ymm6, yword [eax+1]
+	vpcmpgtw k4, ymm5, yword [eax+64]
+	vpcmpgtw k7, zmm7, zword [eax+1]
+	vpcmpgtw k7, zmm7, zword [eax+64]

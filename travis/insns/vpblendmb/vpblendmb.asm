@@ -17,3 +17,9 @@ default rel
 	vpblendmb xmm4{k1}{z}, xmm1, xmm0
 	vpblendmb ymm0{k4}{z}, ymm2, ymm7
 	vpblendmb zmm0{k6}{z}, zmm5, zword [0x7ea]
+	vpblendmb xmm3, xmm7, oword [eax+1]
+	vpblendmb xmm6, xmm0, oword [eax+64]
+	vpblendmb ymm5, ymm3, yword [eax+1]
+	vpblendmb ymm1, ymm4, yword [eax+64]
+	vpblendmb zmm1, zmm1, zword [eax+1]
+	vpblendmb zmm1, zmm1, zword [eax+64]

@@ -25,3 +25,13 @@ default rel
 	vpmaddwd xmm1{k4}{z}, xmm3, oword [0x692]
 	vpmaddwd ymm2{k2}{z}, ymm3, ymm0
 	vpmaddwd zmm7{k6}{z}, zmm7, zword [0xc9a]
+	vpmaddwd xmm0, xmm4, oword [eax+1]
+	vpmaddwd xmm3, xmm0, oword [eax+64]
+	vpmaddwd ymm6, ymm3, yword [eax+1]
+	vpmaddwd ymm2, ymm6, yword [eax+64]
+	vpmaddwd xmm6, xmm7, oword [eax+1]
+	vpmaddwd xmm2, xmm5, oword [eax+64]
+	vpmaddwd ymm2, ymm1, yword [eax+1]
+	vpmaddwd ymm3, ymm2, yword [eax+64]
+	vpmaddwd zmm6, zmm4, zword [eax+1]
+	vpmaddwd zmm0, zmm6, zword [eax+64]

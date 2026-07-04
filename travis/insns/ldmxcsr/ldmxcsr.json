@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for LDMXCSR",
   "id": "ldmxcsr16",
   "format": "bin",
-  "source": "ldmxcsr.asm",
+  "source": "ldmxcsr_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ldmxcsr/",
   "target": [
    { "output": "ldmxcsr.bin16", "match": "ldmxcsr.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for LDMXCSR",
   "id": "ldmxcsr32",
   "format": "bin",
-  "source": "ldmxcsr.asm",
+  "source": "ldmxcsr_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/ldmxcsr/",
   "target": [
    { "output": "ldmxcsr.bin32", "match": "ldmxcsr.bin32.t" }

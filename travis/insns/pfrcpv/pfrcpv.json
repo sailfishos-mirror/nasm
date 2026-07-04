@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFRCPV",
   "id": "pfrcpv16",
   "format": "bin",
-  "source": "pfrcpv.asm",
+  "source": "pfrcpv_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrcpv/",
   "target": [
    { "output": "pfrcpv.bin16", "match": "pfrcpv.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFRCPV",
   "id": "pfrcpv32",
   "format": "bin",
-  "source": "pfrcpv.asm",
+  "source": "pfrcpv_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrcpv/",
   "target": [
    { "output": "pfrcpv.bin32", "match": "pfrcpv.bin32.t" }

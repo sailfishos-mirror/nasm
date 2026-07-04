@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for CMPXCHG8B",
   "id": "cmpxchg8b16",
   "format": "bin",
-  "source": "cmpxchg8b.asm",
+  "source": "cmpxchg8b_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpxchg8b/",
   "target": [
    { "output": "cmpxchg8b.bin16", "match": "cmpxchg8b.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for CMPXCHG8B",
   "id": "cmpxchg8b32",
   "format": "bin",
-  "source": "cmpxchg8b.asm",
+  "source": "cmpxchg8b_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/cmpxchg8b/",
   "target": [
    { "output": "cmpxchg8b.bin32", "match": "cmpxchg8b.bin32.t" }

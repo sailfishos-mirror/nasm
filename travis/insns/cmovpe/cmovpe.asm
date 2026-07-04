@@ -15,3 +15,15 @@ default rel
 	cmovpe r25d, r16d
 	cmovpe r31, r24
 	cmovpe r29w, r22w, r18w
+	cmovpe bp, word [eax+1]
+	cmovpe bp, word [eax+64]
+	cmovpe ebx, dword [eax+1]
+	cmovpe edx, dword [eax+64]
+	cmovpe rdx, qword [eax+1]
+	cmovpe rdi, qword [eax+64]
+	cmovpe dx, bp, word [eax+1]
+	cmovpe bp, cx, word [eax+64]
+	cmovpe edi, edx, dword [eax+1]
+	cmovpe esi, edx, dword [eax+64]
+	cmovpe rcx, rcx, qword [eax+1]
+	cmovpe rax, rdi, qword [eax+64]

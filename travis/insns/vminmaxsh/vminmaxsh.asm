@@ -5,3 +5,5 @@ default rel
 	vminmaxsh xmm22, xmm28, xmm23, 0xca
 	vminmaxsh xmm2{k4}, xmm7, word [0x41c], 0x4
 	vminmaxsh xmm3{k1}{z}, xmm0, word [0xdb9], 0x62
+	vminmaxsh xmm6, xmm4, word [eax+1], 0xb5
+	vminmaxsh xmm7, xmm2, word [eax+64], 0x5

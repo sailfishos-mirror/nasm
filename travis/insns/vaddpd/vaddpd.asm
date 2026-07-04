@@ -26,3 +26,13 @@ default rel
 	vaddpd ymm3{k1}{z}, ymm0, ymm3
 	vaddpd zmm4{k7}{z}, zmm3, zword [0x28e]
 	vaddpd zmm3, zmm1, zmm4, {rn-sae}
+	vaddpd xmm7, xmm7, oword [eax+1]
+	vaddpd xmm1, xmm2, oword [eax+64]
+	vaddpd ymm0, ymm5, yword [eax+1]
+	vaddpd ymm6, ymm7, yword [eax+64]
+	vaddpd xmm4, xmm7, oword [eax+1]
+	vaddpd xmm4, xmm2, oword [eax+64]
+	vaddpd ymm6, ymm0, yword [eax+1]
+	vaddpd ymm5, ymm1, yword [eax+64]
+	vaddpd zmm3, zmm7, zword [eax+1]
+	vaddpd zmm4, zmm1, zword [eax+64]

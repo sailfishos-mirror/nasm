@@ -8,3 +8,7 @@ default rel
 	vmovhps qword [0x41a], xmm14
 	vmovhps xmm24, xmm26, qword [0xec3]
 	vmovhps qword [0x1a3], xmm18
+	vmovhps xmm5, xmm7, qword [eax+1]
+	vmovhps xmm5, xmm3, qword [eax+64]
+	vmovhps qword [eax+1], xmm3
+	vmovhps qword [eax+64], xmm6

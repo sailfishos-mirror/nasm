@@ -592,6 +592,65 @@ sub build_decorated_line {
     return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => 0 };
 }
 
+#-----------------------------------------------------------------------
+# Modrm-memory disp8/disp32 boundary coverage.
+#
+# mem_operand() deliberately emits bare-displacement addressing
+# ([0xNNN], no base register) for bit-width portability (see its
+# comment), which always encodes as a disp32 (or disp16 in 16-bit
+# mode) -- disp8 forms (or, for EVEX, the disp8*N compressed-
+# displacement encoding) are never exercised. Whether a given
+# instruction even has a disp8-encodable form, and what the
+# compressed-displacement scale factor N is, is instruction-specific
+# (depends on the EVEX tuple type), so rather than trying to compute
+# the exact boundary per instruction, every modrm-memory-operand
+# template additionally gets a `[eax+1]` (unambiguously disp8-
+# encodable everywhere) and a `[eax+64]` (large enough to land past
+# the disp8 boundary for byte-granular encodings, while still being a
+# clean multiple of the larger EVEX compressed-displacement scales) line.
+# `[eax+N]` (rather than a bare displacement) is used because it's
+# valid addressing syntax in all of --bits 16/32/64 (32-bit address
+# size works everywhere via the 0x67 prefix), so -- unlike a fixed
+# 64-bit base register -- it doesn't need any bit-width-specific
+# handling and can simply be added to the base per-mnemonic @lines.
+my %mem_sizebits = (
+    mem => 0, mem8 => 8, mem16 => 16, mem32 => 32, mem64 => 64,
+    mem80 => 0, mem128 => 128, mem256 => 256, mem512 => 512,
+    rm8 => 8, rm16 => 16, rm32 => 32, rm64 => 64, rm_sel => 16,
+    xmmrm => 128, xmmrm8 => 8, xmmrm16 => 16, xmmrm32 => 32, xmmrm64 => 64,
+    xmmrm128 => 128, ymmrm256 => 256, zmmrm512 => 512,
+    mmxrm => 64, mmxrm64 => 64,
+);
+
+# Build one disp-boundary instruction line: the first modrm-memory-
+# capable operand in $ops becomes "[eax+$disp]" (sized per its own
+# token), every other operand is generated normally. Returns undef if
+# the template has no modrm-memory-capable operand, or if any other
+# operand fails to generate.
+sub build_dispboundary_line {
+    my ($rng, $mnem, $ops, $is_branch, $disp) = @_;
+    my @operands;
+    my $used_mem = 0;
+    my $needs64 = 0;
+    for my $tok (@$ops) {
+        my $base = base_token($tok);
+        if (!$used_mem && exists $mem_sizebits{$base}) {
+            my $sizebits = $mem_sizebits{$base};
+            my $txt = "[eax+$disp]";
+            $txt = "$memsize{$sizebits} $txt" if $sizebits && $memsize{$sizebits};
+            push @operands, $txt;
+            $used_mem = 1;
+            next;
+        }
+        my $val = gen_operand($rng, $tok, $mnem, $is_branch);
+        return undef unless defined $val;
+        $needs64 = 1 if $needs64_token{$base};
+        push @operands, $val;
+    }
+    return undef unless $used_mem;
+    return { text => lc($mnem) . ' ' . join(', ', @operands), needs64 => $needs64 };
+}
+
 sub make_rng {
     my ($seedval) = @_;
     # Small deterministic xorshift-ish PRNG so runs are reproducible
@@ -658,6 +717,7 @@ for my $mnem (sort keys %by_mnemonic) {
     my @extra_maskz;      # candidate {k1}{z}-masked lines
     my @extra_broadcast;  # candidate {1toN}-broadcast lines
     my @extra_saeer;      # candidate {sae}/{rn-sae}-decorated lines
+    my @extra_dispboundary; # candidate [eax+1]/[eax+64] boundary lines
     for my $t (@sample) {
         my $opt_idx = optional_operand_index($t->{ops});
         my $extendable = has_extendable_token($t->{ops});
@@ -732,6 +792,23 @@ for my $mnem (sort keys %by_mnemonic) {
         }
     }
 
+    # Modrm-memory disp8/disp32 boundary coverage (see
+    # build_dispboundary_line() above): once per *distinct* template
+    # across the mnemonic's entire template set, for the same "buried
+    # variant" reason as the EVEX decorator loop above. Candidates
+    # only, routed through the same staged probe as hireg/apxreg/
+    # decorators below -- even though `[eax+N]` addressing syntax is
+    # valid at every --bits width in the general case, a handful of
+    # instructions may have memory-operand restrictions (alignment/
+    # tuple-type/etc) this generator doesn't model, so one bad
+    # candidate shouldn't cost the mnemonic its pre-existing coverage.
+    for my $t (@dedup_all) {
+        for my $disp (1, 64) {
+            my $dl = build_dispboundary_line($rng, $mnem, $t->{ops}, $is_branch, $disp);
+            push @extra_dispboundary, $dl if defined $dl;
+        }
+    }
+
     next unless @lines;   # nothing we knew how to generate
 
     my @narrow_lines = grep { !$_->{needs64} } @lines;
@@ -793,7 +870,7 @@ for my $mnem (sort keys %by_mnemonic) {
 
     my @full_lines = @lines;
     for my $cat (\@extra_hireg, \@extra_apxreg, \@extra_mask, \@extra_maskz,
-                 \@extra_broadcast, \@extra_saeer) {
+                 \@extra_broadcast, \@extra_saeer, \@extra_dispboundary) {
         next unless @$cat;
         my $candidate = [@full_lines, @$cat];
         @full_lines = @$candidate if $probe_ok->($candidate);

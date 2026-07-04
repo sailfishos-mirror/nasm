@@ -17,3 +17,13 @@ default rel
 	vcmpngt_uqpd k1{k7}, ymm3, ymm5
 	vcmpngt_uqpd k5{k2}, zmm1, zmm4
 	vcmpngt_uqpd k6, zmm1, zmm0, {sae}
+	vcmpngt_uqpd xmm2, xmm1, oword [eax+1]
+	vcmpngt_uqpd xmm3, xmm0, oword [eax+64]
+	vcmpngt_uqpd ymm0, ymm7, yword [eax+1]
+	vcmpngt_uqpd ymm3, ymm3, yword [eax+64]
+	vcmpngt_uqpd k3, xmm5, oword [eax+1]
+	vcmpngt_uqpd k3, xmm0, oword [eax+64]
+	vcmpngt_uqpd k6, ymm5, yword [eax+1]
+	vcmpngt_uqpd k5, ymm6, yword [eax+64]
+	vcmpngt_uqpd k6, zmm6, zword [eax+1]
+	vcmpngt_uqpd k7, zmm2, zword [eax+64]

@@ -21,3 +21,13 @@ default rel
 	vpshuflw xmm1{k4}{z}, oword [0x343], 0xea
 	vpshuflw ymm4{k3}{z}, ymm7, 0x36
 	vpshuflw zmm7{k3}{z}, zword [0x405], 0x2b
+	vpshuflw xmm1, oword [eax+1], 0xa0
+	vpshuflw xmm7, oword [eax+64], 0x13
+	vpshuflw ymm6, yword [eax+1], 0x63
+	vpshuflw ymm0, yword [eax+64], 0xf9
+	vpshuflw xmm7, oword [eax+1], 0x6e
+	vpshuflw xmm1, oword [eax+64], 0x55
+	vpshuflw ymm3, yword [eax+1], 0x1a
+	vpshuflw ymm4, yword [eax+64], 0xfa
+	vpshuflw zmm7, zword [eax+1], 0xee
+	vpshuflw zmm3, zword [eax+64], 0xc2

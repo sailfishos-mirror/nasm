@@ -7,3 +7,7 @@ default rel
 	vfrczps ymm3, yword [0xf36]
 	vfrczps xmm14, xmm8
 	vfrczps ymm14, ymm9
+	vfrczps xmm7, oword [eax+1]
+	vfrczps xmm5, oword [eax+64]
+	vfrczps ymm3, yword [eax+1]
+	vfrczps ymm7, yword [eax+64]

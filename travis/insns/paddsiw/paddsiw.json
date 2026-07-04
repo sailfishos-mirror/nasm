@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PADDSIW",
   "id": "paddsiw16",
   "format": "bin",
-  "source": "paddsiw.asm",
+  "source": "paddsiw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddsiw/",
   "target": [
    { "output": "paddsiw.bin16", "match": "paddsiw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PADDSIW",
   "id": "paddsiw32",
   "format": "bin",
-  "source": "paddsiw.asm",
+  "source": "paddsiw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/paddsiw/",
   "target": [
    { "output": "paddsiw.bin32", "match": "paddsiw.bin32.t" }

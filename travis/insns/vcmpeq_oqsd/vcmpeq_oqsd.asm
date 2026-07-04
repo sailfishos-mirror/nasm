@@ -5,3 +5,5 @@ default rel
 	vcmpeq_oqsd k1, xmm21, xmm17
 	vcmpeq_oqsd k6{k2}, xmm5, xmm2
 	vcmpeq_oqsd k6, xmm5, xmm7, {sae}
+	vcmpeq_oqsd k2, xmm2, qword [eax+1]
+	vcmpeq_oqsd k5, xmm4, qword [eax+64]

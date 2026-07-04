@@ -39,3 +39,13 @@ default rel
 	vpbroadcastw zmm3{k1}{z}, bp
 	vpbroadcastw zmm2{k5}{z}, edx
 	vpbroadcastw zmm7{k6}{z}, rbx
+	vpbroadcastw xmm6, word [eax+1]
+	vpbroadcastw xmm3, word [eax+64]
+	vpbroadcastw ymm2, word [eax+1]
+	vpbroadcastw ymm7, word [eax+64]
+	vpbroadcastw xmm7, word [eax+1]
+	vpbroadcastw xmm1, word [eax+64]
+	vpbroadcastw ymm0, word [eax+1]
+	vpbroadcastw ymm2, word [eax+64]
+	vpbroadcastw zmm7, word [eax+1]
+	vpbroadcastw zmm2, word [eax+64]

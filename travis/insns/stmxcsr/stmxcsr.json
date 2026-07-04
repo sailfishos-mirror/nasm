@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for STMXCSR",
   "id": "stmxcsr16",
   "format": "bin",
-  "source": "stmxcsr.asm",
+  "source": "stmxcsr_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/stmxcsr/",
   "target": [
    { "output": "stmxcsr.bin16", "match": "stmxcsr.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for STMXCSR",
   "id": "stmxcsr32",
   "format": "bin",
-  "source": "stmxcsr.asm",
+  "source": "stmxcsr_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/stmxcsr/",
   "target": [
    { "output": "stmxcsr.bin32", "match": "stmxcsr.bin32.t" }

@@ -17,3 +17,11 @@ default rel
 	adox r23, r21
 	adox r18d, r25d, r21d
 	adox r17, r22, r17
+	adox edi, dword [eax+1]
+	adox ecx, dword [eax+64]
+	adox rcx, qword [eax+1]
+	adox rdx, qword [eax+64]
+	adox eax, eax, dword [eax+1]
+	adox esi, ebp, dword [eax+64]
+	adox rsi, rax, qword [eax+1]
+	adox rdi, rsi, qword [eax+64]

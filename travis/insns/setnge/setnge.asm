@@ -11,3 +11,5 @@ default rel
 	setnge r30b
 	setnge r31
 	setnge r30d
+	setnge byte [eax+1]
+	setnge byte [eax+64]

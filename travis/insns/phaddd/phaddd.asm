@@ -4,3 +4,7 @@ default rel
 	phaddd xmm5, oword [0x1b8]
 	phaddd xmm3, xmm1
 	phaddd xmm9, xmm11
+	phaddd mm5, qword [eax+1]
+	phaddd mm1, qword [eax+64]
+	phaddd xmm6, oword [eax+1]
+	phaddd xmm2, oword [eax+64]

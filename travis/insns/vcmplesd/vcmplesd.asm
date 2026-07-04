@@ -8,3 +8,7 @@ default rel
 	vcmplesd k1, xmm15, xmm8
 	vcmplesd k5{k3}, xmm4, xmm4
 	vcmplesd k6, xmm6, xmm0, {sae}
+	vcmplesd xmm6, xmm6, qword [eax+1]
+	vcmplesd xmm3, xmm5, qword [eax+64]
+	vcmplesd k1, xmm4, qword [eax+1]
+	vcmplesd k7, xmm1, qword [eax+64]

@@ -11,3 +11,5 @@ default rel
 	setnozu r19
 	setnozu r23d
 	setnozu r26b
+	setnozu byte [eax+1]
+	setnozu byte [eax+64]

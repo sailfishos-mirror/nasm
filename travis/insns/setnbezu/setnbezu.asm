@@ -11,3 +11,5 @@ default rel
 	setnbezu r28
 	setnbezu r31d
 	setnbezu r30b
+	setnbezu byte [eax+1]
+	setnbezu byte [eax+64]

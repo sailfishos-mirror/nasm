@@ -25,3 +25,13 @@ default rel
 	vpmaddubsw xmm3{k5}{z}, xmm3, xmm3
 	vpmaddubsw ymm2{k7}{z}, ymm5, ymm1
 	vpmaddubsw zmm1{k3}{z}, zmm2, zword [0x888]
+	vpmaddubsw xmm7, xmm7, oword [eax+1]
+	vpmaddubsw xmm0, xmm2, oword [eax+64]
+	vpmaddubsw ymm2, ymm4, yword [eax+1]
+	vpmaddubsw ymm3, ymm0, yword [eax+64]
+	vpmaddubsw xmm0, xmm5, oword [eax+1]
+	vpmaddubsw xmm1, xmm3, oword [eax+64]
+	vpmaddubsw ymm4, ymm4, yword [eax+1]
+	vpmaddubsw ymm6, ymm1, yword [eax+64]
+	vpmaddubsw zmm1, zmm4, zword [eax+1]
+	vpmaddubsw zmm5, zmm0, zword [eax+64]

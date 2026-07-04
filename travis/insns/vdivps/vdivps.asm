@@ -26,3 +26,13 @@ default rel
 	vdivps ymm1{k6}{z}, ymm2, ymm2
 	vdivps zmm5{k4}{z}, zmm2, zmm6
 	vdivps zmm7, zmm3, zmm4, {rd-sae}
+	vdivps xmm1, xmm5, oword [eax+1]
+	vdivps xmm2, xmm4, oword [eax+64]
+	vdivps ymm4, ymm6, yword [eax+1]
+	vdivps ymm0, ymm5, yword [eax+64]
+	vdivps xmm6, xmm1, oword [eax+1]
+	vdivps xmm0, xmm7, oword [eax+64]
+	vdivps ymm4, ymm4, yword [eax+1]
+	vdivps ymm5, ymm1, yword [eax+64]
+	vdivps zmm2, zmm3, zword [eax+1]
+	vdivps zmm7, zmm0, zword [eax+64]

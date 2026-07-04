@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FSAVE",
   "id": "fsave16",
   "format": "bin",
-  "source": "fsave.asm",
+  "source": "fsave_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fsave/",
   "target": [
    { "output": "fsave.bin16", "match": "fsave.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FSAVE",
   "id": "fsave32",
   "format": "bin",
-  "source": "fsave.asm",
+  "source": "fsave_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fsave/",
   "target": [
    { "output": "fsave.bin32", "match": "fsave.bin32.t" }

@@ -11,3 +11,5 @@ default rel
 	setnezu r29
 	setnezu r29d
 	setnezu r18b
+	setnezu byte [eax+1]
+	setnezu byte [eax+64]

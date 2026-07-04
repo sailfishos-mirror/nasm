@@ -23,3 +23,13 @@ default rel
 	vpdpbusds xmm0{k2}{z}, xmm3, xmm1
 	vpdpbusds ymm3{k6}{z}, ymm3, ymm3
 	vpdpbusds zmm0{k7}{z}, zmm7, zmm3
+	vpdpbusds xmm5, xmm0, oword [eax+1]
+	vpdpbusds xmm0, xmm7, oword [eax+64]
+	vpdpbusds ymm2, ymm6, yword [eax+1]
+	vpdpbusds ymm7, ymm5, yword [eax+64]
+	vpdpbusds xmm2, xmm2, oword [eax+1]
+	vpdpbusds xmm6, xmm1, oword [eax+64]
+	vpdpbusds ymm7, ymm0, yword [eax+1]
+	vpdpbusds ymm1, ymm7, yword [eax+64]
+	vpdpbusds zmm5, zmm1, zword [eax+1]
+	vpdpbusds zmm5, zmm4, zword [eax+64]

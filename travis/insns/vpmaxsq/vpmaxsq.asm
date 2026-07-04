@@ -20,3 +20,9 @@ default rel
 	vpmaxsq xmm1{k1}{z}, xmm4, xmm0
 	vpmaxsq ymm2{k7}{z}, ymm3, ymm6
 	vpmaxsq zmm3{k7}{z}, zmm1, zword [0x24f]
+	vpmaxsq xmm6, xmm6, oword [eax+1]
+	vpmaxsq xmm2, xmm0, oword [eax+64]
+	vpmaxsq ymm2, ymm7, yword [eax+1]
+	vpmaxsq ymm5, ymm2, yword [eax+64]
+	vpmaxsq zmm3, zmm1, zword [eax+1]
+	vpmaxsq zmm0, zmm5, zword [eax+64]

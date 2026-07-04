@@ -9,3 +9,7 @@ default rel
 	vcvtsh2usi r27, xmm23
 	vcvtsh2usi ebx, xmm1, {rd-sae}
 	vcvtsh2usi rbx, xmm1, {rd-sae}
+	vcvtsh2usi edx, word [eax+1]
+	vcvtsh2usi eax, word [eax+64]
+	vcvtsh2usi rsi, word [eax+1]
+	vcvtsh2usi rsi, word [eax+64]

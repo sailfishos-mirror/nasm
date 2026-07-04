@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PMULHRWA",
   "id": "pmulhrwa16",
   "format": "bin",
-  "source": "pmulhrwa.asm",
+  "source": "pmulhrwa_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmulhrwa/",
   "target": [
    { "output": "pmulhrwa.bin16", "match": "pmulhrwa.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PMULHRWA",
   "id": "pmulhrwa32",
   "format": "bin",
-  "source": "pmulhrwa.asm",
+  "source": "pmulhrwa_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmulhrwa/",
   "target": [
    { "output": "pmulhrwa.bin32", "match": "pmulhrwa.bin32.t" }

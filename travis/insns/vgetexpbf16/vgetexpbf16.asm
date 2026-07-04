@@ -17,3 +17,9 @@ default rel
 	vgetexpbf16 xmm6{k1}{z}, xmm6
 	vgetexpbf16 ymm4{k3}{z}, yword [0x505]
 	vgetexpbf16 zmm6{k5}{z}, zword [0x32c]
+	vgetexpbf16 xmm5, oword [eax+1]
+	vgetexpbf16 xmm4, oword [eax+64]
+	vgetexpbf16 ymm2, yword [eax+1]
+	vgetexpbf16 ymm5, yword [eax+64]
+	vgetexpbf16 zmm7, zword [eax+1]
+	vgetexpbf16 zmm5, zword [eax+64]

@@ -20,3 +20,9 @@ default rel
 	vfixupimmps xmm4{k3}{z}, xmm6, oword [0x3fb], 0xf6
 	vfixupimmps ymm0{k6}{z}, ymm3, ymm3, 0x5a
 	vfixupimmps zmm4{k4}{z}, zmm6, zmm5, 0x21
+	vfixupimmps xmm7, xmm4, oword [eax+1], 0xbb
+	vfixupimmps xmm3, xmm4, oword [eax+64], 0x19
+	vfixupimmps ymm3, ymm2, yword [eax+1], 0x79
+	vfixupimmps ymm4, ymm7, yword [eax+64], 0xf0
+	vfixupimmps zmm3, zmm3, zword [eax+1], 0x27
+	vfixupimmps zmm3, zmm3, zword [eax+64], 0xf8

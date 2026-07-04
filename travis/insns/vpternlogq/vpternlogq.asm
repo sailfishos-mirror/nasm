@@ -17,3 +17,9 @@ default rel
 	vpternlogq xmm0{k7}{z}, xmm7, xmm0, 0x80
 	vpternlogq ymm2{k5}{z}, ymm1, yword [0xad5], 0xc2
 	vpternlogq zmm1{k2}{z}, zmm6, zword [0xd71], 0x63
+	vpternlogq xmm3, xmm4, oword [eax+1], 0x37
+	vpternlogq xmm5, xmm7, oword [eax+64], 0xed
+	vpternlogq ymm7, ymm0, yword [eax+1], 0xf4
+	vpternlogq ymm1, ymm0, yword [eax+64], 0xfe
+	vpternlogq zmm7, zmm5, zword [eax+1], 0x78
+	vpternlogq zmm1, zmm7, zword [eax+64], 0x70

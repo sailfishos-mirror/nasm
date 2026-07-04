@@ -11,3 +11,5 @@ default rel
 	setna r24b
 	setna r16
 	setna r23d
+	setna byte [eax+1]
+	setna byte [eax+64]

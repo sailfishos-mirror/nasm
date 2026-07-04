@@ -7,3 +7,7 @@ default rel
 	fcom st1
 	fcom st0, st7
 	fcom st0, st6
+	fcom dword [eax+1]
+	fcom dword [eax+64]
+	fcom qword [eax+1]
+	fcom qword [eax+64]

@@ -7,3 +7,7 @@ default rel
 	fdiv st5
 	fdiv st1
 	fdiv st7
+	fdiv dword [eax+1]
+	fdiv dword [eax+64]
+	fdiv qword [eax+1]
+	fdiv qword [eax+64]

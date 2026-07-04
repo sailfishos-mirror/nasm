@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for CLRSSBSY",
   "id": "clrssbsy16",
   "format": "bin",
-  "source": "clrssbsy.asm",
+  "source": "clrssbsy_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/clrssbsy/",
   "target": [
    { "output": "clrssbsy.bin16", "match": "clrssbsy.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for CLRSSBSY",
   "id": "clrssbsy32",
   "format": "bin",
-  "source": "clrssbsy.asm",
+  "source": "clrssbsy_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/clrssbsy/",
   "target": [
    { "output": "clrssbsy.bin32", "match": "clrssbsy.bin32.t" }

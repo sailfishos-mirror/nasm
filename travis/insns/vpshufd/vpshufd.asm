@@ -21,3 +21,13 @@ default rel
 	vpshufd xmm3{k1}{z}, xmm2, 0xa8
 	vpshufd ymm6{k2}{z}, yword [0x431], 0x1c
 	vpshufd zmm0{k5}{z}, zmm7, 0x5c
+	vpshufd xmm3, oword [eax+1], 0xf4
+	vpshufd xmm7, oword [eax+64], 0x13
+	vpshufd ymm3, yword [eax+1], 0x7c
+	vpshufd ymm7, yword [eax+64], 0xcf
+	vpshufd xmm0, oword [eax+1], 0xa8
+	vpshufd xmm1, oword [eax+64], 0x67
+	vpshufd ymm2, yword [eax+1], 0xe
+	vpshufd ymm7, yword [eax+64], 0x39
+	vpshufd zmm3, zword [eax+1], 0x9a
+	vpshufd zmm2, zword [eax+64], 0x2f

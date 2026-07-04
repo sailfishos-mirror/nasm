@@ -15,3 +15,19 @@ default rel
 	ctestt 2, r19w, r19w
 	ctestt 5, r19d, r20d
 	ctestt 0, r27, r20
+	ctestt 3, byte [eax+1], al
+	ctestt 3, byte [eax+64], al
+	ctestt 6, word [eax+1], ax
+	ctestt 14, word [eax+64], dx
+	ctestt 8, dword [eax+1], ebp
+	ctestt 3, dword [eax+64], ebx
+	ctestt 14, qword [eax+1], rbp
+	ctestt 8, qword [eax+64], rsi
+	ctestt 6, byte [eax+1], 0x95
+	ctestt 6, byte [eax+64], 0xe2
+	ctestt 8, word [eax+1], 0xaf63
+	ctestt 0, word [eax+64], 0xaeb3
+	ctestt 3, dword [eax+1], 0x18f278c8
+	ctestt 10, dword [eax+64], 0x35e16bc1
+	ctestt 2, qword [eax+1], -222885416
+	ctestt 0, qword [eax+64], 363737796

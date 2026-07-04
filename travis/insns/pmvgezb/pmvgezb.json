@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PMVGEZB",
   "id": "pmvgezb16",
   "format": "bin",
-  "source": "pmvgezb.asm",
+  "source": "pmvgezb_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmvgezb/",
   "target": [
    { "output": "pmvgezb.bin16", "match": "pmvgezb.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PMVGEZB",
   "id": "pmvgezb32",
   "format": "bin",
-  "source": "pmvgezb.asm",
+  "source": "pmvgezb_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pmvgezb/",
   "target": [
    { "output": "pmvgezb.bin32", "match": "pmvgezb.bin32.t" }

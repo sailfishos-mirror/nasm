@@ -14,3 +14,9 @@ default rel
 	vpcmpgtub k2{k4}, xmm2, xmm5
 	vpcmpgtub k4{k3}, ymm0, ymm1
 	vpcmpgtub k3{k2}, zmm7, zword [0x4c5]
+	vpcmpgtub k1, xmm4, oword [eax+1]
+	vpcmpgtub k5, xmm4, oword [eax+64]
+	vpcmpgtub k5, ymm6, yword [eax+1]
+	vpcmpgtub k3, ymm7, yword [eax+64]
+	vpcmpgtub k3, zmm4, zword [eax+1]
+	vpcmpgtub k3, zmm0, zword [eax+64]

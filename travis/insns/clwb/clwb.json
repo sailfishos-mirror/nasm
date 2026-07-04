@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for CLWB",
   "id": "clwb16",
   "format": "bin",
-  "source": "clwb.asm",
+  "source": "clwb_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/clwb/",
   "target": [
    { "output": "clwb.bin16", "match": "clwb.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for CLWB",
   "id": "clwb32",
   "format": "bin",
-  "source": "clwb.asm",
+  "source": "clwb_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/clwb/",
   "target": [
    { "output": "clwb.bin32", "match": "clwb.bin32.t" }

@@ -11,3 +11,9 @@ default rel
 	hint_nop26 r18w
 	hint_nop26 r31d
 	hint_nop26 r26
+	hint_nop26 word [eax+1]
+	hint_nop26 word [eax+64]
+	hint_nop26 dword [eax+1]
+	hint_nop26 dword [eax+64]
+	hint_nop26 qword [eax+1]
+	hint_nop26 qword [eax+64]

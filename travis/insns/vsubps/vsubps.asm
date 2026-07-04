@@ -26,3 +26,13 @@ default rel
 	vsubps ymm1{k2}{z}, ymm7, yword [0x786]
 	vsubps zmm6{k5}{z}, zmm1, zmm0
 	vsubps zmm5, zmm6, zmm4, {rd-sae}
+	vsubps xmm5, xmm1, oword [eax+1]
+	vsubps xmm1, xmm7, oword [eax+64]
+	vsubps ymm3, ymm0, yword [eax+1]
+	vsubps ymm6, ymm0, yword [eax+64]
+	vsubps xmm7, xmm6, oword [eax+1]
+	vsubps xmm2, xmm6, oword [eax+64]
+	vsubps ymm5, ymm2, yword [eax+1]
+	vsubps ymm6, ymm6, yword [eax+64]
+	vsubps zmm1, zmm0, zword [eax+1]
+	vsubps zmm2, zmm0, zword [eax+64]

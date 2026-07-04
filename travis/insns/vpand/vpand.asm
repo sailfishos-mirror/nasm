@@ -7,3 +7,7 @@ default rel
 	vpand ymm6, ymm2, ymm3
 	vpand xmm10, xmm13, xmm12
 	vpand ymm10, ymm13, ymm9
+	vpand xmm3, xmm6, oword [eax+1]
+	vpand xmm0, xmm0, oword [eax+64]
+	vpand ymm0, ymm5, yword [eax+1]
+	vpand ymm7, ymm5, yword [eax+64]

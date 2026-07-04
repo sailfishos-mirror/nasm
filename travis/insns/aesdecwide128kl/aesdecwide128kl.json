@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for AESDECWIDE128KL",
   "id": "aesdecwide128kl16",
   "format": "bin",
-  "source": "aesdecwide128kl.asm",
+  "source": "aesdecwide128kl_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesdecwide128kl/",
   "target": [
    { "output": "aesdecwide128kl.bin16", "match": "aesdecwide128kl.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for AESDECWIDE128KL",
   "id": "aesdecwide128kl32",
   "format": "bin",
-  "source": "aesdecwide128kl.asm",
+  "source": "aesdecwide128kl_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/aesdecwide128kl/",
   "target": [
    { "output": "aesdecwide128kl.bin32", "match": "aesdecwide128kl.bin32.t" }

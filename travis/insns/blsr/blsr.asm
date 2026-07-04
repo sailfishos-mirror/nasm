@@ -7,3 +7,7 @@ default rel
 	blsr r9, r11
 	blsr r29d, r26d
 	blsr r28, r26
+	blsr edx, dword [eax+1]
+	blsr ebx, dword [eax+64]
+	blsr rbp, qword [eax+1]
+	blsr rbx, qword [eax+64]

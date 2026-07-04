@@ -8,3 +8,7 @@ default rel
 	vcmpeqss k5, xmm12, xmm13
 	vcmpeqss k5{k4}, xmm2, xmm6
 	vcmpeqss k4, xmm6, xmm5, {sae}
+	vcmpeqss xmm1, xmm5, qword [eax+1]
+	vcmpeqss xmm3, xmm6, qword [eax+64]
+	vcmpeqss k5, xmm6, dword [eax+1]
+	vcmpeqss k3, xmm5, dword [eax+64]

@@ -25,3 +25,13 @@ default rel
 	vorps xmm6{k2}{z}, xmm4, xmm7
 	vorps ymm6{k1}{z}, ymm1, yword [0xba6]
 	vorps zmm0{k6}{z}, zmm1, zmm2
+	vorps xmm7, xmm6, oword [eax+1]
+	vorps xmm0, xmm1, oword [eax+64]
+	vorps ymm3, ymm2, yword [eax+1]
+	vorps ymm4, ymm4, yword [eax+64]
+	vorps xmm1, xmm7, oword [eax+1]
+	vorps xmm1, xmm3, oword [eax+64]
+	vorps ymm1, ymm0, yword [eax+1]
+	vorps ymm3, ymm4, yword [eax+64]
+	vorps zmm0, zmm1, zword [eax+1]
+	vorps zmm0, zmm1, zword [eax+64]

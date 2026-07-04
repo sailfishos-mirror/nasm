@@ -8,3 +8,7 @@ default rel
 	vcmpltsd k6, xmm11, xmm15
 	vcmpltsd k6{k1}, xmm1, xmm1
 	vcmpltsd k3, xmm2, xmm1, {sae}
+	vcmpltsd xmm3, xmm1, qword [eax+1]
+	vcmpltsd xmm3, xmm1, qword [eax+64]
+	vcmpltsd k7, xmm7, qword [eax+1]
+	vcmpltsd k2, xmm6, qword [eax+64]

@@ -7,3 +7,7 @@ default rel
 	cmpngxadd qword [0x677], r15, r9
 	cmpngxadd dword [0x695], r19d, r24d
 	cmpngxadd qword [0x5e4], r27, r28
+	cmpngxadd dword [eax+1], ebp, edx
+	cmpngxadd dword [eax+64], ecx, ebx
+	cmpngxadd qword [eax+1], rdi, rdx
+	cmpngxadd qword [eax+64], rcx, rcx

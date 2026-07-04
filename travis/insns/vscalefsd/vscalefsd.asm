@@ -7,3 +7,5 @@ default rel
 	vscalefsd xmm7{k1}, xmm3, xmm3
 	vscalefsd xmm4{k1}{z}, xmm3, qword [0x582]
 	vscalefsd xmm1, xmm6, xmm5, {rn-sae}
+	vscalefsd xmm7, xmm2, qword [eax+1]
+	vscalefsd xmm5, xmm2, qword [eax+64]

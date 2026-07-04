@@ -15,3 +15,63 @@ default rel
 	sbb r17w, r24w
 	sbb r21d, r20d
 	sbb r28, r31
+	sbb byte [eax+1], dl
+	sbb byte [eax+64], bl
+	sbb word [eax+1], dx
+	sbb word [eax+64], si
+	sbb dword [eax+1], eax
+	sbb dword [eax+64], edi
+	sbb qword [eax+1], rdi
+	sbb qword [eax+64], rdx
+	sbb cl, byte [eax+1]
+	sbb al, byte [eax+64]
+	sbb ax, word [eax+1]
+	sbb cx, word [eax+64]
+	sbb eax, dword [eax+1]
+	sbb ecx, dword [eax+64]
+	sbb rsi, qword [eax+1]
+	sbb rsi, qword [eax+64]
+	sbb byte [eax+1], 0xd8
+	sbb byte [eax+64], 0xd8
+	sbb word [eax+1], 20
+	sbb word [eax+64], -96
+	sbb word [eax+1], 0x588f
+	sbb word [eax+64], 0xea0b
+	sbb dword [eax+1], -14
+	sbb dword [eax+64], 123
+	sbb dword [eax+1], 0x120b9d95
+	sbb dword [eax+64], 0x169bbc40
+	sbb qword [eax+1], -113
+	sbb qword [eax+64], 128
+	sbb qword [eax+1], 138481480
+	sbb qword [eax+64], 479373787
+	sbb bl, dl, byte [eax+1]
+	sbb dl, al, byte [eax+64]
+	sbb ax, si, word [eax+1]
+	sbb bp, cx, word [eax+64]
+	sbb eax, ebp, dword [eax+1]
+	sbb ebx, ecx, dword [eax+64]
+	sbb rax, rbp, qword [eax+1]
+	sbb rcx, rax, qword [eax+64]
+	sbb bl, byte [eax+1], dl
+	sbb bl, byte [eax+64], cl
+	sbb ax, word [eax+1], bp
+	sbb dx, word [eax+64], si
+	sbb ebp, dword [eax+1], ebp
+	sbb ecx, dword [eax+64], eax
+	sbb rax, qword [eax+1], rdx
+	sbb rdx, qword [eax+64], rsi
+	sbb bp, word [eax+1], -16
+	sbb bx, word [eax+64], -14
+	sbb edi, dword [eax+1], -13
+	sbb edi, dword [eax+64], 73
+	sbb rcx, qword [eax+1], 31
+	sbb rbx, qword [eax+64], -22
+	sbb dl, byte [eax+1], 0xc0
+	sbb cl, byte [eax+64], 0x68
+	sbb ax, word [eax+1], 0x322d
+	sbb bp, word [eax+64], 0x88dd
+	sbb esi, dword [eax+1], 0x21b26c61
+	sbb esi, dword [eax+64], 0x2118f2f7
+	sbb rcx, qword [eax+1], -304481604
+	sbb rdx, qword [eax+64], 31411479

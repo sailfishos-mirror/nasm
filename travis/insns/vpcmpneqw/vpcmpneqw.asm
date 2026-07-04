@@ -14,3 +14,9 @@ default rel
 	vpcmpneqw k5{k1}, xmm2, xmm6
 	vpcmpneqw k7{k4}, ymm2, ymm0
 	vpcmpneqw k7{k2}, zmm5, zmm5
+	vpcmpneqw k1, xmm0, oword [eax+1]
+	vpcmpneqw k5, xmm0, oword [eax+64]
+	vpcmpneqw k7, ymm1, yword [eax+1]
+	vpcmpneqw k4, ymm0, yword [eax+64]
+	vpcmpneqw k7, zmm7, zword [eax+1]
+	vpcmpneqw k2, zmm6, zword [eax+64]

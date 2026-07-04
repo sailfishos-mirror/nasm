@@ -7,3 +7,7 @@ default rel
 	aand qword [0x765], r9
 	aand dword [0x205], r28d
 	aand qword [0x3bd], r23
+	aand dword [eax+1], edx
+	aand dword [eax+64], edi
+	aand qword [eax+1], rdx
+	aand qword [eax+64], rsi

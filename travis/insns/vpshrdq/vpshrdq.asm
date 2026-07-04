@@ -20,3 +20,9 @@ default rel
 	vpshrdq xmm7{k1}{z}, xmm3, xmm3, 0x6a
 	vpshrdq ymm4{k5}{z}, ymm6, ymm3, 0x14
 	vpshrdq zmm2{k1}{z}, zmm1, zmm5, 0x54
+	vpshrdq xmm6, xmm7, oword [eax+1], 0x89
+	vpshrdq xmm5, xmm1, oword [eax+64], 0xf0
+	vpshrdq ymm1, ymm3, yword [eax+1], 0x4d
+	vpshrdq ymm4, ymm3, yword [eax+64], 0xf4
+	vpshrdq zmm6, zmm4, zword [eax+1], 0x6f
+	vpshrdq zmm6, zmm5, zword [eax+64], 0xd2

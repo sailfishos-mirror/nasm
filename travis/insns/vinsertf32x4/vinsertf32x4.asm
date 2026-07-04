@@ -13,3 +13,7 @@ default rel
 	vinsertf32x4 zmm2{k6}, zmm1, xmm7, 0x44
 	vinsertf32x4 ymm6{k4}{z}, ymm4, xmm3, 0x83
 	vinsertf32x4 zmm6{k2}{z}, zmm4, xmm1, 0x89
+	vinsertf32x4 ymm0, ymm3, oword [eax+1], 0x6
+	vinsertf32x4 ymm1, ymm4, oword [eax+64], 0x22
+	vinsertf32x4 zmm6, zmm4, oword [eax+1], 0x8c
+	vinsertf32x4 zmm3, zmm4, oword [eax+64], 0xe4

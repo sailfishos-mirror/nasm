@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for CLFLUSHOPT",
   "id": "clflushopt16",
   "format": "bin",
-  "source": "clflushopt.asm",
+  "source": "clflushopt_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/clflushopt/",
   "target": [
    { "output": "clflushopt.bin16", "match": "clflushopt.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for CLFLUSHOPT",
   "id": "clflushopt32",
   "format": "bin",
-  "source": "clflushopt.asm",
+  "source": "clflushopt_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/clflushopt/",
   "target": [
    { "output": "clflushopt.bin32", "match": "clflushopt.bin32.t" }

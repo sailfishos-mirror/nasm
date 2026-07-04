@@ -17,3 +17,9 @@ default rel
 	vbitrev xmm4{k6}{z}, xmm6
 	vbitrev ymm0{k2}{z}, ymm4
 	vbitrev zmm5{k3}{z}, zmm5
+	vbitrev xmm0, oword [eax+1]
+	vbitrev xmm2, oword [eax+64]
+	vbitrev ymm7, yword [eax+1]
+	vbitrev ymm5, yword [eax+64]
+	vbitrev zmm6, zword [eax+1]
+	vbitrev zmm5, zword [eax+64]

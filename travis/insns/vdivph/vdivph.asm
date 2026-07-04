@@ -21,3 +21,9 @@ default rel
 	vdivph ymm3{k3}{z}, ymm3, yword [0x4cf]
 	vdivph zmm4{k4}{z}, zmm1, zmm3
 	vdivph zmm7, zmm0, zmm2, {ru-sae}
+	vdivph xmm6, xmm0, oword [eax+1]
+	vdivph xmm0, xmm5, oword [eax+64]
+	vdivph ymm7, ymm7, yword [eax+1]
+	vdivph ymm4, ymm2, yword [eax+64]
+	vdivph zmm3, zmm1, zword [eax+1]
+	vdivph zmm0, zmm3, zword [eax+64]

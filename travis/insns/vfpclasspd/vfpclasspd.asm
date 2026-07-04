@@ -14,3 +14,9 @@ default rel
 	vfpclasspd k1{k1}, oword [0xf9c], 0xc7
 	vfpclasspd k6{k7}, ymm3, 0x57
 	vfpclasspd k4{k7}, zword [0x176], 0xb3
+	vfpclasspd k2, oword [eax+1], 0x12
+	vfpclasspd k6, oword [eax+64], 0x7b
+	vfpclasspd k1, yword [eax+1], 0x35
+	vfpclasspd k1, yword [eax+64], 0x25
+	vfpclasspd k5, zword [eax+1], 0xa8
+	vfpclasspd k6, zword [eax+64], 0x53

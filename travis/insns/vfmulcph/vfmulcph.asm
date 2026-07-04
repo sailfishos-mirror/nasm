@@ -21,3 +21,9 @@ default rel
 	vfmulcph ymm3{k5}{z}, ymm6, ymm4
 	vfmulcph zmm7{k7}{z}, zmm3, zword [0xa5b]
 	vfmulcph zmm1, zmm0, zmm4, {rn-sae}
+	vfmulcph xmm2, xmm3, oword [eax+1]
+	vfmulcph xmm7, xmm2, oword [eax+64]
+	vfmulcph ymm3, ymm4, yword [eax+1]
+	vfmulcph ymm5, ymm2, yword [eax+64]
+	vfmulcph zmm0, zmm5, zword [eax+1]
+	vfmulcph zmm3, zmm7, zword [eax+64]

@@ -15,3 +15,11 @@ default rel
 	vfmsubps ymm14, ymm8, ymm14, ymm8
 	vfmsubps xmm9, xmm11, xmm12, xmm14
 	vfmsubps ymm12, ymm9, ymm11, ymm15
+	vfmsubps xmm4, xmm1, oword [eax+1], xmm3
+	vfmsubps xmm1, xmm0, oword [eax+64], xmm1
+	vfmsubps ymm2, ymm2, yword [eax+1], ymm3
+	vfmsubps ymm3, ymm2, yword [eax+64], ymm7
+	vfmsubps xmm0, xmm2, xmm6, oword [eax+1]
+	vfmsubps xmm7, xmm5, xmm4, oword [eax+64]
+	vfmsubps ymm3, ymm2, ymm2, yword [eax+1]
+	vfmsubps ymm3, ymm3, ymm3, yword [eax+64]

@@ -4,3 +4,7 @@ default rel
 	packuswb xmm4, xmm1
 	packuswb xmm2, xmm1
 	packuswb xmm8, xmm15
+	packuswb mm6, qword [eax+1]
+	packuswb mm5, qword [eax+64]
+	packuswb xmm7, oword [eax+1]
+	packuswb xmm5, oword [eax+64]

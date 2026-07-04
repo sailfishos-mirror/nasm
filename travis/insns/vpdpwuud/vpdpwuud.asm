@@ -21,3 +21,13 @@ default rel
 	vpdpwuud xmm3{k7}{z}, xmm3, xmm2
 	vpdpwuud ymm7{k1}{z}, ymm6, ymm1
 	vpdpwuud zmm5{k7}{z}, zmm6, zmm0
+	vpdpwuud xmm4, xmm0, oword [eax+1]
+	vpdpwuud xmm3, xmm5, oword [eax+64]
+	vpdpwuud ymm3, ymm7, yword [eax+1]
+	vpdpwuud ymm3, ymm6, yword [eax+64]
+	vpdpwuud xmm0, xmm2, oword [eax+1]
+	vpdpwuud xmm0, xmm1, oword [eax+64]
+	vpdpwuud ymm5, ymm3, yword [eax+1]
+	vpdpwuud ymm4, ymm6, yword [eax+64]
+	vpdpwuud zmm5, zmm5, zword [eax+1]
+	vpdpwuud zmm0, zmm0, zword [eax+64]

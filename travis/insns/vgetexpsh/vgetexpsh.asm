@@ -6,3 +6,5 @@ default rel
 	vgetexpsh xmm1{k1}, xmm0, word [0xb44]
 	vgetexpsh xmm7{k7}{z}, xmm5, xmm7
 	vgetexpsh xmm1, xmm2, xmm3, {sae}
+	vgetexpsh xmm3, xmm2, word [eax+1]
+	vgetexpsh xmm4, xmm2, word [eax+64]

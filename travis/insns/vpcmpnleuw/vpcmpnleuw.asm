@@ -14,3 +14,9 @@ default rel
 	vpcmpnleuw k2{k3}, xmm3, xmm0
 	vpcmpnleuw k2{k4}, ymm3, ymm2
 	vpcmpnleuw k2{k1}, zmm4, zmm2
+	vpcmpnleuw k2, xmm7, oword [eax+1]
+	vpcmpnleuw k7, xmm7, oword [eax+64]
+	vpcmpnleuw k7, ymm3, yword [eax+1]
+	vpcmpnleuw k4, ymm6, yword [eax+64]
+	vpcmpnleuw k1, zmm2, zword [eax+1]
+	vpcmpnleuw k6, zmm7, zword [eax+64]

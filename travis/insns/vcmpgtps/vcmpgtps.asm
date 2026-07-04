@@ -17,3 +17,13 @@ default rel
 	vcmpgtps k7{k5}, ymm4, yword [0x367]
 	vcmpgtps k1{k7}, zmm4, zmm2
 	vcmpgtps k1, zmm3, zmm5, {sae}
+	vcmpgtps xmm0, xmm3, oword [eax+1]
+	vcmpgtps xmm6, xmm7, oword [eax+64]
+	vcmpgtps ymm4, ymm7, yword [eax+1]
+	vcmpgtps ymm7, ymm6, yword [eax+64]
+	vcmpgtps k5, xmm4, oword [eax+1]
+	vcmpgtps k2, xmm3, oword [eax+64]
+	vcmpgtps k6, ymm3, yword [eax+1]
+	vcmpgtps k2, ymm1, yword [eax+64]
+	vcmpgtps k7, zmm2, zword [eax+1]
+	vcmpgtps k5, zmm4, zword [eax+64]

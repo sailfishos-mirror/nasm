@@ -7,3 +7,5 @@ default rel
 	vsqrtsh xmm1{k6}, xmm4, word [0xf04]
 	vsqrtsh xmm6{k5}{z}, xmm4, xmm7
 	vsqrtsh xmm4, xmm7, xmm2, {ru-sae}
+	vsqrtsh xmm2, xmm1, word [eax+1]
+	vsqrtsh xmm5, xmm4, word [eax+64]

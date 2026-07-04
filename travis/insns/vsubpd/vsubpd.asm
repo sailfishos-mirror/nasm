@@ -26,3 +26,13 @@ default rel
 	vsubpd ymm3{k3}{z}, ymm4, ymm7
 	vsubpd zmm0{k1}{z}, zmm1, zmm0
 	vsubpd zmm0, zmm3, zmm1, {rd-sae}
+	vsubpd xmm3, xmm0, oword [eax+1]
+	vsubpd xmm7, xmm2, oword [eax+64]
+	vsubpd ymm7, ymm3, yword [eax+1]
+	vsubpd ymm6, ymm4, yword [eax+64]
+	vsubpd xmm4, xmm7, oword [eax+1]
+	vsubpd xmm4, xmm4, oword [eax+64]
+	vsubpd ymm3, ymm7, yword [eax+1]
+	vsubpd ymm5, ymm0, yword [eax+64]
+	vsubpd zmm0, zmm0, zword [eax+1]
+	vsubpd zmm0, zmm5, zword [eax+64]

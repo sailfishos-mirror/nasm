@@ -25,3 +25,13 @@ default rel
 	vpmaxub xmm7{k4}{z}, xmm7, xmm4
 	vpmaxub ymm4{k5}{z}, ymm0, ymm2
 	vpmaxub zmm7{k7}{z}, zmm1, zmm6
+	vpmaxub xmm5, xmm5, oword [eax+1]
+	vpmaxub xmm3, xmm5, oword [eax+64]
+	vpmaxub ymm1, ymm3, yword [eax+1]
+	vpmaxub ymm3, ymm0, yword [eax+64]
+	vpmaxub xmm6, xmm3, oword [eax+1]
+	vpmaxub xmm4, xmm7, oword [eax+64]
+	vpmaxub ymm5, ymm5, yword [eax+1]
+	vpmaxub ymm3, ymm5, yword [eax+64]
+	vpmaxub zmm7, zmm5, zword [eax+1]
+	vpmaxub zmm2, zmm3, zword [eax+64]

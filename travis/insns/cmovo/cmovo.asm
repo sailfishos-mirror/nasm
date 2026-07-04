@@ -15,3 +15,15 @@ default rel
 	cmovo r31d, r30d
 	cmovo r19, r19
 	cmovo r22w, r25w, r26w
+	cmovo cx, word [eax+1]
+	cmovo ax, word [eax+64]
+	cmovo ebp, dword [eax+1]
+	cmovo esi, dword [eax+64]
+	cmovo rdi, qword [eax+1]
+	cmovo rcx, qword [eax+64]
+	cmovo cx, dx, word [eax+1]
+	cmovo ax, dx, word [eax+64]
+	cmovo ebp, ebx, dword [eax+1]
+	cmovo esi, ecx, dword [eax+64]
+	cmovo rbx, rdx, qword [eax+1]
+	cmovo rdx, rbx, qword [eax+64]

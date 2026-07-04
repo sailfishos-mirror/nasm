@@ -15,3 +15,11 @@ default rel
 	idiv r24w
 	idiv r28d
 	idiv r27
+	idiv byte [eax+1]
+	idiv byte [eax+64]
+	idiv word [eax+1]
+	idiv word [eax+64]
+	idiv dword [eax+1]
+	idiv dword [eax+64]
+	idiv qword [eax+1]
+	idiv qword [eax+64]

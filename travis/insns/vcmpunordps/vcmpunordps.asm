@@ -17,3 +17,13 @@ default rel
 	vcmpunordps k5{k5}, ymm1, ymm6
 	vcmpunordps k5{k1}, zmm0, zmm2
 	vcmpunordps k6, zmm1, zmm2, {sae}
+	vcmpunordps xmm7, xmm3, oword [eax+1]
+	vcmpunordps xmm2, xmm6, oword [eax+64]
+	vcmpunordps ymm0, ymm2, yword [eax+1]
+	vcmpunordps ymm0, ymm1, yword [eax+64]
+	vcmpunordps k5, xmm0, oword [eax+1]
+	vcmpunordps k3, xmm6, oword [eax+64]
+	vcmpunordps k4, ymm4, yword [eax+1]
+	vcmpunordps k7, ymm5, yword [eax+64]
+	vcmpunordps k2, zmm7, zword [eax+1]
+	vcmpunordps k7, zmm5, zword [eax+64]

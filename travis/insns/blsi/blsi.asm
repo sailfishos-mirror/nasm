@@ -7,3 +7,7 @@ default rel
 	blsi r8, r10
 	blsi r20d, r31d
 	blsi r19, r31
+	blsi ebp, dword [eax+1]
+	blsi eax, dword [eax+64]
+	blsi rcx, qword [eax+1]
+	blsi rbx, qword [eax+64]

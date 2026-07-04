@@ -17,3 +17,9 @@ default rel
 	vreducepd xmm3{k5}{z}, xmm6, 0xbb
 	vreducepd ymm6{k2}{z}, yword [0x42e], 0xcc
 	vreducepd zmm7{k5}{z}, zmm1, 0x89
+	vreducepd xmm0, oword [eax+1], 0x9c
+	vreducepd xmm1, oword [eax+64], 0x5a
+	vreducepd ymm2, yword [eax+1], 0x4f
+	vreducepd ymm3, yword [eax+64], 0xcc
+	vreducepd zmm0, zword [eax+1], 0x48
+	vreducepd zmm2, zword [eax+64], 0xc5

@@ -11,3 +11,11 @@ default rel
 	vmovdqa xmm8, xmm14
 	vmovdqa ymm10, ymm12
 	vmovdqa ymm14, ymm9
+	vmovdqa xmm3, oword [eax+1]
+	vmovdqa xmm0, oword [eax+64]
+	vmovdqa oword [eax+1], xmm3
+	vmovdqa oword [eax+64], xmm1
+	vmovdqa ymm7, yword [eax+1]
+	vmovdqa ymm1, yword [eax+64]
+	vmovdqa yword [eax+1], ymm6
+	vmovdqa yword [eax+64], ymm4

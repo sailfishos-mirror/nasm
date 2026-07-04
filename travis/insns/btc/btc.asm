@@ -15,3 +15,15 @@ default rel
 	btc r20d, r16d
 	btc r17, r22
 	btc r29w, 0x66
+	btc word [eax+1], bx
+	btc word [eax+64], cx
+	btc dword [eax+1], edx
+	btc dword [eax+64], ecx
+	btc qword [eax+1], rbx
+	btc qword [eax+64], rbp
+	btc word [eax+1], 0xbd
+	btc word [eax+64], 0x1b
+	btc dword [eax+1], 0xde
+	btc dword [eax+64], 0xe4
+	btc qword [eax+1], 0x81
+	btc qword [eax+64], 0x6

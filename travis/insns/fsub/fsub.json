@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FSUB",
   "id": "fsub16",
   "format": "bin",
-  "source": "fsub.asm",
+  "source": "fsub_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fsub/",
   "target": [
    { "output": "fsub.bin16", "match": "fsub.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FSUB",
   "id": "fsub32",
   "format": "bin",
-  "source": "fsub.asm",
+  "source": "fsub_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fsub/",
   "target": [
    { "output": "fsub.bin32", "match": "fsub.bin32.t" }

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFRSQRTV",
   "id": "pfrsqrtv16",
   "format": "bin",
-  "source": "pfrsqrtv.asm",
+  "source": "pfrsqrtv_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrsqrtv/",
   "target": [
    { "output": "pfrsqrtv.bin16", "match": "pfrsqrtv.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFRSQRTV",
   "id": "pfrsqrtv32",
   "format": "bin",
-  "source": "pfrsqrtv.asm",
+  "source": "pfrsqrtv_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrsqrtv/",
   "target": [
    { "output": "pfrsqrtv.bin32", "match": "pfrsqrtv.bin32.t" }

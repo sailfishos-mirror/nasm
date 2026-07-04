@@ -22,3 +22,13 @@ default rel
 	vfmsubadd231pd ymm5{k7}{z}, ymm7, ymm0
 	vfmsubadd231pd zmm6{k1}{z}, zmm1, zmm1
 	vfmsubadd231pd zmm6, zmm0, zmm7, {rn-sae}
+	vfmsubadd231pd xmm3, xmm3, oword [eax+1]
+	vfmsubadd231pd xmm1, xmm4, oword [eax+64]
+	vfmsubadd231pd ymm7, ymm7, yword [eax+1]
+	vfmsubadd231pd ymm0, ymm1, yword [eax+64]
+	vfmsubadd231pd xmm7, xmm4, oword [eax+1]
+	vfmsubadd231pd xmm6, xmm0, oword [eax+64]
+	vfmsubadd231pd ymm5, ymm2, yword [eax+1]
+	vfmsubadd231pd ymm7, ymm6, yword [eax+64]
+	vfmsubadd231pd zmm1, zmm2, zword [eax+1]
+	vfmsubadd231pd zmm0, zmm5, zword [eax+64]

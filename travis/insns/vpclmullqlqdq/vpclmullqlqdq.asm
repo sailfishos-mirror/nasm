@@ -14,3 +14,9 @@ default rel
 	vpclmullqlqdq xmm21, xmm25, xmm29
 	vpclmullqlqdq ymm26, ymm29, ymm30
 	vpclmullqlqdq zmm31, zmm16, zmm19
+	vpclmullqlqdq xmm1, xmm5, oword [eax+1]
+	vpclmullqlqdq xmm4, xmm3, oword [eax+64]
+	vpclmullqlqdq ymm7, ymm3, yword [eax+1]
+	vpclmullqlqdq ymm7, ymm6, yword [eax+64]
+	vpclmullqlqdq zmm3, zmm3, zword [eax+1]
+	vpclmullqlqdq zmm4, zmm7, zword [eax+64]

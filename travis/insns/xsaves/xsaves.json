@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for XSAVES",
   "id": "xsaves16",
   "format": "bin",
-  "source": "xsaves.asm",
+  "source": "xsaves_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xsaves/",
   "target": [
    { "output": "xsaves.bin16", "match": "xsaves.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for XSAVES",
   "id": "xsaves32",
   "format": "bin",
-  "source": "xsaves.asm",
+  "source": "xsaves_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/xsaves/",
   "target": [
    { "output": "xsaves.bin32", "match": "xsaves.bin32.t" }

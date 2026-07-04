@@ -11,3 +11,5 @@ default rel
 	setg r25b
 	setg r30
 	setg r25d
+	setg byte [eax+1]
+	setg byte [eax+64]

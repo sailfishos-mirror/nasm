@@ -15,3 +15,15 @@ default rel
 	cmovnae r21d, r18d
 	cmovnae r21, r22
 	cmovnae r23w, r17w, r17w
+	cmovnae dx, word [eax+1]
+	cmovnae bp, word [eax+64]
+	cmovnae ecx, dword [eax+1]
+	cmovnae ebx, dword [eax+64]
+	cmovnae rcx, qword [eax+1]
+	cmovnae rax, qword [eax+64]
+	cmovnae bp, si, word [eax+1]
+	cmovnae bx, ax, word [eax+64]
+	cmovnae esi, ebx, dword [eax+1]
+	cmovnae edi, esi, dword [eax+64]
+	cmovnae rsi, rcx, qword [eax+1]
+	cmovnae rcx, rbx, qword [eax+64]

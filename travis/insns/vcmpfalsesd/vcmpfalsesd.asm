@@ -8,3 +8,7 @@ default rel
 	vcmpfalsesd k1, xmm15, xmm14
 	vcmpfalsesd k6{k4}, xmm0, qword [0xc80]
 	vcmpfalsesd k2, xmm3, xmm6, {sae}
+	vcmpfalsesd xmm4, xmm2, qword [eax+1]
+	vcmpfalsesd xmm7, xmm3, qword [eax+64]
+	vcmpfalsesd k6, xmm2, qword [eax+1]
+	vcmpfalsesd k4, xmm2, qword [eax+64]

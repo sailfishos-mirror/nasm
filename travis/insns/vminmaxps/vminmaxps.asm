@@ -17,3 +17,9 @@ default rel
 	vminmaxps xmm7{k3}{z}, xmm1, xmm7, 0x21
 	vminmaxps ymm5{k4}{z}, ymm0, ymm3, 0xb6
 	vminmaxps zmm4{k4}{z}, zmm5, zword [0x4e6], 0xcd
+	vminmaxps xmm6, xmm2, oword [eax+1], 0xc0
+	vminmaxps xmm1, xmm7, oword [eax+64], 0xe9
+	vminmaxps ymm5, ymm6, yword [eax+1], 0x8f
+	vminmaxps ymm6, ymm3, yword [eax+64], 0xe0
+	vminmaxps zmm0, zmm6, zword [eax+1], 0xee
+	vminmaxps zmm1, zmm6, zword [eax+64], 0xe7

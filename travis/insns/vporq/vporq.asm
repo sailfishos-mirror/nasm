@@ -20,3 +20,9 @@ default rel
 	vporq xmm7{k6}{z}, xmm2, xmm4
 	vporq ymm7{k2}{z}, ymm5, yword [0xfb9]
 	vporq zmm4{k6}{z}, zmm1, zmm6
+	vporq xmm6, xmm3, oword [eax+1]
+	vporq xmm7, xmm2, oword [eax+64]
+	vporq ymm1, ymm4, yword [eax+1]
+	vporq ymm4, ymm0, yword [eax+64]
+	vporq zmm4, zmm1, zword [eax+1]
+	vporq zmm7, zmm6, zword [eax+64]

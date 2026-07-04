@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for VMPTRLD",
   "id": "vmptrld16",
   "format": "bin",
-  "source": "vmptrld.asm",
+  "source": "vmptrld_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmptrld/",
   "target": [
    { "output": "vmptrld.bin16", "match": "vmptrld.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for VMPTRLD",
   "id": "vmptrld32",
   "format": "bin",
-  "source": "vmptrld.asm",
+  "source": "vmptrld_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmptrld/",
   "target": [
    { "output": "vmptrld.bin32", "match": "vmptrld.bin32.t" }

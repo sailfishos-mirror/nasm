@@ -10,3 +10,7 @@ default rel
 	vfnmsub231ss xmm1{k1}, xmm1, dword [0x4ce]
 	vfnmsub231ss xmm3{k1}{z}, xmm1, xmm7
 	vfnmsub231ss xmm1, xmm4, xmm7, {rz-sae}
+	vfnmsub231ss xmm0, xmm5, dword [eax+1]
+	vfnmsub231ss xmm3, xmm4, dword [eax+64]
+	vfnmsub231ss xmm4, xmm5, dword [eax+1]
+	vfnmsub231ss xmm2, xmm3, dword [eax+64]

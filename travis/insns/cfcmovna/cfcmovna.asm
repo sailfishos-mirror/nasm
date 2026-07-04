@@ -15,3 +15,21 @@ default rel
 	cfcmovna r16d, r17d
 	cfcmovna r23, r20
 	cfcmovna r25w, r21w
+	cfcmovna word [eax+1], cx
+	cfcmovna word [eax+64], dx
+	cfcmovna dword [eax+1], edx
+	cfcmovna dword [eax+64], ebx
+	cfcmovna qword [eax+1], rdi
+	cfcmovna qword [eax+64], rax
+	cfcmovna di, word [eax+1]
+	cfcmovna bp, word [eax+64]
+	cfcmovna ecx, dword [eax+1]
+	cfcmovna ebp, dword [eax+64]
+	cfcmovna rsi, qword [eax+1]
+	cfcmovna rbp, qword [eax+64]
+	cfcmovna bp, si, word [eax+1]
+	cfcmovna di, bp, word [eax+64]
+	cfcmovna edx, edx, dword [eax+1]
+	cfcmovna ecx, ebp, dword [eax+64]
+	cfcmovna rbx, rdx, qword [eax+1]
+	cfcmovna rdi, rbp, qword [eax+64]

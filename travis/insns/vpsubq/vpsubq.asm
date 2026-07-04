@@ -25,3 +25,13 @@ default rel
 	vpsubq xmm1{k6}{z}, xmm3, oword [0xa04]
 	vpsubq ymm3{k6}{z}, ymm6, ymm0
 	vpsubq zmm7{k6}{z}, zmm5, zmm0
+	vpsubq xmm5, xmm4, oword [eax+1]
+	vpsubq xmm7, xmm3, oword [eax+64]
+	vpsubq ymm3, ymm6, yword [eax+1]
+	vpsubq ymm1, ymm2, yword [eax+64]
+	vpsubq xmm4, xmm2, oword [eax+1]
+	vpsubq xmm4, xmm4, oword [eax+64]
+	vpsubq ymm2, ymm5, yword [eax+1]
+	vpsubq ymm0, ymm0, yword [eax+64]
+	vpsubq zmm2, zmm7, zword [eax+1]
+	vpsubq zmm5, zmm2, zword [eax+64]

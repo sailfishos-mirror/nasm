@@ -11,3 +11,5 @@ default rel
 	setno r18b
 	setno r22
 	setno r21d
+	setno byte [eax+1]
+	setno byte [eax+64]

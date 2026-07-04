@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FDIV",
   "id": "fdiv16",
   "format": "bin",
-  "source": "fdiv.asm",
+  "source": "fdiv_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fdiv/",
   "target": [
    { "output": "fdiv.bin16", "match": "fdiv.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FDIV",
   "id": "fdiv32",
   "format": "bin",
-  "source": "fdiv.asm",
+  "source": "fdiv_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fdiv/",
   "target": [
    { "output": "fdiv.bin32", "match": "fdiv.bin32.t" }

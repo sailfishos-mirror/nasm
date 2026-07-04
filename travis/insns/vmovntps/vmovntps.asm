@@ -11,3 +11,9 @@ default rel
 	vmovntps oword [0xd32], xmm22
 	vmovntps yword [0x9b4], ymm28
 	vmovntps zword [0x826], zmm26
+	vmovntps oword [eax+1], xmm1
+	vmovntps oword [eax+64], xmm7
+	vmovntps yword [eax+1], ymm4
+	vmovntps yword [eax+64], ymm4
+	vmovntps zword [eax+1], zmm0
+	vmovntps zword [eax+64], zmm5

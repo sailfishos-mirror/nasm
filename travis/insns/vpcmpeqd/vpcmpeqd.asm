@@ -16,3 +16,13 @@ default rel
 	vpcmpeqd k4{k4}, xmm5, xmm5
 	vpcmpeqd k4{k3}, ymm1, yword [0x23b]
 	vpcmpeqd k5{k7}, zmm4, zword [0x843]
+	vpcmpeqd xmm2, xmm5, oword [eax+1]
+	vpcmpeqd xmm0, xmm1, oword [eax+64]
+	vpcmpeqd ymm4, ymm1, yword [eax+1]
+	vpcmpeqd ymm4, ymm7, yword [eax+64]
+	vpcmpeqd k7, xmm1, oword [eax+1]
+	vpcmpeqd k5, xmm0, oword [eax+64]
+	vpcmpeqd k4, ymm5, yword [eax+1]
+	vpcmpeqd k5, ymm3, yword [eax+64]
+	vpcmpeqd k2, zmm2, zword [eax+1]
+	vpcmpeqd k1, zmm3, zword [eax+64]

@@ -13,3 +13,9 @@ default rel
 	ud1 r18w, r28w
 	ud1 r21d, r23d
 	ud1 r22, r22
+	ud1 si, word [eax+1]
+	ud1 ax, word [eax+64]
+	ud1 edx, dword [eax+1]
+	ud1 ebx, dword [eax+64]
+	ud1 rax, qword [eax+1]
+	ud1 rbp, qword [eax+64]

@@ -14,3 +14,9 @@ default rel
 	vpcmpleq k1{k1}, xmm0, xmm3
 	vpcmpleq k7{k5}, ymm5, yword [0x54d]
 	vpcmpleq k6{k7}, zmm7, zword [0x137]
+	vpcmpleq k3, xmm3, oword [eax+1]
+	vpcmpleq k4, xmm1, oword [eax+64]
+	vpcmpleq k6, ymm6, yword [eax+1]
+	vpcmpleq k5, ymm2, yword [eax+64]
+	vpcmpleq k7, zmm7, zword [eax+1]
+	vpcmpleq k4, zmm2, zword [eax+64]

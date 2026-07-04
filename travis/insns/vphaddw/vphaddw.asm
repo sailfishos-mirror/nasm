@@ -7,3 +7,7 @@ default rel
 	vphaddw ymm0, ymm7, ymm3
 	vphaddw xmm8, xmm15, xmm13
 	vphaddw ymm13, ymm12, ymm10
+	vphaddw xmm1, xmm0, oword [eax+1]
+	vphaddw xmm2, xmm6, oword [eax+64]
+	vphaddw ymm1, ymm0, yword [eax+1]
+	vphaddw ymm0, ymm1, yword [eax+64]

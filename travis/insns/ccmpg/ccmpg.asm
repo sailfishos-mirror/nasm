@@ -15,3 +15,33 @@ default rel
 	ccmpg 6, r30w, r21w
 	ccmpg 9, r31d, r24d
 	ccmpg 1, r28, r27
+	ccmpg 3, byte [eax+1], bl
+	ccmpg 9, byte [eax+64], dl
+	ccmpg 5, word [eax+1], cx
+	ccmpg 8, word [eax+64], di
+	ccmpg 0, dword [eax+1], eax
+	ccmpg 3, dword [eax+64], ebp
+	ccmpg 13, qword [eax+1], rdx
+	ccmpg 3, qword [eax+64], rdi
+	ccmpg 14, cl, byte [eax+1]
+	ccmpg 4, al, byte [eax+64]
+	ccmpg 1, bp, word [eax+1]
+	ccmpg 2, cx, word [eax+64]
+	ccmpg 10, ecx, dword [eax+1]
+	ccmpg 12, eax, dword [eax+64]
+	ccmpg 1, rax, qword [eax+1]
+	ccmpg 2, rsi, qword [eax+64]
+	ccmpg 2, word [eax+1], 0
+	ccmpg 8, word [eax+64], 70
+	ccmpg 15, dword [eax+1], 89
+	ccmpg 4, dword [eax+64], -32
+	ccmpg 5, qword [eax+1], 87
+	ccmpg 8, qword [eax+64], 0
+	ccmpg 4, byte [eax+1], 0xf1
+	ccmpg 15, byte [eax+64], 0x2
+	ccmpg 2, word [eax+1], 0x8202
+	ccmpg 4, word [eax+64], 0xf90b
+	ccmpg 13, dword [eax+1], 0x361f4f33
+	ccmpg 8, dword [eax+64], 0x3aa3b19a
+	ccmpg 7, qword [eax+1], 429263645
+	ccmpg 9, qword [eax+64], 220487927

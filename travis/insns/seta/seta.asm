@@ -11,3 +11,5 @@ default rel
 	seta r24b
 	seta r28
 	seta r18d
+	seta byte [eax+1]
+	seta byte [eax+64]

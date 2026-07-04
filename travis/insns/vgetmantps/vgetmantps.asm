@@ -17,3 +17,9 @@ default rel
 	vgetmantps xmm2{k2}{z}, oword [0xb7a], 0xed
 	vgetmantps ymm3{k2}{z}, ymm1, 0xb5
 	vgetmantps zmm2{k7}{z}, zmm0, 0xda
+	vgetmantps xmm3, oword [eax+1], 0x73
+	vgetmantps xmm3, oword [eax+64], 0x20
+	vgetmantps ymm5, yword [eax+1], 0x25
+	vgetmantps ymm4, yword [eax+64], 0x73
+	vgetmantps zmm0, zword [eax+1], 0x3c
+	vgetmantps zmm7, zword [eax+64], 0x9a

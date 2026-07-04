@@ -10,3 +10,7 @@ default rel
 	vfmadd132ss xmm6{k3}, xmm3, xmm3
 	vfmadd132ss xmm5{k6}{z}, xmm1, xmm6
 	vfmadd132ss xmm5, xmm3, xmm1, {ru-sae}
+	vfmadd132ss xmm6, xmm1, dword [eax+1]
+	vfmadd132ss xmm7, xmm5, dword [eax+64]
+	vfmadd132ss xmm4, xmm4, dword [eax+1]
+	vfmadd132ss xmm5, xmm3, dword [eax+64]

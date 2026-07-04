@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFCMPGE",
   "id": "pfcmpge16",
   "format": "bin",
-  "source": "pfcmpge.asm",
+  "source": "pfcmpge_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfcmpge/",
   "target": [
    { "output": "pfcmpge.bin16", "match": "pfcmpge.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFCMPGE",
   "id": "pfcmpge32",
   "format": "bin",
-  "source": "pfcmpge.asm",
+  "source": "pfcmpge_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfcmpge/",
   "target": [
    { "output": "pfcmpge.bin32", "match": "pfcmpge.bin32.t" }

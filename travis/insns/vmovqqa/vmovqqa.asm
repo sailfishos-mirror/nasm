@@ -5,3 +5,7 @@ default rel
 	vmovqqa ymm0, ymm7
 	vmovqqa ymm15, ymm10
 	vmovqqa ymm8, ymm11
+	vmovqqa ymm7, yword [eax+1]
+	vmovqqa ymm3, yword [eax+64]
+	vmovqqa yword [eax+1], ymm1
+	vmovqqa yword [eax+64], ymm3

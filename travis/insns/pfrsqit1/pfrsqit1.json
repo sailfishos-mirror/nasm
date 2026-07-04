@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFRSQIT1",
   "id": "pfrsqit116",
   "format": "bin",
-  "source": "pfrsqit1.asm",
+  "source": "pfrsqit1_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrsqit1/",
   "target": [
    { "output": "pfrsqit1.bin16", "match": "pfrsqit1.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFRSQIT1",
   "id": "pfrsqit132",
   "format": "bin",
-  "source": "pfrsqit1.asm",
+  "source": "pfrsqit1_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfrsqit1/",
   "target": [
    { "output": "pfrsqit1.bin32", "match": "pfrsqit1.bin32.t" }

@@ -11,3 +11,5 @@ default rel
 	setbzu r23
 	setbzu r17d
 	setbzu r24b
+	setbzu byte [eax+1]
+	setbzu byte [eax+64]

@@ -17,3 +17,9 @@ default rel
 	vfmadd213bf16 xmm5{k2}{z}, xmm0, xmm6
 	vfmadd213bf16 ymm1{k2}{z}, ymm7, ymm0
 	vfmadd213bf16 zmm2{k4}{z}, zmm6, zmm6
+	vfmadd213bf16 xmm7, xmm0, oword [eax+1]
+	vfmadd213bf16 xmm0, xmm1, oword [eax+64]
+	vfmadd213bf16 ymm4, ymm7, yword [eax+1]
+	vfmadd213bf16 ymm5, ymm1, yword [eax+64]
+	vfmadd213bf16 zmm7, zmm3, zword [eax+1]
+	vfmadd213bf16 zmm1, zmm6, zword [eax+64]

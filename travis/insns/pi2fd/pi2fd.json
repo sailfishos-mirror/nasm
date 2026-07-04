@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PI2FD",
   "id": "pi2fd16",
   "format": "bin",
-  "source": "pi2fd.asm",
+  "source": "pi2fd_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pi2fd/",
   "target": [
    { "output": "pi2fd.bin16", "match": "pi2fd.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PI2FD",
   "id": "pi2fd32",
   "format": "bin",
-  "source": "pi2fd.asm",
+  "source": "pi2fd_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pi2fd/",
   "target": [
    { "output": "pi2fd.bin32", "match": "pi2fd.bin32.t" }

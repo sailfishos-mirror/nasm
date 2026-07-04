@@ -11,3 +11,5 @@ default rel
 	setnaezu r18
 	setnaezu r21d
 	setnaezu r17b
+	setnaezu byte [eax+1]
+	setnaezu byte [eax+64]

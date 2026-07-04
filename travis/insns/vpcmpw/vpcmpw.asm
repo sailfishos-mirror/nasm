@@ -14,3 +14,9 @@ default rel
 	vpcmpw k6{k2}, xmm3, xmm5, 0xd4
 	vpcmpw k4{k1}, ymm3, yword [0xc02], 0x18
 	vpcmpw k5{k1}, zmm2, zword [0xdfe], 0x2b
+	vpcmpw k2, xmm2, oword [eax+1], 0xb5
+	vpcmpw k1, xmm2, oword [eax+64], 0x92
+	vpcmpw k6, ymm2, yword [eax+1], 0x24
+	vpcmpw k2, ymm1, yword [eax+64], 0xc2
+	vpcmpw k3, zmm0, zword [eax+1], 0x57
+	vpcmpw k2, zmm3, zword [eax+64], 0xef

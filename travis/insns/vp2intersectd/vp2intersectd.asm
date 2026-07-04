@@ -11,3 +11,9 @@ default rel
 	vp2intersectd k4, xmm29, xmm25
 	vp2intersectd k4, ymm31, ymm29
 	vp2intersectd k3, zmm18, zmm21
+	vp2intersectd k3, xmm5, oword [eax+1]
+	vp2intersectd k1, xmm6, oword [eax+64]
+	vp2intersectd k7, ymm3, yword [eax+1]
+	vp2intersectd k2, ymm7, yword [eax+64]
+	vp2intersectd k7, zmm6, zword [eax+1]
+	vp2intersectd k3, zmm3, zword [eax+64]

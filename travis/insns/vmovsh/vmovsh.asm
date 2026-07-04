@@ -15,3 +15,7 @@ default rel
 	vmovsh xmm3{k2}, word [0x599]
 	vmovsh word [0x28a]{k6}, xmm4
 	vmovsh xmm7{k3}, xmm7, xmm5
+	vmovsh xmm5, word [eax+1]
+	vmovsh xmm5, word [eax+64]
+	vmovsh word [eax+1], xmm0
+	vmovsh word [eax+64], xmm3

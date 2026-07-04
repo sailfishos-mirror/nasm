@@ -25,3 +25,13 @@ default rel
 	vshufpd xmm6{k1}{z}, xmm2, oword [0x553], 0xd6
 	vshufpd ymm1{k5}{z}, ymm5, yword [0xf94], 0xa6
 	vshufpd zmm4{k7}{z}, zmm5, zword [0xdf2], 0xe2
+	vshufpd xmm6, xmm3, oword [eax+1], 0x75
+	vshufpd xmm1, xmm6, oword [eax+64], 0x1e
+	vshufpd ymm3, ymm1, yword [eax+1], 0xdb
+	vshufpd ymm1, ymm5, yword [eax+64], 0x4
+	vshufpd xmm4, xmm0, oword [eax+1], 0xe9
+	vshufpd xmm3, xmm1, oword [eax+64], 0x73
+	vshufpd ymm5, ymm3, yword [eax+1], 0x87
+	vshufpd ymm5, ymm4, yword [eax+64], 0x4b
+	vshufpd zmm6, zmm0, zword [eax+1], 0xc8
+	vshufpd zmm1, zmm7, zword [eax+64], 0xa6

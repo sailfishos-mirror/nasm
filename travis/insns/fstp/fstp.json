@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FSTP",
   "id": "fstp16",
   "format": "bin",
-  "source": "fstp.asm",
+  "source": "fstp_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fstp/",
   "target": [
    { "output": "fstp.bin16", "match": "fstp.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FSTP",
   "id": "fstp32",
   "format": "bin",
-  "source": "fstp.asm",
+  "source": "fstp_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fstp/",
   "target": [
    { "output": "fstp.bin32", "match": "fstp.bin32.t" }

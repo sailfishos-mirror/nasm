@@ -11,3 +11,5 @@ default rel
 	setae r21b
 	setae r16
 	setae r18d
+	setae byte [eax+1]
+	setae byte [eax+64]

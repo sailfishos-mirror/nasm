@@ -7,3 +7,7 @@ default rel
 	fadd st3
 	fadd st2
 	fadd st2
+	fadd dword [eax+1]
+	fadd dword [eax+64]
+	fadd qword [eax+1]
+	fadd qword [eax+64]

@@ -5,3 +5,7 @@ default rel
 	vfmsubadd312ps ymm3, ymm0, yword [0x64b]
 	vfmsubadd312ps xmm8, xmm8, xmm8
 	vfmsubadd312ps ymm12, ymm10, ymm10
+	vfmsubadd312ps xmm5, xmm3, oword [eax+1]
+	vfmsubadd312ps xmm1, xmm7, oword [eax+64]
+	vfmsubadd312ps ymm2, ymm0, yword [eax+1]
+	vfmsubadd312ps ymm3, ymm0, yword [eax+64]

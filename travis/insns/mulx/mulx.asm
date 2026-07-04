@@ -9,3 +9,7 @@ default rel
 	mulx r8, r9, r14
 	mulx r19d, r20d, r17d
 	mulx r22, r18, r21
+	mulx eax, ebp, dword [eax+1]
+	mulx esi, edi, dword [eax+64]
+	mulx rbx, rdi, qword [eax+1]
+	mulx rbp, rsi, qword [eax+64]

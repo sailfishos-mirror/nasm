@@ -15,3 +15,33 @@ default rel
 	ccmps 4, r19w, r30w
 	ccmps 8, r27d, r30d
 	ccmps 1, r16, r17
+	ccmps 3, byte [eax+1], dl
+	ccmps 2, byte [eax+64], dl
+	ccmps 12, word [eax+1], di
+	ccmps 5, word [eax+64], bp
+	ccmps 11, dword [eax+1], ecx
+	ccmps 11, dword [eax+64], edx
+	ccmps 6, qword [eax+1], rcx
+	ccmps 1, qword [eax+64], rdi
+	ccmps 5, bl, byte [eax+1]
+	ccmps 5, al, byte [eax+64]
+	ccmps 13, di, word [eax+1]
+	ccmps 4, bx, word [eax+64]
+	ccmps 12, esi, dword [eax+1]
+	ccmps 11, esi, dword [eax+64]
+	ccmps 1, rax, qword [eax+1]
+	ccmps 2, rsi, qword [eax+64]
+	ccmps 13, word [eax+1], -104
+	ccmps 10, word [eax+64], -31
+	ccmps 8, dword [eax+1], 106
+	ccmps 11, dword [eax+64], -108
+	ccmps 3, qword [eax+1], -122
+	ccmps 8, qword [eax+64], 38
+	ccmps 11, byte [eax+1], 0x64
+	ccmps 4, byte [eax+64], 0x6e
+	ccmps 9, word [eax+1], 0xafd1
+	ccmps 5, word [eax+64], 0xc49a
+	ccmps 12, dword [eax+1], 0x2838c5ab
+	ccmps 8, dword [eax+64], 0x27d5fd
+	ccmps 10, qword [eax+1], -340874139
+	ccmps 6, qword [eax+64], 392403653

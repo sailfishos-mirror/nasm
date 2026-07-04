@@ -26,3 +26,13 @@ default rel
 	vminpd ymm0{k1}{z}, ymm7, ymm7
 	vminpd zmm1{k1}{z}, zmm1, zmm7
 	vminpd zmm3, zmm5, zmm7, {sae}
+	vminpd xmm4, xmm7, oword [eax+1]
+	vminpd xmm2, xmm3, oword [eax+64]
+	vminpd ymm5, ymm6, yword [eax+1]
+	vminpd ymm3, ymm2, yword [eax+64]
+	vminpd xmm0, xmm2, oword [eax+1]
+	vminpd xmm5, xmm4, oword [eax+64]
+	vminpd ymm1, ymm2, yword [eax+1]
+	vminpd ymm4, ymm3, yword [eax+64]
+	vminpd zmm3, zmm5, zword [eax+1]
+	vminpd zmm6, zmm5, zword [eax+64]

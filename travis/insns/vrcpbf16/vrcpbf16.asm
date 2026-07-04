@@ -17,3 +17,9 @@ default rel
 	vrcpbf16 xmm2{k1}{z}, oword [0x8d5]
 	vrcpbf16 ymm3{k3}{z}, ymm0
 	vrcpbf16 zmm2{k6}{z}, zmm1
+	vrcpbf16 xmm1, oword [eax+1]
+	vrcpbf16 xmm6, oword [eax+64]
+	vrcpbf16 ymm4, yword [eax+1]
+	vrcpbf16 ymm7, yword [eax+64]
+	vrcpbf16 zmm1, zword [eax+1]
+	vrcpbf16 zmm4, zword [eax+64]

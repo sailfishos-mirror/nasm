@@ -7,3 +7,5 @@ default rel
 	vcvtsd2sh xmm7{k1}, xmm2, xmm6
 	vcvtsd2sh xmm6{k3}{z}, xmm6, xmm4
 	vcvtsd2sh xmm6, xmm6, xmm1, {ru-sae}
+	vcvtsd2sh xmm6, xmm2, qword [eax+1]
+	vcvtsd2sh xmm3, xmm4, qword [eax+64]

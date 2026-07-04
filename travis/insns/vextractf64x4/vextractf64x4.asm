@@ -9,3 +9,5 @@ default rel
 	vextractf64x4 yword [0x5e1], zmm17, 0xc9
 	vextractf64x4 ymm5{k7}, zmm6, 0x97
 	vextractf64x4 yword [0xea5]{k7}, zmm5, 0x3
+	vextractf64x4 yword [eax+1], zmm0, 0x86
+	vextractf64x4 yword [eax+64], zmm1, 0x1a

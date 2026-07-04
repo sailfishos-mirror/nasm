@@ -15,3 +15,33 @@ default rel
 	ccmpz 15, r26w, r26w
 	ccmpz 10, r22d, r19d
 	ccmpz 12, r31, r27
+	ccmpz 10, byte [eax+1], dl
+	ccmpz 14, byte [eax+64], dl
+	ccmpz 5, word [eax+1], bp
+	ccmpz 10, word [eax+64], di
+	ccmpz 8, dword [eax+1], ecx
+	ccmpz 6, dword [eax+64], ebx
+	ccmpz 13, qword [eax+1], rax
+	ccmpz 10, qword [eax+64], rsi
+	ccmpz 12, cl, byte [eax+1]
+	ccmpz 1, dl, byte [eax+64]
+	ccmpz 7, bx, word [eax+1]
+	ccmpz 1, ax, word [eax+64]
+	ccmpz 13, edx, dword [eax+1]
+	ccmpz 8, ebx, dword [eax+64]
+	ccmpz 3, rdx, qword [eax+1]
+	ccmpz 0, rax, qword [eax+64]
+	ccmpz 6, word [eax+1], 125
+	ccmpz 10, word [eax+64], -16
+	ccmpz 9, dword [eax+1], -112
+	ccmpz 4, dword [eax+64], 19
+	ccmpz 14, qword [eax+1], 87
+	ccmpz 5, qword [eax+64], 69
+	ccmpz 10, byte [eax+1], 0xe1
+	ccmpz 13, byte [eax+64], 0xcc
+	ccmpz 14, word [eax+1], 0x4dac
+	ccmpz 4, word [eax+64], 0x94bf
+	ccmpz 10, dword [eax+1], 0x13fdaedf
+	ccmpz 8, dword [eax+64], 0x12e904be
+	ccmpz 15, qword [eax+1], -233178741
+	ccmpz 2, qword [eax+64], -128458952

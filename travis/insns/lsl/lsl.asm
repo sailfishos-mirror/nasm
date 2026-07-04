@@ -11,3 +11,9 @@ default rel
 	lsl r28w, r28w
 	lsl r31d, r31w
 	lsl r29, r29w
+	lsl cx, word [eax+1]
+	lsl si, word [eax+64]
+	lsl edi, word [eax+1]
+	lsl edx, word [eax+64]
+	lsl rax, word [eax+1]
+	lsl rbx, word [eax+64]

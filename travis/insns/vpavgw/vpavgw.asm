@@ -25,3 +25,13 @@ default rel
 	vpavgw xmm3{k1}{z}, xmm6, oword [0xf5d]
 	vpavgw ymm0{k4}{z}, ymm2, ymm7
 	vpavgw zmm7{k5}{z}, zmm1, zword [0x312]
+	vpavgw xmm1, xmm4, oword [eax+1]
+	vpavgw xmm1, xmm4, oword [eax+64]
+	vpavgw ymm3, ymm6, yword [eax+1]
+	vpavgw ymm7, ymm0, yword [eax+64]
+	vpavgw xmm5, xmm2, oword [eax+1]
+	vpavgw xmm2, xmm2, oword [eax+64]
+	vpavgw ymm0, ymm1, yword [eax+1]
+	vpavgw ymm0, ymm2, yword [eax+64]
+	vpavgw zmm2, zmm1, zword [eax+1]
+	vpavgw zmm3, zmm3, zword [eax+64]

@@ -8,3 +8,7 @@ default rel
 	vcmpfalse_oqss k5, xmm11, xmm11
 	vcmpfalse_oqss k3{k4}, xmm2, xmm4
 	vcmpfalse_oqss k2, xmm4, xmm6, {sae}
+	vcmpfalse_oqss xmm1, xmm2, qword [eax+1]
+	vcmpfalse_oqss xmm4, xmm2, qword [eax+64]
+	vcmpfalse_oqss k2, xmm6, dword [eax+1]
+	vcmpfalse_oqss k3, xmm2, dword [eax+64]

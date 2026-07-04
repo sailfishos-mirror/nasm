@@ -12,3 +12,7 @@ default rel
 	vsubss xmm3{k6}, xmm1, xmm5
 	vsubss xmm5{k5}{z}, xmm0, dword [0x40c]
 	vsubss xmm3, xmm5, xmm4, {ru-sae}
+	vsubss xmm3, xmm3, dword [eax+1]
+	vsubss xmm4, xmm7, dword [eax+64]
+	vsubss xmm1, xmm5, dword [eax+1]
+	vsubss xmm0, xmm6, dword [eax+64]

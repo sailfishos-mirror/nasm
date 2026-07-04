@@ -11,3 +11,5 @@ default rel
 	setns r28b
 	setns r27
 	setns r31d
+	setns byte [eax+1]
+	setns byte [eax+64]

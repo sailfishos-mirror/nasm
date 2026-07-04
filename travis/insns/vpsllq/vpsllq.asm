@@ -31,3 +31,19 @@ default rel
 	vpsllq xmm5{k1}{z}, xmm5, 0x5c
 	vpsllq ymm5{k2}{z}, yword [0xe95], 0x87
 	vpsllq zmm5{k1}{z}, zmm5, 0x2d
+	vpsllq xmm2, xmm2, oword [eax+1]
+	vpsllq xmm6, xmm6, oword [eax+64]
+	vpsllq ymm3, ymm1, oword [eax+1]
+	vpsllq ymm0, ymm0, oword [eax+64]
+	vpsllq xmm2, xmm1, oword [eax+1]
+	vpsllq xmm2, xmm4, oword [eax+64]
+	vpsllq ymm7, ymm0, oword [eax+1]
+	vpsllq ymm6, ymm3, oword [eax+64]
+	vpsllq zmm2, zmm6, oword [eax+1]
+	vpsllq zmm1, zmm7, oword [eax+64]
+	vpsllq xmm2, oword [eax+1], 0xf1
+	vpsllq xmm1, oword [eax+64], 0xcc
+	vpsllq ymm3, yword [eax+1], 0x46
+	vpsllq ymm5, yword [eax+64], 0xdf
+	vpsllq zmm0, zword [eax+1], 0xdf
+	vpsllq zmm2, zword [eax+64], 0x4a

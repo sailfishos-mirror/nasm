@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FISTTP",
   "id": "fisttp16",
   "format": "bin",
-  "source": "fisttp.asm",
+  "source": "fisttp_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fisttp/",
   "target": [
    { "output": "fisttp.bin16", "match": "fisttp.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FISTTP",
   "id": "fisttp32",
   "format": "bin",
-  "source": "fisttp.asm",
+  "source": "fisttp_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fisttp/",
   "target": [
    { "output": "fisttp.bin32", "match": "fisttp.bin32.t" }

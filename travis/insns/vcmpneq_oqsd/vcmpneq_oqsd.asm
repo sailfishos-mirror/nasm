@@ -8,3 +8,7 @@ default rel
 	vcmpneq_oqsd k1, xmm15, xmm15
 	vcmpneq_oqsd k3{k4}, xmm3, qword [0x4ce]
 	vcmpneq_oqsd k5, xmm6, xmm7, {sae}
+	vcmpneq_oqsd xmm3, xmm0, qword [eax+1]
+	vcmpneq_oqsd xmm4, xmm5, qword [eax+64]
+	vcmpneq_oqsd k4, xmm7, qword [eax+1]
+	vcmpneq_oqsd k1, xmm0, qword [eax+64]

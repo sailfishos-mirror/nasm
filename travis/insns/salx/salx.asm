@@ -19,3 +19,19 @@ default rel
 	salx r17d, r29d, r23w
 	salx r21d, r24d, r20d
 	salx r30d, r20d, r16
+	salx esi, dword [eax+1], bl
+	salx ecx, dword [eax+64], cl
+	salx ebx, dword [eax+1], cx
+	salx esi, dword [eax+64], di
+	salx ebx, dword [eax+1], esi
+	salx esi, dword [eax+64], edx
+	salx ecx, dword [eax+1], rbx
+	salx eax, dword [eax+64], rbp
+	salx rcx, qword [eax+1], dl
+	salx rcx, qword [eax+64], al
+	salx rdi, qword [eax+1], bp
+	salx rax, qword [eax+64], dx
+	salx rbx, qword [eax+1], esi
+	salx rsi, qword [eax+64], edi
+	salx rax, qword [eax+1], rax
+	salx rcx, qword [eax+64], rbx

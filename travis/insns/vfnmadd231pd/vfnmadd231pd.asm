@@ -22,3 +22,13 @@ default rel
 	vfnmadd231pd ymm6{k6}{z}, ymm1, ymm3
 	vfnmadd231pd zmm0{k1}{z}, zmm6, zmm0
 	vfnmadd231pd zmm1, zmm7, zmm7, {rz-sae}
+	vfnmadd231pd xmm3, xmm3, oword [eax+1]
+	vfnmadd231pd xmm0, xmm5, oword [eax+64]
+	vfnmadd231pd ymm6, ymm6, yword [eax+1]
+	vfnmadd231pd ymm0, ymm7, yword [eax+64]
+	vfnmadd231pd xmm2, xmm5, oword [eax+1]
+	vfnmadd231pd xmm0, xmm1, oword [eax+64]
+	vfnmadd231pd ymm2, ymm6, yword [eax+1]
+	vfnmadd231pd ymm4, ymm7, yword [eax+64]
+	vfnmadd231pd zmm0, zmm2, zword [eax+1]
+	vfnmadd231pd zmm3, zmm3, zword [eax+64]

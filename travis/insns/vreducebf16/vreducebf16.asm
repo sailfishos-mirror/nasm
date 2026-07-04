@@ -17,3 +17,9 @@ default rel
 	vreducebf16 xmm7{k1}{z}, xmm1, 0xa1
 	vreducebf16 ymm4{k1}{z}, ymm7, 0x53
 	vreducebf16 zmm1{k4}{z}, zword [0x4cf], 0x41
+	vreducebf16 xmm0, oword [eax+1], 0x9f
+	vreducebf16 xmm7, oword [eax+64], 0x90
+	vreducebf16 ymm0, yword [eax+1], 0x95
+	vreducebf16 ymm5, yword [eax+64], 0xb5
+	vreducebf16 zmm6, zword [eax+1], 0xb2
+	vreducebf16 zmm3, zword [eax+64], 0x4c

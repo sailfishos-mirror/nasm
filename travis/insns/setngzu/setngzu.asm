@@ -11,3 +11,5 @@ default rel
 	setngzu r30
 	setngzu r24d
 	setngzu r16b
+	setngzu byte [eax+1]
+	setngzu byte [eax+64]

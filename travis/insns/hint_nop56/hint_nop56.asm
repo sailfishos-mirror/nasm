@@ -11,3 +11,9 @@ default rel
 	hint_nop56 r28w
 	hint_nop56 r23d
 	hint_nop56 r17
+	hint_nop56 word [eax+1]
+	hint_nop56 word [eax+64]
+	hint_nop56 dword [eax+1]
+	hint_nop56 dword [eax+64]
+	hint_nop56 qword [eax+1]
+	hint_nop56 qword [eax+64]

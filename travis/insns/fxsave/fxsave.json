@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for FXSAVE",
   "id": "fxsave16",
   "format": "bin",
-  "source": "fxsave.asm",
+  "source": "fxsave_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fxsave/",
   "target": [
    { "output": "fxsave.bin16", "match": "fxsave.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for FXSAVE",
   "id": "fxsave32",
   "format": "bin",
-  "source": "fxsave.asm",
+  "source": "fxsave_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/fxsave/",
   "target": [
    { "output": "fxsave.bin32", "match": "fxsave.bin32.t" }

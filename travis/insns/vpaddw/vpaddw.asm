@@ -25,3 +25,13 @@ default rel
 	vpaddw xmm6{k3}{z}, xmm5, oword [0x98c]
 	vpaddw ymm3{k6}{z}, ymm5, yword [0x688]
 	vpaddw zmm3{k2}{z}, zmm4, zmm6
+	vpaddw xmm7, xmm0, oword [eax+1]
+	vpaddw xmm5, xmm0, oword [eax+64]
+	vpaddw ymm7, ymm7, yword [eax+1]
+	vpaddw ymm3, ymm6, yword [eax+64]
+	vpaddw xmm3, xmm3, oword [eax+1]
+	vpaddw xmm7, xmm5, oword [eax+64]
+	vpaddw ymm2, ymm2, yword [eax+1]
+	vpaddw ymm4, ymm4, yword [eax+64]
+	vpaddw zmm0, zmm6, zword [eax+1]
+	vpaddw zmm3, zmm3, zword [eax+64]

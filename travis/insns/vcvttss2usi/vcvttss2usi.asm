@@ -9,3 +9,7 @@ default rel
 	vcvttss2usi r28, xmm18
 	vcvttss2usi ebx, xmm1, {sae}
 	vcvttss2usi rbp, xmm6, {sae}
+	vcvttss2usi edx, dword [eax+1]
+	vcvttss2usi ebx, dword [eax+64]
+	vcvttss2usi rax, dword [eax+1]
+	vcvttss2usi rdi, dword [eax+64]

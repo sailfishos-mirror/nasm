@@ -11,3 +11,7 @@ default rel
 	vbroadcasti64x2 zmm4{k5}, oword [0xa1d]
 	vbroadcasti64x2 ymm7{k4}{z}, oword [0x66a]
 	vbroadcasti64x2 zmm4{k2}{z}, oword [0x819]
+	vbroadcasti64x2 ymm3, oword [eax+1]
+	vbroadcasti64x2 ymm7, oword [eax+64]
+	vbroadcasti64x2 zmm5, oword [eax+1]
+	vbroadcasti64x2 zmm7, oword [eax+64]

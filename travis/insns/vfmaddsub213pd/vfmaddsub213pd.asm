@@ -22,3 +22,13 @@ default rel
 	vfmaddsub213pd ymm3{k1}{z}, ymm1, ymm4
 	vfmaddsub213pd zmm5{k1}{z}, zmm1, zmm6
 	vfmaddsub213pd zmm3, zmm2, zmm5, {rz-sae}
+	vfmaddsub213pd xmm3, xmm5, oword [eax+1]
+	vfmaddsub213pd xmm6, xmm5, oword [eax+64]
+	vfmaddsub213pd ymm3, ymm0, yword [eax+1]
+	vfmaddsub213pd ymm3, ymm5, yword [eax+64]
+	vfmaddsub213pd xmm0, xmm7, oword [eax+1]
+	vfmaddsub213pd xmm5, xmm5, oword [eax+64]
+	vfmaddsub213pd ymm2, ymm6, yword [eax+1]
+	vfmaddsub213pd ymm5, ymm7, yword [eax+64]
+	vfmaddsub213pd zmm6, zmm5, zword [eax+1]
+	vfmaddsub213pd zmm1, zmm6, zword [eax+64]

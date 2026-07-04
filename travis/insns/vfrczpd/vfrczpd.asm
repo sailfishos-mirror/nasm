@@ -7,3 +7,7 @@ default rel
 	vfrczpd ymm6, ymm5
 	vfrczpd xmm8, xmm8
 	vfrczpd ymm15, ymm11
+	vfrczpd xmm2, oword [eax+1]
+	vfrczpd xmm3, oword [eax+64]
+	vfrczpd ymm0, yword [eax+1]
+	vfrczpd ymm3, yword [eax+64]

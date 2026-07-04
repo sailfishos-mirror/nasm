@@ -7,3 +7,5 @@ default rel
 	vfmsub231sh xmm5{k4}, xmm1, word [0x902]
 	vfmsub231sh xmm5{k3}{z}, xmm2, xmm6
 	vfmsub231sh xmm0, xmm2, xmm2, {ru-sae}
+	vfmsub231sh xmm4, xmm4, word [eax+1]
+	vfmsub231sh xmm1, xmm0, word [eax+64]

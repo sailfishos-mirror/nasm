@@ -7,3 +7,7 @@ default rel
 	vpshad xmm0, xmm7, xmm2
 	vpshad xmm13, xmm14, xmm13
 	vpshad xmm9, xmm10, xmm9
+	vpshad xmm3, oword [eax+1], xmm5
+	vpshad xmm0, oword [eax+64], xmm6
+	vpshad xmm7, xmm5, oword [eax+1]
+	vpshad xmm4, xmm5, oword [eax+64]

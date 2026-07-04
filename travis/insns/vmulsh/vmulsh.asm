@@ -7,3 +7,5 @@ default rel
 	vmulsh xmm6{k1}, xmm4, word [0x1ef]
 	vmulsh xmm3{k4}{z}, xmm4, xmm3
 	vmulsh xmm1, xmm6, xmm6, {rn-sae}
+	vmulsh xmm3, xmm3, word [eax+1]
+	vmulsh xmm6, xmm2, word [eax+64]

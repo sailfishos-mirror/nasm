@@ -3,3 +3,5 @@ default rel
 	vphaddubq xmm1
 	vphaddubq xmm0, xmm7
 	vphaddubq xmm9, xmm15
+	vphaddubq xmm0, oword [eax+1]
+	vphaddubq xmm3, oword [eax+64]

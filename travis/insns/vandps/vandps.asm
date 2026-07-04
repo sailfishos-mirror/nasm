@@ -25,3 +25,13 @@ default rel
 	vandps xmm3{k3}{z}, xmm3, oword [0xdaf]
 	vandps ymm2{k4}{z}, ymm3, yword [0x54a]
 	vandps zmm3{k6}{z}, zmm3, zmm3
+	vandps xmm5, xmm4, oword [eax+1]
+	vandps xmm7, xmm3, oword [eax+64]
+	vandps ymm7, ymm0, yword [eax+1]
+	vandps ymm1, ymm1, yword [eax+64]
+	vandps xmm5, xmm5, oword [eax+1]
+	vandps xmm3, xmm2, oword [eax+64]
+	vandps ymm7, ymm2, yword [eax+1]
+	vandps ymm6, ymm5, yword [eax+64]
+	vandps zmm4, zmm2, zword [eax+1]
+	vandps zmm1, zmm1, zword [eax+64]

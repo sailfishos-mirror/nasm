@@ -13,3 +13,9 @@ default rel
 	ud2b r18w, r24w
 	ud2b r18d, r16d
 	ud2b r17, r21
+	ud2b cx, word [eax+1]
+	ud2b di, word [eax+64]
+	ud2b edx, dword [eax+1]
+	ud2b eax, dword [eax+64]
+	ud2b rbx, qword [eax+1]
+	ud2b rdi, qword [eax+64]

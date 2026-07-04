@@ -17,3 +17,13 @@ default rel
 	vcmptrue_usps k3{k7}, ymm0, yword [0x1e8]
 	vcmptrue_usps k6{k7}, zmm7, zword [0x22c]
 	vcmptrue_usps k5, zmm5, zmm6, {sae}
+	vcmptrue_usps xmm1, xmm3, oword [eax+1]
+	vcmptrue_usps xmm2, xmm4, oword [eax+64]
+	vcmptrue_usps ymm4, ymm0, yword [eax+1]
+	vcmptrue_usps ymm5, ymm0, yword [eax+64]
+	vcmptrue_usps k1, xmm0, oword [eax+1]
+	vcmptrue_usps k3, xmm4, oword [eax+64]
+	vcmptrue_usps k2, ymm5, yword [eax+1]
+	vcmptrue_usps k2, ymm0, yword [eax+64]
+	vcmptrue_usps k6, zmm2, zword [eax+1]
+	vcmptrue_usps k7, zmm2, zword [eax+64]

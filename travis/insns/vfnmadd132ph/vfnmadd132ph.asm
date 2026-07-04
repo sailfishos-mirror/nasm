@@ -21,3 +21,9 @@ default rel
 	vfnmadd132ph ymm0{k7}{z}, ymm2, ymm4
 	vfnmadd132ph zmm1{k1}{z}, zmm3, zmm1
 	vfnmadd132ph zmm7, zmm3, zmm2, {rd-sae}
+	vfnmadd132ph xmm1, xmm1, oword [eax+1]
+	vfnmadd132ph xmm7, xmm3, oword [eax+64]
+	vfnmadd132ph ymm3, ymm3, yword [eax+1]
+	vfnmadd132ph ymm2, ymm4, yword [eax+64]
+	vfnmadd132ph zmm2, zmm0, zword [eax+1]
+	vfnmadd132ph zmm2, zmm5, zword [eax+64]

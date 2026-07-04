@@ -7,3 +7,7 @@ default rel
 	vfmsubss xmm0, xmm5, xmm1, dword [0x155]
 	vfmsubss xmm12, xmm9, xmm10, xmm8
 	vfmsubss xmm14, xmm9, xmm13, xmm10
+	vfmsubss xmm7, xmm1, dword [eax+1], xmm4
+	vfmsubss xmm6, xmm7, dword [eax+64], xmm4
+	vfmsubss xmm6, xmm1, xmm4, dword [eax+1]
+	vfmsubss xmm3, xmm4, xmm2, dword [eax+64]

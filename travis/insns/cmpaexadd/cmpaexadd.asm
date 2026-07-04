@@ -7,3 +7,7 @@ default rel
 	cmpaexadd qword [0x452], r9, r10
 	cmpaexadd dword [0xf06], r26d, r30d
 	cmpaexadd qword [0x28c], r17, r27
+	cmpaexadd dword [eax+1], edx, edx
+	cmpaexadd dword [eax+64], edi, edx
+	cmpaexadd qword [eax+1], rbp, rax
+	cmpaexadd qword [eax+64], rax, rdi

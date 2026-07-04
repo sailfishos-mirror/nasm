@@ -17,3 +17,11 @@ default rel
 	vcvtsd2si r27, xmm24
 	vcvtsd2si eax, xmm5, {rd-sae}
 	vcvtsd2si rbx, xmm2, {rz-sae}
+	vcvtsd2si eax, qword [eax+1]
+	vcvtsd2si ebx, qword [eax+64]
+	vcvtsd2si rbp, qword [eax+1]
+	vcvtsd2si rdi, qword [eax+64]
+	vcvtsd2si esi, qword [eax+1]
+	vcvtsd2si esi, qword [eax+64]
+	vcvtsd2si rdi, qword [eax+1]
+	vcvtsd2si rsi, qword [eax+64]

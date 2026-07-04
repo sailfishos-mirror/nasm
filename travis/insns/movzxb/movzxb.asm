@@ -11,3 +11,9 @@ default rel
 	movzxb r22w, r23b
 	movzxb r28d, r20b
 	movzxb r21, r21b
+	movzxb bx, byte [eax+1]
+	movzxb ax, byte [eax+64]
+	movzxb ebx, byte [eax+1]
+	movzxb ebp, byte [eax+64]
+	movzxb rdi, byte [eax+1]
+	movzxb rsi, byte [eax+64]

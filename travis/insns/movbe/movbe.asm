@@ -15,3 +15,15 @@ default rel
 	movbe r29d, dword [0x221]
 	movbe r29, qword [0x4a5]
 	movbe word [0x723], r19w
+	movbe si, word [eax+1]
+	movbe di, word [eax+64]
+	movbe esi, dword [eax+1]
+	movbe ecx, dword [eax+64]
+	movbe rbx, qword [eax+1]
+	movbe rdi, qword [eax+64]
+	movbe word [eax+1], di
+	movbe word [eax+64], bx
+	movbe dword [eax+1], eax
+	movbe dword [eax+64], esi
+	movbe qword [eax+1], rbp
+	movbe qword [eax+64], rcx

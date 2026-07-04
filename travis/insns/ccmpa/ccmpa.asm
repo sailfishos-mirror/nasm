@@ -15,3 +15,33 @@ default rel
 	ccmpa 3, r22w, r16w
 	ccmpa 2, r27d, r25d
 	ccmpa 9, r29, r24
+	ccmpa 12, byte [eax+1], dl
+	ccmpa 1, byte [eax+64], dl
+	ccmpa 7, word [eax+1], di
+	ccmpa 7, word [eax+64], bx
+	ccmpa 8, dword [eax+1], esi
+	ccmpa 10, dword [eax+64], edx
+	ccmpa 11, qword [eax+1], rbp
+	ccmpa 9, qword [eax+64], rbx
+	ccmpa 5, cl, byte [eax+1]
+	ccmpa 6, dl, byte [eax+64]
+	ccmpa 2, bp, word [eax+1]
+	ccmpa 0, dx, word [eax+64]
+	ccmpa 3, edx, dword [eax+1]
+	ccmpa 13, edx, dword [eax+64]
+	ccmpa 3, rbx, qword [eax+1]
+	ccmpa 8, rdx, qword [eax+64]
+	ccmpa 4, word [eax+1], -15
+	ccmpa 9, word [eax+64], -22
+	ccmpa 9, dword [eax+1], 105
+	ccmpa 11, dword [eax+64], -46
+	ccmpa 3, qword [eax+1], 35
+	ccmpa 12, qword [eax+64], -73
+	ccmpa 7, byte [eax+1], 0x3
+	ccmpa 7, byte [eax+64], 0x14
+	ccmpa 13, word [eax+1], 0x2217
+	ccmpa 1, word [eax+64], 0xfd2c
+	ccmpa 10, dword [eax+1], 0x2d3c990d
+	ccmpa 15, dword [eax+64], 0x2d856cc1
+	ccmpa 0, qword [eax+1], 477395961
+	ccmpa 4, qword [eax+64], 326080965

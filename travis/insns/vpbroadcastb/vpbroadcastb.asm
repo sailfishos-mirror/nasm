@@ -45,3 +45,13 @@ default rel
 	vpbroadcastb zmm7{k1}{z}, bx
 	vpbroadcastb zmm2{k2}{z}, edx
 	vpbroadcastb zmm4{k5}{z}, rdx
+	vpbroadcastb xmm7, byte [eax+1]
+	vpbroadcastb xmm1, byte [eax+64]
+	vpbroadcastb ymm6, byte [eax+1]
+	vpbroadcastb ymm0, byte [eax+64]
+	vpbroadcastb xmm1, byte [eax+1]
+	vpbroadcastb xmm5, byte [eax+64]
+	vpbroadcastb ymm3, byte [eax+1]
+	vpbroadcastb ymm2, byte [eax+64]
+	vpbroadcastb zmm4, byte [eax+1]
+	vpbroadcastb zmm4, byte [eax+64]

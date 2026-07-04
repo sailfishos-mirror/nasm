@@ -15,3 +15,15 @@ default rel
 	cmove r30d, r16d
 	cmove r20, r31
 	cmove r29w, r16w, r17w
+	cmove dx, word [eax+1]
+	cmove cx, word [eax+64]
+	cmove eax, dword [eax+1]
+	cmove ebx, dword [eax+64]
+	cmove rbp, qword [eax+1]
+	cmove rdx, qword [eax+64]
+	cmove cx, bx, word [eax+1]
+	cmove bx, bx, word [eax+64]
+	cmove esi, esi, dword [eax+1]
+	cmove edi, ebx, dword [eax+64]
+	cmove rbx, rdi, qword [eax+1]
+	cmove rdx, rsi, qword [eax+64]

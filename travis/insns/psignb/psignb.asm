@@ -4,3 +4,7 @@ default rel
 	psignb xmm4, xmm7
 	psignb xmm2, oword [0xd35]
 	psignb xmm11, xmm13
+	psignb mm6, qword [eax+1]
+	psignb mm3, qword [eax+64]
+	psignb xmm6, oword [eax+1]
+	psignb xmm0, oword [eax+64]

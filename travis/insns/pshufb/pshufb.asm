@@ -4,3 +4,7 @@ default rel
 	pshufb xmm1, oword [0xe64]
 	pshufb xmm1, oword [0x24c]
 	pshufb xmm8, xmm10
+	pshufb mm5, qword [eax+1]
+	pshufb mm1, qword [eax+64]
+	pshufb xmm0, oword [eax+1]
+	pshufb xmm7, oword [eax+64]

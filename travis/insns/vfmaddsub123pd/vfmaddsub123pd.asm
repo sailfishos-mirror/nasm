@@ -5,3 +5,7 @@ default rel
 	vfmaddsub123pd ymm3, ymm7, yword [0xb79]
 	vfmaddsub123pd xmm9, xmm15, xmm13
 	vfmaddsub123pd ymm10, ymm11, ymm11
+	vfmaddsub123pd xmm2, xmm1, oword [eax+1]
+	vfmaddsub123pd xmm0, xmm4, oword [eax+64]
+	vfmaddsub123pd ymm2, ymm7, yword [eax+1]
+	vfmaddsub123pd ymm6, ymm0, yword [eax+64]

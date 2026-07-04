@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PFMIN",
   "id": "pfmin16",
   "format": "bin",
-  "source": "pfmin.asm",
+  "source": "pfmin_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfmin/",
   "target": [
    { "output": "pfmin.bin16", "match": "pfmin.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PFMIN",
   "id": "pfmin32",
   "format": "bin",
-  "source": "pfmin.asm",
+  "source": "pfmin_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pfmin/",
   "target": [
    { "output": "pfmin.bin32", "match": "pfmin.bin32.t" }

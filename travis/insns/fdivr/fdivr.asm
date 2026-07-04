@@ -7,3 +7,7 @@ default rel
 	fdivr st6
 	fdivr st7, st0
 	fdivr st6, st0
+	fdivr dword [eax+1]
+	fdivr dword [eax+64]
+	fdivr qword [eax+1]
+	fdivr qword [eax+64]

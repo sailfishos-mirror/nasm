@@ -12,3 +12,7 @@ default rel
 	vcvtsd2ss xmm4{k5}, xmm2, qword [0xba1]
 	vcvtsd2ss xmm7{k1}{z}, xmm4, xmm3
 	vcvtsd2ss xmm4, xmm5, xmm0, {rz-sae}
+	vcvtsd2ss xmm7, xmm2, qword [eax+1]
+	vcvtsd2ss xmm5, xmm4, qword [eax+64]
+	vcvtsd2ss xmm3, xmm4, qword [eax+1]
+	vcvtsd2ss xmm3, xmm4, qword [eax+64]

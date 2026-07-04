@@ -17,3 +17,13 @@ default rel
 	vcmpnlt_usps k5{k5}, ymm5, ymm4
 	vcmpnlt_usps k2{k5}, zmm1, zmm5
 	vcmpnlt_usps k2, zmm3, zmm1, {sae}
+	vcmpnlt_usps xmm0, xmm4, oword [eax+1]
+	vcmpnlt_usps xmm2, xmm4, oword [eax+64]
+	vcmpnlt_usps ymm6, ymm4, yword [eax+1]
+	vcmpnlt_usps ymm3, ymm6, yword [eax+64]
+	vcmpnlt_usps k2, xmm6, oword [eax+1]
+	vcmpnlt_usps k5, xmm4, oword [eax+64]
+	vcmpnlt_usps k2, ymm5, yword [eax+1]
+	vcmpnlt_usps k7, ymm2, yword [eax+64]
+	vcmpnlt_usps k7, zmm2, zword [eax+1]
+	vcmpnlt_usps k1, zmm3, zword [eax+64]

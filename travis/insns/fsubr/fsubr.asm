@@ -7,3 +7,7 @@ default rel
 	fsubr st5
 	fsubr st1, st0
 	fsubr st0, st0
+	fsubr dword [eax+1]
+	fsubr dword [eax+64]
+	fsubr qword [eax+1]
+	fsubr qword [eax+64]

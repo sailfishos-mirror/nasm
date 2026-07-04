@@ -8,3 +8,7 @@ default rel
 	vcmple_oqss k3, xmm12, xmm14
 	vcmple_oqss k7{k6}, xmm0, xmm0
 	vcmple_oqss k4, xmm4, xmm3, {sae}
+	vcmple_oqss xmm1, xmm5, qword [eax+1]
+	vcmple_oqss xmm1, xmm0, qword [eax+64]
+	vcmple_oqss k3, xmm7, dword [eax+1]
+	vcmple_oqss k3, xmm3, dword [eax+64]

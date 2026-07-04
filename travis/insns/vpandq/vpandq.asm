@@ -20,3 +20,9 @@ default rel
 	vpandq xmm0{k5}{z}, xmm3, xmm4
 	vpandq ymm3{k3}{z}, ymm0, ymm7
 	vpandq zmm2{k6}{z}, zmm0, zmm6
+	vpandq xmm7, xmm1, oword [eax+1]
+	vpandq xmm4, xmm6, oword [eax+64]
+	vpandq ymm0, ymm1, yword [eax+1]
+	vpandq ymm2, ymm5, yword [eax+64]
+	vpandq zmm5, zmm0, zword [eax+1]
+	vpandq zmm6, zmm7, zword [eax+64]

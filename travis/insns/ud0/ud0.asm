@@ -13,3 +13,9 @@ default rel
 	ud0 r17w, r18w
 	ud0 r31d, r17d
 	ud0 r26, r20
+	ud0 si, word [eax+1]
+	ud0 dx, word [eax+64]
+	ud0 edi, dword [eax+1]
+	ud0 edi, dword [eax+64]
+	ud0 rcx, qword [eax+1]
+	ud0 rcx, qword [eax+64]

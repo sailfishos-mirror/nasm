@@ -17,3 +17,9 @@ default rel
 	vpermt2pd xmm4{k7}{z}, xmm5, xmm5
 	vpermt2pd ymm6{k1}{z}, ymm7, ymm1
 	vpermt2pd zmm4{k3}{z}, zmm7, zmm1
+	vpermt2pd xmm2, xmm0, oword [eax+1]
+	vpermt2pd xmm5, xmm6, oword [eax+64]
+	vpermt2pd ymm2, ymm7, yword [eax+1]
+	vpermt2pd ymm7, ymm7, yword [eax+64]
+	vpermt2pd zmm1, zmm0, zword [eax+1]
+	vpermt2pd zmm6, zmm3, zword [eax+64]

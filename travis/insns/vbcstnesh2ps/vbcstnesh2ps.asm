@@ -5,3 +5,7 @@ default rel
 	vbcstnesh2ps ymm6, word [0x6e1]
 	vbcstnesh2ps xmm13, word [0x626]
 	vbcstnesh2ps ymm12, word [0x224]
+	vbcstnesh2ps xmm3, word [eax+1]
+	vbcstnesh2ps xmm6, word [eax+64]
+	vbcstnesh2ps ymm5, word [eax+1]
+	vbcstnesh2ps ymm3, word [eax+64]

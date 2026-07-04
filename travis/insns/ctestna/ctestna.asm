@@ -15,3 +15,19 @@ default rel
 	ctestna 15, r18w, r29w
 	ctestna 8, r24d, r18d
 	ctestna 11, r17, r24
+	ctestna 6, byte [eax+1], cl
+	ctestna 8, byte [eax+64], al
+	ctestna 5, word [eax+1], bx
+	ctestna 12, word [eax+64], dx
+	ctestna 12, dword [eax+1], ebx
+	ctestna 5, dword [eax+64], ebx
+	ctestna 1, qword [eax+1], rbx
+	ctestna 10, qword [eax+64], rax
+	ctestna 9, byte [eax+1], 0x99
+	ctestna 11, byte [eax+64], 0xf7
+	ctestna 14, word [eax+1], 0x577e
+	ctestna 4, word [eax+64], 0x4534
+	ctestna 5, dword [eax+1], 0x25c35138
+	ctestna 12, dword [eax+64], 0xe05ddc4
+	ctestna 0, qword [eax+1], 404935948
+	ctestna 12, qword [eax+64], 486058033

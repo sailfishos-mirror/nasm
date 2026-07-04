@@ -12,3 +12,7 @@ default rel
 	vdivsd xmm3{k3}, xmm3, xmm4
 	vdivsd xmm5{k6}{z}, xmm3, qword [0x23e]
 	vdivsd xmm6, xmm0, xmm4, {rd-sae}
+	vdivsd xmm6, xmm6, qword [eax+1]
+	vdivsd xmm7, xmm0, qword [eax+64]
+	vdivsd xmm1, xmm6, qword [eax+1]
+	vdivsd xmm7, xmm2, qword [eax+64]

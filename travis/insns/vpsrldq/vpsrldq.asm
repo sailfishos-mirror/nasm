@@ -19,3 +19,9 @@ default rel
 	vpsrldq ymm17, ymm20, 0xaf
 	vpsrldq xmm29, xmm19, 0x41
 	vpsrldq ymm24, ymm27, 0x7d
+	vpsrldq xmm6, oword [eax+1], 0xf4
+	vpsrldq xmm2, oword [eax+64], 0x96
+	vpsrldq ymm4, yword [eax+1], 0x5e
+	vpsrldq ymm7, yword [eax+64], 0xf0
+	vpsrldq zmm1, zword [eax+1], 0x5b
+	vpsrldq zmm0, zword [eax+64], 0xb8

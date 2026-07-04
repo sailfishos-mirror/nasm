@@ -25,3 +25,13 @@ default rel
 	vpshufb xmm0{k4}{z}, xmm1, xmm6
 	vpshufb ymm0{k1}{z}, ymm7, ymm2
 	vpshufb zmm2{k7}{z}, zmm3, zmm0
+	vpshufb xmm7, xmm1, oword [eax+1]
+	vpshufb xmm1, xmm3, oword [eax+64]
+	vpshufb ymm6, ymm6, yword [eax+1]
+	vpshufb ymm3, ymm5, yword [eax+64]
+	vpshufb xmm7, xmm0, oword [eax+1]
+	vpshufb xmm5, xmm0, oword [eax+64]
+	vpshufb ymm3, ymm4, yword [eax+1]
+	vpshufb ymm1, ymm1, yword [eax+64]
+	vpshufb zmm1, zmm6, zword [eax+1]
+	vpshufb zmm7, zmm5, zword [eax+64]

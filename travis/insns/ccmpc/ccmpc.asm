@@ -15,3 +15,33 @@ default rel
 	ccmpc 13, r16w, r29w
 	ccmpc 8, r30d, r19d
 	ccmpc 9, r17, r20
+	ccmpc 10, byte [eax+1], cl
+	ccmpc 7, byte [eax+64], al
+	ccmpc 2, word [eax+1], bx
+	ccmpc 10, word [eax+64], dx
+	ccmpc 8, dword [eax+1], ebx
+	ccmpc 0, dword [eax+64], esi
+	ccmpc 14, qword [eax+1], rdx
+	ccmpc 5, qword [eax+64], rsi
+	ccmpc 1, al, byte [eax+1]
+	ccmpc 0, dl, byte [eax+64]
+	ccmpc 14, bx, word [eax+1]
+	ccmpc 15, bp, word [eax+64]
+	ccmpc 11, edi, dword [eax+1]
+	ccmpc 12, ebx, dword [eax+64]
+	ccmpc 10, rcx, qword [eax+1]
+	ccmpc 7, rdi, qword [eax+64]
+	ccmpc 8, word [eax+1], -58
+	ccmpc 6, word [eax+64], 91
+	ccmpc 1, dword [eax+1], -7
+	ccmpc 2, dword [eax+64], 6
+	ccmpc 7, qword [eax+1], 47
+	ccmpc 8, qword [eax+64], 33
+	ccmpc 6, byte [eax+1], 0x74
+	ccmpc 1, byte [eax+64], 0x6b
+	ccmpc 0, word [eax+1], 0x8e8e
+	ccmpc 2, word [eax+64], 0xfb7
+	ccmpc 13, dword [eax+1], 0xfdf8a1a
+	ccmpc 11, dword [eax+64], 0x3043f972
+	ccmpc 8, qword [eax+1], 53357401
+	ccmpc 11, qword [eax+64], -142029383

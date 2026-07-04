@@ -11,3 +11,9 @@ default rel
 	lar r28w, r31w
 	lar r28d, r23w
 	lar r16, r22w
+	lar bp, word [eax+1]
+	lar si, word [eax+64]
+	lar ecx, word [eax+1]
+	lar edx, word [eax+64]
+	lar rax, word [eax+1]
+	lar rdx, word [eax+64]

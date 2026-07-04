@@ -20,3 +20,9 @@ default rel
 	vprorvq xmm1{k7}{z}, xmm5, xmm5
 	vprorvq ymm7{k7}{z}, ymm7, ymm1
 	vprorvq zmm2{k6}{z}, zmm1, zword [0x3d9]
+	vprorvq xmm2, xmm4, oword [eax+1]
+	vprorvq xmm1, xmm3, oword [eax+64]
+	vprorvq ymm4, ymm2, yword [eax+1]
+	vprorvq ymm5, ymm4, yword [eax+64]
+	vprorvq zmm6, zmm6, zword [eax+1]
+	vprorvq zmm2, zmm2, zword [eax+64]

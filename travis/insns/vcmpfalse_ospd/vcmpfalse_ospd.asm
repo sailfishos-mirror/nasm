@@ -17,3 +17,13 @@ default rel
 	vcmpfalse_ospd k2{k7}, ymm0, ymm3
 	vcmpfalse_ospd k3{k2}, zmm6, zword [0xd63]
 	vcmpfalse_ospd k6, zmm1, zmm1, {sae}
+	vcmpfalse_ospd xmm2, xmm1, oword [eax+1]
+	vcmpfalse_ospd xmm6, xmm2, oword [eax+64]
+	vcmpfalse_ospd ymm6, ymm0, yword [eax+1]
+	vcmpfalse_ospd ymm0, ymm7, yword [eax+64]
+	vcmpfalse_ospd k6, xmm4, oword [eax+1]
+	vcmpfalse_ospd k7, xmm6, oword [eax+64]
+	vcmpfalse_ospd k3, ymm0, yword [eax+1]
+	vcmpfalse_ospd k3, ymm3, yword [eax+64]
+	vcmpfalse_ospd k7, zmm4, zword [eax+1]
+	vcmpfalse_ospd k2, zmm4, zword [eax+64]

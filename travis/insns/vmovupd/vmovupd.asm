@@ -24,3 +24,23 @@ default rel
 	vmovupd oword [0x863]{k3}, xmm7
 	vmovupd yword [0xd28]{k4}, ymm7
 	vmovupd zword [0xe47]{k1}, zmm4
+	vmovupd xmm4, oword [eax+1]
+	vmovupd xmm1, oword [eax+64]
+	vmovupd oword [eax+1], xmm6
+	vmovupd oword [eax+64], xmm3
+	vmovupd ymm6, yword [eax+1]
+	vmovupd ymm2, yword [eax+64]
+	vmovupd yword [eax+1], ymm3
+	vmovupd yword [eax+64], ymm5
+	vmovupd xmm2, oword [eax+1]
+	vmovupd xmm4, oword [eax+64]
+	vmovupd ymm6, yword [eax+1]
+	vmovupd ymm7, yword [eax+64]
+	vmovupd zmm1, zword [eax+1]
+	vmovupd zmm1, zword [eax+64]
+	vmovupd oword [eax+1], xmm6
+	vmovupd oword [eax+64], xmm1
+	vmovupd yword [eax+1], ymm5
+	vmovupd yword [eax+64], ymm2
+	vmovupd zword [eax+1], zmm6
+	vmovupd zword [eax+64], zmm3

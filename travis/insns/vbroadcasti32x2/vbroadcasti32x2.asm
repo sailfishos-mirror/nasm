@@ -17,3 +17,9 @@ default rel
 	vbroadcasti32x2 xmm7{k5}{z}, qword [0x2ed]
 	vbroadcasti32x2 ymm2{k1}{z}, xmm2
 	vbroadcasti32x2 zmm6{k5}{z}, xmm4
+	vbroadcasti32x2 xmm5, qword [eax+1]
+	vbroadcasti32x2 xmm0, qword [eax+64]
+	vbroadcasti32x2 ymm2, qword [eax+1]
+	vbroadcasti32x2 ymm1, qword [eax+64]
+	vbroadcasti32x2 zmm1, qword [eax+1]
+	vbroadcasti32x2 zmm4, qword [eax+64]

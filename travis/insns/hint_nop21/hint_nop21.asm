@@ -11,3 +11,9 @@ default rel
 	hint_nop21 r17w
 	hint_nop21 r21d
 	hint_nop21 r17
+	hint_nop21 word [eax+1]
+	hint_nop21 word [eax+64]
+	hint_nop21 dword [eax+1]
+	hint_nop21 dword [eax+64]
+	hint_nop21 qword [eax+1]
+	hint_nop21 qword [eax+64]

@@ -17,3 +17,9 @@ default rel
 	vmulbf16 xmm7{k6}{z}, xmm0, oword [0x9da]
 	vmulbf16 ymm5{k7}{z}, ymm2, ymm3
 	vmulbf16 zmm4{k3}{z}, zmm1, zmm0
+	vmulbf16 xmm2, xmm2, oword [eax+1]
+	vmulbf16 xmm5, xmm5, oword [eax+64]
+	vmulbf16 ymm4, ymm0, yword [eax+1]
+	vmulbf16 ymm0, ymm6, yword [eax+64]
+	vmulbf16 zmm3, zmm5, zword [eax+1]
+	vmulbf16 zmm0, zmm6, zword [eax+64]

@@ -13,3 +13,9 @@ default rel
 	movsxb r17w, r23b
 	movsxb r26d, r20b
 	movsxb r24, r16b
+	movsxb bx, byte [eax+1]
+	movsxb cx, byte [eax+64]
+	movsxb eax, byte [eax+1]
+	movsxb edi, byte [eax+64]
+	movsxb rbx, byte [eax+1]
+	movsxb rax, byte [eax+64]

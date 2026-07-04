@@ -11,3 +11,5 @@ default rel
 	seto r21b
 	seto r21
 	seto r27d
+	seto byte [eax+1]
+	seto byte [eax+64]

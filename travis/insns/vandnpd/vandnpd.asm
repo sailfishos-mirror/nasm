@@ -25,3 +25,13 @@ default rel
 	vandnpd xmm7{k6}{z}, xmm3, oword [0xea3]
 	vandnpd ymm5{k7}{z}, ymm2, ymm6
 	vandnpd zmm5{k5}{z}, zmm6, zmm1
+	vandnpd xmm1, xmm6, oword [eax+1]
+	vandnpd xmm7, xmm0, oword [eax+64]
+	vandnpd ymm7, ymm4, yword [eax+1]
+	vandnpd ymm1, ymm3, yword [eax+64]
+	vandnpd xmm7, xmm5, oword [eax+1]
+	vandnpd xmm0, xmm0, oword [eax+64]
+	vandnpd ymm5, ymm2, yword [eax+1]
+	vandnpd ymm6, ymm4, yword [eax+64]
+	vandnpd zmm0, zmm2, zword [eax+1]
+	vandnpd zmm5, zmm0, zword [eax+64]

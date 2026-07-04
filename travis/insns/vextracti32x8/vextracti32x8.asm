@@ -9,3 +9,5 @@ default rel
 	vextracti32x8 yword [0x910], zmm29, 0x50
 	vextracti32x8 ymm2{k6}, zmm3, 0xb7
 	vextracti32x8 yword [0xf9a]{k3}, zmm2, 0xd7
+	vextracti32x8 yword [eax+1], zmm6, 0xb0
+	vextracti32x8 yword [eax+64], zmm3, 0x63

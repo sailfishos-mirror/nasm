@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for KMOV",
   "id": "kmov16",
   "format": "bin",
-  "source": "kmov.asm",
+  "source": "kmov_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/kmov/",
   "target": [
    { "output": "kmov.bin16", "match": "kmov.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for KMOV",
   "id": "kmov32",
   "format": "bin",
-  "source": "kmov.asm",
+  "source": "kmov_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/kmov/",
   "target": [
    { "output": "kmov.bin32", "match": "kmov.bin32.t" }

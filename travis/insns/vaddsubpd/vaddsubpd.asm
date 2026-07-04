@@ -7,3 +7,7 @@ default rel
 	vaddsubpd ymm1, ymm4, ymm2
 	vaddsubpd xmm8, xmm12, xmm12
 	vaddsubpd ymm9, ymm10, ymm12
+	vaddsubpd xmm2, xmm5, oword [eax+1]
+	vaddsubpd xmm5, xmm0, oword [eax+64]
+	vaddsubpd ymm6, ymm0, yword [eax+1]
+	vaddsubpd ymm7, ymm6, yword [eax+64]

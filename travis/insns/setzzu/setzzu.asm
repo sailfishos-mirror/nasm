@@ -11,3 +11,5 @@ default rel
 	setzzu r16
 	setzzu r24d
 	setzzu r20b
+	setzzu byte [eax+1]
+	setzzu byte [eax+64]

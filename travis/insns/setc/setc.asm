@@ -11,3 +11,5 @@ default rel
 	setc r18b
 	setc r25
 	setc r20d
+	setc byte [eax+1]
+	setc byte [eax+64]

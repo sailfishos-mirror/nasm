@@ -5,3 +5,7 @@ default rel
 	vbcstnebf16ps ymm5, word [0x1aa]
 	vbcstnebf16ps xmm9, word [0x94f]
 	vbcstnebf16ps ymm10, word [0x366]
+	vbcstnebf16ps xmm6, word [eax+1]
+	vbcstnebf16ps xmm5, word [eax+64]
+	vbcstnebf16ps ymm5, word [eax+1]
+	vbcstnebf16ps ymm1, word [eax+64]

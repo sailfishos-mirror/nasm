@@ -9,3 +9,7 @@ default rel
 	psrad xmm6, 0x34
 	psrad xmm12, xmm8
 	psrad xmm12, 0x33
+	psrad mm2, qword [eax+1]
+	psrad mm6, qword [eax+64]
+	psrad xmm5, oword [eax+1]
+	psrad xmm1, oword [eax+64]

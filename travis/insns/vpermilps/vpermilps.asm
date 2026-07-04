@@ -29,3 +29,23 @@ default rel
 	vpermilps xmm2{k7}{z}, xmm4, xmm2
 	vpermilps ymm3{k6}{z}, ymm6, ymm7
 	vpermilps zmm6{k7}{z}, zmm5, zmm7
+	vpermilps xmm3, xmm3, oword [eax+1]
+	vpermilps xmm4, xmm1, oword [eax+64]
+	vpermilps ymm3, ymm6, yword [eax+1]
+	vpermilps ymm6, ymm3, yword [eax+64]
+	vpermilps xmm6, oword [eax+1], 0xf4
+	vpermilps xmm0, oword [eax+64], 0x21
+	vpermilps ymm5, yword [eax+1], 0x88
+	vpermilps ymm2, yword [eax+64], 0x8b
+	vpermilps xmm4, oword [eax+1], 0x25
+	vpermilps xmm7, oword [eax+64], 0xe9
+	vpermilps ymm3, yword [eax+1], 0x64
+	vpermilps ymm0, yword [eax+64], 0x5
+	vpermilps zmm3, zword [eax+1], 0xa8
+	vpermilps zmm1, zword [eax+64], 0x4c
+	vpermilps xmm0, xmm1, oword [eax+1]
+	vpermilps xmm5, xmm7, oword [eax+64]
+	vpermilps ymm5, ymm0, yword [eax+1]
+	vpermilps ymm1, ymm6, yword [eax+64]
+	vpermilps zmm2, zmm6, zword [eax+1]
+	vpermilps zmm2, zmm5, zword [eax+64]

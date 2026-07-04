@@ -25,3 +25,13 @@ default rel
 	vpmaxsw xmm6{k2}{z}, xmm0, xmm0
 	vpmaxsw ymm2{k3}{z}, ymm0, ymm7
 	vpmaxsw zmm6{k6}{z}, zmm6, zmm0
+	vpmaxsw xmm3, xmm5, oword [eax+1]
+	vpmaxsw xmm2, xmm7, oword [eax+64]
+	vpmaxsw ymm1, ymm2, yword [eax+1]
+	vpmaxsw ymm1, ymm7, yword [eax+64]
+	vpmaxsw xmm7, xmm0, oword [eax+1]
+	vpmaxsw xmm4, xmm4, oword [eax+64]
+	vpmaxsw ymm0, ymm5, yword [eax+1]
+	vpmaxsw ymm2, ymm1, yword [eax+64]
+	vpmaxsw zmm2, zmm0, zword [eax+1]
+	vpmaxsw zmm7, zmm0, zword [eax+64]

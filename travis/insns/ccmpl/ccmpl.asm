@@ -15,3 +15,33 @@ default rel
 	ccmpl 10, r19w, r17w
 	ccmpl 2, r21d, r26d
 	ccmpl 5, r25, r28
+	ccmpl 13, byte [eax+1], bl
+	ccmpl 5, byte [eax+64], al
+	ccmpl 9, word [eax+1], si
+	ccmpl 13, word [eax+64], di
+	ccmpl 8, dword [eax+1], ecx
+	ccmpl 0, dword [eax+64], ecx
+	ccmpl 6, qword [eax+1], rdx
+	ccmpl 6, qword [eax+64], rdi
+	ccmpl 2, cl, byte [eax+1]
+	ccmpl 0, al, byte [eax+64]
+	ccmpl 7, dx, word [eax+1]
+	ccmpl 13, cx, word [eax+64]
+	ccmpl 12, ecx, dword [eax+1]
+	ccmpl 9, ebx, dword [eax+64]
+	ccmpl 5, rdi, qword [eax+1]
+	ccmpl 11, rsi, qword [eax+64]
+	ccmpl 8, word [eax+1], -12
+	ccmpl 7, word [eax+64], -67
+	ccmpl 9, dword [eax+1], -4
+	ccmpl 13, dword [eax+64], -35
+	ccmpl 9, qword [eax+1], 63
+	ccmpl 2, qword [eax+64], -36
+	ccmpl 6, byte [eax+1], 0x90
+	ccmpl 15, byte [eax+64], 0xc3
+	ccmpl 7, word [eax+1], 0xbee
+	ccmpl 5, word [eax+64], 0xd5f3
+	ccmpl 10, dword [eax+1], 0xb098b48
+	ccmpl 13, dword [eax+64], 0x29b46fa9
+	ccmpl 11, qword [eax+1], -381212624
+	ccmpl 9, qword [eax+64], 500905960

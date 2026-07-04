@@ -17,3 +17,9 @@ default rel
 	vsqrtbf16 xmm6{k4}{z}, xmm7
 	vsqrtbf16 ymm0{k2}{z}, ymm2
 	vsqrtbf16 zmm7{k5}{z}, zword [0xef5]
+	vsqrtbf16 xmm4, oword [eax+1]
+	vsqrtbf16 xmm7, oword [eax+64]
+	vsqrtbf16 ymm0, yword [eax+1]
+	vsqrtbf16 ymm3, yword [eax+64]
+	vsqrtbf16 zmm3, zword [eax+1]
+	vsqrtbf16 zmm4, zword [eax+64]

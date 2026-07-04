@@ -25,3 +25,13 @@ default rel
 	vpackusdw xmm3{k6}{z}, xmm4, xmm1
 	vpackusdw ymm6{k1}{z}, ymm3, ymm6
 	vpackusdw zmm5{k7}{z}, zmm2, zmm5
+	vpackusdw xmm5, xmm2, oword [eax+1]
+	vpackusdw xmm3, xmm1, oword [eax+64]
+	vpackusdw ymm2, ymm7, yword [eax+1]
+	vpackusdw ymm7, ymm0, yword [eax+64]
+	vpackusdw xmm7, xmm4, oword [eax+1]
+	vpackusdw xmm4, xmm7, oword [eax+64]
+	vpackusdw ymm4, ymm2, yword [eax+1]
+	vpackusdw ymm5, ymm3, yword [eax+64]
+	vpackusdw zmm5, zmm2, zword [eax+1]
+	vpackusdw zmm4, zmm1, zword [eax+64]

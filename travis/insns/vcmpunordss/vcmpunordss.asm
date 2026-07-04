@@ -8,3 +8,7 @@ default rel
 	vcmpunordss k2, xmm13, xmm10
 	vcmpunordss k2{k4}, xmm7, dword [0xad7]
 	vcmpunordss k6, xmm5, xmm1, {sae}
+	vcmpunordss xmm3, xmm1, qword [eax+1]
+	vcmpunordss xmm2, xmm6, qword [eax+64]
+	vcmpunordss k3, xmm5, dword [eax+1]
+	vcmpunordss k7, xmm0, dword [eax+64]

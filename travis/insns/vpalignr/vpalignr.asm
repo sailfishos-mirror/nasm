@@ -25,3 +25,13 @@ default rel
 	vpalignr xmm6{k5}{z}, xmm7, xmm1, 0xb3
 	vpalignr ymm2{k6}{z}, ymm1, ymm5, 0x15
 	vpalignr zmm2{k1}{z}, zmm3, zmm4, 0x4a
+	vpalignr xmm0, xmm1, oword [eax+1], 0x91
+	vpalignr xmm5, xmm3, oword [eax+64], 0x93
+	vpalignr ymm0, ymm7, yword [eax+1], 0x93
+	vpalignr ymm1, ymm0, yword [eax+64], 0x9d
+	vpalignr xmm1, xmm4, oword [eax+1], 0x45
+	vpalignr xmm5, xmm7, oword [eax+64], 0xfd
+	vpalignr ymm5, ymm2, yword [eax+1], 0xf1
+	vpalignr ymm3, ymm6, yword [eax+64], 0x7c
+	vpalignr zmm1, zmm7, zword [eax+1], 0xb
+	vpalignr zmm5, zmm5, zword [eax+64], 0x16

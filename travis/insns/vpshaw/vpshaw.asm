@@ -7,3 +7,7 @@ default rel
 	vpshaw xmm4, xmm6, xmm0
 	vpshaw xmm10, xmm8, xmm15
 	vpshaw xmm10, xmm11, xmm10
+	vpshaw xmm6, oword [eax+1], xmm2
+	vpshaw xmm7, oword [eax+64], xmm6
+	vpshaw xmm2, xmm1, oword [eax+1]
+	vpshaw xmm2, xmm1, oword [eax+64]

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PSHUFW",
   "id": "pshufw16",
   "format": "bin",
-  "source": "pshufw.asm",
+  "source": "pshufw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pshufw/",
   "target": [
    { "output": "pshufw.bin16", "match": "pshufw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PSHUFW",
   "id": "pshufw32",
   "format": "bin",
-  "source": "pshufw.asm",
+  "source": "pshufw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pshufw/",
   "target": [
    { "output": "pshufw.bin32", "match": "pshufw.bin32.t" }

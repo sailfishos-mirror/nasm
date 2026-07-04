@@ -3,3 +3,5 @@ default rel
 	verw cx
 	verw r14w
 	verw r30w
+	verw word [eax+1]
+	verw word [eax+64]

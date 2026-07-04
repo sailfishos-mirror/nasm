@@ -11,3 +11,5 @@ default rel
 	setpo r22b
 	setpo r31
 	setpo r28d
+	setpo byte [eax+1]
+	setpo byte [eax+64]

@@ -15,3 +15,5 @@ default rel
 	smsw r21
 	smsw r30w
 	smsw r29d
+	smsw word [eax+1]
+	smsw word [eax+64]

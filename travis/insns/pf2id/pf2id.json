@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PF2ID",
   "id": "pf2id16",
   "format": "bin",
-  "source": "pf2id.asm",
+  "source": "pf2id_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pf2id/",
   "target": [
    { "output": "pf2id.bin16", "match": "pf2id.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PF2ID",
   "id": "pf2id32",
   "format": "bin",
-  "source": "pf2id.asm",
+  "source": "pf2id_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/pf2id/",
   "target": [
    { "output": "pf2id.bin32", "match": "pf2id.bin32.t" }

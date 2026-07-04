@@ -12,3 +12,7 @@ default rel
 	vsqrtss xmm2{k4}, xmm7, xmm3
 	vsqrtss xmm7{k4}{z}, xmm7, xmm2
 	vsqrtss xmm6, xmm6, xmm0, {rz-sae}
+	vsqrtss xmm6, xmm2, dword [eax+1]
+	vsqrtss xmm0, xmm0, dword [eax+64]
+	vsqrtss xmm5, xmm7, dword [eax+1]
+	vsqrtss xmm1, xmm6, dword [eax+64]

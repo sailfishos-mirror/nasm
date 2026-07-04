@@ -8,3 +8,7 @@ default rel
 	vcmpnge_uqsd k5, xmm8, xmm11
 	vcmpnge_uqsd k7{k4}, xmm4, xmm2
 	vcmpnge_uqsd k3, xmm0, xmm4, {sae}
+	vcmpnge_uqsd xmm6, xmm1, qword [eax+1]
+	vcmpnge_uqsd xmm2, xmm0, qword [eax+64]
+	vcmpnge_uqsd k6, xmm0, qword [eax+1]
+	vcmpnge_uqsd k2, xmm5, qword [eax+64]

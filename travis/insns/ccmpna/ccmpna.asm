@@ -15,3 +15,33 @@ default rel
 	ccmpna 7, r29w, r22w
 	ccmpna 1, r29d, r31d
 	ccmpna 7, r24, r17
+	ccmpna 8, byte [eax+1], dl
+	ccmpna 4, byte [eax+64], cl
+	ccmpna 10, word [eax+1], si
+	ccmpna 3, word [eax+64], cx
+	ccmpna 0, dword [eax+1], edx
+	ccmpna 8, dword [eax+64], ecx
+	ccmpna 6, qword [eax+1], rbx
+	ccmpna 12, qword [eax+64], rcx
+	ccmpna 6, al, byte [eax+1]
+	ccmpna 15, al, byte [eax+64]
+	ccmpna 15, di, word [eax+1]
+	ccmpna 13, ax, word [eax+64]
+	ccmpna 4, ebx, dword [eax+1]
+	ccmpna 15, ebx, dword [eax+64]
+	ccmpna 9, rbp, qword [eax+1]
+	ccmpna 8, rcx, qword [eax+64]
+	ccmpna 2, word [eax+1], -24
+	ccmpna 13, word [eax+64], -2
+	ccmpna 15, dword [eax+1], 14
+	ccmpna 14, dword [eax+64], -36
+	ccmpna 11, qword [eax+1], -36
+	ccmpna 2, qword [eax+64], 119
+	ccmpna 10, byte [eax+1], 0x34
+	ccmpna 12, byte [eax+64], 0xc7
+	ccmpna 13, word [eax+1], 0xae41
+	ccmpna 7, word [eax+64], 0x72b0
+	ccmpna 9, dword [eax+1], 0x3f985298
+	ccmpna 3, dword [eax+64], 0xe274868
+	ccmpna 0, qword [eax+1], 465072673
+	ccmpna 2, qword [eax+64], 121930368

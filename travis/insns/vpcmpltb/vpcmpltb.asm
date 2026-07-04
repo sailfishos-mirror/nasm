@@ -14,3 +14,9 @@ default rel
 	vpcmpltb k5{k4}, xmm4, xmm4
 	vpcmpltb k3{k1}, ymm3, ymm5
 	vpcmpltb k7{k2}, zmm4, zword [0x3ac]
+	vpcmpltb k6, xmm4, oword [eax+1]
+	vpcmpltb k3, xmm1, oword [eax+64]
+	vpcmpltb k1, ymm3, yword [eax+1]
+	vpcmpltb k5, ymm7, yword [eax+64]
+	vpcmpltb k3, zmm7, zword [eax+1]
+	vpcmpltb k3, zmm6, zword [eax+64]

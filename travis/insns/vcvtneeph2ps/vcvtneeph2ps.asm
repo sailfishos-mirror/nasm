@@ -5,3 +5,7 @@ default rel
 	vcvtneeph2ps ymm1, yword [0x4b7]
 	vcvtneeph2ps xmm8, oword [0x560]
 	vcvtneeph2ps ymm14, yword [0xbbd]
+	vcvtneeph2ps xmm3, oword [eax+1]
+	vcvtneeph2ps xmm0, oword [eax+64]
+	vcvtneeph2ps ymm7, yword [eax+1]
+	vcvtneeph2ps ymm5, yword [eax+64]

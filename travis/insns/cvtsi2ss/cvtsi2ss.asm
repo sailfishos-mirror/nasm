@@ -5,3 +5,7 @@ default rel
 	cvtsi2ss xmm7, qword [0x4b3]
 	cvtsi2ss xmm11, r14d
 	cvtsi2ss xmm13, r13
+	cvtsi2ss xmm5, dword [eax+1]
+	cvtsi2ss xmm3, dword [eax+64]
+	cvtsi2ss xmm0, qword [eax+1]
+	cvtsi2ss xmm7, qword [eax+64]

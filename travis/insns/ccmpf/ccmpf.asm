@@ -15,3 +15,33 @@ default rel
 	ccmpf 4, r21w, r18w
 	ccmpf 0, r21d, r20d
 	ccmpf 14, r17, r22
+	ccmpf 2, byte [eax+1], dl
+	ccmpf 2, byte [eax+64], al
+	ccmpf 8, word [eax+1], dx
+	ccmpf 14, word [eax+64], dx
+	ccmpf 5, dword [eax+1], ecx
+	ccmpf 14, dword [eax+64], ebx
+	ccmpf 0, qword [eax+1], rbp
+	ccmpf 14, qword [eax+64], rdx
+	ccmpf 2, dl, byte [eax+1]
+	ccmpf 13, bl, byte [eax+64]
+	ccmpf 10, cx, word [eax+1]
+	ccmpf 11, ax, word [eax+64]
+	ccmpf 0, edx, dword [eax+1]
+	ccmpf 5, eax, dword [eax+64]
+	ccmpf 9, rax, qword [eax+1]
+	ccmpf 1, rdx, qword [eax+64]
+	ccmpf 11, word [eax+1], 86
+	ccmpf 9, word [eax+64], -99
+	ccmpf 4, dword [eax+1], 119
+	ccmpf 8, dword [eax+64], -91
+	ccmpf 10, qword [eax+1], -87
+	ccmpf 14, qword [eax+64], 88
+	ccmpf 15, byte [eax+1], 0x12
+	ccmpf 5, byte [eax+64], 0x96
+	ccmpf 9, word [eax+1], 0xe763
+	ccmpf 9, word [eax+64], 0x9fc6
+	ccmpf 10, dword [eax+1], 0x3e01d64b
+	ccmpf 7, dword [eax+64], 0x263e5334
+	ccmpf 9, qword [eax+1], -87097222
+	ccmpf 8, qword [eax+64], 286679442

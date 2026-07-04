@@ -15,3 +15,15 @@ default rel
 	cmovnbe r17d, r21d
 	cmovnbe r31, r28
 	cmovnbe r23w, r20w, r25w
+	cmovnbe cx, word [eax+1]
+	cmovnbe bp, word [eax+64]
+	cmovnbe edx, dword [eax+1]
+	cmovnbe ebp, dword [eax+64]
+	cmovnbe rax, qword [eax+1]
+	cmovnbe rax, qword [eax+64]
+	cmovnbe ax, si, word [eax+1]
+	cmovnbe di, bp, word [eax+64]
+	cmovnbe edi, ebp, dword [eax+1]
+	cmovnbe esi, ebp, dword [eax+64]
+	cmovnbe rbp, rdi, qword [eax+1]
+	cmovnbe rsi, rsi, qword [eax+64]

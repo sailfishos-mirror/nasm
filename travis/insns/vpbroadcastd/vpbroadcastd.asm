@@ -33,3 +33,13 @@ default rel
 	vpbroadcastd xmm2{k4}{z}, edi
 	vpbroadcastd ymm1{k4}{z}, ebx
 	vpbroadcastd zmm6{k5}{z}, edi
+	vpbroadcastd xmm3, dword [eax+1]
+	vpbroadcastd xmm5, dword [eax+64]
+	vpbroadcastd ymm7, dword [eax+1]
+	vpbroadcastd ymm5, dword [eax+64]
+	vpbroadcastd xmm1, dword [eax+1]
+	vpbroadcastd xmm4, dword [eax+64]
+	vpbroadcastd ymm0, dword [eax+1]
+	vpbroadcastd ymm4, dword [eax+64]
+	vpbroadcastd zmm1, dword [eax+1]
+	vpbroadcastd zmm2, dword [eax+64]

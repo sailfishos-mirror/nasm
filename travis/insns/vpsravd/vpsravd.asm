@@ -25,3 +25,13 @@ default rel
 	vpsravd xmm4{k4}{z}, xmm7, oword [0x213]
 	vpsravd ymm0{k2}{z}, ymm3, ymm6
 	vpsravd zmm1{k1}{z}, zmm0, zmm6
+	vpsravd xmm2, xmm3, oword [eax+1]
+	vpsravd xmm4, xmm2, oword [eax+64]
+	vpsravd ymm1, ymm1, yword [eax+1]
+	vpsravd ymm3, ymm6, yword [eax+64]
+	vpsravd xmm7, xmm5, oword [eax+1]
+	vpsravd xmm7, xmm1, oword [eax+64]
+	vpsravd ymm2, ymm4, yword [eax+1]
+	vpsravd ymm4, ymm7, yword [eax+64]
+	vpsravd zmm1, zmm7, zword [eax+1]
+	vpsravd zmm4, zmm4, zword [eax+64]

@@ -6,3 +6,5 @@ default rel
 	vrsqrt28pd zmm5{k7}, zmm3
 	vrsqrt28pd zmm6{k1}{z}, zmm0
 	vrsqrt28pd zmm1, zmm6, {sae}
+	vrsqrt28pd zmm1, zword [eax+1]
+	vrsqrt28pd zmm2, zword [eax+64]

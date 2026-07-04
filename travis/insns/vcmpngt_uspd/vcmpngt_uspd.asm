@@ -17,3 +17,13 @@ default rel
 	vcmpngt_uspd k3{k6}, ymm2, yword [0x7b4]
 	vcmpngt_uspd k6{k3}, zmm7, zword [0x9e1]
 	vcmpngt_uspd k4, zmm6, zmm6, {sae}
+	vcmpngt_uspd xmm0, xmm5, oword [eax+1]
+	vcmpngt_uspd xmm0, xmm6, oword [eax+64]
+	vcmpngt_uspd ymm2, ymm1, yword [eax+1]
+	vcmpngt_uspd ymm3, ymm7, yword [eax+64]
+	vcmpngt_uspd k3, xmm4, oword [eax+1]
+	vcmpngt_uspd k1, xmm2, oword [eax+64]
+	vcmpngt_uspd k5, ymm2, yword [eax+1]
+	vcmpngt_uspd k5, ymm6, yword [eax+64]
+	vcmpngt_uspd k5, zmm6, zword [eax+1]
+	vcmpngt_uspd k5, zmm6, zword [eax+64]

@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for VMXON",
   "id": "vmxon16",
   "format": "bin",
-  "source": "vmxon.asm",
+  "source": "vmxon_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmxon/",
   "target": [
    { "output": "vmxon.bin16", "match": "vmxon.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for VMXON",
   "id": "vmxon32",
   "format": "bin",
-  "source": "vmxon.asm",
+  "source": "vmxon_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/vmxon/",
   "target": [
    { "output": "vmxon.bin32", "match": "vmxon.bin32.t" }

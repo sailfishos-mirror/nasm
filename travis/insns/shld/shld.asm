@@ -15,3 +15,27 @@ default rel
 	shld r24d, r28d, 0x54
 	shld r16, r22, 0xdc
 	shld r20w, r31w, cl
+	shld word [eax+1], ax, 0xff
+	shld word [eax+64], di, 0xe9
+	shld dword [eax+1], ecx, 0xc1
+	shld dword [eax+64], ecx, 0xf4
+	shld qword [eax+1], rbx, 0xa0
+	shld qword [eax+64], rbp, 0x7
+	shld word [eax+1], bp, cl
+	shld word [eax+64], cx, cl
+	shld dword [eax+1], ecx, cl
+	shld dword [eax+64], edi, cl
+	shld qword [eax+1], rdx, cl
+	shld qword [eax+64], rbp, cl
+	shld ax, word [eax+1], bp, 0x56
+	shld cx, word [eax+64], ax, 0x8c
+	shld ecx, dword [eax+1], ecx, 0x4d
+	shld esi, dword [eax+64], ecx, 0x92
+	shld rdx, qword [eax+1], rdx, 0x45
+	shld rsi, qword [eax+64], rcx, 0xbf
+	shld di, word [eax+1], bp, cl
+	shld ax, word [eax+64], ax, cl
+	shld ebx, dword [eax+1], eax, cl
+	shld eax, dword [eax+64], eax, cl
+	shld rbx, qword [eax+1], rbp, cl
+	shld rbp, qword [eax+64], rbx, cl

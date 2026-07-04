@@ -3,7 +3,7 @@
   "description": "Pseudorandom test for PREFETCHW",
   "id": "prefetchw16",
   "format": "bin",
-  "source": "prefetchw.asm",
+  "source": "prefetchw_narrow.asm",
   "option": "--bits 16 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/prefetchw/",
   "target": [
    { "output": "prefetchw.bin16", "match": "prefetchw.bin16.t" }
@@ -14,7 +14,7 @@
   "description": "Pseudorandom test for PREFETCHW",
   "id": "prefetchw32",
   "format": "bin",
-  "source": "prefetchw.asm",
+  "source": "prefetchw_narrow.asm",
   "option": "--bits 32 -w-ea-absolute -w-implicit-abs-deprecated -I./travis/insns/prefetchw/",
   "target": [
    { "output": "prefetchw.bin32", "match": "prefetchw.bin32.t" }

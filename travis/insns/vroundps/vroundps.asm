@@ -5,3 +5,7 @@ default rel
 	vroundps ymm4, ymm4, 0xf7
 	vroundps xmm12, xmm8, 0xc4
 	vroundps ymm12, ymm15, 0xe3
+	vroundps xmm1, oword [eax+1], 0x5a
+	vroundps xmm5, oword [eax+64], 0x37
+	vroundps ymm7, yword [eax+1], 0xcc
+	vroundps ymm5, yword [eax+64], 0x99

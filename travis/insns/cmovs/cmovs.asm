@@ -15,3 +15,15 @@ default rel
 	cmovs r19d, r27d
 	cmovs r21, r23
 	cmovs r31w, r28w, r26w
+	cmovs si, word [eax+1]
+	cmovs di, word [eax+64]
+	cmovs edx, dword [eax+1]
+	cmovs eax, dword [eax+64]
+	cmovs rdi, qword [eax+1]
+	cmovs rcx, qword [eax+64]
+	cmovs bp, di, word [eax+1]
+	cmovs dx, cx, word [eax+64]
+	cmovs ecx, esi, dword [eax+1]
+	cmovs ebx, edx, dword [eax+64]
+	cmovs rdi, rbp, qword [eax+1]
+	cmovs rax, rcx, qword [eax+64]

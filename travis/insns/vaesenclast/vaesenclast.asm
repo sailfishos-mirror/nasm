@@ -14,3 +14,9 @@ default rel
 	vaesenclast xmm19, xmm26, xmm23
 	vaesenclast ymm17, ymm16, ymm19
 	vaesenclast zmm16, zmm20, zmm29
+	vaesenclast xmm3, xmm5, oword [eax+1]
+	vaesenclast xmm1, xmm1, oword [eax+64]
+	vaesenclast ymm2, ymm6, yword [eax+1]
+	vaesenclast ymm7, ymm6, yword [eax+64]
+	vaesenclast zmm2, zmm0, zword [eax+1]
+	vaesenclast zmm6, zmm3, zword [eax+64]

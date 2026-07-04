@@ -10,3 +10,11 @@ default rel
 	pinsrw mm0, r13w, 0x4e
 	pinsrw mm1, r11d, 0x41
 	pinsrw xmm11, r10w, 0x3
+	pinsrw mm4, [eax+1], 0x55
+	pinsrw mm4, [eax+64], 0x6c
+	pinsrw mm1, word [eax+1], 0x4c
+	pinsrw mm4, word [eax+64], 0x20
+	pinsrw xmm4, [eax+1], 0x4c
+	pinsrw xmm6, [eax+64], 0x69
+	pinsrw xmm7, word [eax+1], 0x3b
+	pinsrw xmm6, word [eax+64], 0x3c

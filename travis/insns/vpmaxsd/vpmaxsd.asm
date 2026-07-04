@@ -25,3 +25,13 @@ default rel
 	vpmaxsd xmm5{k5}{z}, xmm0, xmm3
 	vpmaxsd ymm4{k1}{z}, ymm7, yword [0xa70]
 	vpmaxsd zmm4{k7}{z}, zmm2, zmm7
+	vpmaxsd xmm1, xmm3, oword [eax+1]
+	vpmaxsd xmm7, xmm3, oword [eax+64]
+	vpmaxsd ymm0, ymm2, yword [eax+1]
+	vpmaxsd ymm7, ymm2, yword [eax+64]
+	vpmaxsd xmm1, xmm6, oword [eax+1]
+	vpmaxsd xmm5, xmm3, oword [eax+64]
+	vpmaxsd ymm5, ymm1, yword [eax+1]
+	vpmaxsd ymm1, ymm2, yword [eax+64]
+	vpmaxsd zmm6, zmm3, zword [eax+1]
+	vpmaxsd zmm7, zmm5, zword [eax+64]
