@@ -6,4 +6,5 @@ default rel
 	vpermpd zmm9, zmm2, 0x4c
 	vpermpd zmm5, zword [0xc1c], 0x31
 	vpermpd ymm4, ymm3, ymm13
+	vpermpd ymm4, ymm13
 	vpermpd ymm7, ymm12, ymm0

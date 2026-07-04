@@ -1,5 +1,6 @@
 default rel
 	vmovsd xmm4, xmm8, xmm6
+	vmovsd xmm4, xmm6
 	vmovsd xmm9, xmm15, xmm8
 	vmovsd xmm13, qword [0xf8e]
 	vmovsd xmm1, qword [0x6e6]

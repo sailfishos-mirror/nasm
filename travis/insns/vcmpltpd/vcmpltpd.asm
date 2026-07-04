@@ -1,7 +1,9 @@
 default rel
 	vcmpltpd xmm8, xmm2, xmm5
+	vcmpltpd xmm8, xmm5
 	vcmpltpd xmm3, xmm14, xmm10
 	vcmpltpd ymm7, ymm6, ymm12
+	vcmpltpd ymm7, ymm12
 	vcmpltpd ymm4, ymm15, ymm11
 	vcmpltpd k2, xmm14, xmm6
 	vcmpltpd k3, xmm7, xmm15

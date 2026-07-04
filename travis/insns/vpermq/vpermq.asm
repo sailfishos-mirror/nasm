@@ -6,4 +6,5 @@ default rel
 	vpermq zmm6, zmm14, 0x6b
 	vpermq zmm2, zmm9, 0xee
 	vpermq ymm6, ymm1, ymm3
+	vpermq ymm6, ymm3
 	vpermq ymm15, ymm5, yword [0xcf5]

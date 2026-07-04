@@ -4,6 +4,8 @@ default rel
 	adox rax, qword [0x3bf]
 	adox rsi, rdi
 	adox ebx, ebp, dword [0x7dd]
+	adox ebp, dword [0x7dd]
 	adox ecx, ebp, eax
 	adox rax, rdx, qword [0x1df]
+	adox rdx, qword [0x1df]
 	adox rdi, rcx, rax

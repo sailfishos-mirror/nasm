@@ -229,10 +229,6 @@ my %gen = (
     reg32   => sub { my ($r) = @_; pick($r, @reg32) },
     reg32na => sub { my ($r) = @_; pick($r, @reg32na) },
     reg64   => sub { my ($r) = @_; pick($r, @reg64) },
-    'reg8?'  => sub { my ($r) = @_; pick($r, @reg8) },
-    'reg16?' => sub { my ($r) = @_; pick($r, @reg16) },
-    'reg32?' => sub { my ($r) = @_; pick($r, @reg32) },
-    'reg64?' => sub { my ($r) = @_; pick($r, @reg64) },
     'reg64:reg64' => sub { my ($r) = @_; pick($r,@reg64).":".pick($r,@reg64) },
     reg_sreg => sub { my ($r) = @_; pick($r, @sreg) },
     reg_creg => sub { my ($r) = @_; pick($r, @creg) },
@@ -317,7 +313,7 @@ my %gen = (
 # instructions still get 16/32-bit coverage instead of the whole file
 # being disqualified by one 64-bit-only line.
 my %needs64_token = map { $_ => 1 } qw(
-    reg64 reg64? reg64:reg64 reg_rax imm64 udword64 sdword64 sbytedword64
+    reg64 reg64:reg64 reg_rax imm64 udword64 sdword64 sbytedword64
 );
 
 # Mnemonics whose sole/last "imm"-like operand is actually a branch
@@ -337,7 +333,14 @@ my %unsupported;   # token => count, for the coverage report
 
 sub base_token {
     my ($tok) = @_;
-    $tok =~ s/\*$//;      # strided/decoratable-operand marker
+    # Trailing '*' marks an optional source operand (duplicates the
+    # previous operand in the encoding when omitted from the concrete
+    # instruction); trailing '?' marks an optional destination operand
+    # (omitted entirely, e.g. APX NDD forms). Both strip to the plain
+    # base operand-type token for generation purposes -- see
+    # optional_operand_index() below for where the omitted-form
+    # coverage itself is generated.
+    $tok =~ s/[\*\?]$//;
     $tok =~ s/\|.*$//;    # |mask, |z, |bNN, |rs2 ... decorators
     return $tok;
 }
@@ -355,6 +358,27 @@ sub gen_operand {
         return $gen{$base}->($rng);
     }
     $unsupported{$base}++;
+    return undef;
+}
+
+# insns.xda marks at most one operand per template with a trailing '*'
+# (optional source operand -- x86/insns.pl's relaxed_forms() duplicates
+# the *previous* operand in the encoding when this one is omitted from
+# the source, e.g. "IMUL reg32,reg32" is short for "IMUL
+# reg32,reg32,reg32") or '?' (optional destination operand -- entirely
+# absent from the encoding when omitted, e.g. APX NDD forms like "INC
+# reg32,rm32" alongside plain "INC rm32"). Either way, from a pure
+# operand-*syntax* point of view (which is all this generator needs --
+# see the design-rationale header comment / tools/testgen/README.md),
+# both cases reduce to: the marked operand can be dropped from the
+# concrete instruction's operand list entirely. Returns the operand
+# index to drop for the reduced-arity variant, or undef if this
+# template has no optional operand.
+sub optional_operand_index {
+    my ($ops) = @_;
+    for my $i (0 .. $#$ops) {
+        return $i if $ops->[$i] =~ /[\*\?]$/;
+    }
     return undef;
 }
 
@@ -418,7 +442,8 @@ for my $mnem (sort keys %by_mnemonic) {
     my $is_branch = $branch_mnemonic{$mnem} ? 1 : 0;
     my @lines;        # { text => ..., needs64 => 0|1 }
     for my $t (@sample) {
-        for (1 .. $variants) {
+        my $opt_idx = optional_operand_index($t->{ops});
+        for my $variant_num (1 .. $variants) {
             my @operands;
             my $ok = 1;
             my $needs64 = 0;
@@ -433,6 +458,20 @@ for my $mnem (sort keys %by_mnemonic) {
                 text    => lc($mnem) . (@operands ? ' ' . join(', ', @operands) : ''),
                 needs64 => $needs64,
             };
+
+            # Optional-operand ('*'/'?') coverage: also emit the
+            # reduced-arity form once per template (using the first
+            # successfully-generated variant's operand values), so the
+            # omitted-operand parsing/encoding path gets exercised too,
+            # not just the full form.
+            if (defined $opt_idx && $variant_num == 1) {
+                my @reduced = @operands;
+                splice(@reduced, $opt_idx, 1);
+                push @lines, {
+                    text    => lc($mnem) . (@reduced ? ' ' . join(', ', @reduced) : ''),
+                    needs64 => $needs64,
+                };
+            }
         }
     }
 

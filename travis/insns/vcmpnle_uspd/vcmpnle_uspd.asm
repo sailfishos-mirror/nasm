@@ -1,7 +1,9 @@
 default rel
 	vcmpnle_uspd xmm12, xmm9, oword [0x14a]
+	vcmpnle_uspd xmm12, oword [0x14a]
 	vcmpnle_uspd xmm7, xmm10, xmm10
 	vcmpnle_uspd ymm13, ymm7, ymm0
+	vcmpnle_uspd ymm13, ymm0
 	vcmpnle_uspd ymm6, ymm1, yword [0xe7c]
 	vcmpnle_uspd k1, xmm5, xmm3
 	vcmpnle_uspd k5, xmm7, xmm7
