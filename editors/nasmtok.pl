@@ -367,10 +367,24 @@ sub write_output_json {
 	$ver{$vn} = $vv;
     }
 
-    print $out $json->encode({
+    my $txt = $json->encode({
 	'$comment' => "NASM syntax information extracted from ${whoami}",
 	    'tokens' => \%tokens, 'version' => \%ver});
-    print $out "\n";
+
+    # $json->encode() creates a single long line; break up the lines
+    # at least...
+    my @txt = split(/\,/, $txt);
+    my $last = shift @txt;
+    foreach my $t (@txt) {
+	if (length($last)+length($t) > 77) {
+	    print $out $last, ",\n";
+	    $last = $t;
+	} else {
+	    $last .= ",$t";
+	}
+    }
+    print $out $last, "\n";
+
     return 0;
 }
 
