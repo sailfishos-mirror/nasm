@@ -566,13 +566,13 @@ splint:
 # Travis tests
 #
 travis test: $(PROGS)
-	$(MAKE) -f travis.mk all
+	$(MAKE) -f travis.mak all
 
 clean-travis travis-clean:
-	$(MAKE) -f travis.mk clean
+	$(MAKE) -f travis.mak clean
 
 update-travis travis-update golden:
-	$(MAKE) -f travis.mk update
+	$(MAKE) -f travis.mak update
 
 #
 # Rules to run autogen if necessary

@@ -101,6 +101,7 @@ TAGS
 /test/ffmpegtest
 /test/x264test
 /travis.mk
+/travis.mak
 /version.h
 /version.mac
 /version.mak
