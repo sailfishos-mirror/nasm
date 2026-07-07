@@ -2,6 +2,7 @@
 /* Copyright 2026 The NASM Authors - All Rights Reserved */
 
 #include "compiler.h"
+#include "nasmlib.h"
 #include "files.h"
 #include "error.h"
 
@@ -47,7 +48,7 @@ void check_overwrite_files(void)
 
     for (fn = FN_INFILE+2; fn < FN_NFILES; fn++) {
         const char *outname = get_filename(fn);
-        if (outname && !strcmp(inname, outname)) {
+        if (outname && !nasm_compare_paths(inname, outname)) {
             nasm_fatal("%s file would overwrite input file",
                        filename_names[fn]);
         }
