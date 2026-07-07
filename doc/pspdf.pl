@@ -78,7 +78,7 @@ sub win32_gs_help() {
     foreach my $p (split(/\;/, $gs[0]->{'/GS_LIB'})) {
 	foreach my $exe ('gswin64c.exe', 'gswin32c.exe', 'gs.exe') {
 	    last if (defined($gsp));
-	    my $e = File::Spec->catpath($p, $exe);
+	    my $e = File::Spec->catfile($p, $exe);
 	    $gsp = $e if (-f $e && -x _);
 	}
     }
