@@ -25,6 +25,12 @@
 #ifndef NASM_CONFIG_MSVC_H
 #define NASM_CONFIG_MSVC_H
 
+/* Needed for the _BitScanReverse()/_BitScanReverse64() intrinsics below;
+   not available prior to Visual Studio 2005. */
+#if _MSC_VER >= 1400
+# include <intrin.h>
+#endif
+
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
 
@@ -33,8 +39,24 @@
 # define HAVE_INTTYPES_H 1
 #endif
 
+/* Define to 1 if you have the <intrin.h> header file. */
+#if _MSC_VER >= 1400
+# define HAVE_INTRIN_H 1
+#endif
+
 /* Define to 1 if you have the <io.h> header file. */
 #define HAVE_IO_H 1
+
+/* Define to 1 if you have the <stdarg.h> header file. */
+#define HAVE_STDARG_H 1
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#if _MSC_VER >= 1600
+# define HAVE_STDINT_H 1
+#endif
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#define HAVE_STDIO_H 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
@@ -48,6 +70,9 @@
 /* Define to 1 if you have the <sys/types.h> header file. */
 #define HAVE_SYS_TYPES_H 1
 
+/* Define to 1 if you have the <wchar.h> header file. */
+#define HAVE_WCHAR_H 1
+
 /* Define to 1 if you have the `access' function. */
 #define HAVE_ACCESS 1
 #if _MSC_VER < 1400
@@ -59,6 +84,13 @@
 #if _MSC_VER < 1400
 # define fileno _fileno
 #endif
+
+/* Define to 1 if you have the `isascii' function. */
+#define HAVE_ISASCII 1
+#define isascii __isascii
+
+/* Define to 1 if you have the `iscntrl' function. */
+#define HAVE_ISCNTRL 1
 
 /* Define to 1 if you have the `snprintf' function. */
 #define HAVE_SNPRINTF 1
@@ -76,6 +108,25 @@
 
 /* Define to 1 if you have the `_filelengthi64' function. */
 #define HAVE__FILELENGTHI64 1
+
+/* Define to 1 if you have the `_byteswap_ushort' intrinsic function. */
+#define HAVE__BYTESWAP_USHORT 1
+
+/* Define to 1 if you have the `_byteswap_ulong' intrinsic function. */
+#define HAVE__BYTESWAP_ULONG 1
+
+/* Define to 1 if you have the `_byteswap_uint64' intrinsic function. */
+#define HAVE__BYTESWAP_UINT64 1
+
+/* Define to 1 if you have the `_BitScanReverse' intrinsic function. */
+#if _MSC_VER >= 1400
+# define HAVE__BITSCANREVERSE 1
+#endif
+
+/* Define to 1 if you have the `_BitScanReverse64' intrinsic function. */
+#if (defined(_M_X64) || defined(_M_ARM64)) && _MSC_VER >= 1400
+# define HAVE__BITSCANREVERSE64 1
+#endif
 
 /* Define to 1 if you have the `_fseeki64' function. */
 #define HAVE__FSEEKI64 1
@@ -131,6 +182,18 @@
    pointer, if such a type exists, and if the system does not define it. */
 # define uintptr_t size_t
 #endif
+
+/* Define to 1 if the system has the type `uintmax_t'. */
+#ifdef HAVE_STDINT_H
+# define HAVE_UINTMAX_T 1
+#else
+/* Define to the widest unsigned integer type if <stdint.h> and <inttypes.h>
+   do not define. */
+# define uintmax_t unsigned long long
+#endif
+
+/* Define to 1 if the system has the type `unsigned long long int'. */
+#define HAVE_UNSIGNED_LONG_LONG_INT 1
 
 /* Define to 1 if you have the `vsnprintf' function. */
 #define HAVE_VSNPRINTF 1
